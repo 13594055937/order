@@ -1,0 +1,42 @@
+[ 2017-02-18T03:52:41+08:00 ] 139.162.88.63 http://clientapi.ipip.net/echo.php?info=1234567890
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+ERR: 无法加载模块:Echo
+
+[ 2017-02-18T10:13:31+08:00 ] 114.231.86.126 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000296s ]
+ERR: 无法加载模块:Favicon
+
+[ 2017-02-18T10:13:32+08:00 ] 114.231.86.126 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000305s ]
+ERR: 无法加载模块:Favicon
+
+[ 2017-02-18T12:34:02+08:00 ] 117.136.47.162 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000317s ]
+ERR: 无法加载模块:Favicon
+
+[ 2017-02-18T13:33:45+08:00 ] 187.23.161.238 /hndUnblock.cgi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+ERR: 无法加载模块:HndUnblock
+
+[ 2017-02-18T13:33:49+08:00 ] 187.23.161.238 /tmUnblock.cgi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000297s ]
+ERR: 无法加载模块:TmUnblock
+
+[ 2017-02-18T18:17:39+08:00 ] 80.82.78.38 http://www.baidu.com/cache/global/img/gs.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000328s ]
+ERR: 无法加载模块:Cache
+

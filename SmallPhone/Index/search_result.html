@@ -1,0 +1,21 @@
+<include file="Public/header" />
+    <!-- container -->
+    <div id="container">
+        <div class="g-wrap m-search-page g-mt20">
+            <h2>搜索结果：<span class="key">{$product_name}</span></h2>
+            <ul class="list list-search">
+                <foreach name="list" item="data">
+                    <li class="item clearfix">
+                        <a href="{:U('photoshanghai/photograph_detail',array('id'=>$data['id']))}" class="title col-8">{$data.huodong_title}</a>
+                        <span class="from col-4">【所属栏目】<a href="{:U('photoshanghai/photograph_list')}" class="category">带你拍上海</a></span>
+                    </li>
+                </foreach>
+            </ul>
+            <div class="m-page-box g-mtb20">
+                {$page}
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <include file="Public/footer" />
+

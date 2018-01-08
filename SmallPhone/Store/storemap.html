@@ -1,0 +1,53 @@
+<include file="Public/header"/>
+<link rel="stylesheet" href="__PUBLIC__/smallphone/css/common.css">		<!-- 头部 E -->
+		 <!-- 焦点图 S-->
+		 <div class="banner img">
+		 	<img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/banner-3.jpg" >
+		 </div>
+		 <!-- 焦点图 E-->
+		<div class="am-list-news store">
+			<!--列表标题-->
+			<div class="tit-1">
+				<img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/tit-1.png" >
+			</div>
+
+			<ul class="cm-list">
+				<foreach name="storelist" item="store_data" key="keys">
+		              <li>
+						<div class="left">
+							<img alt="{$imgalt}" src="__PUBLIC__/images/{$store_data.store_img1}" >
+						</div>
+						<div class="right">
+							<h3 class="line-1 title">{$store_data.province_name}：{$store_data.name} </h3>
+							<a href="tel:{$store_data.telphone}"><div class="red hotline">订购热线：{$store_data.telphone}</div></a>
+							<div class="text">地址：{$store_data.address}</div>
+							<div class="am-cf">
+								<span class="am-fl"></span>
+								<a class="am-fr" href="http://m.amap.com/?q={$store_data.weidu},{$store_data.jingdu}&name={$store_data.name}">去这里</a>
+							</div>
+						</div>
+					  </li>
+	            </foreach>
+				
+			</ul>
+
+		</div>
+
+		<!-- 产品分类 S -->
+		<div class="classify">
+			<div class="tit-2">产品分类</div>
+			<ul class="am-avg-sm-2">
+				<foreach name="gift" item="gift_card">
+					<li class="boxs">
+						<a href="{:U('product/product_list',array('guige'=>$gift_card['type']."_".$gift_card['nums'],'name'=>$gift_card['type'].$gift_card['nums']."对装"))}"> 
+							<img alt="{$imgalt}" src="__PUBLIC__/images/{$gift_card.pic}" >
+						</a>
+					</li>
+	            </foreach>
+			</ul>
+		</div>
+		<!-- 产品分类 E -->
+
+		
+		<!-- 底部链接 S-->
+		<include file="Public/footer"/>

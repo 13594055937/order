@@ -1,0 +1,53 @@
+// helper
+@import "../helper/_variable.less";
+@import "../helper/_mixin.less";
+// base
+@import "../base/_reset.less";
+// component
+@import "../component/_button.less";
+@import "../component/_item.less";
+@import "../component/_form.less";
+// icon
+@import "../icons/_icon_all.less";
+// layout
+@import "../layout/_layout.less";
+@import "../layout/_header.less";
+@import "../layout/_nav.less";
+@import "../layout/_footer.less";
+
+/* spa */
+
+.m-release-page {
+    .form-text {
+        background-color: #fff;
+        color: #333;
+    }
+    .form-select {
+        background-color: #fff;
+        color: #333;
+    }
+}
+
+.sub-file {
+    position: relative;
+    width: 300px;
+    height: 30px;
+    .form-text {
+        height: 30px;
+        &.form-file {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: red;
+            z-index: 1;
+            background-color: #fff;
+            border: 0 none;
+            width: 300px;
+            height: 30px;filter: "alpha(opacity=0)";
+filter: alpha(opacity=0);
+opacity: 0;
+cursor: pointer;
+
+        }
+    }
+}

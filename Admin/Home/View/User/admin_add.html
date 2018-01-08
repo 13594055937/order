@@ -1,0 +1,177 @@
+<include file="Public/header" />
+<include file="Public/top" />
+<div role="main" class="ui-content">
+	<include file="Public/menu" />
+    <div class="cp_right">
+        <div class="mar">
+        	<p id="title">
+        		<b class="wlsz_back"></b>
+        		<a href="{:U('user/index')}">用户管理</a>
+        	</p>
+            <div class="wlsz_jkdz right_bot">
+            	<form role="form" action="{:U('user/admin_save')}" method="POST" id="myForm">
+            	<input type="hidden" name="id" value="{$data.id}" readyonly />
+                <h2>{$edit_info} </h2>
+             	<table class="table table-striped table-bordered table-hover">
+                    <tr>
+                        <td class="col-name">用户编号</td>
+                        <td>
+                            <input name="usercode" type="text" value="{$data.usercode}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-name">用户名</td>
+                        <td>
+                            <input name="username" type="text" value="{$data.username}">
+                        </td>
+                    </tr>
+                    <if condition="empty($data['id'])">
+                    <tr>
+                        <td class="col-name">密码</td>
+                        <td>
+                            <input name="userpwd" type="password" value="{$data.userpwd}">
+                        </td>
+                    </tr>
+                    </if>
+                    <tr>
+                        <td class="col-name">手机</td>
+                        <td>
+                            <input name="mobile" type="text" value="{$data.mobile}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-name">关联微信</td>
+                        <td>
+                            <input name="openid" type="text" value="{$data.openid}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-name">邮箱</td>
+                        <td>
+                            <input name="email" type="text" value="{$data.email}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-name">用户类型</td>
+                        <td>
+                            <select name="usertype">
+                                <foreach name="usertype_list" item="usertype" key="k">
+                                    <option value="{$usertype}" <if condition="$data['usertype'] eq $k"> selected</if>>{$usertype}</option>
+                                </foreach>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-name">所属公司</td>
+                        <td>
+                           <select name="company">
+                               <foreach name="company_list" item="company">
+                                 <option value="{$company.name}" <if condition="$data['company'] eq $company['name']"> selected</if>>{$company.name}</option>
+                               </foreach>
+                           </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-name">状态</td>
+                        <td>
+                            <div data-role="controlgroup" data-type="horizontal">
+                                <label>
+                                    停用<input name="status" type="radio" value="0" <if condition="$data['status'] eq 0"> checked=true </if>>
+                                </label>
+                                <label>启用<input name="status" type="radio" value="1" <if condition="$data['status'] eq 1 || $data['status'] eq '' "> checked=true </if>></label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr><td colspan="2">管理分组</td></tr>
+                    <tr>
+                        <td style="width:200px;">用户管理 </td>
+                        <td>
+                         <input type="checkbox" name="user[]" value="用户管理" <if condition="isset($data['usergroup']['user'])&&in_array('用户管理',$data['usergroup']['user'])">checked</if>>用户管理
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:200px;">公司管理 </td>
+                        <td>
+                         <input type="checkbox" name="company[]" value="公司管理" <if condition="isset($data['usergroup']['company'])&&in_array('公司管理',$data['usergroup']['company'])">checked</if>>公司管理
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:200px;">客户管理</td>
+                        <td>
+                         <input type="checkbox" name="customer[]" value="客户管理" <if condition="isset($data['usergroup']['customer'])&&in_array('客户管理',$data['usergroup']['customer'])">checked</if>>客户管理
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:200px;">工程师管理</td>
+                        <td>
+                         <input type="checkbox" name="engineer[]" value="工程师管理" <if condition="isset($data['usergroup']['engineer'])&&in_array('工程师管理',$data['usergroup']['engineer'])">checked</if>>工程师管理
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:200px;">工单查询</td>
+                        <td>
+                            <input type="checkbox" name="order[]" value="工单查询" <if condition="isset($data['usergroup']['order'])&&in_array('工单查询',$data['usergroup']['order'])">checked</if>>工单查询
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:200px;">基础数据管理</td>
+                        <td>
+                            <input type="checkbox" name="base[]" value="基础数据管理" <if condition="isset($data['usergroup']['base'])&&in_array('基础数据管理',$data['usergroup']['base'])">checked</if>>基础数据管理
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <if condition="$edit_info neq '查看信息'">
+                            <td colspan="2" align="center">
+                                <input type="submit" class="search" data-inline="true" value="提交">
+                            </td>
+                        </if>
+                    </tr>
+                </table>
+                <input type="button" value="返回" onclick="window.history.back(-1)" data-inline="true">
+            	</form>
+             </div>
+            </div>
+        </div>
+    </div>
+<include file="Public/footer" />
+<script language="JavaScript">
+$(document).ready(function(){
+    $("#myForm").validate({
+        rules:{username:"required",
+               usercode:"required",
+            },
+        messages:{
+            username:"用户名不能为空",
+            usercode:"用户编码不能为空",
+        },
+        submitHandler: function(form) {
+            $(form).ajaxSubmit(options);
+            return false;
+        }
+    });
+	var options = {
+	    url: "{:U('user/admin_save')}",
+	    type: 'post',
+	    success: function(data) {
+	    	data = eval("("+data+")")
+	    	if(data.status=="true"){
+	    		window.location.href="{:U('user/admin_index')}";
+	    	}
+	    } 
+	};
+});
+function selectAll(obj){
+    obj = obj+"[]";
+    var allObj = document.getElementsByName(obj)
+    for(var i = 0; i < allObj.length; i++)
+       allObj[i].checked = true;
+}
+
+function cancalAll(obj){
+    obj = obj+"[]";
+    var allObj = document.getElementsByName(obj)
+    for(var i = 0; i < allObj.length; i++)
+       allObj[i].checked = false;
+}
+</script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+        <title>个人中心</title>
+        <link rel="stylesheet" href="__PUBLIC__/css/uikit.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/iven.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/form-select.css" />
+        <script src="__PUBLIC__/js/jquery.js"></script>
+        <script src="__PUBLIC__/js/uikit.min.js"></script>
+        <script src="__PUBLIC__/js/form-select.min.js"></script>
+    </head>
+    <body>
+    <script>
+    $(document).ready(function() {
+        $("#apply_danbao").click(function(){
+            var apply_fee = $("#apply_fee").val();
+            if(apply_fee=="" || apply_fee <1){
+                return false;
+            }
+            $("form").submit();
+        })
+    })
+    </script>
+    <div class="uk-container uk-container-center">
+        <form class="uk-form assi-form" action="{:U('task/danbao_apply')}" method="post">
+            <input type="hidden" value="{$task.id}" name="task_id">
+            <h2 class="iv-h2">项目名称 <span>{$task.pro_name}</span></h2>
+            <h2 class="iv-h2">项目编号 <span>{$task.pro_code}</span></h2>
+            <h2 class="iv-h2">担保金额</h2>
+            <input type="number" name="apply_fee" id="apply_fee" placeholder="请填写担保金额" />
+            <p class="p-note uk-position-relative"><img class="uk-position-absolute" src="__PUBLIC__/images/ho.png" alt="">
+                任务合作双方先协调好金额，申请由平台介入担保交易！
+            </p>
+            <div class="uk-text-center">
+                <button id="apply_danbao" class="uk-margin-top uk-button uk-button-primary uk-button-submit"><i class="uk-icon-mouse-pointer uk-icon-justify"></i>申请担保交易</button>
+            </div>
+        </form>
+    </div>
+<include file="Public/footer" />

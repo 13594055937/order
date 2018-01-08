@@ -1,0 +1,363 @@
+.scrollable() {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.flexbox() {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.flex-wrap(@fw) when (@fw =nowrap) {
+    -webkit-box-lines: single;
+    -moz-box-lines: single;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: none;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+
+.flex-wrap(@fw) when (@fw =wrap) {
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.flex-wrap(@fw) when not (@fw =wrap) and not (@fw =nowrap) {
+    -webkit-flex-wrap: @fw;
+    -ms-flex-wrap: @fw;
+    flex-wrap: @fw;
+}
+
+.flex-shrink(@fs) {
+    -webkit-flex-shrink: @fs;
+    -ms-flex: 0 @fs auto;
+    flex-shrink: @fs;
+}
+
+// Border
+// -------------------------------
+.border-radius (@radius: 5px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.border-radius-custom (@topleft: 5px, @topright: 5px, @bottomleft: 5px, @bottomright: 5px) {
+    -webkit-border-radius: @arguments;
+    -moz-border-radius: @arguments;
+    border-radius: @arguments;
+}
+
+
+/* slice  ：图片边框向内偏移
+ * repeate：平铺(repeated)、铺满(rounded)或拉伸(stretched)
+ * width  : 图片边框的宽度
+ * outset : 边框图像区域超出边框的量
+ **/
+
+.border-image(@url, @slice, @width, @outset, @repeat) {
+    -webkit-border-image: @arguments;
+    -moz-border-image: @arguments;
+    -o-border-image: @arguments;
+    border-image: @arguments;
+}
+
+// Flexbox
+// -------------------------------
+.display-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.display-inline-flex {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+
+// Content Columns
+
+/* column-width column-count; */
+
+.content-columns(@columnCount: 2, @columnGap: 10px, @border: 1px solid #fff) {
+    -webkit-column-count: @columnCount;
+    -moz-column-count: @columnCount;
+    -o-column-count: @columnCount;
+    column-count: @columnCount;
+    -webkit-column-gap: @columnGap;
+    -moz-column-gap: @columnGap;
+    -o-column-gap: @columnGap;
+    column-gap: @columnGap;
+    -webkit-column-rule: @border;
+    -moz-column-rule: @border;
+    -o-column-rule: @border;
+    column-rule: @border;
+}
+
+// Box-shadow
+// -------------------------------
+.box-shadow (@x: 0px, @y: 3px, @z: 0px, @blur: 5px, @alpha: 0.5) {
+    -webkit-box-shadow: @x @y @z @blur rgba(0, 0, 0, @alpha);
+    -moz-box-shadow: @x @y @z @blur rgba(0, 0, 0, @alpha);
+    -o-box-shadow: @x @y @z @blur rgba(0, 0, 0, @alpha);
+    box-shadow: @x @y @z @blur rgba(0, 0, 0, @alpha);
+}
+
+.inner-shadow(@param1, @param2, @param3, @opacity) {
+    -webkit-box-shadow: inset @param1 @param2 @param3 rgba(0, 0, 0, @opacity);
+    -moz-box-shadow: inset @param1 @param2 @param3 rgba(0, 0, 0, @opacity);
+    box-shadow: inset @param1 @param2 @param3 rgba(0, 0, 0, @opacity);
+}
+
+// Transition
+// -------------------------------
+.transition (@prop: @prop, @time: 1s, @ease: linear) {
+    -webkit-transition: @prop @time @ease;
+    -moz-transition: @prop @time @ease;
+    -o-transition: @prop @time @ease;
+    -ms-transition: @prop @time @ease;
+    transition: @prop @time @ease;
+}
+
+// Transform
+// -------------------------------
+.transform (@rotate: 90deg, @scale: 1, @skew: 1deg, @translate: 10px) {
+    -webkit-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+    -moz-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+    -o-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+    -ms-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+    transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+}
+
+.translate(@width: -50%, @height: 0) {
+    -webkit-transform: translate(@width, @height);
+    -moz-transform: translate(@width, @height);
+    -o-transform: translate(@width, @height);
+    transform: translate(@width, @height);
+}
+
+// .translate3d(@x, @y, @z){
+//     -webkit-transform(translate3d(@x, @y, @z));
+//     -moz-transform(translate3d(@x, @y, @z));
+//     -o-transform(translate3d(@x, @y, @z));
+//     transform(translate3d(@x, @y, @z));
+// }
+// Background clipping
+
+/* border-box|padding-box|content-box; */
+
+.background-clip(@clip) {
+    -webkit-background-clip: @clip;
+    -moz-background-clip: @clip;
+    -o-background-clip: @clip;
+    background-clip: @clip;
+}
+
+// Box sizing
+// --------------------------------------------------
+.box-sizing(@boxmodel) {
+    -webkit-box-sizing: @boxmodel;
+    -moz-box-sizing: @boxmodel;
+    -o-box-sizing: @boxmodel;
+    box-sizing: @boxmodel;
+}
+
+// Gradients
+// -------------------------------
+.gradient(@origin: top, @startColor, @endColor) {
+    background-color: @startColor/2 + @endColor/2;
+    filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr='@{startColor}', endColorstr='@{endColor}')";
+    background-image: -webkit-linear-gradient(@origin, @startColor, @endColor);
+    background-image: -moz-linear-gradient(@origin, @startColor, @endColor);
+    background-image: -o-linear-gradient(@origin, @startColor, @endColor);
+    background-image: -ms-linear-gradient(@origin, @startColor, @endColor);
+    background-image: linear-gradient(@origin, @startColor, @endColor);
+}
+
+.quick-gradient (@origin: left, @alpha: 0.2) {
+    background-image: -webkit-linear-gradient(@origin, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, @alpha));
+    background-image: -moz-linear-gradient(@origin, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, @alpha));
+    background-image: -o-linear-gradient(@origin, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, @alpha));
+    background-image: -ms-linear-gradient(@origin, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, @alpha));
+    background-image: linear-gradient(@origin, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, @alpha));
+}
+
+.reflect (@length: 50%, @opacity: 0.2) {
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(@length, transparent), to(rgba(255, 255, 255, @opacity)));
+}
+
+// Background-size
+// -------------------------------
+.background-size(@width: auto, @height) {
+    -webkit-background-size: @arguments;
+    -moz-background-size: @arguments;
+    -o-background-size: @arguments;
+    background-size: @arguments;
+}
+
+// Trangle
+// -------------------------------
+.triangle-base() {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+}
+
+.triangle(@direction, @size, @color) {
+    .triangle(@direction, @size * 2, @size, @color);
+}
+
+.triangle(@direction, @width, @height, @color) when (@direction =up) {
+    .triangle-base();
+    border-left: (@width / 2)dashed transparent;
+    border-right: (@width / 2)dashed transparent;
+    border-bottom: @height solid @color;
+}
+
+.triangle(@direction, @width, @height, @color) when (@direction =down) {
+    .triangle-base();
+    border-left: (@width / 2) dashed transparent;
+    border-right: (@width / 2) dashed transparent;
+    border-top: @height solid @color;
+}
+
+.triangle(@direction, @width, @height, @color) when (@direction =left) {
+    .triangle-base();
+    border-top: (@width / 2) dashed transparent;
+    border-bottom: (@width / 2) dashed transparent;
+    border-right: @height solid @color;
+}
+
+.triangle(@direction, @width, @height, @color) when (@direction =right) {
+    .triangle-base();
+    border-top: (@width / 2) dashed transparent;
+    border-bottom: (@width / 2) dashed transparent;
+    border-left: @height solid @color;
+}
+
+// Encoded SVG Background
+.encoded-svg-background(@svg) {
+    @url: `encodeURIComponent(@ { svg
+}
+
+)`;
+background-image: url("data:image/svg+xml;charset=utf-8,@{url}");
+
+}
+// Preserve3D
+.preserve3d() {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+// Wrap
+// -------------------------------
+.wrap {
+    text-wrap: wrap;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    word-wrap: break-word;
+}
+// Ellipsis
+// -------------------------------
+.text-ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    -webkit-text-overflow: ellipsis;
+    -khtml-text-overflow: ellipsis;
+    -icab-text-overflow: ellipsis;
+    -moz-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+// Opacity
+// -------------------------------
+.opacity(@opacity) {
+    @opa: (@opacity*100);
+    filter: alpha(opacity=@opa);
+    opacity: @opacity;
+}
+// inline-block
+// -------------------------------
+.ib {
+    display: inline-block;
+    *zoom: 1;
+    vertical-align: top;
+}
+// Hide
+// -------------------------------
+.text-hide() {
+    font: ~"0/0" a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+// Animation
+
+/*
+ * name            : 动画名称
+ * duration        ：完成一个周期所花费时间
+ * timing-function : 速度曲线
+ * delay           : 何时开始
+ * iteration-count : 被播放次数
+ * derection       : 下一周期是否逆向播放
+ * play            : 规定动画是否运行
+ */
+.animation(@name,
+@duration: 200,
+@timingFn: ease,
+@delay: 0,
+@count: 1,
+@derection: normal,
+@play: running,
+@fill-mode) {
+    -webkit-animation: @arguments;
+    -moz-animation: @arguments;
+    -o-animation: @arguments;
+    animation: @arguments;
+}
+// Retina image
+// -------------------------------
+.img-retina(@file-1x;
+@file-2x;
+@width-1x;
+@height-1x) {
+    background-image: url("@{file-1x}");
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and ( min--moz-device-pixel-ratio: 2), only screen and ( -o-min-device-pixel-ratio: 2/1), only screen and ( min-device-pixel-ratio: 2), only screen and ( min-resolution: 192dpi), only screen and ( min-resolution: 2dppx) {
+        background-image: url("@{file-2x}");
+        background-size: @width-1x @height-1x;
+    }
+}
+// Placeholder text
+// --------------------------------------------------
+.placeholder(@color: @input-color-placeholder,
+@text-indent: 0) {
+    &::-moz-placeholder {
+        // Firefox 19+
+        color: @color;
+    }
+    
+    &:-ms-input-placeholder {
+        color: @color;
+    }
+    
+    &::-webkit-input-placeholder {
+        color: @color;
+        // Safari placeholder margin issue
+        text-indent: @text-indent;
+    }
+}

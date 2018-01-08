@@ -1,0 +1,60 @@
+<include file="Public/header"/>
+<link rel="stylesheet" href="__PUBLIC__/smallphone/css/common.css">
+<link rel="stylesheet" href="__PUBLIC__/smallphone/css/my.css">
+		<!-- 头部 E -->
+
+		<!-- 个人中心 S -->
+		<div class="personal">
+			<a href="javascript:void(0)" class="head">
+				<img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/head.png">
+				<span>{$userinfo.name}（{$userinfo.mobile}）</span>
+			</a>
+			<div class="myorder">
+				<a class="title am-cf" href="{:U('user/order')}">
+					<b class="am-fl">我的订单</b>
+					<span class="am-fr">查看全部</span>
+				</a>
+				<ul>
+					<li>
+						<a href="{:U('user/order',array('status'=>0))}">
+							<i class="iconfont icon-daifukuan-copy"></i>
+							<span>待付款</span>
+						</a>
+					</li>
+					<li>
+						<a href="{:U('user/order',array('status'=>1,'fahuo'=>0))}">
+							<i class="iconfont icon-daifahuo"></i>
+							<span>待发货</span>
+						</a>
+					</li>
+					<li>
+						<a href="{:U('user/order',array('fahuo'=>1))}">
+							<i class="iconfont icon-yifahuo"></i>
+							<span>已发货</span>
+						</a>
+					</li>
+				</ul>
+				<div class="cm-link">
+					<a class="item" href="{:U('user/addresslist')}" >收货地址</a>
+					<a class="item" href="{:U('user/bindaccount')}" >修改手机</a>
+					<a class="item" href="{:U('user/editpwd')}" >修改密码</a>
+					<a class="item" href="{:U('user/login_out')}" >注销账户</a>
+				</div>
+				
+			</div>
+		</div>
+		<!-- 个人中心 E -->
+		
+		<!--[if (gte IE 9)|!(IE)]><!-->
+		<script src="__PUBLIC__/smallphone/js/jquery.min.js"></script>
+		<!--<![endif]-->
+
+		<!--[if lte IE 8 ]>
+		<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+		<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+		<![endif]-->
+		<script src="__PUBLIC__/smallphone/js/amazeui.min.js"></script>
+	</body>
+
+</html>

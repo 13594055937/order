@@ -1,0 +1,65 @@
+// helper
+@import "../helper/_variable.less";
+@import "../helper/_mixin.less";
+// base
+@import "../base/_reset.less";
+// component
+@import "../component/_page.less";
+// icon
+@import "../icons/_icon_all.less";
+@import "../icons/_icon_font.less";
+// layout
+@import "../layout/_layout.less";
+@import "../layout/_header.less";
+@import "../layout/_nav.less";
+@import "../layout/_footer.less";
+
+/* spa */
+
+.m-search-page {
+    h2 {
+        padding: 10px 0;
+        color: #fff;
+        font-size: 22px;
+        font-weight: normal;
+        .key {
+            color: @orange;
+        }
+    }
+}
+
+.list {
+    &.list-search {
+        .item {
+            position: relative;
+            border-bottom: 1px dashed @border-color;
+            padding: 10px 0;
+            .font-size-md;
+            .title {
+                position: relative;
+                padding-left: 10px;
+                &:before {
+                    content: '';
+                    width: 0;
+                    height: 0;
+                    font-size: 0;
+                    border: 2px solid @border-color;
+                    position: absolute;
+                    top: 14px;
+                    left: 0;
+                }
+                &:hover {
+                    &:before {
+                        border-color: #fff;
+                    }
+                }
+            }
+            .from {
+                text-align: right;
+            }
+            .category {
+                color: @orange;
+            }
+        }
+    }
+}

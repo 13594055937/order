@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{HTTP_HOST}  ^haoxiehui\.cn$ [NC]
+
+RewriteRule ^(.*)$  http://www.haoxiehui.cn/$1 [R=301,L]
+RewriteCond %{HTTP_HOST}  ^527dazhaxie\.com$ [NC]
+
+RewriteRule ^(.*)$  http://www.527dazhaxie.com/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
+</IfModule>

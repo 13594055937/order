@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+        <title>注册</title>
+        <link rel="stylesheet" href="__PUBLIC__/css/uikit.css" />
+		<link rel="stylesheet" href="__PUBLIC__/css/iven.css" />
+    </head>
+    <body>
+	<img src="__PUBLIC__/images/2016-08-29_113128.jpg" alt="">
+    <div class="uk-container uk-container-center">
+        <form action="{:U('user/modifyUserInfo',array('step'=>2))}" class="register" method="post">
+            <input type="hidden" name="step" value="step1">
+            <ul class="uk-list">
+                <li>姓名：<input type="text" name="username" id="username" value="" placeholder="请输入真实姓名"></li>
+                <li>性别：  <label><input type="radio" name="sex" value="男" checked=""> 男士</label> 
+                            <label><input type="radio" name="sex" value="女" checked=""> 女士</label>
+                </li>
+                <li>手机号： <input type="text" name="telphone" id='telphone'  placeholder="请输入真实手机号"></li>
+		<!--
+                <li>
+				<div class="uk-form-icon">
+					<i class="uk-icon-area-chart uk-icon-justify"></i>
+					<input type="text" name="invalidcode" id="invalidcode" placeholder="请输入图形验证码" class="uk-display-inline-block" />
+				</div>
+				<img src="{:U('user/verify','','')}" id="code" width="100" height="50" class="uk-display-inline-block uk-float-right"/>
+				
+				</li>
+		-->
+                <li>
+				<div class="uk-form-icon">
+					<i class="uk-icon-envelope-o uk-icon-justify"></i>
+					<input type="text" name="msgCode" id="msgCode" placeholder="请输入手机验证码" >
+				</div>
+				<a class="getcodebtn uk-float-right btn get-msgCode">获取验证码</a>
+				</li>
+            </ul>
+            <div class="uk-text-center">
+                <button class="uk-margin-top uk-button uk-button-primary button-step button-step-one"><i class="uk-icon-mouse-pointer uk-icon-justify "></i>下一步</button>
+            </div>
+            <div style="display:none" id="reg_url" value="">{:U('user/sendsms')}</div>
+            <div style="display:none" id="stepurl" value="">{:U('user/modifyUserInfo',array('step'=>2))}</div>
+        </form>
+    </div>
+
+    <include file="Public/footer" />
+    <script src="__PUBLIC__/script/register.js"></script>

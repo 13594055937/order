@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+        <title>个人中心</title>
+        <link rel="stylesheet" href="__PUBLIC__/css/uikit.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/iven.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/form-select.css" />
+        <script src="__PUBLIC__/js/jquery.js"></script>
+        <script src="__PUBLIC__/js/uikit.min.js"></script>
+        <script src="__PUBLIC__/js/form-select.min.js"></script>
+    </head>
+    <body>
+    <div class="user-header">
+        <div class="uk-container uk-container-center">
+        <div class="uk-grid uk-grid-small">
+            <div class="uk-width-1-4">
+                <div class="uk-panel user-pic uk-text-center">
+                    <img src="__PUBLIC__/images/mrzhang.jpg" alt="">
+                    <h4 class="uk-margin-small-top white">{$userinfo.user_type}</h4>
+                </div>
+            </div>
+            <div class="uk-width-3-4">
+                <div class="user-info">
+                <h2>{$userinfo.username} <span>({$userinfo.telphone})</span></h2>
+                <hr>
+                <p>信誉等级：<span>{$userinfo.dengji}</span>  信誉积分：<span>{$userinfo.jifen}</span>
+                </p>
+                <hr>
+                <if condition="$userinfo['is_identify'] eq 1">
+                     <div class="renzheng-png">
+                        <img src="__PUBLIC__/images/icon-17.png" alt=""> <span class="uk-text-middle">已认证（线上）</span>
+                    </div>
+		<elseif condition="$userinfo['is_identify'] eq 2"/>
+                     <div class="renzheng-png">
+                        <img src="__PUBLIC__/images/icon-17.png" alt=""> <span class="uk-text-middle">已认证（线下）</span>
+                    </div>
+                <else/>
+                    你还未认证呢
+                </if>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="balance">
+        <div class="uk-container uk-container-center">
+        <div class="uk-grid">
+            <div class="uk-width-1-2">
+                <span>余额：<i class="red">￥{$userinfo.money}</i></span>                
+            </div>
+            <div class="uk-width-1-2 uk-text-right">
+                <a href="{:U('user/recharge')}" class="uk-button uk-button-large uk-button-yellow">充值</a>
+                <if condition="$userinfo['money'] gt 0"><a href="{:U('user/withdrawls')}" class="uk-button uk-button-large uk-button-primary">提现</a></if>
+            </div>
+        </div>
+        </div>
+    </div> 
+    <!--我的信誉 prestige--> 
+    <div class="prestige">
+        <div class="uk-container uk-container-center">
+            <div class="prestige-subtitle"><img src="__PUBLIC__/images/icon-21.png" alt=""> <span class="uk-text-primary uk-text-large">信誉详情</span> <span class="uk-float-right uk-text-middle">信誉积分:<i>{$userinfo.jifen}</i> 好评率:<i><php>if($userinfo['jifen'] == $userinfo['realjf'])echo "100%";else{echo intval($userinfo['jifen']*100/$userinfo['realjf'])."%";}</php></i></span></div>
+            <foreach name="honordata" item="honor">
+                <article>
+                    <h3>{$honor.pro_name}</h3>
+                    <p class="uk-text-muted">项目编号：{$honor.pro_code} &nbsp;&nbsp;&nbsp;评价时间：<php>echo date("Y-m-d", $honor['create_time']);</php></p>
+                </article>
+                <dl class="prestige-dl">
+                    <dt>评语</dt>
+                    <dd>
+                        {$honor.content}
+                    </dd>
+                    <div style="height:15px;"></div>
+                    <dt>评分</dt>
+                    <dd class="star">
+                        <p>效率：<php>for($i=0;$i<$honor['efficate'];$i++){echo '<i class="uk-icon-star"></i>';}</php>
+                        </p>
+                        <p>质量：<php>for($a=0;$a<$honor['quality'];$a++){echo '<i class="uk-icon-star"></i>';}</php>
+                        </p>
+                        <p>评分：<php>for($c=0;$c<$honor['attitude'];$c++){echo '<i class="uk-icon-star"></i>';}</php>
+                        </p>
+                    </dd>
+                </dl>
+            </foreach>
+        </div>
+    </div>
+   
+
+    <include file="Public/footer" />

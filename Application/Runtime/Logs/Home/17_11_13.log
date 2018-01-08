@@ -1,0 +1,281 @@
+[ 2017-11-13T00:11:48+08:00 ] 58.217.192.54 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000076s ]
+NOTIC: [8] Undefined offset: 1 /www/web/order/Application/Home/Controller/GlobalController.class.php 第 252 行.
+NOTIC: [8] Undefined index: timestamp /www/web/order/ThinkPHP/Library/Com/Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: nonce /www/web/order/ThinkPHP/Library/Com/Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: signature /www/web/order/ThinkPHP/Library/Com/Wechat.class.php 第 300 行.
+
+[ 2017-11-13T05:29:53+08:00 ] 106.11.242.226 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000088s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000061s ]
+NOTIC: [8] Undefined offset: 1 /www/web/order/Application/Home/Controller/GlobalController.class.php 第 252 行.
+NOTIC: [8] Undefined index: timestamp /www/web/order/ThinkPHP/Library/Com/Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: nonce /www/web/order/ThinkPHP/Library/Com/Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: signature /www/web/order/ThinkPHP/Library/Com/Wechat.class.php 第 300 行.
+
+[ 2017-11-13T10:07:21+08:00 ] 220.248.47.34 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000066s ]
+
+[ 2017-11-13T10:31:31+08:00 ] 140.207.54.75 /index.php?signature=41c8a60665877f7753fe1545327db96135d95e17&timestamp=1510540290&nonce=1033668959&openid=oK3GO06kQK7E0pvvROGh_T7tIijg&encrypt_type=aes&msg_signature=9ad835a6ccae2c32e19fb7ce332d5fab717e89f0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000055s ]
+NOTIC: [8] Undefined offset: 1 /www/web/order/Application/Home/Controller/GlobalController.class.php 第 253 行.
+NOTIC: [8] Use of undefined constant self - assumed 'self' /www/web/order/ThinkPHP/Library/Com/Wechat.class.php 第 156 行.
+
+[ 2017-11-13T10:31:31+08:00 ] 220.248.47.34 /index.php/task/sendtask.html?code=061V3Ash0KbKYy1SW8th0ceLsh0V3As3&state=h5_1461051704
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000072s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000076s ]
+NOTIC: [2048] Declaration of Home\Controller\TaskController::getcityinfo() should be compatible with Home\Controller\GlobalController::getCityInfo($provinceId) /www/web/order/Application/Home/Controller/TaskController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `company` WHERE ( status=1 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `jobtype` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jobtype` WHERE ( status=1 )  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000024s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000056s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001646s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001679s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000058s ]
+
+[ 2017-11-13T10:46:59+08:00 ] 220.248.47.34 /index.php/task/sendtask.html?mobile=15000897931&debug=true
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000026s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000049s ]
+NOTIC: [2048] Declaration of Home\Controller\TaskController::getcityinfo() should be compatible with Home\Controller\GlobalController::getCityInfo($provinceId) /www/web/order/Application/Home/Controller/TaskController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `user` WHERE ( mobile='15000897931' )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `company` WHERE ( status=1 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `jobtype` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jobtype` WHERE ( status=1 )  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000021s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000047s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001380s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001408s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000024s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000041s ]
+
+[ 2017-11-13T10:47:01+08:00 ] 220.248.47.34 /task/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000045s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000023s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000047s ]
+NOTIC: [2048] Declaration of Home\Controller\TaskController::getcityinfo() should be compatible with Home\Controller\GlobalController::getCityInfo($provinceId) /www/web/order/Application/Home/Controller/TaskController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `company` WHERE ( status=1 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `jobtype` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jobtype` WHERE ( status=1 )  [ RunTime:0.0001s ]
+
+[ 2017-11-13T15:05:15+08:00 ] 112.80.230.66 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000066s ]
+
+[ 2017-11-13T15:29:37+08:00 ] 140.207.54.80 /index.php?signature=556e3e6d7fa7608dd33e181864fd964e9ee30d76&timestamp=1510558177&nonce=356814904&openid=oK3GO08mtEVfIBwle51Sj1qOn-Hs&encrypt_type=aes&msg_signature=092ec1cc9cdbff5603a8a8c0642b0eb0333239be
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000051s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+NOTIC: [8] Undefined offset: 1 /www/web/order/Application/Home/Controller/GlobalController.class.php 第 253 行.
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `user` WHERE ( openid='oK3GO08mtEVfIBwle51Sj1qOn-Hs' )  [ RunTime:0.0003s ]
+NOTIC: [2] file_put_contents(a.log): failed to open stream: Permission denied /www/web/order/Application/Home/Controller/GlobalController.class.php 第 133 行.
+NOTIC: [2] file_put_contents(a.log): failed to open stream: Permission denied /www/web/order/Application/Home/Controller/GlobalController.class.php 第 135 行.
+NOTIC: [2] file_put_contents(./token_2017_11_13.json): failed to open stream: Permission denied /www/web/order/ThinkPHP/Library/Com/WechatAuth.class.php 第 132 行.
+NOTIC: [2] file_put_contents(./error.json): failed to open stream: Permission denied /www/web/order/Application/Home/Controller/GlobalController.class.php 第 73 行.
+
+[ 2017-11-13T17:00:17+08:00 ] 140.207.54.75 /index.php?signature=e13787a27c877f6097a6123965126e7fbd6d7f57&timestamp=1510563616&nonce=1005202222&openid=oK3GO04aF4F0Nf6ToMtSXhCCEOxg&encrypt_type=aes&msg_signature=060c77901fa214993269d03f0075529a693cf8bb
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000056s ]
+NOTIC: [8] Undefined offset: 1 /www/web/order/Application/Home/Controller/GlobalController.class.php 第 253 行.
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `user` WHERE ( openid='oK3GO04aF4F0Nf6ToMtSXhCCEOxg' )  [ RunTime:0.0002s ]
+NOTIC: [2] file_put_contents(a.log): failed to open stream: Permission denied /www/web/order/Application/Home/Controller/GlobalController.class.php 第 133 行.
+NOTIC: [2] file_put_contents(a.log): failed to open stream: Permission denied /www/web/order/Application/Home/Controller/GlobalController.class.php 第 135 行.
+NOTIC: [2] file_put_contents(./token_2017_11_13.json): failed to open stream: Permission denied /www/web/order/ThinkPHP/Library/Com/WechatAuth.class.php 第 132 行.
+NOTIC: [2] file_put_contents(./error.json): failed to open stream: Permission denied /www/web/order/Application/Home/Controller/GlobalController.class.php 第 73 行.
+
+[ 2017-11-13T17:00:21+08:00 ] 140.207.54.76 /index.php?signature=ab09d740dddf30c63bfbdb712d72b9e9cedf4b72&timestamp=1510563621&nonce=1583359529&openid=oK3GO04aF4F0Nf6ToMtSXhCCEOxg&encrypt_type=aes&msg_signature=39326d615df5c8b4e231397c1fb9b613d9f1f76c
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000048s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000025s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000049s ]
+NOTIC: [8] Undefined offset: 1 /www/web/order/Application/Home/Controller/GlobalController.class.php 第 253 行.
+NOTIC: [8] Use of undefined constant self - assumed 'self' /www/web/order/ThinkPHP/Library/Com/Wechat.class.php 第 156 行.
+
+[ 2017-11-13T17:00:22+08:00 ] 36.60.21.175 /index.php/task/sendtask.html?code=021VrGGH12Ev480ctRGH1BbKGH1VrGG-&state=h5_1461051704
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000048s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000026s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000051s ]
+NOTIC: [2048] Declaration of Home\Controller\TaskController::getcityinfo() should be compatible with Home\Controller\GlobalController::getCityInfo($provinceId) /www/web/order/Application/Home/Controller/TaskController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `company` WHERE ( status=1 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `jobtype` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jobtype` WHERE ( status=1 )  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000022s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000047s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001439s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001468s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000052s ]
+
+[ 2017-11-13T17:00:23+08:00 ] 140.207.54.75 /index.php?signature=f5f0374e06f70dfe7c5f88f7fcb55662017e86c1&timestamp=1510563623&nonce=2115283048&openid=oK3GO04aF4F0Nf6ToMtSXhCCEOxg&encrypt_type=aes&msg_signature=8bd6d5985da3d521b390181af3742770fc5855e7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000024s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000049s ]
+NOTIC: [8] Undefined offset: 1 /www/web/order/Application/Home/Controller/GlobalController.class.php 第 253 行.
+NOTIC: [8] Use of undefined constant self - assumed 'self' /www/web/order/ThinkPHP/Library/Com/Wechat.class.php 第 156 行.
+
+[ 2017-11-13T17:00:24+08:00 ] 36.60.21.175 /index.php/task/sendtask.html?code=071mxr451Vh0gM1wcJ751i9O451mxr4U&state=h5_1461051704
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000046s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000053s ]
+NOTIC: [2048] Declaration of Home\Controller\TaskController::getcityinfo() should be compatible with Home\Controller\GlobalController::getCityInfo($provinceId) /www/web/order/Application/Home/Controller/TaskController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `company` WHERE ( status=1 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `jobtype` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jobtype` WHERE ( status=1 )  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000023s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000051s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001539s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001578s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000026s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000045s ]
+
+[ 2017-11-13T17:37:47+08:00 ] 112.80.230.66 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000045s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] Undefined offset: 1 /www/web/order/Application/Home/Controller/GlobalController.class.php 第 253 行.
+NOTIC: [8] Undefined index: timestamp /www/web/order/ThinkPHP/Library/Com/Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: nonce /www/web/order/ThinkPHP/Library/Com/Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: signature /www/web/order/ThinkPHP/Library/Com/Wechat.class.php 第 300 行.
+
+[ 2017-11-13T17:39:58+08:00 ] 123.147.248.18 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000047s ]
+
+[ 2017-11-13T19:24:09+08:00 ] 140.207.54.80 /index.php?signature=510466b7a73c18049f2dd065f4251ec5d7efee31&timestamp=1510572249&nonce=1650837109&openid=oK3GO08mtEVfIBwle51Sj1qOn-Hs&encrypt_type=aes&msg_signature=c73e200f9a314ff06b5b47a7b9e9b03fb226e173
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000045s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000025s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000048s ]
+NOTIC: [8] Undefined offset: 1 /www/web/order/Application/Home/Controller/GlobalController.class.php 第 253 行.
+NOTIC: [8] Use of undefined constant self - assumed 'self' /www/web/order/ThinkPHP/Library/Com/Wechat.class.php 第 156 行.
+
+[ 2017-11-13T19:24:11+08:00 ] 182.140.177.166 /index.php/task/sendtask.html?code=081Q3P7e2QeSvE0V9O6e2fzA7e2Q3P72&state=h5_1461051704
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000045s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000025s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000047s ]
+NOTIC: [2048] Declaration of Home\Controller\TaskController::getcityinfo() should be compatible with Home\Controller\GlobalController::getCityInfo($provinceId) /www/web/order/Application/Home/Controller/TaskController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `company` WHERE ( status=1 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `jobtype` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jobtype` WHERE ( status=1 )  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000020s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000046s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001383s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001411s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000030s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000048s ]
+
+[ 2017-11-13T19:24:13+08:00 ] 182.140.177.166 /task/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000045s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000025s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000070s ]
+NOTIC: [2048] Declaration of Home\Controller\TaskController::getcityinfo() should be compatible with Home\Controller\GlobalController::getCityInfo($provinceId) /www/web/order/Application/Home/Controller/TaskController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `company` WHERE ( status=1 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `jobtype` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jobtype` WHERE ( status=1 )  [ RunTime:0.0001s ]
+
+[ 2017-11-13T19:59:54+08:00 ] 115.173.87.239 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000049s ]
+
+[ 2017-11-13T20:16:17+08:00 ] 58.217.192.54 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000048s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000029s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000051s ]
+NOTIC: [8] Undefined offset: 1 /www/web/order/Application/Home/Controller/GlobalController.class.php 第 253 行.
+NOTIC: [8] Undefined index: timestamp /www/web/order/ThinkPHP/Library/Com/Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: nonce /www/web/order/ThinkPHP/Library/Com/Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: signature /www/web/order/ThinkPHP/Library/Com/Wechat.class.php 第 300 行.
+
+[ 2017-11-13T22:03:15+08:00 ] 115.173.87.239 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000043s ]
+

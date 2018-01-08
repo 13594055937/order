@@ -1,0 +1,97 @@
+[ 2017-12-04T16:57:40+08:00 ] 61.160.224.141 /index.php?signature=97455d54bc8826cab99316a3d8b89ca97667da37&timestamp=1512377860&nonce=645368519&openid=oK3GO08JgQKm-CReR1nu0aFjV5-4&encrypt_type=aes&msg_signature=140f2bcfc7deeb24c30542cf4b3da5e0b3a6b224
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000048s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000475s ]
+NOTIC: [8] Undefined offset: 1 /www/wwwroot/order/Application/Home/Controller/GlobalController.class.php 第 253 行.
+
+[ 2017-12-04T17:24:34+08:00 ] 140.207.54.76 /index.php?signature=400b34b5b0093dbc80e50ebf5a40b5ea5931d975&timestamp=1512379474&nonce=2134877145&openid=oK3GO052-3RgKjRHmLCIdiAhrr3o&encrypt_type=aes&msg_signature=1f7dbd4b1d8b5427c193c4d246aa457f3c0fc574
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000047s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000337s ]
+NOTIC: [8] Undefined offset: 1 /www/wwwroot/order/Application/Home/Controller/GlobalController.class.php 第 253 行.
+
+[ 2017-12-04T17:45:42+08:00 ] 61.160.224.136 /index.php?signature=96483fe746b4c83e3e7a14c997ae3980033d177e&timestamp=1512380742&nonce=726102165&openid=oK3GO03s5U8qpBwhuSv4DsdIz8lM&encrypt_type=aes&msg_signature=60f87c88c5fc7dbfdd583d301c069fcbaa751fd4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000046s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000337s ]
+NOTIC: [8] Undefined offset: 1 /www/wwwroot/order/Application/Home/Controller/GlobalController.class.php 第 253 行.
+
+[ 2017-12-04T17:47:02+08:00 ] 61.160.224.136 /index.php?signature=6f6593378a6766e805bda9df9a6a9c7be156c130&timestamp=1512380822&nonce=1890507369&openid=oK3GO03s5U8qpBwhuSv4DsdIz8lM&encrypt_type=aes&msg_signature=3459f66b70161e9211d49c0c60eb75321b629254
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000324s ]
+NOTIC: [8] Undefined offset: 1 /www/wwwroot/order/Application/Home/Controller/GlobalController.class.php 第 253 行.
+NOTIC: [8] Use of undefined constant self - assumed 'self' /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 156 行.
+
+[ 2017-12-04T17:47:04+08:00 ] 61.160.224.141 /index.php/task/sendtask.html?code=081lJ4Sk14kwol0UQIPk1w1gSk1lJ4SK&state=h5_1461051704
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000271s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000298s ]
+NOTIC: [2048] Declaration of Home\Controller\TaskController::getcityinfo() should be compatible with Home\Controller\GlobalController::getCityInfo($provinceId) /www/wwwroot/order/Application/Home/Controller/TaskController.class.php 第 4 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-12-04T17:47:09+08:00 ] 61.160.224.135 /index.php?signature=cc15e457ff3628e00cca911d0c25115b64b0f3f0&timestamp=1512380829&nonce=1157789426&openid=oK3GO03s5U8qpBwhuSv4DsdIz8lM&encrypt_type=aes&msg_signature=1dd1a6ecab01c98a8e4d4cf29b33c2feb03b6d52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000278s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000306s ]
+NOTIC: [8] Undefined offset: 1 /www/wwwroot/order/Application/Home/Controller/GlobalController.class.php 第 253 行.
+NOTIC: [8] Use of undefined constant self - assumed 'self' /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 156 行.
+
+[ 2017-12-04T17:47:10+08:00 ] 61.160.224.141 /index.php/task/sendtask.html?code=021mFzcj11KUDx0x2zfj1PItcj1mFzcq&state=h5_1461051704
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000062s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000421s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000460s ]
+NOTIC: [2048] Declaration of Home\Controller\TaskController::getcityinfo() should be compatible with Home\Controller\GlobalController::getCityInfo($provinceId) /www/wwwroot/order/Application/Home/Controller/TaskController.class.php 第 4 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-12-04T17:47:13+08:00 ] 120.52.18.50 /index.php/task/sendtask.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000321s ]
+NOTIC: [2048] Declaration of Home\Controller\TaskController::getcityinfo() should be compatible with Home\Controller\GlobalController::getCityInfo($provinceId) /www/wwwroot/order/Application/Home/Controller/TaskController.class.php 第 4 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-12-04T21:12:34+08:00 ] 61.160.224.141 /index.php?signature=22b416ae371f513ab76c6bf49f02ec9cafaaaffd&timestamp=1512393154&nonce=771212292&openid=oK3GO08JgQKm-CReR1nu0aFjV5-4&encrypt_type=aes&msg_signature=16a85e2e4d2df65ec8b5c6fae0148e7089c1f711
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000487s ]
+NOTIC: [8] Undefined offset: 1 /www/wwwroot/order/Application/Home/Controller/GlobalController.class.php 第 253 行.
+NOTIC: [8] Use of undefined constant self - assumed 'self' /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 156 行.
+
+[ 2017-12-04T21:12:35+08:00 ] 61.160.224.135 /index.php/task/sendtask.html?code=061JVPsf0h01CB1hQCrf0gmDsf0JVPsP&state=h5_1461051704
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000056s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000273s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000302s ]
+NOTIC: [2048] Declaration of Home\Controller\TaskController::getcityinfo() should be compatible with Home\Controller\GlobalController::getCityInfo($provinceId) /www/wwwroot/order/Application/Home/Controller/TaskController.class.php 第 4 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+

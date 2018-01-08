@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+        <title>个人中心--添加银行卡</title>
+        <link rel="stylesheet" href="__PUBLIC__/css/uikit.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/iven.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/form-select.css" />
+        <script src="__PUBLIC__/js/jquery.js"></script>
+        <script src="__PUBLIC__/js/uikit.min.js"></script>
+        <script src="__PUBLIC__/js/form-select.min.js"></script>
+    </head>
+    <body>
+    <br>
+    <div class="uk-container uk-container-center">    
+	<form class="uk-form assi-form" action="{:U('user/savebank')}" method="post" onclick="return false">
+    <div style="height:15px;"></div>
+    开 户 行：<input type="text" name="bankname" id="bankname" placeholder="开户行" />
+    <div style="height:15px;"></div>
+    支    行：<input type="text" name="branchbank" id="branchname" placeholder="支行" />
+    <div style="height:15px;"></div>
+    银行卡号:<input type="text" name="card" id="card" placeholder="银行卡号" />
+	<div style="height:15px;"></div>
+	真实姓名:<input type="text" name="username" id="username" placeholder="真实姓名" />
+	<p class="p-note uk-position-relative"><img class="uk-position-absolute" src="__PUBLIC__/images/ho.png" alt="">请仔细核对填写的银行卡信息是否正确，否则提现会失效。</p>
+    <div class="uk-text-center">
+        <button class="uk-margin-top uk-button uk-button-primary uk-button-submit gosubmit" onclick="gosubmit()"><i class="uk-icon-mouse-pointer uk-icon-justify"></i>立即保存</button>
+    </div>
+</form>
+    </div>
+<script>
+    function gosubmit(){
+        var bankname = $("#bankname").val();
+        var branchname = $("#branchname").val();
+        var card = $("#card").val();
+        var username = $("#username").val();
+        if(bankname == "" || branchname=="" || card=="" || username==""){
+            alert("所填信息不能为空!");
+            return false;
+        }
+        $("form").submit();
+    }
+</script>
+
+    <include file="Public/footer" />

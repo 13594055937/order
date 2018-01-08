@@ -1,0 +1,43 @@
+<include file="Public/header"/>
+<include file="Public/left"/>
+    <style type="text/css">
+    .honner_yearlist{font-style:italic;} 
+    .honner_yearlist p > em{font-weight:bold;font-style:italic;font-size:18px;}
+    .honner_yearlist .yellow_blue,.honner_yearlist  .orage,.honner_yearlist  .blue{ font-size:13px;color:#434343;font-family:微软雅黑;}
+    </style>
+    <div class="mrn_con ">  
+         <div class="mrnl_login regist culture_d" style="margin-top:50px;">    
+           <div class="culture_title">{$_PartDesc}</div>
+           <div class="culture">
+            <foreach name="list" item="data" key="k">
+              <if condition=" $k eq 0">
+                <div class="culture_nr">
+              <else />
+                <div class="criterion">
+              </if>    
+                <div class="show_conbox">
+                  <p class="teach_b_title famliy_com">
+                    <em>{$k+1}</em>
+                    <span class="sz_repeat">{$data.title}</span> 
+                    <span><img src="__PUBLIC__/images/school_{$k+1}.png" alt=""></span> 
+                  </p>    
+                  <p class="xiconbox">
+                    {$data.detail}
+                    <if condition="$k eq 0">   
+                      <span class="more famliy_com">
+                        <a href="javascript:void(0)" onclick="doyoo.util.openChat();return false;">了解更多&gt;&gt;</a>
+                      </span>
+                    </if> 
+                  </p>
+                </div> 
+                </div>
+                <img src="__PUBLIC__/images/jin{$k+1}.gif" alt height=10 width=711>
+            </foreach> 
+          </div>
+             
+        </div>
+    </div>
+
+</div>
+</div>
+<include file="Public/footer"/>

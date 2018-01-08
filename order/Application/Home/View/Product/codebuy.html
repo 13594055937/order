@@ -1,0 +1,383 @@
+<include file="Public/header" />
+<link href="__PUBLIC__/css/hxh.css" rel="stylesheet">
+<link href="__PUBLIC__/css/swiper.min.css" rel="stylesheet">
+    <div class="banner">
+      <php>$bg="banner-7.jpg";</php>
+    <foreach name="imgs" item="imgslist"><if condition="$imgslist['position'] eq 'pc购买页'"><php>$bg = $imgslist['small_pic'];</php></if></foreach>
+
+      <div style="background:url(__PUBLIC__/images/{$bg}) no-repeat center top;height:717px;" class="img"></div>
+      <div class="w">
+        <div class="codebuy">
+          <ul class="label justify">
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <div class="codebox"><img alt="{$imgalt}" src="__PUBLIC__/images/{$product_detail.qrcode}">
+            <div class="text">
+              <h3>扫码购买</h3>
+              <p>微信扫码购买更便捷</p>
+            </div>
+            <div style="cursor: default;" class="btn">RMB:{$product_detail.price}</div>
+          </div>
+          <div class="c-goods">
+            <h3>{$product_detail.name} </h3>
+            <div class="goods clearfix">
+              <div class="fl"><img alt="{$imgalt}" src="__PUBLIC__/images/{$product_detail.small_pic}"></div>
+              <dl class="fr">
+                <dt>{$product_detail.pname}型</dt>
+                <dd>雄蟹 {$product_detail.male_crab_weight}两* {$product_detail.nums}只</dd>
+                <dd>雌蟹 {$product_detail.female_crab_weight}两* {$product_detail.nums}只</dd>
+              </dl>
+            </div>
+          </div>
+          <div class="sh-btn">顺丰免费送货上门</div>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <!--礼卡-->
+      <div id="item1" class="l-card item">
+        <div class="head-radiu">
+          <div class="w bgfff tabb1">
+            <div class="tab-head clearfix">
+              <ul class="list fl">
+                <li class="current"><a href="javascript:;"><span>礼卡/三对装</span></a></li>
+                <li><a href="javascript:;"><span>礼盒/三对装</span></a></li>
+                <li><a href="javascript:;"><span>礼卡/四对装</span></a></li>
+                <li><a href="javascript:;"><span>礼盒/四对装</span></a></li>
+                <li><a href="javascript:;"><span>礼卡/五对装</span></a></li>
+                <li><a href="javascript:;"><span>礼盒/五对装</span></a></li>
+              </ul>
+              <div class="content1 clearfix">
+                <div class="item">
+                  <div class="featureContainer">
+                    <div class="feature">
+                      <div class="block">
+                        <div id="botton-scroll-1" class="button-scroll">
+                          <ul class="featureUL clearfix">
+                            <foreach name="gift" item="gift_data">
+                              <if condition="$gift_data['type'] eq '礼卡' && $gift_data['nums'] eq 3">
+				<foreach name="giftp" item="giftp_data">
+                              	<if condition="$giftp_data['gift_id'] eq $gift_data['id']">
+				  <li class="featureBox">
+                                  <div class="box">
+                                    <a href="/product/codebuy_{$giftp_data.id}.html">
+                                      <img alt="{$imgalt}" src="__PUBLIC__/images/{$giftp_data.small_pic}">
+                                      <div class="l-bottom"><b>阳澄湖大闸蟹礼卡规格选择</b>
+                                        <div class="line">
+                                          <div class="fl spec">
+                                            <p>雄蟹 {$giftp_data.male_crab_weight}两 * 3只</p>
+                                            <p>雌蟹 {$giftp_data.female_crab_weight}两 * 3只</p>
+                                          </div>
+                                          <div class="fl price">RMB:{$giftp_data.price}</div>
+                                        </div>
+                                      </div>
+                                    </a>
+                                  </div>
+                                </li>
+				</if>
+				</foreach>
+                              </if>
+                            </foreach>
+                          </ul>
+                        </div>
+                        <!-- /botton-scroll -->
+                      </div>
+                      <!-- /block -->
+                      <a class="prev" href="javascript:void();">Previous</a>
+                      <a class="next" href="javascript:void();">Next</a>
+                    </div>
+
+                  </div>
+                  <!-- 第二个tab -->
+                  <div class="featureContainer">
+                    <div class="feature">
+                      <div class="block">
+                        <div id="botton-scroll-2" class="button-scroll">
+			<ul class="featureUL clearfix">
+                            <foreach name="gift" item="gift_data">
+                              <if condition="$gift_data['type'] eq '礼盒' && $gift_data['nums'] eq 3">
+                                <foreach name="giftp" item="giftp_data">
+                               	<if condition="$giftp_data['gift_id'] eq $gift_data['id']">
+				 <li class="featureBox">
+                                  <div class="box">
+                                    <a href="/product/codebuy_{$giftp_data.id}.html">
+                                      <img alt="{$imgalt}" src="__PUBLIC__/images/{$giftp_data.small_pic}">
+                                      <div class="l-bottom"><b>阳澄湖大闸蟹礼盒规格选择</b>
+                                        <div class="line">
+                                          <div class="fl spec">
+                                            <p>雄蟹 {$giftp_data.male_crab_weight}两 * 3只</p>
+                                            <p>雌蟹 {$giftp_data.female_crab_weight}两 * 3只</p>
+                                          </div>
+                                          <div class="fl price">RMB:{$giftp_data.price}</div>
+                                        </div>
+                                      </div>
+                                    </a>
+                                  </div>
+                                </li>
+				</if>
+                                </foreach>
+                              </if>
+                            </foreach>
+                          </ul>
+                        </div>
+                        <!-- /botton-scroll -->
+                      </div>
+                      <!-- /block -->
+                      <a class="prev" href="javascript:void();">Previous</a>
+                      <a class="next" href="javascript:void();">Next</a>
+                    </div>
+
+                  </div>
+                  <!-- 第三个tab -->
+                  <div class="featureContainer">
+                    <div class="feature">
+                      <div class="block">
+                        <div id="botton-scroll-3" class="button-scroll">
+			<ul class="featureUL clearfix">
+                            <foreach name="gift" item="gift_data">
+                              <if condition="$gift_data['type'] eq '礼卡' && $gift_data['nums'] eq 4">
+                                <foreach name="giftp" item="giftp_data">
+                               <if condition="$giftp_data['gift_id'] eq $gift_data['id']">
+				 <li class="featureBox">
+                                  <div class="box">
+                                    <a href="/product/codebuy_{$giftp_data.id}.html">
+                                      <img alt="{$imgalt}" src="__PUBLIC__/images/{$giftp_data.small_pic}">
+                                      <div class="l-bottom"><b>阳澄湖大闸蟹礼卡规格选择</b>
+                                        <div class="line">
+                                          <div class="fl spec">
+                                            <p>雄蟹 {$giftp_data.male_crab_weight}两 * 4只</p>
+                                            <p>雌蟹 {$giftp_data.female_crab_weight}两 * 4只</p>
+                                          </div>
+                                          <div class="fl price">RMB:{$giftp_data.price}</div>
+                                        </div>
+                                      </div>
+                                    </a>
+                                  </div>
+                                </li>
+				</if>
+                                </foreach>
+                              </if>
+                            </foreach>
+                          </ul>
+                        </div>
+                        <!-- /botton-scroll -->
+                      </div>
+                      <!-- /block -->
+                      <a class="prev" href="javascript:void();">Previous</a>
+                      <a class="next" href="javascript:void();">Next</a>
+                    </div>
+
+                  </div>
+                  <!-- 第四个tab -->
+                  <div class="featureContainer">
+                    <div class="feature">
+                      <div class="block">
+                        <div id="botton-scroll-4" class="button-scroll">
+			<ul class="featureUL clearfix">
+                            <foreach name="gift" item="gift_data">
+                              <if condition="$gift_data['type'] eq '礼盒' && $gift_data['nums'] eq 4">
+                                <foreach name="giftp" item="giftp_data">
+                                <if condition="$giftp_data['gift_id'] eq $gift_data['id']">
+				<li class="featureBox">
+                                  <div class="box">
+                                    <a href="/product/codebuy_{$giftp_data.id}.html">
+                                      <img alt="{$imgalt}" src="__PUBLIC__/images/{$giftp_data.small_pic}">
+                                      <div class="l-bottom"><b>阳澄湖大闸蟹礼盒规格选择</b>
+                                        <div class="line">
+                                          <div class="fl spec">
+                                            <p>雄蟹 {$giftp_data.male_crab_weight}两 * 4只</p>
+                                            <p>雌蟹 {$giftp_data.female_crab_weight}两 * 4只</p>
+                                          </div>
+                                          <div class="fl price">RMB:{$giftp_data.price}</div>
+                                        </div>
+                                      </div>
+                                    </a>
+                                  </div>
+                                </li>
+				</if>
+                                </foreach>
+                              </if>
+                            </foreach>
+                          </ul>
+                        </div>
+                        <!-- /botton-scroll -->
+                      </div>
+                      <!-- /block -->
+                      <a class="prev" href="javascript:void();">Previous</a>
+                      <a class="next" href="javascript:void();">Next</a>
+                    </div>
+
+                  </div>
+                  <!-- 第五个tab -->
+                  <div class="featureContainer">
+                    <div class="feature">
+                      <div class="block">
+                        <div id="botton-scroll-5" class="button-scroll">
+			<ul class="featureUL clearfix">
+                            <foreach name="gift" item="gift_data">
+                              <if condition="$gift_data['type'] eq '礼卡' && $gift_data['nums'] eq 5">
+                                <foreach name="giftp" item="giftp_data">
+                               <if condition="$giftp_data['gift_id'] eq $gift_data['id']">
+				 <li class="featureBox">
+                                  <div class="box">
+                                    <a href="/product/codebuy_{$giftp_data.id}.html">
+                                      <img alt="{$imgalt}" src="__PUBLIC__/images/{$giftp_data.small_pic}">
+                                      <div class="l-bottom"><b>阳澄湖大闸蟹礼卡规格选择</b>
+                                        <div class="line">
+                                          <div class="fl spec">
+                                            <p>雄蟹 {$giftp_data.male_crab_weight}两 * 5只</p>
+                                            <p>雌蟹 {$giftp_data.female_crab_weight}两 * 5只</p>
+                                          </div>
+                                          <div class="fl price">RMB:{$giftp_data.price}</div>
+                                        </div>
+                                      </div>
+                                    </a>
+                                  </div>
+                                </li>
+				</if>
+                                </foreach>
+                              </if>
+                            </foreach>
+                          </ul>
+                        </div>
+                        <!-- /botton-scroll -->
+                      </div>
+                      <!-- /block -->
+                      <a class="prev" href="javascript:void();">Previous</a>
+                      <a class="next" href="javascript:void();">Next</a>
+                    </div>
+
+                  </div>
+                   <!-- 第六个tab -->
+                  <div class="featureContainer">
+                    <div class="feature">
+                      <div class="block">
+                        <div id="botton-scroll-6" class="button-scroll">
+			<ul class="featureUL clearfix">
+                            <foreach name="gift" item="gift_data">
+                              <if condition="$gift_data['type'] eq '礼盒' && $gift_data['nums'] eq 5">
+                                <foreach name="giftp" item="giftp_data">
+				<if condition="$giftp_data['gift_id'] eq $gift_data['id']">
+                                <li class="featureBox">
+                                  <div class="box">
+                                    <a href="/product/codebuy_{$giftp_data.id}.html">
+                                      <img alt="{$imgalt}" src="__PUBLIC__/images/{$giftp_data.small_pic}">
+                                      <div class="l-bottom"><b>阳澄湖大闸蟹礼盒规格选择</b>
+                                        <div class="line">
+                                          <div class="fl spec">
+                                            <p>雄蟹 {$giftp_data.male_crab_weight}两 * 5只</p>
+                                            <p>雌蟹 {$giftp_data.female_crab_weight}两 * 5只</p>
+                                          </div>
+                                          <div class="fl price">RMB:{$giftp_data.price}</div>
+                                        </div>
+                                      </div>
+                                    </a>
+                                  </div>
+                                </li>
+				</if>
+                                </foreach>
+                              </if>
+                            </foreach>
+                          </ul>
+                        </div>
+                        <!-- /botton-scroll -->
+                      </div>
+                      <!-- /block -->
+                      <a class="prev" href="javascript:void();">Previous</a>
+                      <a class="next" href="javascript:void();">Next</a>
+                    </div>
+
+                  </div>
+                </div>
+                  
+              </div>
+            </div>
+        </div>
+      </div>
+      </div>
+      <div class="c-link-2">
+        <div class="w">
+          <ul>
+            <li><a href="#">
+                <div class="img img-1"></div>
+                <p>常务理事单位</p></a></li>
+            <li class="line"></li>
+            <li><a href="#">
+                <div class="img img-2"></div>
+                <p>原产地直供</p></a></li>
+            <li class="line"></li>
+            <li><a href="#">
+                <div class="img img-3"></div>
+                <p>24家全国直营店</p></a></li>
+            <li class="line"></li>
+            <li><a href="#">
+                <div class="img img-4"></div>
+                <p>顺丰免费包邮</p></a></li>
+            <li class="line"></li>
+            <li><a href="#">
+                <div class="img img-5"></div>
+                <p>只只精选</p></a></li>
+            <li class="line"></li>
+            <li><a href="#">
+                <div class="img img-6"></div>
+                <p>品质保障</p></a></li>
+            <li class="line"></li>
+            <li><a href="#">
+                <div class="img img-7"></div>
+                <p>长期有效</p></a></li>
+            <li class="line"></li>
+            <li><a href="#">
+                <div class="img img-8"></div>
+                <p>全年7*12服务</p></a></li>
+          </ul>
+        </div>
+      </div>
+      <!--模块1-视频-->
+      <div id="item2" class="video-1 box-1 item">
+        <div class="img-2"><img alt="{$imgalt}" src="__PUBLIC__/images/pic-1.png"></div>
+      </div>
+    <include file="Public/hxh_body"/>
+    <!--显示视频-->
+    <div class="showvideo">
+      <div class="mask"></div>
+      <div class="video">
+        <video id="video1" width="693px" height="421px" controls="controls">
+          <source src="__PUBLIC__/video/dzx.mp4" type="video/mp4">your browser does not support the video tag
+        </video>
+      </div>
+    </div>
+    <include file="Public/footer2" />
+    <div class="r-fixed">
+      <div class="logo"><img alt="{$imgalt}" src="__PUBLIC__/images/logo.png"></div>
+      <div class="online"><i class="animated infinite rubberBand"></i>
+        <p>在线咨询</p>
+      </div>
+      <div class="reply"><i class="animated flash infinite"></i>
+        <p>免费回呼</p>
+      </div>
+      <div class="code"><img alt="{$imgalt}" src="__PUBLIC__/images/code-1.jpg"></div>
+      <div class="sc-top animated fadeInDown"><img alt="{$imgalt}" src="__PUBLIC__/images/s-top.png"></div>
+    </div>
+    <div id="menu" class="l-fixed">
+      <ul>
+        <li data-target="item1"> <span>礼卡展示</span></li>
+        <li data-target="item2"> <span>视频中心</span></li>
+        <li data-target="item3"> <span>隆情谢礼</span></li>
+        <li data-target="item4"> <span>品质产地</span></li>
+        <li data-target="item5"> <span>成长之路</span></li>
+        <li data-target="item6"> <span>捕蟹流程</span></li>
+        <li data-target="item7"> <span>资质保障</span></li>
+        <li data-target="item8"> <span>提货方式</span></li>
+        <li data-target="item9"> <span>门店产品</span></li>
+        <li data-target="item10"> <span>价格包装</span></li>
+        <li data-target="item11"> <span>企业定制</span></li>
+        <li data-target="item12"> <span>底部导航</span></li>
+      </ul>
+    </div>
+    <script src="__PUBLIC__/js/require.js" data-main="__PUBLIC__/js/hxh"></script>
+    <script src="__PUBLIC__/js/jquery.min.js"></script>
+    <script src="__PUBLIC__/js/slider.js"></script>
+    </body>
+  </html>

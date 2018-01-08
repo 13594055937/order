@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+        <title>{$type}</title>
+        <link rel="stylesheet" href="__PUBLIC__/css/uikit.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/iven.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/form-select.css" />
+        <script src="__PUBLIC__/js/jquery.js"></script>
+        <script src="__PUBLIC__/js/uikit.min.js"></script>
+        <script src="__PUBLIC__/js/form-select.min.js"></script>
+    </head>
+    <body>
+    <if condition="$type eq '交易举报'">
+        <!--详情-->
+        <br>
+        <div class="uk-container uk-container-center">    
+            <div class="uk-grid">
+                <div class="uk-width-2-3">
+                    <h3 class="uk-margin-remove">举报记录</h3>
+                    <p class="uk-margin-remove">举报违规的项目，我们会严加惩办</p>
+                </div>
+                <div class="uk-width-1-3">
+                    <a href="{:U('suggest/tosuggest',array('type'=>$type))}" class="uk-button uk-button-primary uk-float-right">我要举报</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+    <elseif condition="$type eq '交易维权'"/>
+        <ul class="legal-tabs-title">
+            <li <if condition="!isset($record)">class="uk-active"</if>><a href="{:U('suggest/index',array('type'=>$type))}">交易项目</a></li>
+            <li <if condition="isset($record)">class="uk-active"</if>><a href="{:U('suggest/index',array('type'=>$type,'record'=>1))}">维权记录</a></li>
+        </ul>
+    <else/>
+        <br>
+        <div class="uk-container uk-container-center">    
+            <div class="uk-grid uk-grid-medium">
+                <div class="uk-width-2-3">
+                    <h3 class="uk-margin-remove">投诉建议记录</h3>
+                    <p class="uk-margin-remove">举报违规的项目，我们会严加惩办</p>
+                </div>
+                <div class="uk-width-1-3">
+                    <a href="{:U('suggest/tosuggest',array('type'=>$type))}" class="uk-button uk-button-primary">我要投诉/建议</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </if>
+
+    <div class="uk-container uk-container-center">
+    <!-- 这是内容项目的容器 -->
+    <foreach name="list" item="listdata">
+		<if condition="$type eq '投诉建议'">
+		<div class="report">
+    		<h3>{$listdata.title}</h3>
+    		<p><span>提交时间：<php>echo date("Y-m-d", $listdata['suggest_time']);</php></span> </p>
+    		<div><a href="{:U('suggest/detail',array('id'=>$listdata['id']))}" class="uk-button uk-button-primary">查看详情</a> <span class="uk-float-right">状态：<i class="red"><if condition="$listdata['status'] eq 0">待处理<elseif condition="$listdata['status'] eq 1"/>解决中<elseif condition="$listdata['status'] eq 2"/>已解决<else/>不解决</if></i></span></div>
+    	</div>
+    	<hr>
+		<elseif condition="$type eq '交易举报'"/>
+        <div class="report">
+    		<h3>{$listdata.pro_name}</h3>
+    		<p><span>项目编号：{$listdata.pro_code}</span>&nbsp;&nbsp;<span>发布时间：<php>echo date("Y-m-d", $listdata['suggest_time']);</php></span> </p>
+    		<div><a href="{:U('suggest/detail',array('id'=>$listdata['id']))}" class="uk-button uk-button-primary">查看详情</a> <span class="uk-float-right">状态：<i class="red"><if condition="$listdata['status'] eq 0">待处理<elseif condition="$listdata['status'] eq 1"/>解决中<elseif condition="$listdata['status'] eq 2"/>已解决<else/>不解决</if></i></span></div>
+    	</div>
+    	<hr>
+		<else/>
+		<div class="report">
+    		<h3>{$listdata.pro_name}</h3>
+    		<p><span>项目编号：{$listdata.pro_code}</span>&nbsp;&nbsp;<span>发布时间：<php>$listdata['suggest_time'] = $listdata['suggest_time'] ? $listdata['suggest_time'] :$listdata['create_time'];echo date("Y-m-d", $listdata['suggest_time']);</php></span> </p>
+    		<if condition="isset($record)">
+			<div><a href="{:U('suggest/detail',array('id'=>$listdata['id']))}" class="uk-button uk-button-primary">查看详情</a> <span class="uk-float-right">状态：<i class="red"><if condition="$listdata['status'] eq 0">待处理<elseif condition="$listdata['status'] eq 1"/>解决中<elseif condition="$listdata['status'] eq 2"/>已解决<else/>不解决</if></i></span></div>
+			<else/>
+			<div><a href="{:U('suggest/tosuggest',array('type'=>$type,'taskid'=>$listdata['id']))}" class="uk-button uk-button-primary uk-button-large">我要维权</a></div>
+			</if>
+		</div>
+    	<hr>
+		</if>
+    </foreach>
+    </div>    
+
+    <include file="Public/footer" />

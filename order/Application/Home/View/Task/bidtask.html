@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+        <title>投标成功</title>
+        <link rel="stylesheet" href="__PUBLIC__/css/uikit.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/iven.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/form-select.css" />
+        <script src="__PUBLIC__/js/jquery.js"></script>
+        <script src="__PUBLIC__/js/uikit.min.js"></script>
+        <script src="__PUBLIC__/js/form-select.min.js"></script>
+    </head>
+    <body>
+<div class="uk-container uk-container-center">
+    <div class="post-success uk-text-center">
+        <i class="uk-icon-check"></i>
+        <h2>恭喜您投标成功</h2>
+        <p class="uk-width-5-6 uk-container-center">请等待雇主选择合作方，您可以在“我的任务”里查看进展，如果雇主选择了与您合作，双方即可互相看到个人资料和联系方式等信息。</p>
+        <div class="uk-margin-medium-top">
+            <a href="{:U('task/index')}" class="uk-button uk-button-primary">返回任务大厅</a>
+            <a href="{:U('user/mytask')}" class="uk-button uk-button-yellow">查看我的任务</a>
+        </div>
+    </div>
+</div>
+ <include file="Public/footer" />

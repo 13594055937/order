@@ -1,0 +1,139 @@
+.branch {
+  background: #eee;
+  border: 1px solid #bfbfbf;
+  padding: 25px 78px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  margin-top: 80px;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 2;
+}
+.branch .line {
+  position: absolute;
+  top: 0;
+  bottom: 25px;
+  top: 25px;
+  right: 78px;
+  left: 78px;
+  z-index: -1;
+}
+.branch .line div {
+  position: absolute;
+  width: 1px;
+  background: #d6d6d6;
+  height: 100%;
+  display: block;
+  content: '';
+  top: 0;
+}
+.branch .line div.l-1 {
+  left: 16.6%;
+}
+.branch .line div.l-2 {
+  left: 33.2%;
+}
+.branch .line div.l-3 {
+  left: 49.8%;
+}
+.branch .line div.l-4 {
+  left: 66.4%;
+}
+.branch .line div.l-5 {
+  left: 83%;
+}
+.branch ul {
+  margin-bottom: -24px;
+}
+.branch ul li {
+  width: 16.60%;
+  text-align: center;
+  padding-bottom: 24px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.adding {
+  font-size: 24px;
+}
+.branch-info #branch h3 {
+  color: #b00005;
+}
+.branch-info .info {
+  width: 408px;
+}
+.branch-info .info h3 {
+  font-size: 24px;
+  font-weight: normal;
+}
+.branch-info .info .text {
+  padding-bottom: 15px;
+}
+.branch-info .info p {
+  font-size: 16px;
+  line-height: 24px;
+}
+.branch-info .leaveword .line {
+  border: 1px solid #dbdbdb;
+  line-height: 38px;
+  width: 256px;
+  height: 38px;
+  margin-bottom: 14px;
+}
+.branch-info .leaveword .line label {
+  padding-left: 10px;
+}
+.branch-info .leaveword .line input {
+  width: 205px;
+  color: #666;
+}
+.branch-info .leaveword textarea {
+  width: 400px;
+  height: 126px;
+  padding: 10px;
+  border: 1px dotted #dbdbdb;
+  display: block;
+  margin-left: 10px;
+}
+.branch-info .button {
+  position: relative;
+}
+.branch-info .button:after,
+.branch-info .button:before {
+  width: 46px;
+  display: block;
+  position: absolute;
+  height: 100%;
+  content: '';
+  top: 0px;
+}
+.branch-info .button:after {
+  border-right: 1px solid #b60005;
+  border-bottom: 1px solid #b60005;
+  right: 0;
+}
+.branch-info .button:before {
+  border-left: 1px solid #b60005;
+  border-top: 1px solid #b60005;
+  left: 0;
+}
+.branch-info button {
+  width: 100%;
+  border: 1px solid #dbdbdb;
+  height: 38px;
+  line-height: 38px;
+  cursor: pointer;
+}
+.adding {
+  display: block;
+  background: #eee;
+  border: 1px solid #bfbfbf;
+  padding: 18px 0;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+.map {
+  padding-top: 30px;
+  padding-bottom: 72px;
+}

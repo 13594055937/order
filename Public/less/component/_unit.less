@@ -1,0 +1,68 @@
+// unit
+.bar {
+    &.bar-download {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 8;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding-left: 20px;
+        img {
+            background: none;
+        }
+        .list {
+            &.list-avatar-sm {
+                .item {
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    .avatar {
+                        top: 5px;
+                    }
+                    h3 {
+                        color: @primary;
+                        line-height: 34px;
+                        .font-size(24);
+                    }
+                    p {
+                        color: @primary;
+                        line-height: 20px;
+                    }
+                }
+            }
+            .icon-close {
+                position: absolute;
+                top: 0;
+                left: -20px;
+            }
+            .button {
+                position: absolute;
+                right: -5px;
+                top: 13px;
+                padding-right: 32px;
+                padding-left: 10px;
+            }
+            .icon-arrow-right {
+                position: absolute;
+                right: 3px;
+                top: 2px;
+            }
+        }
+    }
+}
+
+.app-down {
+    position: relative;
+    width: 100%;
+    .i-close {
+        width: 36px;
+        height: 36px;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .icon-close {
+        margin: 5px 0 0 5px;
+    }
+}

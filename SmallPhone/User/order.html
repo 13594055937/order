@@ -1,0 +1,40 @@
+<include file="Public/header"/>
+<link rel="stylesheet" href="__PUBLIC__/smallphone/css/amazeui.min.css">
+<link rel="stylesheet" href="__PUBLIC__/smallphone/css/common.css">
+<link rel="stylesheet" href="http://at.alicdn.com/t/font_aqnu3pqtlk8rggb9.css">
+<link rel="stylesheet" href="__PUBLIC__/smallphone/css/my.css">
+		<!-- 头部 E -->
+		<!-- 内容 S -->
+		<div class="orderlist">
+			<div class="title-2 am-text-lef t">我的订单</div>
+			<div class="list">
+				<foreach name="orderlist" item="data" key="key">
+				  <div class="item">
+					<!-- <a href=""> -->
+					<div class="state-date">
+						<div class=" state"><if condition="$data['status'] eq 0">待付款</if><if condition="$data['status'] eq 1 && $data['fahuo'] eq 0">待发货</if><if condition="$data['fahuo'] eq 1">已发货</if></div>
+						<div class=" date"><span></span></div>
+					</div>
+					<div class="goods">
+						<foreach name="cartlist[$key]" item="cartdata"> 
+						<a><img alt="{$imgalt}" src="__PUBLIC__/images/{$cartdata.pic}" ></a>
+						</foreach>
+					</div>
+					<div class="am-cf btnbox">
+						<div class="am-fl">
+							<if condition="$data['status'] eq 0">待付款<else/>已付款</if>：￥{$data.amount}
+						</div>
+						<div class="am-fr ">
+						<if condition="$data['status'] eq 0"><a class="am-btn red" href="{:U('user/pay',array('id'=>$data['id']))}">立即付款</a></if>
+							<a class="am-btn" href="{:U('user/orderdetail',array('id'=>$data['id']))}">查看订单</a>
+						</div>
+					</div>
+					<!-- </a> -->
+				</div>
+				</foreach>
+
+			</div>
+		</div>
+		
+		<!-- 内容 E -->
+		<include file="Public/footer"/>

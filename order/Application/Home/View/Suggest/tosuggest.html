@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+        <title>{$type}</title>
+        <link rel="stylesheet" href="__PUBLIC__/css/uikit.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/iven.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/form-select.css" />
+        <script src="__PUBLIC__/js/jquery.js"></script>
+        <script src="__PUBLIC__/js/uikit.min.js"></script>
+        <script src="__PUBLIC__/js/form-select.min.js"></script>
+    </head>
+    <script type="text/javascript">
+         $(document).ready(function(){
+            $("#tosubmit").click(function(){
+                var weiquan_type = $.trim($("#weiquan_name").find('option:selected').val());
+                var title = $("#title").val();
+                var content = $("#content").val();
+                if(content == ""){
+                    alert("必填项不能为空");
+                    return false;
+                }
+                if($("#suggest_type").val()!= "投诉建议" && weiquan_type ==""){
+                    alert("维权类型不能为空")
+                    return false;
+                }
+
+                if($("#suggest_type").val()== "投诉建议" && title ==""){
+                    alert("投诉/建议主题不能为空")
+                    return false;
+                }
+                if($("#suggest_type").val()=='交易举报'){
+                    if($("#pro_name").val()=="" || $("#pro_code").val()==""){
+                        alert("项目名称不能为空")
+                        return false;
+                    }
+                }
+                $("form").submit();
+            })
+         })
+    </script>
+    <body>
+    <div class="uk-container uk-container-center">
+        <form class="uk-form assi-form" action="{:U('suggest/savesuggest')}" method="post">
+            <input type="hidden" name="suggest_type" id="suggest_type" value="{$type}">
+            <input type="hidden" name="task_id" value="<if condition="isset($id) && $id gt 0">{$id}<else/>0</if>">
+            <if condition="$type eq '交易举报'">
+            <h2 class="iv-h2">项目名称：</h2>
+			<span><input type="text" name="pro_name" id="pro_name" value="{$list.pro_name}"></span>
+            <h2 class="iv-h2">项目编号：</h2>
+			<span><input type="text" name="pro_code" id="pro_code" value="{$list.pro_code}"></span>
+            <h2 class="iv-h2">维权类型： <span class="uk-float-right"><i class="red">*</i>必填</span></h2>    
+            <div class="uk-form-select" data-uk-form-select>
+                <span></span>
+                <select id="weiquan_name" name="weiquan_type">
+                    <option value="">请选择</option>
+                    <foreach name="weiquan" item="weiquandata">
+                        <option value="{$weiquandata.id}">{$weiquandata.name}</option>
+                    </foreach>
+                </select>
+            </div>
+            <elseif condition="$type eq '交易维权'"/>
+            <h2 class="iv-h2">项目名称： <span>{$list.pro_name}</span></h2>
+            <h2 class="iv-h2">项目编号： <span>{$list.pro_code}</span></h2>
+            <h2 class="iv-h2">合作时间： <span><php>echo $list['create_time']</php></span></h2>
+            <h2 class="iv-h2">项目金额： <span>￥{$list.price}</span></h2>
+            <h2 class="iv-h2">任务类型： <span>{$list.task_type_name}</span></h2>
+            <if condition="!empty($list['city'])"><h2 class="iv-h2">项目地址： <span>{$list.city}</span></h2></if>
+            <h2 class="iv-h2">维权类型： <span class="uk-float-right"><i class="red">*</i>必填</span></h2>    
+            <div class="uk-form-select" data-uk-form-select>
+                <span></span>
+                 <select id="weiquan_name" name="weiquan_type">
+                    <option value="">请选择</option>
+                    <foreach name="weiquan" item="weiquandata">
+                        <option value="{$weiquandata.id}">{$weiquandata.name}</option>
+                    </foreach>
+                </select>
+            </div>
+            <else/>
+                <h2 class="iv-h2">投诉/建议主题 <span class="uk-float-right"><i class="red">*</i>必填</span></h2>
+                <input type="text" name="title" id="title" placeholder="填写投诉/建议主题" />
+            </if>
+            <h2 class="iv-h2">原因说明 <span class="uk-float-right"><i class="red">*</i>必填</span></h2>
+            <textarea name="content" id="content" cols="30" rows="6" placeholder="描述具体情况"></textarea>
+            <div class="uk-text-center">
+                <button class="uk-margin-top uk-button uk-button-primary uk-button-submit" id="tosubmit"><i class="uk-icon-mouse-pointer uk-icon-justify"></i>立即提交</button>
+            </div>
+        </form>
+    </div>
+    <include file="Public/footer" />

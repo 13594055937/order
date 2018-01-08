@@ -1,0 +1,43 @@
+<div id="cityurl" style="display:none">{:U('Order/getcityinfo')}</div>
+<div id="areaurl" style="display:none">{:U('Order/getareainfo')}</div>
+<input type="hidden" id="default_city" value="{$data.city}"/>
+<input type="hidden" id="default_area" value="{$data.area}"/>
+<select name="province" id="province" class="form-control">
+    <if condition="empty($data['province'])"><option value="">请选择省市</option></if>
+    <foreach name="province_list" item="province">
+        <option value="{$province.name}" <if condition="$data['province'] eq $province['name']">selected=selected</if>>{$province.name}</option>
+    </foreach>
+</select>
+<select name="city" id="cityinfo" class="form-control"><if condition="!empty($data['city'])"><option value="{$data.city}">{$data.city}</option><else /><option value="">请选择市</option></if></select>
+<select name="area" id="areainfo" class="form-control"><if condition="!empty($data['area'])"><option value="{$data.area}">{$data.area}</option><else /><option value="">请选择城区</option></if></select>
+<script>
+    //select监听事件
+    $(document).ready(function() {
+        $("#province").change(function(){
+            var uu = $(this).find('option:selected').val();
+            var default_city = $("#default_city").val();
+            var url = $("#cityurl").html();
+            $.ajax({
+                'url'  :url,
+                'data'   :{'province':uu,'city':default_city},
+                'type'   :'get',
+                'success':function(msg){
+                    $("#cityinfo").html(msg);
+                }
+            })
+        });
+        $("#cityinfo").change(function(){
+            var uu = $(this).find('option:selected').val();
+            var default_area = $("#default_area").val();
+            var url = $("#areaurl").html();
+            $.ajax({
+                'url'  :url,
+                'data'   :{'city':uu,'area':default_area},
+                'type'   :'get',
+                'success':function(msg){
+                    $("#areainfo").html(msg);
+                }
+            })
+        });
+    });
+</script>

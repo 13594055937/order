@@ -1,0 +1,45 @@
+/*! UIkit 2.26.4 | http://www.getuikit.com | (c) 2014 YOOtheme | MIT License */
+/* ========================================================================
+   Component: Form select
+ ========================================================================== */
+/*
+ * 1. Behave like form elements
+ * 2. Create position context for dropdowns
+ * 3. Clip content
+ */
+.uk-form-select {
+  /* 1 */
+  overflow: hidden;
+  background: #eee;
+  height: 40px; line-height: 40px;
+  width: 100%;
+  vertical-align: middle;
+  /* 2 */
+  position: relative;
+  /* 3 */
+  overflow: hidden;
+}
+
+.uk-form-select span{
+  display: block;
+  background: url(../images/select-right-icon.png) no-repeat right;
+  font-size: 14px;
+  padding-left:10px;
+}
+/*
+ * 1. Required for Firefox
+ * 1. Required for Webkit to make `height` work
+ */
+.uk-form-select select {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  /* 1 */
+  left: 0;
+  /* 2 */
+  -webkit-appearance: none;
+}

@@ -1,0 +1,48 @@
+[ 2017-12-12T06:32:13+08:00 ] 61.160.224.141 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000069s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000385s ]
+NOTIC: [8] Undefined offset: 1 /www/wwwroot/order/Application/Home/Controller/GlobalController.class.php 第 253 行.
+NOTIC: [8] Undefined index: timestamp /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: nonce /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: signature /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 300 行.
+
+[ 2017-12-12T06:32:52+08:00 ] 61.160.224.135 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000063s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000230s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000246s ]
+NOTIC: [8] Undefined offset: 1 /www/wwwroot/order/Application/Home/Controller/GlobalController.class.php 第 253 行.
+NOTIC: [8] Undefined index: timestamp /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: nonce /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: signature /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 300 行.
+
+[ 2017-12-12T12:15:18+08:00 ] 61.160.224.135 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000029s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000243s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000259s ]
+NOTIC: [8] Undefined offset: 1 /www/wwwroot/order/Application/Home/Controller/GlobalController.class.php 第 253 行.
+NOTIC: [8] Undefined index: timestamp /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: nonce /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: signature /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 300 行.
+
+[ 2017-12-12T21:45:25+08:00 ] 120.52.18.49 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000029s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000254s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000272s ]
+NOTIC: [8] Undefined offset: 1 /www/wwwroot/order/Application/Home/Controller/GlobalController.class.php 第 253 行.
+NOTIC: [8] Undefined index: timestamp /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: nonce /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: signature /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 300 行.
+

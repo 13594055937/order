@@ -1,0 +1,68 @@
+[ 2017-12-07T05:55:08+08:00 ] 61.160.224.136 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+NOTIC: [8] Undefined offset: 1 /www/wwwroot/order/Application/Home/Controller/GlobalController.class.php 第 253 行.
+NOTIC: [8] Undefined index: timestamp /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: nonce /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: signature /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 300 行.
+
+[ 2017-12-07T07:04:10+08:00 ] 120.52.18.51 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000046s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000244s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000262s ]
+NOTIC: [8] Undefined offset: 1 /www/wwwroot/order/Application/Home/Controller/GlobalController.class.php 第 253 行.
+NOTIC: [8] Undefined index: timestamp /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: nonce /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: signature /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 300 行.
+
+[ 2017-12-07T17:27:34+08:00 ] 61.160.224.140 /index.php/task/sendtask.html?code=081LvdG11JN6yN10ToG11zYAG11LvdGS&state=h5_1461051704
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000400s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000422s ]
+NOTIC: [2] Declaration of Home\Controller\TaskController::getcityinfo() should be compatible with Home\Controller\GlobalController::getCityInfo($provinceId) /www/wwwroot/order/Application/Home/Controller/TaskController.class.php 第 4 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-12-07T17:27:43+08:00 ] 61.160.224.140 /index.php/task/sendtask.html?code=0614EKJb1F9Qtu0ubDNb1C5lJb14EKJS&state=h5_1461051704
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000031s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000260s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000283s ]
+NOTIC: [2] Declaration of Home\Controller\TaskController::getcityinfo() should be compatible with Home\Controller\GlobalController::getCityInfo($provinceId) /www/wwwroot/order/Application/Home/Controller/TaskController.class.php 第 4 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-12-07T17:27:43+08:00 ] 61.160.224.141 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000039s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000230s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000246s ]
+NOTIC: [8] Undefined offset: 1 /www/wwwroot/order/Application/Home/Controller/GlobalController.class.php 第 253 行.
+NOTIC: [8] Undefined index: timestamp /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: nonce /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: signature /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 300 行.
+
+[ 2017-12-07T17:27:49+08:00 ] 61.160.224.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000037s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000242s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000261s ]
+NOTIC: [8] Undefined offset: 1 /www/wwwroot/order/Application/Home/Controller/GlobalController.class.php 第 253 行.
+NOTIC: [8] Undefined index: timestamp /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: nonce /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: signature /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 300 行.
+

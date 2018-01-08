@@ -1,0 +1,166 @@
+[ 2017-12-06T05:36:10+08:00 ] 61.160.224.140 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000052s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000412s ]
+NOTIC: [8] Undefined offset: 1 /www/wwwroot/order/Application/Home/Controller/GlobalController.class.php 第 253 行.
+NOTIC: [8] Undefined index: timestamp /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: nonce /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: signature /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 300 行.
+
+[ 2017-12-06T06:42:09+08:00 ] 61.160.224.141 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000053s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000276s ]
+NOTIC: [8] Undefined offset: 1 /www/wwwroot/order/Application/Home/Controller/GlobalController.class.php 第 253 行.
+NOTIC: [8] Undefined index: timestamp /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: nonce /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: signature /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 300 行.
+
+[ 2017-12-06T16:26:29+08:00 ] 61.160.224.136 /index.php?signature=2f5717126ed2647436ddd9cb21a087638fdc299d&timestamp=1512548789&nonce=181658562&openid=oK3GO01DFBjY2J8X3V2JaE604K5A&encrypt_type=aes&msg_signature=146f6f66991b67287cf36e1487f55549b2576a82
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000032s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000244s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000262s ]
+NOTIC: [8] Undefined offset: 1 /www/wwwroot/order/Application/Home/Controller/GlobalController.class.php 第 253 行.
+
+[ 2017-12-06T16:26:32+08:00 ] 61.160.224.140 /index.php?signature=262b6445b6796763497e428730221487c21848ab&timestamp=1512548792&nonce=547584961&openid=oK3GO01DFBjY2J8X3V2JaE604K5A&encrypt_type=aes&msg_signature=2c2a1ffbf102d5c2b9a969b277d4c29e9bcdb68b
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000027s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000248s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000266s ]
+NOTIC: [8] Undefined offset: 1 /www/wwwroot/order/Application/Home/Controller/GlobalController.class.php 第 253 行.
+NOTIC: [8] Use of undefined constant self - assumed 'self' /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 156 行.
+
+[ 2017-12-06T16:37:14+08:00 ] 61.160.224.140 /index.php?signature=2c288a76bf57b11e0eaf5386b97f558c2af744ad&timestamp=1512549434&nonce=1066097968&openid=oK3GO01DFBjY2J8X3V2JaE604K5A&encrypt_type=aes&msg_signature=b9aa836094ade13ad53ee95aa2fe1e2be7a474eb
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000027s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000253s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000272s ]
+NOTIC: [8] Undefined offset: 1 /www/wwwroot/order/Application/Home/Controller/GlobalController.class.php 第 253 行.
+NOTIC: [8] Use of undefined constant self - assumed 'self' /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 156 行.
+
+[ 2017-12-06T16:37:15+08:00 ] 61.160.224.140 /index.php/task/sendtask.html?code=061bKvJ41Bu40M1KGWH41xqDJ41bKvJA&state=h5_1461051704
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000031s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000299s ]
+NOTIC: [2] Declaration of Home\Controller\TaskController::getcityinfo() should be compatible with Home\Controller\GlobalController::getCityInfo($provinceId) /www/wwwroot/order/Application/Home/Controller/TaskController.class.php 第 4 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-12-06T18:42:23+08:00 ] 61.160.224.136 /index.php/task/sendtask.html?code=021DkQlD1VYGQ30TxplD11KNlD1DkQlu&state=h5_1461051704
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000027s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000243s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000262s ]
+NOTIC: [2] Declaration of Home\Controller\TaskController::getcityinfo() should be compatible with Home\Controller\GlobalController::getCityInfo($provinceId) /www/wwwroot/order/Application/Home/Controller/TaskController.class.php 第 4 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-12-06T18:42:26+08:00 ] 61.160.224.136 /index.php?signature=b53df5a401554a26e186e8e981f0e9c76b492821&timestamp=1512556941&nonce=277893528&openid=oK3GO01OM6Gfub3tqmj8Iui0Vju8&encrypt_type=aes&msg_signature=aac7d7cec27a6f9ed1d502466d8182f4cbb0e9b0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000028s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000251s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000269s ]
+NOTIC: [8] Undefined offset: 1 /www/wwwroot/order/Application/Home/Controller/GlobalController.class.php 第 253 行.
+NOTIC: [8] Use of undefined constant self - assumed 'self' /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 156 行.
+
+[ 2017-12-06T18:42:27+08:00 ] 61.160.224.136 /index.php/task/sendtask.html?code=081WRTep0Dk4qo1ivBfp040bfp0WRTet&state=h5_1461051704
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000028s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000242s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000262s ]
+NOTIC: [2] Declaration of Home\Controller\TaskController::getcityinfo() should be compatible with Home\Controller\GlobalController::getCityInfo($provinceId) /www/wwwroot/order/Application/Home/Controller/TaskController.class.php 第 4 行.
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-12-06T18:42:27+08:00 ] 61.160.224.135 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000025s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000244s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000261s ]
+NOTIC: [8] Undefined offset: 1 /www/wwwroot/order/Application/Home/Controller/GlobalController.class.php 第 253 行.
+NOTIC: [8] Undefined index: timestamp /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: nonce /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: signature /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 300 行.
+
+[ 2017-12-06T18:42:32+08:00 ] 61.160.224.136 /index.php?signature=01cf2e60e5ae2354dcde7cfd315537b48ded654f&timestamp=1512556947&nonce=1553615040&openid=oK3GO01OM6Gfub3tqmj8Iui0Vju8&encrypt_type=aes&msg_signature=b3ecd8024e506c73bd77116bf043e0da94ba19db
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000242s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000261s ]
+NOTIC: [8] Undefined offset: 1 /www/wwwroot/order/Application/Home/Controller/GlobalController.class.php 第 253 行.
+NOTIC: [8] Use of undefined constant self - assumed 'self' /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 156 行.
+
+[ 2017-12-06T23:41:05+08:00 ] 61.160.224.136 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000045s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001158s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001203s ]
+NOTIC: [8] Undefined offset: 1 /www/wwwroot/order/Application/Home/Controller/GlobalController.class.php 第 253 行.
+NOTIC: [8] Undefined index: timestamp /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: nonce /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: signature /www/wwwroot/order/ThinkPHP/Library/Com/Wechat.class.php 第 300 行.
+
+[ 2017-12-06T23:41:06+08:00 ] 61.160.224.145 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+
+[ 2017-12-06T23:41:15+08:00 ] 61.160.224.136 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000263s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000282s ]
+NOTIC: [8] Undefined offset: 1 /www/wwwroot/order/Application/Home/Controller/GlobalController.class.php 第 253 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+NOTIC: [8] Undefined variable: pic /www/wwwroot/order/Application/Runtime/Cache/Home/ba9f7a85ac4d7e7f0b0da6e93b0b5939.php 第 22 行.
+NOTIC: [8] Undefined variable: havet_read /www/wwwroot/order/Application/Runtime/Cache/Home/ba9f7a85ac4d7e7f0b0da6e93b0b5939.php 第 76 行.
+NOTIC: [8] Undefined variable: baobeiNum /www/wwwroot/order/Application/Runtime/Cache/Home/ba9f7a85ac4d7e7f0b0da6e93b0b5939.php 第 83 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.317538s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.317563s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001134s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001152s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001165s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001181s ]
+
+[ 2017-12-06T23:41:20+08:00 ] 61.160.224.145 /Public/images/icon-12.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000032s ]
+
+[ 2017-12-06T23:42:20+08:00 ] 61.160.224.144 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000033s ]
+

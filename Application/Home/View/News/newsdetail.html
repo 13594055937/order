@@ -1,0 +1,84 @@
+<include file="Public/header" />
+<link href="__PUBLIC__/css/newslist.css" rel="stylesheet">
+    <div class="banner">
+      <div style="background:url(__PUBLIC__/images/banner-2.jpg) no-repeat center top;height:485px;" class="img"></div>
+    </div>
+    <div class="main">
+      <div class="w-1 newsdetail">
+	<h5 class="top w">当前位置: <span><a href="/">首页</a> ><a href="/news/newslist.html" >资讯中心</a> > <a href="/news/{$news_jianjie}.html">{$data.news_type}</a> >{$data.title}</span></h5>
+        <h3 class="title">{$data.title}</h3>
+        <div class="f-tit"><span class="time">时间：{$data.create_time}</span><span>浏览：{$data.view_times}次</span><span>
+             
+            分享到：</span>
+          <div class="bshare-custom"><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><a title="分享到QQ空间" class="bshare-qzone"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a>
+            <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;amp;uuid=&amp;amp;pophcol=2&amp;amp;lang=zh"></script>
+            <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+          </div>
+        </div>
+        <div class="w">
+          <div class="abstract">摘要：{$data.title2}</div>
+          <div class="mainbody">
+            <p style="color:red;">
+              {$data.description}
+            </p>
+          </div>
+        </div>
+        <div class="prev-next">
+          <if condition="isset($preNews) && !empty($preNews)">
+            <a href="/news/news_{$preNews.id}.html" class="prev">上一篇：<span>{$preNews.title}</span></a>
+          </if>
+          <if condition="isset($nextNews) && !empty($nextNews)">
+            <a href="/news/news_{$nextNews.id}.html" class="next">下一篇：<span>{$nextNews.title}</span></a>
+          </if>
+        </div>
+      </div>
+    </div>
+    <include file="Public/footer2" />
+    <script src="__PUBLIC__/js/jquery.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $(".st-head i").click(function() {
+          $(this).toggleClass('close').parent().next('.st-body').slideToggle();
+        });
+        $('.st-close b').click(function() {
+          $(".st-head i").trigger("click");
+        });
+        $('.st-body li').hover(function() {
+          var _this = $(this);
+          _this.find('.box').fadeIn('fast');
+        }, function() {
+          $(this).find('.box').fadeOut('fast');
+        });
+        //tab切换
+        function resetTabs(obj) {
+          $(obj).parent().parent().next("div").children("div").hide();
+          $(obj).parent().parent().find("a").removeClass("current");
+        }
+
+        //tab
+        loadTab();
+
+        function loadTab() {
+          $(".content > div").hide();
+          $(".tabs").each(function() {
+            $(this).find("li:first a").addClass("current");
+          });
+          $(".content").each(function() {
+            $(this).find("div:first").fadeIn();
+          });
+          $(".tabs a").on("click", function(e) {
+            e.preventDefault();
+            if ($(this).attr("class") == "current") {
+              return;
+            } else {
+              resetTabs(this);
+              $(this).addClass("current");
+              $($(this).attr("name")).fadeIn();
+            }
+          });
+        }
+      })
+    </script>
+    </body>
+    </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+        <title>修改用户手机</title>
+        <link rel="stylesheet" href="__PUBLIC__/css/uikit.css" />
+		<link rel="stylesheet" href="__PUBLIC__/css/iven.css" />
+        <script src="__PUBLIC__/js/jquery.js"></script>
+        <script src="__PUBLIC__/js/uikit.min.js"></script>
+    </head>
+    <body>
+    <if condition="isset($error)"><h2 class="uk-text-center register-2-note" style="color:red">{$error}</h2></if>
+    <h3 class="uk-text-center register-2-note">为确保您的账号安全，需验证原绑定的手机号</h3>
+    <form action="{:U('user/editphone',array('step'=>'step1'))}" method="post" onclick="return false">
+    <div class="uk-container uk-container-center">
+        <h4>手机号：<span class="uk-text-muted">{$userinfo.telphone}</span></h4>
+        <input type="hidden" id="telphone" name="telphone" value="{$userinfo.telphone}">
+        <h4><input type="text" name="code" class="uk-form-blank" placeholder="请输入手机验证码" width="100"> <button class="uk-button uk-button-primary uk-float-right get-msgCode">获取验证码</button></h4>
+        <div class="uk-text-center">
+            <button type="submit" class="uk-margin-top uk-button uk-button-primary uk-button-submit" id="submitit"><i class="uk-icon-mouse-pointer uk-icon-justify"></i>下一步</button>
+        </div>
+    </div>
+    <div style="display:none" id="reg_url" value="">{:U('user/sendsms')}</div>
+    </form>
+<include file="Public/footer"/>
+<script>
+	$("#submitit").click(function(){
+		$("form").submit();
+	})
+</script>
+<script src="__PUBLIC__/script/register.js"></script>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+        <title>评价中心</title>
+        <link rel="stylesheet" href="__PUBLIC__/css/uikit.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/iven.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/form-select.css" />
+        <script src="__PUBLIC__/js/jquery.js"></script>
+        <script src="__PUBLIC__/js/uikit.min.js"></script>
+        <script src="__PUBLIC__/js/form-select.min.js"></script>
+    </head>
+    <script type="text/javascript">
+         $(document).ready(function(){
+            $(".star i").on("click", starClick);
+            //点击星星
+            function starClick(){
+                var dt = $(this);
+                var id = parseInt(dt.index());
+                var type = dt.attr("type");
+                $("#"+type).val(id);				
+			
+				dt.parent().children().slice(0,id+1).removeClass("uk-icon-star-o").addClass("uk-icon-star");
+				dt.parent().children().slice(id+1).removeClass("uk-icon-star").addClass("uk-icon-star-o");
+                /*dt.parent().children().each(function () {
+                    var dd = $(this);
+                    if(parseInt(dd.index())<=id ){						
+						dd.slice(0,id).removeClass("uk-icon-star-o").addClass("uk-icon-star");
+						dd.slice(id).removeClass("uk-icon-star").addClass("uk-icon-star-o");
+					}
+                });*/
+            }
+            $("#tosubmit").click(function(){
+                var content = $("#content").val();
+                var efficate = $("#efficate").val();
+                var quality = $("#quality").val();
+                var attitude = $("#attitude").val();
+                if(content == ""||efficate=="" ||quality=="" ||attitude=="" ){
+                    alert("必填项不能为空");
+                    return false;
+                }
+                $("form").submit();
+            })
+         })
+    </script>
+    <body>
+    <div class="uk-container uk-container-center">
+        <h2 class="iv-h2">项目名称: <span>{$task.pro_name}</span></h2>
+        <h2 class="iv-h2">项目编号: <span>{$task.pro_code}</span></h2>
+        <h2 class="iv-h2">完成时间: <span><php>echo date("Y-m-d", $task['finish_time']);</php></span></h2>
+        <hr>
+        <form action="{:U('user/saveevaluate')}" class="uk-form" method="post">
+        <input type="hidden" name="task_id" value="{$task.id}">
+		<input type="hidden" name="accept_uid" value=<if condition="$userinfo['id'] eq $task['accept_uid']">{$task.uid}<else/>{$task.accept_uid}</if>>
+        <h2 class="iv-h2">综合评分 <span class="uk-float-right"><i class="red">*</i>必填</span></h2>
+        <div class="star">
+        <p><span class="red star J_Comment_Star">*</span> 效率：<php>for($i=0;$i<5;$i++){echo "<i class='uk-icon-star-o' type='efficate'></i>";}</php><input type="hidden" name="efficate" id="efficate" value="1"></p>
+        <p><span class="red star J_Comment_Star">*</span> 质量：<php>for($j=0;$j<5;$j++){echo "<i class='uk-icon-star-o' type='quality' ></i>";}</php><input type="hidden" name="quality" id="quality" value="1"></p>
+        <p><span class="red star J_Comment_Star">*</span> 评分：<php>for($z=0;$z<5;$z++){echo "<i class='uk-icon-star-o' type='attitude'></i>";}</php><input type="hidden" name="attitude" id="attitude" value="1"></p>
+        </div>
+        <h2 class="iv-h2">详细评价 <span class="uk-float-right"><i class="red">*</i>必填</span></h2>
+        <textarea name="content" id="content" cols="30" rows="6" placeholder="请输入详细评价内容"></textarea>
+        <div class="uk-text-center uk-margin-top">
+            <button class="uk-margin-top uk-button uk-button-primary uk-button-submit" id="tosubmit"><i class="uk-icon-mouse-pointer uk-icon-justify"></i>立即提交</button>
+        </div>
+        </form>
+    </div> 
+
+    <include file="Public/footer" />

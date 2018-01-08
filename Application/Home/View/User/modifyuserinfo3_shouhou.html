@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+        <title>我要预报备</title>
+        <link rel="stylesheet" href="__PUBLIC__/css/uikit.css" />
+		<link rel="stylesheet" href="__PUBLIC__/css/iven.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/form-select.css" /> <!--下拉select样式强化-->
+        <link rel="stylesheet" href="__PUBLIC__/css/form-file.css" />  <!--文件上传样式强化-->
+        <script src="__PUBLIC__/js/jquery.js"></script>
+        <script src="__PUBLIC__/js/uikit.min.js"></script>
+        <script src="__PUBLIC__/js/form-select.min.js"></script>
+    </head>
+    <body>
+	<div class="uk-container uk-container-center">
+        <form class="uk-form assi-form">
+            <h2 class="iv-h2">工作单位 <span class="uk-text-small">不做公开展示</span> <span class="uk-float-right"><i class="red">*</i>必填</span></h2>
+            <input type="text" name="title" id="" placeholder="请输入真实工作单位" />
+            <h2 class="iv-h2">工作年限 <span class="uk-float-right"><i class="red">*</i>必填</span></h2>
+            <div class="uk-form-select" data-uk-form-select>
+                <span></span>
+                <select>
+                    <option value="">请选择</option>
+                    <option value="">一年以上</option>
+                    <option value="">三年以上</option>
+                    <option value="">五年以上</option>
+                </select>
+            </div>
+            <h2 class="iv-h2">所在区域 <span class="uk-float-right"><i class="red">*</i>必填</span></h2>
+            <div class="uk-grid uk-grid-small">
+                <div class="uk-width-1-2">
+                    <div class="uk-form-select" data-uk-form-select>
+                        <span></span>
+                        <select>
+                            <option value="">上海市</option>
+                            <option value="">江苏省</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="uk-width-1-2">
+                    <div class="uk-form-select" data-uk-form-select>
+                        <span></span>
+                        <select>
+                            <option value="">上海市</option>
+                            <option value="">江苏省</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <h2 class="iv-h2">出生日期 <span class="uk-float-right"><i class="red">*</i>必填</span></h2>
+            <div class="uk-grid uk-grid-small">
+                <div class="uk-width-1-3">
+                    <div class="uk-form-select" data-uk-form-select>
+                        <span></span>
+                        <select>
+                            <option value="">年</option>
+                            <option value="">江苏省</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="uk-width-1-3">
+                    <div class="uk-form-select" data-uk-form-select>
+                        <span></span>
+                        <select>
+                            <option value="">月</option>
+                            <option value="">江苏省</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="uk-width-1-3">
+                    <div class="uk-form-select" data-uk-form-select>
+                        <span></span>
+                        <select>
+                            <option value="">日</option>
+                            <option value="">江苏省</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <h2 class="iv-h2">身份证号 <span class="uk-float-right"><i class="red">*</i>必填</span></h2>
+            <input type="text" name="title" id="" placeholder="请输入真实身份证号" />
+            <div class="uk-grid">
+                <div class="uk-width-1-2">
+                    <div class="uk-panel uk-text-center">
+                        <h3 class="uk-margin-top">身份证反面</h3>
+                        <img src="__PUBLIC__/images/2016-08-29_140006.jpg" alt="">
+                        <!--文件表单强化组件 button只影响样式-->
+                        <div class="uk-form-file">
+                        <button class="uk-button uk-button-large uk-button-primary uk-margin-top">确认上传</button>
+                        <input type="file">
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-1-2">
+                    <div class="uk-panel uk-text-center">
+                        <h3 class="uk-margin-top">身份证正面</h3>
+                        <img src="__PUBLIC__/images/2016-08-29_140006.jpg" alt="">
+                        <div class="uk-form-file">
+                        <button class="uk-button uk-button-large uk-button-primary uk-margin-top">确认上传</button>
+                        <input type="file">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h2 class="iv-h2">QQ号码 <span class="uk-float-right"><i class="red">*</i>必填</span></h2>
+            <input type="text" name="title" id="" placeholder="请输入真实QQ号码" />
+            <h2 class="iv-h2">微信号码 <span class="uk-float-right"><i class="red">*</i>必填</span></h2>
+            <input type="text" name="title" id="" placeholder="请输入真实微信号码" />
+            <h2 class="iv-h2">常用邮箱 <span class="uk-float-right"><i class="red">*</i>必填</span></h2>
+            <input type="text" name="title" id="" placeholder="请输入常用邮箱" />
+            <h2 class="iv-h2">自我介绍 <span class="uk-float-right"><i class="red">*</i>必填</span></h2>
+            <textarea name="content" id="" cols="30" rows="10" placeholder="请输入个人简介"></textarea>
+            <div class="uk-text-center">
+                <button class="uk-margin-top uk-button uk-button-primary uk-button-submit"><i class="uk-icon-mouse-pointer uk-icon-justify"></i>立即提交</button>
+                <label class="uk-margin-top"><input type="checkbox" checked=true name="agreeit" id="agreeit"> 我已阅读并同意《电伙平台条例》</label>
+            </div>
+        </form>
+    </div>
+    <include file="Public/footer" />

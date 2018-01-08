@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+        <title>详情</title>
+        <link rel="stylesheet" href="__PUBLIC__/css/uikit.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/iven.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/form-select.css" />
+        <script src="__PUBLIC__/js/jquery.js"></script>
+        <script src="__PUBLIC__/js/uikit.min.js"></script>
+        <script src="__PUBLIC__/js/form-select.min.js"></script>
+    </head>
+    <body>
+    <div class="uk-container uk-container-center">
+        <if condition="isset($maintask)">
+            <h2 class="iv-h2">项目名称: <span>{$maintask.pro_name}</span></h2>
+            <h2 class="iv-h2">项目编号: <span>{$maintask.pro_code}</span></h2>
+        </if>
+        <h2 class="iv-h2">提交时间: <span><php>echo date("Y-m-d",$suggest['suggest_time']);</php></span></h2>
+        <h2 class="iv-h2">状 态: <span><if condition="$suggest['status'] eq 0">待处理<elseif condition="$suggest['status'] eq 1"/>解决中<elseif condition="$suggest['status'] eq 2"/>已解决<else/>不解决</if></span></h2>
+        <if condition="!empty($suggest['name'])">
+            <h2 class="iv-h2">维权类型: <span>{$suggest.name}</span></h2>
+        </if>
+        <h2 class="iv-h2">原因说明: </h2>
+        <p>
+            {$suggest.content}
+        </p>
+
+        <div class="uk-text-center uk-margin-medium-top">
+            <if condition="$suggest['status'] eq 1"><a href="{:U('suggest/deal',array('type'=>$suggest['suggest_type'],'suggest_id'=>$suggest['id']))}"><button class="uk-margin-top uk-button uk-button-primary uk-button-slarge">
+			<i class="uk-icon-mouse-pointer uk-icon-justify"></i>问题已解决</button></a></if>
+        </div>
+    </div>    
+
+    <include file="Public/footer" />

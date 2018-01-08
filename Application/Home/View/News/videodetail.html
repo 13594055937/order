@@ -1,0 +1,84 @@
+<include file="Public/header" />
+<link href="__PUBLIC__/css/videodetail.css" rel="stylesheet">
+    <div class="content">
+      <php>$bg="bg-8.png";</php>
+    <foreach name="imgs" item="imgslist"><if condition="$imgslist['position'] eq 'pc视频详情'"><php>$bg = $imgslist['small_pic'];</php></if></foreach>
+      <div class="imgbox"><img src="__PUBLIC__/images/{$bg}"></div>
+      <div class="w boxs clearfix" style="display:block">
+        <div class="left fl">
+	  <h5 class="top w">当前位置: <span><a href="/">首页</a> ><a href="/news/videolist.html" >视频中心</a>  >{$detail.title}</span></h5>
+          <h3>{$detail.title}</h3>
+          <h4><span>时间：{$detail.create_time}</span><span>浏览：{$detail.view_times}次</span><span>分享到：
+              <div class="bshare-custom"><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><a title="分享到QQ空间" class="bshare-qzone"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a>
+                <script type="text/javascript" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;amp;uuid=&amp;amp;pophcol=2&amp;amp;lang=zh"></script>
+                <script type="text/javascript" src="http://static.bshare.cn/b/bshareC0.js"></script>
+              </div></span></h4>
+          {$detail.description}
+	   <if condition="!empty($detail['video_url'])">
+          <video id="video" data-setup="{&amp;quot;loop&amp;quot;: true}" loop="" width="750px" heigth="475px" controls class="vjs-tech">
+            <source src="__PUBLIC__/images/{$detail.video_url}" type="video/mp4">
+          </video>
+	   </if>
+        </div>
+        <div class="right fr">
+        <if condition="isset($preVideos)">
+          <div class="up">
+            <a href="/news/videos_{$preVideos.id}.html"><img alt="{$imgalt}" src="__PUBLIC__/images/{$preVideos.small_pic}"></a>
+            <h3>{$preVideos.title}</h3>
+          </div>
+        </if>
+        <if condition="!empty($nextVideos)">
+          <div class="down">
+            <a href="/news/videos_{$nextVideos.id}.html"><img alt="{$imgalt}" src="__PUBLIC__/images/{$nextVideos.small_pic}"></a>
+            <h3>{$nextVideos.title}</h3>
+          </div>
+        </if>
+        </div>
+      </div>
+    </div>
+    <include file="Public/footer" />
+    <script src="__PUBLIC__/js/jquery.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        $(".st-head i").click(function() {
+          $(this).toggleClass('close').parent().next('.st-body').slideToggle();
+        });
+        $('.st-close b').click(function() {
+          $(".st-head i").trigger("click");
+        });
+        $('.st-body li').hover(function() {
+          var _this = $(this);
+      //    _this.find('.box').fadeIn('fast');
+        }, function() {
+        //  $(this).find('.box').fadeOut('fast');
+        });
+        //tab切换
+        function resetTabs(obj) {
+     	  $(obj).parent().parent().next("div").children("div").hide();
+          $(obj).parent().parent().find("a").removeClass("current");
+        }
+
+        //tab
+        loadTab();
+
+        function loadTab() {
+          $(".content > div").hide();
+          $(".tabs").each(function() {
+            $(this).find("li:first a").addClass("current");
+          });
+          $(".content").each(function() {
+           $(this).find("div:first").fadeIn();
+          });
+          $(".tabs a").on("click", function(e) {
+            e.preventDefault();
+            if ($(this).attr("class") == "current") {
+              return;
+            } else {
+              resetTabs(this);
+              $(this).addClass("current");
+             $($(this).attr("name")).fadeIn();
+            }
+          });
+        }
+      })
+    </script>

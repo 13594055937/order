@@ -1,0 +1,28 @@
+<include file="Public/header" />
+    <!-- container -->
+    <div id="container">
+        <form action="{:U('pay/doalipay')}" method="post">
+            <div class="g-wrap m-util-pay clearfix g-mt20">
+                <dl class="list-util-pay">
+                    <dt class="name">付款方式<span class="s-assert">（必填）</span></dt>
+                    <dd class="clearfix">
+                        <label for="payAlipay" class="pay-ways pay-alipay">
+                            <input type="radio" name="pay" checked id="payAlipay">
+                            <input type="hidden" name="trade_no" value="{$order_id}">
+                            <input type="hidden" name="ordsubject" value="报名活动{$list.id}">
+                            <input type="hidden" name="ordtotal_fee" value="{$list.price}">
+                            <input type="hidden" name="ordbody" value="报名活动支付">
+                            <input type="hidden" name="ordshow_url" value="{:U('index/index')}">
+
+                            <img src="__PUBLIC__/images/__PUBLIC__/img/alipay.jpg" alt="">
+                        </label>
+                    </dd>
+                </dl>
+                <div class="g-mt20 g-tac">
+                    <input type="submit" value="立即付款" style="width: 100px;height: 40px;color: red;font-size:18px;">
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- footer -->
+   <include file="Public/footer" />

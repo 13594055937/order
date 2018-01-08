@@ -1,0 +1,44 @@
+<include file="Public/header"/>
+<link rel="stylesheet" href="__PUBLIC__/smallphone/css/common.css">
+<link rel="stylesheet" href="__PUBLIC__/smallphone/css/my.css">
+<style>.f-main .am-form-group a{width:11rem;}</style>
+		<!-- 头部 E -->
+		<div class="f-main bgfff modify">
+			<div class="title-2 margin"><if condition="$userinfo['mobile'] neq ''">修改<else/>绑定</if>手机号</div>
+			<form class="form">
+			  <fieldset>
+			    <if condition="$userinfo['mobile'] neq ''">
+			    <div class="am-form-group">
+			      <input type="text" placeholder="原绑定手机号" value="{$userinfo.mobile}" readonly>
+			    </div>
+			    <div class="am-form-group">
+			      <input type="text" placeholder="新手机号" id="telphone">
+			    </div>
+			    <else/>
+			      <div class="am-form-group">
+                               <input type="text" placeholder="手机号" id="telphone">
+                              </div>
+			    </if>
+			    <div class="am-form-group">
+			      <input type="text"  placeholder="验证码" name="invalidcode"  id="invalidcode">
+			      <a href="" class="getcodeimg"><img alt="{$imgalt}" id="codeimg" src="{:U('product/verify')}" ></a>
+			    </div>
+				
+			    <div class="am-form-group">
+			      <input type="text"  placeholder="手机验证码" name="msgCode" id="msgCode">
+			      <a href="" class="getcode get-msgCode">获取验证码</a>
+			    </div>
+
+			    <p><button type="button" class="am-btn am-btn-block button-step">确认修改</button></p>
+			  </fieldset>
+			  <div style="display:none" id="reg_url" value="">{:U('user/sendsms')}</div>
+                          <div style="display:none" id="bindphone_url" value="">{:U('user/bindphone')}</div>
+			  <div style="display:none" id="stepurl" value="">{:U('user/my')}</div>
+			</form>
+			<script src="__PUBLIC__/smallphone/js/jquery.min.js"></script>
+			<script src="__PUBLIC__/script/bindphone.js"></script>
+		</div>
+		
+	</body>
+
+</html>

@@ -1,0 +1,123 @@
+<include file="Public/header"/>
+<link rel="stylesheet" href="__PUBLIC__/smallphone/css/common.css">
+<link rel="stylesheet" href="__PUBLIC__/smallphone/css/my.css">
+<!-- 头部 E -->
+		<!-- 内容 S -->
+		<div class="main bgfff">
+			<form action="{:U('user/saveAddress')}" method="post">
+			<div class="title-2 am-text-left">{$edit}收货地址</div>
+			<input type="hidden" name="id" value="{$addressDetail.id}">
+			<input type="hidden" name="gotourl" value="{$gotourl}">
+			<div class="z-link">
+				<span>收货人：</span>
+				<input type="text" placeholder="收货人姓名" id="name" name="name" value="{$addressDetail.name}">
+			</div>
+			<div class="z-link">
+				<span>手机号码：</span>
+				<input type="text" placeholder="手机号" name="mobile" id="mobile" value="{$addressDetail.mobile}">
+			</div>
+			<div class="z-link">
+				<span>所在地区：</span>
+				<select  class="province" name="province" id="province">
+				    <option value="">省份</option>
+				    <foreach name="province" item="province_data">
+				    	<option value="{$province_data.name}" <if condition="$addressDetail['province'] eq $province_data['name']">selected</if>>{$province_data.name}</option>
+				    </foreach>
+				</select>
+				
+			</div>
+			<div class="z-link">
+				<select  class="city" id="city" name="city">
+				    <if condition="isset($addressDetail)">
+				    	<option value="{$addressDetail.city}">{$addressDetail.city}</option>
+				    <else/>
+				    <option value="">城市</option>
+				    </if>
+				</select>
+			</div>
+			<div class="z-link">
+				<select  class="area" id="district" name="district">
+				    <if condition="isset($addressDetail)">
+				    	<option value="{$addressDetail.district}">{$addressDetail.district}</option>
+				    <else/>
+				    <option value="">区域</option>
+				    </if>
+				</select>
+			</div>
+			<div class="z-link">
+				<span>详细地址：</span>
+				<input type="text" placeholder="详细地址" name="address" id="address" value="{$addressDetail.address}">
+			</div>
+			<div class=" z-link">
+			  <span>设置为默认地址</span>
+			  <div class="z-check">
+			  	<input type="checkbox" name="is_commend" id="checkbox-10-1" /><label for="checkbox-10-1"></label>  
+			  </div>
+			</div>
+			<input type="hidden" id="address_id" value="{$addressDetail.id}">
+			<a class="am-btn am-btn-block btn-radius" id="submit_addr">保存并修改</a>
+
+			</form>
+		</div>
+		<!-- 内容 E -->
+		
+
+		<!--[if (gte IE 9)|!(IE)]><!-->
+		<script src="__PUBLIC__/smallphone/js/jquery.min.js"></script>
+		<!--<![endif]-->
+
+		<!--[if lte IE 8 ]>
+		<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+		<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+		<![endif]-->
+		<script src="__PUBLIC__/smallphone/js/amazeui.min.js"></script>
+
+	</body>
+	<script type="text/javascript">
+		$("#province").change(function(){
+			var provinceid = $("#province").val();
+			if(provinceid!=""){
+				$.post("GetCity.html",{"provinceid":provinceid},function(data){
+		          data = JSON.parse(data);
+		          var cityinfo = "<option value=''>选择城市</option>";
+		          $(data).each(function(i,val) { 
+		          	cityinfo += "<option value="+val.cityname+">"+val.cityname+"</option>";
+		          })
+		          $("#city").html(cityinfo);
+		        });
+			}
+		})
+		$("#city").change(function(){
+			var provinceid = $("#city").val();
+			if(provinceid!=""){
+				$.post("GetDistrict.html",{"cityid":provinceid},function(data){
+		          data = JSON.parse(data);
+		          var cityinfo = "";
+		          $(data).each(function(i,val) { 
+		          	cityinfo += "<option value="+val.districtname+">"+val.districtname+"</option>";
+		          })
+		          $("#district").html(cityinfo);
+		        });
+			}
+		})
+		$("#submit_addr").click(function(){
+			var name=$.trim($("#name").val());
+			var mobile=$.trim($("#mobile").val());
+			var province=$.trim($("#province").val());
+			var city=$.trim($("#city").val());
+			var district=$.trim($("#district").val());
+			var address=$.trim($("#address").val());
+			if(name=="" || mobile=="" || province=="" || city=="" || district=="" || address==""){
+				alert("所填项不能为空!");
+				return false;
+			}
+			 var reg = /^1[3458]\d{9}$/
+                	if (!reg.test($.trim(mobile))) {
+                   	 alert('手机号码格式有填错');
+                   	 return false;
+               	        }
+			$("form").submit();
+		});
+	</script>
+</html>

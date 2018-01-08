@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+        <title>修改个人资料</title>
+        <link rel="stylesheet" href="__PUBLIC__/css/uikit.css" />
+		<link rel="stylesheet" href="__PUBLIC__/css/iven.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/form-select.css" /> <!--下拉select样式强化-->
+        <link rel="stylesheet" href="__PUBLIC__/css/form-file.css" />  <!--文件上传样式强化-->
+    </head>
+    <body>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            YYYYMMDDstart();
+            $("#province").change(function(){
+                var uu = $(this).find('option:selected').val();
+                if(uu=="")return false;
+                var url = $("#cityurl").html();
+                $.ajax({
+                      'url'  :url,
+                      'data'   :{'province_id':uu},
+                      'type'   :'get',
+                      'success':function(msg){
+                         $("#cityinfo").html(msg);
+                      }
+                    })
+            });
+            $("#year").change(function(){
+                var uu = $(this).find('option:selected').val();
+                YYYYDD(uu)
+            });
+            $("#month").change(function(){
+                var uu = $(this).find('option:selected').val();
+                MMDD(uu)
+            });
+            function YYYYMMDDstart() {
+                MonHead = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+                //先给年下拉框赋内容
+                var y = new Date().getFullYear();
+                for (var i = (y -18 ); i > (y-50); i--) //以今年为准，前30年，后30年
+                    document.reg_testdate.YYYY.options.add(new Option(" " + i, i));
+
+                //赋月份的下拉框
+                for (var i = 1; i < 13; i++)
+                    document.reg_testdate.MM.options.add(new Option(" " + i, i));
+
+                // document.reg_testdate.YYYY.value = y;
+                // document.reg_testdate.MM.value = new Date().getMonth() + 1;
+                // var n = MonHead[new Date().getMonth()];
+                // if (new Date().getMonth() ==1 && IsPinYear(YYYYvalue)) n++;
+                // writeDay(n); //赋日期下拉框Author:meizz
+                // document.reg_testdate.DD.value = new Date().getDate();
+            }
+
+            function YYYYDD(str) //年发生变化时日期发生变化(主要是判断闰平年)
+            {
+                var MMvalue = document.reg_testdate.MM.options[document.reg_testdate.MM.selectedIndex].value;
+                if (MMvalue == "") {
+                    var e = document.reg_testdate.DD;
+                    optionsClear(e);
+                    return false;
+                }
+                var n = MonHead[MMvalue - 1];
+                if (MMvalue == 2 && IsPinYear(str)) n++;
+                writeDay(n)
+            }
+
+
+
+            function MMDD(str) //月发生变化时日期联动
+            {
+                var YYYYvalue = document.reg_testdate.YYYY.options[document.reg_testdate.YYYY.selectedIndex].value;
+                if (YYYYvalue == "") {
+                    var e = document.reg_testdate.DD;
+                    optionsClear(e);
+                    return false;
+                }
+                var n = MonHead[str - 1];
+                if (str == 2 && IsPinYear(YYYYvalue)) n++;
+                writeDay(n)
+            }
+
+
+
+            function writeDay(n) //据条件写日期的下拉框
+            {
+                var e = document.reg_testdate.DD;
+                optionsClear(e);
+                for (var i = 1; i < (n + 1); i++)
+                    e.options.add(new Option(" " + i, i));
+            }
+
+
+
+            function IsPinYear(year) //判断是否闰平年
+            {
+                return (0 == year % 4 && (year % 100 != 0 || year % 400 == 0));
+            }
+
+            function optionsClear(e) {
+                e.options.length = 1;
+            }
+            $("#submitit").click(function(){
+				var agreeit = $("#agreeit").prop("checked");
+				if(!agreeit){
+					alert("请先同意条例");
+					return false;
+				}
+                var company = $.trim($("#company").val());
+                var worktime = $.trim($("#worktime").find('option:selected').val());
+                var province = $.trim($("#province").find('option:selected').val());
+                var city = $.trim($("#cityinfo").find('option:selected').val());
+                var year = $.trim($("#year").find('option:selected').val());
+                var month = $.trim($("#month").find('option:selected').val());
+                var day = $.trim($("#day").find('option:selected').val());
+                var qq = $.trim($("#qq").val());
+                var weixin = $.trim($("#weixin").val());
+                var email = $.trim($("#email").val());
+                var myself = $.trim($("#myself").val());
+                var ids = $.trim($("#ids").val());
+                if(company == "" || worktime == "" || province == "" || city == "" || year == "" || month == ""|| day == "" || qq == "" || weixin == "" || email == "" || myself == "" || ids == ""){
+                    alert("必填项不能为空");
+                    return false;
+                }
+                var user_type = $("#user_type").html();
+                if(user_type == '项目经理'){
+                    var sale_product = $('input:radio:checked').val();
+                    var product_brand = $("#product_brand").val();
+                    if(sale_product=="" || product_brand ==""){
+                        alert("销售产品和产品品牌不能为空")
+                        return false;
+                    }
+                }
+                if(user_type == '设计师'){
+                    var industry_type =  $("#industry_type").find('option:selected').val();
+                    if(industry_type==""){
+                        alert("行业分类不能为空")
+                        return false;
+                    }
+                }
+                $("form").submit();
+            })
+        })
+    </script>
+	<div class="uk-container uk-container-center">
+        <form class="uk-form assi-form uk-width-1-1" method="post" enctype="multipart/form-data" action="{:U('user/saveuserinfo')}" name="reg_testdate">
+            <h2 class="iv-h2">姓名 <span class="uk-float-right"><i class="red">*</i>不可更改</span></h2>
+            <input type="text"  value="{$userinfo.username}" disabled>
+            <h2 class="iv-h2">性别 <span class="uk-float-right"><i class="red">*</i>不可更改</span></h2>
+            <input type="text"  value="{$userinfo.sex}"  disabled>
+            <h2 class="iv-h2">身份 <span class="uk-float-right"><i class="red">*</i>不可更改</span></h2>
+            <input type="text" value="{$userinfo.user_type}" disabled>
+            <h2 class="iv-h2">工作单位 <span class="uk-text-small">不做公开展示</span> <span class="uk-float-right"><i class="red">*</i>必填</span></h2>
+            <input type="text" name="company" id="" placeholder="请输入真实工作单位" value="{$userinfo.company}" />
+            <h2 class="iv-h2">工作年限 <span class="uk-float-right"><i class="red">*</i>必填</span></h2>
+            <div class="uk-form-select" data-uk-form-select>
+                <span></span>
+                <select name="worktime" id="worktime">
+                    <option value="">请选择</option>
+                    <option value="一年以上" <if condition="$userinfo['worktime'] eq '一年以上'">selected=selected</if>>一年以上</option>
+                    <option value="三年以上" <if condition="$userinfo['worktime'] eq '三年以上'">selected=selected</if>>三年以上</option>
+                    <option value="五年以上" <if condition="$userinfo['worktime'] eq '五年以上'">selected=selected</if>>五年以上</option>
+                </select>
+            </div>
+            <div id="cityurl" style="display:none">{:U('task/getcityinfo')}</div>
+            <div id="user_type" style="display:none">{$userinfo.user_type}</div>
+            <if condition="$userinfo['user_type'] eq '项目经理'">
+                <h2 class="iv-h2">销售产品 <span class="uk-float-right"><i class="red">*</i>必填</span></h2>
+                <ul class="uk-grid uk-grid-width-1-2">
+                    <foreach name="design_list" item="designdata">
+                        <li><label><input type="checkbox" value="{$designdata.name}" name="sale_product[]"> {$designdata.name}</label></li>
+                    </foreach>
+                </ul>
+                <h2 class="iv-h2">产品品牌 <span class="uk-float-right"><i class="red">*</i>必填</span></h2>
+                <input type="text" name="product_brand" id="product_brand" placeholder="请输入产品品牌" />
+            <elseif condition="$userinfo['user_type'] eq '设计师'" />
+                <h2 class="iv-h2">行业分类 <span class="uk-float-right"><i class="red">*</i>必填</span></h2>
+                <div class="uk-form-select" data-uk-form-select>
+                    <span></span>
+                    <select name="industry_type" id="industry_type">
+                        <option value="">请选择</option>
+                        <foreach name="industry_type" item="industrydata">
+                            <option value="{$industrydata.industry_name}" <if condition="$userinfo['industry_type'] eq $industrydata['industry_name']">selected=selected</if> >{$industrydata.industry_name}</option>
+                        </foreach>
+                    </select>
+                </div>
+            </if>
+            <h2 class="iv-h2">所在区域 <span class="uk-float-right"><i class="red">*</i>必填</span></h2>
+            <div class="uk-grid uk-grid-small">
+                <div class="uk-width-1-2">
+                    <div class="uk-form-select" data-uk-form-select>
+                        <span></span>
+                        <select name="prov" id="province">
+                            <option value="">请选择省份</option>
+                            <foreach name="province" item="prodata">
+                                <option value="{$prodata.id}" <if condition="$userinfo['prov'] eq $prodata['id']">selected=selected</if>>{$prodata.name}</option>
+                            </foreach>
+                        </select>
+                    </div>
+                </div>
+                <div class="uk-width-1-2">
+                    <div class="uk-form-select" data-uk-form-select>
+                        <span></span>
+                        <select id="cityinfo" name="city">
+                        <option>请选择城市</option>
+                        <option value="{$userinfo.city}" <if condition="isset($userinfo['city']) && !empty($userinfo['city'])">selected=selected</if>>{$userinfo.city}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <h2 class="iv-h2">出生日期 <span class="uk-float-right"><i class="red">*</i>必填</span></h2>
+            <div class="uk-grid uk-grid-small">
+                <div class="uk-width-1-3">
+                    <div class="uk-form-select" data-uk-form-select>
+                        <span></span>
+                        <select name="YYYY" id="year">
+                          <option value="">年份</option>
+                          <option value="{$userinfo.year}" <if condition="isset($userinfo['year']) && !empty($userinfo['year'])">selected=selected</if>>{$userinfo.year}</option>
+                        </select>&nbsp;<span class='select-arrow-down' id='select-arrow-down'></span>
+                    </div>
+                </div>
+                <div class="uk-width-1-3">
+                    <div class="uk-form-select" data-uk-form-select>
+                        <span></span>
+                        <select name="MM" id="month">
+                          <option value="">月</option>
+						  
+                          <option value="{$userinfo.month}" <if condition="isset($userinfo['month']) && !empty($userinfo['month'])">selected=selected</if>>{$userinfo.month}</option>
+                        </select>&nbsp;<span class='select-arrow-down' id='select-arrow-down1'></span>
+                    </div>
+                </div>
+                <div class="uk-width-1-3">
+                    <div class="uk-form-select" data-uk-form-select>
+                        <span></span>
+                        <select name="DD" id="day">
+                          <option value="">日</option>
+                          <option value="{$userinfo.day}" <if condition="isset($userinfo['day']) && !empty($userinfo['day'])">selected=selected</if>>{$userinfo.day}</option>
+                        </select>&nbsp;<span class='select-arrow-down' id='select-arrow-down2'></span>
+                    </div>
+                </div>
+            </div>
+            <h2 class="iv-h2">身份证号 <span class="uk-float-right"><i class="red">*</i>必填</span></h2>
+            <input type="text" name="ids" id="ids" value="{$userinfo.ids}" placeholder="请输入真实身份证号" />
+            <div class="uk-grid">
+                <div class="uk-width-1-2">
+                    <div class="uk-panel uk-text-center">
+                        <h3 class="uk-margin-top">身份证正面</h3>
+                        <input type="file" name="ids_pic[]" accept="image/*">
+                        <if condition="!empty($userinfo['id_end'])">
+                            <img src="__PUBLIC__/images/upload/{$userinfo.id_end}" style="width:100px;height:100px">
+                        </if>
+                    </div>
+                </div>
+				<div class="uk-width-1-2">
+                    <div class="uk-panel uk-text-center">
+                        <h3 class="uk-margin-top">身份证反面</h3>
+                        <input type="file" name="ids_pic[]" accept="image/*">
+                        <if condition="!empty($userinfo['id_front'])">
+                            <img src="__PUBLIC__/images/upload/{$userinfo.id_front}" style="width:100px;height:100px">
+                        </if>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h2 class="iv-h2">QQ号码 <span class="uk-float-right"><i class="red">*</i>必填</span></h2>
+            <input type="text" name="qq" id="qq" value="{$userinfo.qq}"  placeholder="请输入真实QQ号码" />
+            <h2 class="iv-h2">微信号码 <span class="uk-float-right"><i class="red">*</i>必填</span></h2>
+            <input type="text" name="weixin" value="{$userinfo.weixin}" id="weixin" placeholder="请输入真实微信号码" />
+            <h2 class="iv-h2">常用邮箱 <span class="uk-float-right"><i class="red">*</i>必填</span></h2>
+            <input type="text" name="email" value="{$userinfo.email}" id="email" placeholder="请输入常用邮箱" />
+            <h2 class="iv-h2">自我介绍 <span class="uk-float-right"><i class="red">*</i>必填</span></h2>
+            <textarea name="myself" id="myself" cols="30" rows="10" placeholder="请输入个人简介">{$userinfo.myself}</textarea>
+            <div class="uk-text-center">
+                <button class="uk-margin-top uk-button uk-button-primary uk-button-submit"><i class="uk-icon-mouse-pointer uk-icon-justify"></i>立即提交</button>
+                <label class="uk-margin-top"><input type="checkbox" checked=true name="agreeit" id="agreeit"> 我已阅读并同意《电伙平台条例》</label>
+            </div>
+        </form>
+    </div>
+    <include file="Public/footer" />

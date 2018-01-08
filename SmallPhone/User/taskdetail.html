@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+        <title>我发布的任务详情</title>
+        <link rel="stylesheet" href="__PUBLIC__/css/uikit.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/iven.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/form-select.css" />
+        <script src="__PUBLIC__/js/jquery.js"></script>
+        <script src="__PUBLIC__/js/uikit.min.js"></script>
+        <script src="__PUBLIC__/js/form-select.min.js"></script>
+    </head>
+    <body>
+    <div class="uk-container uk-container-center">
+        <h2 class="iv-h2"><span>项目名称:</span> {$task.pro_name}</h2>
+        <h2 class="iv-h2"><span>项目编号:</span> {$task.pro_code}</h2>
+        <h2 class="iv-h2"><span>更新时间:</span> <php>echo date("Y-m-d", $task['create_time']);</php></h2>
+        <h2 class="iv-h2"><span>任务类型:</span> {$task.task_type_name}</h2>
+     <if condition="!empty($pro_name['name'])">   <h2 class="iv-h2"><span>项目地址:</span> {$pro_name.name}{$task.city}</h2></if>
+      <if condition="!empty($task['design_product_ids'])">  <h2 class="iv-h2"><span>涉及产品:</span> {$task.design_product_ids}</h2></if>
+        <if condition="!empty($task['product_brand'])"><h2 class="iv-h2"><span>产品品牌:</span> {$task.product_brand}</h2></if>
+	<h2 class="iv-h2"><span>项目金额:</span> ￥<if condition="!empty($task['price'])">{$task.price}<else/>500</if></h2>
+        <h2 class="iv-h2"><span>状 态:</span> <if condition="$task['status'] eq 0">后台审核中<elseif condition="$task['status'] eq 1"/>进行中<elseif condition="$task['status'] eq 2"/>已完成<elseif condition="$task['status'] eq 3"/>招标中&nbsp;&nbsp;&nbsp;<span>剩余时间&nbsp;&nbsp;<i class="red"><php>$leftime = $task['expire_time'] - time();$day = $leftime/3600/24;$hour=($task['expire_time']-$day*24*3600)/3600;if($day>0){echo intval($day)."天";}</php></i></span><elseif condition="$task['status'] eq 4"/>已取消<else/>已结束</if></h2>
+	<if condition="$task['finish_time'] neq 0">
+        <h2 class="iv-h2 uk-margin-remove"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="uk-text-muted">任务完成--<php>echo date("Y-m-d H:i:s",$task['finish_time'])</php></span> </h2>
+        </if>
+        <if condition="$task['confirm_danbao'] neq 0">
+                <h2 class="iv-h2 uk-margin-remove"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="uk-text-muted">确认担保--<php>echo date("Y-m-d H:i:s",$task['confirm_danbao'])</php></span> </h2>
+        </if>
+        <if condition="$task['confirm_corp'] neq 0">
+                <h2 class="iv-h2 uk-margin-remove"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="uk-text-muted">确认合作--<php>echo date("Y-m-d H:i:s",$task['confirm_corp'])</php></span> </h2>
+        </if>
+        <if condition="$task['close_time'] neq 0">
+        <h2 class="iv-h2 uk-margin-remove"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="uk-text-muted">任务关闭--<php>echo date("Y-m-d H:i:s",$task['close_time'])</php></span> </h2>  </if>
+	<if condition="$task['create_time'] neq 0">
+        <h2 class="iv-h2 uk-margin-remove"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="uk-text-muted">任务发布--<php>echo date("Y-m-d H:i:s",$task['create_time'])</php></span> </h2>  </if>
+        <h2 class="iv-h2">需求描述: </h2>
+        <p>
+            {$task.content}
+        </p>
+    </div>
+        <div class="uk-panel people-box">
+            <div class="uk-container uk-container-center">
+            <h3>共收到投标<span class="uk-text-danger uk-text-large">{$task.bid_nums}</span>个</h3>
+            <p>已投标用户</p>
+            <div class="people">
+                <foreach name="bid" item="biddata">
+                <span><i class="uk-icon-user"></i><a href="{:U('task/biddetail',array('taskid'=>$task['id'],'bid_user_id'=>$biddata['id']))}" class="uk-text-middle">{$biddata.username}<if condition="!empty($task['accept_uid']) && $task['accept_uid'] eq $biddata['id']">(已选择合作)</if></a></span>
+				<p class="uk-margin-remove">{$biddata.self_introduce}</p>
+                </foreach>
+            </div>
+            </div>
+        </div>
+    <div class="uk-container uk-container-center">        
+        <div class="uk-text-center">
+            <if condition="$task['status'] eq 0">
+    <p class="uk-text-center uk-text-muted">*正在平台担保申请中，请耐心等待..</p>
+            <elseif condition="$task['status'] eq 1"/>
+				<if condition="isset($danbao) && $danbao['status'] eq 0">
+				<else/>
+					<a href="{:U('task/confirmtask',array('taskid'=>$task['id'],'userid'=>$task['uid']))}"><button class="uk-margin-top uk-button uk-button-primary uk-button-submit"><i class="uk-icon-mouse-pointer uk-icon-justify"></i>确认完成</button></a>
+				</if>
+					<p></p>{$descr}
+				<if condition="$show_weiquan eq 0 && !isset($danbao)">
+					<a href="{:U('task/selectDanbao',array('task_id'=>$task['id']))}"><button class="uk-margin-top uk-button uk-button-primary uk-button-submit"><i class="uk-icon-mouse-pointer uk-icon-justify"></i>选择担保</button></a>
+				</if>
+			<elseif condition="$task['status'] eq 2 && !$hasEve"/>
+                <a href="{:U('user/toevaluate',array('taskid'=>$task['id']))}"><button class="uk-margin-top uk-button uk-button-primary uk-button-submit"><i class="uk-icon-mouse-pointer uk-icon-justify"></i>立即评价</button></a>
+            <elseif condition="$task['status'] eq 3"/>
+                <a href="{:U('task/closetask',array('taskid'=>$task['id'],'userid'=>$task['uid']))}"><button class="uk-margin-top uk-button uk-button-primary uk-button-submit"><i class="uk-icon-mouse-pointer uk-icon-justify"></i>取消招标</button></a>
+            <else/>
+            </if>
+        </div>
+    </div>    
+
+    <include file="Public/footer" />

@@ -1,0 +1,156 @@
+/** 这里都是用户自定义的css 如果需要更改请在这里修改，覆盖框架里的css**/
+/*头部*/
+.post-btn a{ margin: 0 5px; }
+header{ padding: 15px 0;  }
+
+.red{ color: #C32C37; }
+.white{ color: #fff; }
+.yellow{ color: #D28521; }
+.bk-eee{ background: #eee; }
+
+/*主页中间*/
+.main-nav{ margin: 15px 0; }
+.main-nav .uk-width-1-3 img{ width:50px; height:50px;}
+.assi{ margin:30px 0;  }
+.assi-title{ height: 60px; background: #EEEEEE; 
+	line-height: 60px; font-size: 18px; color: #2273CC; margin: 20px 0;}
+.assi-title img{ margin-right: 10px; }
+
+.assi h4{ margin-bottom: 0; }
+.assi h4 a{ color: #333; }
+.assi-price{ margin-top:10px;}
+.assi-price { color: #D28521; font-size: 16px; }
+.assi-price a{ color:#fff;}
+.assi-info{ bottom:0; left: 25px; }
+.assi-info .span2{display: inline-block; color: #999999; }
+.assi-info .span2 i{ font-style: normal; }
+
+footer{ background: #eee; padding: 10px 0; position: fixed; bottom: 0; left: 0; width: 100%;}
+footer img{ width:60px; height:60px;}
+footer i{ font-size:18px; color:#666;}
+.footer-btn {display: inline-block; margin-top: -50px; }
+span.one-center-btn{ display: block; width:28px; height: 28px; 
+	border-radius: 50%; background: red; color: #fff; line-height: 28px; text-align: center;
+	right: 5px; top: -25px; font-size: 14px; }
+	
+/*发布任务*/
+.iv-h2{ font-size: 14px; color: #000; margin-top:30px; padding-left: 15px; border-left: #448AD6 2px solid; line-height: 22px;}
+.iv-h2 span{ color:#999; line-height: 22px;}
+.iv-h2 span i{ margin-right: 10px; font-style: normal;}
+.p-note{ color: #999999; margin-left: 30px;}
+.p-note span{ color: #333; }
+.p-note img{left: -30px; top: 0;}
+
+/*发布成功*/
+.post-success{ margin-top: 150px; }
+.post-success i{ font-size: 45px; width: 40px; line-height: 40px; height: 40px; text-align: center; border:#2273CC 2px solid; padding:10px; border-radius: 50%; color: #2273CC; }
+.post-success h2{color:#2273CC; }
+
+/*发布失败*/
+.post-lose{ margin-top: 150px; }
+.post-lose i{ font-size: 45px; width: 40px; line-height: 40px; height: 40px; text-align: center; border:#DE444F 2px solid; padding:10px; border-radius: 50%; color: #DE444F; }
+.post-lose h2{color:#DE444F; }
+
+/**/
+.assi-form label{display: block; height: 30px; line-height: 30px; }
+.assi-form textarea{ padding: 20px; }
+
+.room-select .uk-form-select span{ background-image: url(../images/icon-13.png)!important; background-repeat:no-repeat; }
+.room-select{ background: #eee; }
+
+article{margin: 20px 0;}
+
+.report span{display: inline-block; line-height: 40px;}
+.report span i{ font-style: normal; }
+.report p{ margin: 0; }
+.report h3{ margin-bottom: 5px; }
+.no-record{margin-top: 200px;}
+
+/*维权页面切换*/
+.legal-tabs-title { background: #eee; height: 50px; line-height: 50px; padding: 10px;}
+.legal-tabs-title li{display: inline-block; font-size: 14px; list-style: none; width: 49%; text-align: center; color: #333;}
+.legal-tabs-title li.uk-active{ color: #2273CC; text-decoration: none; }
+
+/*用户反馈*/
+.feedback-box{margin-top: 15px; padding: 25px 10px;}
+.feedback-box img{ margin-top: 15px; display:inline-block;}
+.feedback-box p{ font-size:16px; line-height:24px;}
+.feedback-box h2,.feedback-box p,.feedback-box { color: #fff; }
+.feedback-box h2{ margin-bottom: 4px; }
+.feedback-box .subtitle{ color: #F3B4A7; margin-top: 0 }
+.feedback-box-color1{ background: #E86646; }
+.feedback-box-color2{ background: #6DB9FF; }
+.feedback-box-color3{ background: #FD8719; }
+
+/*用户中心*/
+.user-header{ background: #1B63B2; color: #fff; }
+.user-pic{ border-right: #3D7ABD 1px solid; padding-right: 15px; 
+	padding-top: 30px; padding-bottom: 60px;}
+.user-info { margin-top: 20px; margin-bottom: 60px; }
+.user-info h2{ color: #fff; margin: 10px 0;}
+.user-info h2 span{color:#c2dfff; font-size: 0.8em;}
+.user-info p{ color:#c2dfff; margin: 10px 0;}
+.user-info p span{ color:#fff; }
+.user-info .renzheng-png{ color: #FED762; margin-top: 15px; }
+.user-info hr{ box-sizing: content-box;  height: 0;
+  margin: 0;  border: 0;  border-top: 1px solid #3D7ABD; }
+
+/*充值*/
+.money a{height: 50px; line-height: 50px; text-align: center; width: 100%; background: #eee; color: #333; font-size: 16px; }  
+.money a.uk-active{ background: #448AD6; color: #fff; }
+/*余额*/
+.balance{ background: #eee; padding: 15px 0;}
+.balance span{ font-size: 16px; line-height: 36px;margin-left: 20px;}
+.balance span i{ font-style: normal; }
+.user-menu-list{ padding-left:0;}
+.user-menu-list li a{ display:block; color:#666;}
+.user-menu-list li{height: 40px; line-height: 40px; background: url(../images/icon-24.png) right 16px no-repeat; font-size: 14px; padding: 6px 0 10px;
+border-bottom: #eee 1px solid; list-style: none;}
+.user-menu-list li span{ margin-left: 15px; }
+.user-menu-list li i{display: inline-block; width: 26px; height: 26px; line-height: 26px; text-align: center;
+ margin-right: 20px; font-style: normal; background: red; color: #fff; margin-top: 10px; border-radius: 50%;}
+
+/*注册*/
+.register li{ height: 48px; line-height: 45px;  color: #000; font-size: 14px; border-bottom: #F5F5F5 1px solid; padding-top: 4px;}
+.register li input{ border:none; line-height: 40px; outline: none;}
+.register-2-note { background: #eee; padding: 6px 0; color: #666; font-size: 14px;}  
+.register-2-list i{position: absolute; right: 20px; top: 16px; width: 50px; height: 50px; line-height: 50px; 
+	text-align: center; background: #818181; color: #fff; border-radius: 50%; font-size: 30px; cursor: pointer;}
+.register-2-list li.active i{background: #448AD6;}
+.register-2-list li h3{ margin-bottom: 0; margin-top: 10px;}
+.register-2-list li p{ margin-top: 5px; }
+/*注册*/
+.getcodebtn{ background:#448AD6; color:#fff; padding:0px 12px; font-size:12px;}
+.getcodebtn a{ color:#fff;}
+
+/*反馈页面切换*/
+.feed-tabs-title { background: #eee; height: 50px; line-height: 50px; padding: 0;}
+.feed-tabs-title li{display: inline-block; list-style: none; width: 32%}
+.feed-tabs-title li a{display: block; font-size: 14px; text-align: center; color: #333;}
+.feed-tabs-title li.uk-active a{ color: #2273CC; text-decoration: none; }
+
+/*我的信誉*/
+.prestige-subtitle{ height: 60px; line-height: 60px; }
+.prestige-subtitle span{ color: #666;  }
+.prestige-subtitle span i{ color:#D48A2F; display: inline-block; margin-left: 6px; margin-right: 15px; font-style: normal;}
+
+.prestige-dl dt{width: 50px; float: left; color: #D48B2D; }
+.prestige-dl dd{ margin-left: 55px; }
+.star p i{ font-size: 24px; color: #F7B85B; display: inline-block; margin: 0 3px;}
+
+/**选择用户合作*/
+.people-box{ background: #eee; padding: 20px 0; }
+.people span{ display: inline-block; }
+.people span i{ margin-right: 8px; font-size: 18px; }
+
+/*查看用户信息，个人中心*/
+.view-info h2{ margin: 5px 0; }
+
+/*我发布的任务 悬浮标签*/
+.i-post a i{ width: 24px; height: 24px; text-align: center; font-style: normal; background: red;
+ line-height: 22px; border-radius: 50%; color: #fff; font-size: 12px; top: 2px; right: 10px;}
+ 
+.uk-form-blank{ outline: none; }
+
+/*我发布的任务 特殊按钮 右边加长*/
+.btn-spec{ padding-right: 50px!important; }

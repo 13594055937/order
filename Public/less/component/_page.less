@@ -1,0 +1,26 @@
+@import "../icons/_icon_font.less";
+.m-page-box {
+    text-align: center;
+    margin: 40px 0 20px;
+    a,
+    span.current {
+        display: inline-block;
+        height: 30px;
+        line-height: 30px;
+        min-width: 30px;
+        padding: 0 5px;
+        .font-size-md;
+        border: 1px solid @border-color;
+        &.prev {
+            padding-left: 10px;
+        }
+        &.next {
+            padding-right: 10px;
+        }
+    }
+    a:hover,
+    span.current {
+        background-color: @border-color;
+        color: #fff;
+    }
+}

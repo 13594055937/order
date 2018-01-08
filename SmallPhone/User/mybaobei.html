@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+        <title>维权记录</title>
+        <link rel="stylesheet" href="__PUBLIC__/css/uikit.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/iven.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/form-select.css" />
+        <script src="__PUBLIC__/js/jquery.js"></script>
+        <script src="__PUBLIC__/js/uikit.min.js"></script>
+        <script src="__PUBLIC__/js/form-select.min.js"></script>
+    </head>
+    <body>
+    <!-- 这是包含拨动元素的容器 -->
+    <ul class="legal-tabs-title">
+        <li class="uk-active" id="0">我的预报备</li>
+    </ul>
+
+    <div class="uk-container uk-container-center" id="task0">
+        <!-- 这是内容项目的容器 -->
+        <foreach  name="baobei" item="senddata">
+            <div class="report">
+        	<h3>{$senddata.pro_name}</h3>
+        	<p><span>项目编号：{$senddata.pro_code}</span>&nbsp;&nbsp;<span>发布时间：{$senddata.create_time | date='Y-m-d H:i:s'}</span> </p>
+        	<div class="i-post"><if condition="$senddata['bid_nums'] gt 0"><a href="{:U('task/detail',array('id'=>$senddata['id']))}" class="uk-button uk-button-primary uk-button-large uk-position-relative btn-spec">查看详情 <i class="uk-position-absolute">+{$senddata.bid_nums}</i></a></if> <span class="uk-float-right">状态：<i class="red">{$senddata.pro_stage}</i></span>
+        	</div>
+        	</div>
+        	<hr>
+        </foreach>
+    </div>    
+    <include file="Public/footer" />

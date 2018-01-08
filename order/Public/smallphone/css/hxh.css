@@ -1,0 +1,244 @@
+.outbox img {
+  display: block;
+  width: 100%;
+}
+.outbox .box1 img {
+  width: 100%;
+  display: block;
+}
+.outbox .box2 {
+  background: #161515;
+  height: 350px;
+}
+.outbox .box2 img {
+  display: block;
+  width: 100%;
+  padding: 35px 25px 0;
+}
+.outbox .box3 {
+  margin: -212px 15px 0;
+  padding-bottom: 8px;
+  position: relative;
+  z-index: 9;
+  background: #fff;
+}
+.outbox .box3 video {
+  width: 100%;
+}
+.outbox .box3 > div {
+  width: 100%;
+  background: #cc1717;
+  padding: 6px 0;
+}
+.outbox .box3 > div img {
+  width: 75%;
+  margin: 0 auto;
+}
+.outbox .box4 {
+  position: relative;
+  z-index: 8;
+  margin-top: -80px;
+}
+.outbox .box5 {
+  background: url(../../smallphone/images/11-bg5.jpg) no-repeat;
+  background-size: cover;
+  padding: 30px 10px 20px;
+}
+.outbox .box5 img {
+  width: 80%;
+  margin: 0 auto 20px;
+}
+.outbox .box5 .swiper-slide {
+  text-align: center;
+}
+.outbox .box5 .swiper-slide img {
+  display: inline-block;
+  width: 75%;
+  margin: auto;
+}
+.outbox .box5 .swiper-button-next {
+  background: url(../../smallphone/images/right.png) no-repeat;
+  background-size: 22px 22px;
+  background-position: center;
+}
+.outbox .box5 .swiper-button-prev {
+  background: url(../../smallphone/images/left.png) no-repeat;
+  background-size: 22px 22px;
+  background-position: center;
+}
+.outbox .box5 .swiper-pagination-bullet {
+  background: none;
+  border: 1px solid #fff;
+  opacity: 1;
+}
+.outbox .box5 .swiper-pagination-bullet-active {
+  background: #fff;
+}
+.outbox .box7 {
+  background: url(../../smallphone/images/11-bg13.jpg) no-repeat;
+  background-size: cover;
+  padding: 30px 15px;
+}
+.outbox .box7 .img1 {
+  width: 90%;
+  margin: 0 auto ;
+}
+.outbox .box8 .swiper-pagination-bullet {
+  background: none;
+  border: 1px solid #000;
+  opacity: 1;
+  width: 6px;
+  height: 6px;
+}
+.outbox .box8 .swiper-pagination-bullet-active {
+  background: #000;
+}
+.outbox .box9 {
+  background: url(../../smallphone/images/11-bg14.jpg) no-repeat;
+  background-size: cover;
+}
+.outbox .box9 .swiper-button-next {
+  background: url(../../smallphone/images/11-2.png) no-repeat;
+  background-size: 22px 22px;
+  background-position: center;
+}
+.outbox .box9 .swiper-button-prev {
+  background: url(../../smallphone/images/11-1.png) no-repeat;
+  background-size: 22px 22px;
+  background-position: center;
+}
+.outbox .box9 .swiper-pagination-bullet {
+  background: none;
+  border: 1px solid #000;
+  opacity: 1;
+}
+.outbox .box9 .swiper-pagination-bullet-active {
+  background: #000;
+}
+.outbox .box10 {
+  background: #fff;
+}
+.outbox .box11 {
+  background: url(../../smallphone/images/11-bg12.jpg) no-repeat;
+  background-size: cover;
+  padding: 30px 15px;
+}
+.outbox .box11 img {
+  width: 90%;
+  margin: 0 auto ;
+}
+.outbox .box11 .cm-list li .left {
+  width: 8rem;
+}
+.outbox .box11 .cm-list li .left .title {
+  color: #000;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.outbox .box11 .cm-list li .date {
+  font-size: 1rem;
+  color: #000;
+}
+.outbox .box11 .am-nav-tabs {
+  border: none;
+  margin: 12px 0;
+}
+.outbox .box11 .am-nav-tabs > li {
+  margin-right: 25px;
+  width: 28%;
+  text-align: center;
+  line-height: 25px;
+  background: #b5b5b5;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.outbox .box11 .am-nav-tabs > li a {
+  color: #fff;
+  margin-right: 0;
+}
+.outbox .box11 .am-nav-tabs > li:last-child {
+  margin-right: 0;
+}
+.outbox .box11 .am-nav-tabs .am-active a {
+  border: 0;
+  background: #b60005;
+}
+.outbox .box11 .am-tabs-bd {
+  border: 0;
+}
+.outbox .box12 {
+  background: url(../../smallphone/images/11-bg15.jpg) no-repeat;
+  background-size: cover;
+  padding: 30px 15px 15px;
+}
+.outbox .box14 {
+  background: url(../../smallphone/images/11-bg17.jpg) no-repeat;
+  background-size: cover;
+  padding: 30px 15px 15px;
+}
+.outbox .box14 img {
+  width: 80%;
+  margin: auto;
+}
+.outbox .box14 p {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 24px 20px;
+}
+.outbox .box14 a {
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: block;
+  line-height: 30px;
+  background: #fff;
+  color: #333;
+  text-align: center;
+  border-radius: 4px;
+  padding: 0 5px;
+}
+.outbox .box14 a:last-child {
+  margin-left: 12px;
+  background: #b60005;
+  color: #fff;
+}
+.outbox .box15 {
+  background: #fff;
+  position: relative;
+  padding: 12px 12px 50px;
+}
+.outbox .box15 > img {
+  width: 60%;
+  margin: 12px auto;
+}
+.outbox .box15 a {
+  display: block;
+  width: 92px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 4px;
+  color: #fff;
+  background: #b60005;
+  font-size: 14px;
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+}
+.outbox .box15 .swiper-pagination {
+  width: inherit;
+  left: 12px;
+  bottom: 16px;
+}
+.outbox .box15 .swiper-pagination-bullet {
+  background: none;
+  border: 1px solid #000;
+  opacity: 1;
+  width: 23px;
+  height: 4px;
+  border-radius: inherit;
+}
+.outbox .box15 .swiper-pagination-bullet-active {
+  background: #000;
+}

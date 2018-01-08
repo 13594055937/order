@@ -1,0 +1,56 @@
+<include file="Public/header"/>
+<link rel="stylesheet" href="__PUBLIC__/smallphone/css/common.css">
+<link rel="stylesheet" href="__PUBLIC__/smallphone/css/my.css">
+		<!-- 头部 E -->
+		<!-- 内容 S -->
+		<div class="orderlist">
+			<div class="title-2 am-text-left">收货地址管理</div>
+			<div class="list">
+				<foreach name="addresslist" item="data">
+					<div class="item item-f">
+						<div class="box">
+						<if condition="$data['is_commend'] eq 1">
+							<div class="b-fl">
+								默认地址<span class="default"></span>
+							</div>
+						</if>
+							<div class="b-fr">
+								<a href="{:U('user/address_del',array('id'=>$data['id']))}" >删除</a>
+							</div>
+						</div>
+						<div class="box">
+							<div class="b-fl">
+								<div class="line">姓名：{$data.name}</div>
+								<div class="line">电话：{$data.mobile}</div>
+								<div class="line">地址：{$data.province}{$data.city}{$data.district}{$data.address}</div>
+							</div>
+							<div class="b-fr">
+								<a href="{:U('user/editAddress',array('id'=>$data['id']))}?gotourl={$gotourl}"><i class="iconfont icon-xiegonggao" style="color: #333"></i></a>
+							</div>
+						</div>
+					</div>
+				</foreach>
+				<if condition="count($addresslist) lt 6">
+					<div class="am-text-center c-prompt">您还可以创建<php>echo 6-count($addresslist);</php>个收货地址<span class="red"><php>echo count($addresslist);</php>/6</span></div>
+					<a  class="am-btn am-btn-block btn-radius" href="{:U('user/editAddress')}?gotourl={$gotourl}">+新增地址</a>
+				</if>
+
+			</div>
+		</div>
+		<!-- 内容 E -->
+		
+
+		<!--[if (gte IE 9)|!(IE)]><!-->
+		<script src="__PUBLIC__/smallphone/js/jquery.min.js"></script>
+		<!--<![endif]-->
+
+		<!--[if lte IE 8 ]>
+		<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+		<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+		<![endif]-->
+		<script src="__PUBLIC__/smallphone/js/amazeui.min.js"></script>
+
+	</body>
+
+</html>

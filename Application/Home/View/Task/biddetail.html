@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+        <title>投标用户信息</title>
+        <link rel="stylesheet" href="__PUBLIC__/css/uikit.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/iven.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/form-select.css" />
+        <script src="__PUBLIC__/js/jquery.js"></script>
+        <script src="__PUBLIC__/js/uikit.min.js"></script>
+        <script src="__PUBLIC__/js/form-select.min.js"></script>
+    </head>
+    <body>
+    <div class="user-header">
+        <div class="uk-container uk-container-center">
+        <div class="uk-grid uk-grid-small">
+            <div class="uk-width-1-4">
+                <div class="uk-panel user-pic uk-text-center">
+                    <img src="__PUBLIC__/images/mrzhang.jpg" alt="">
+                    <h4 class="uk-margin-small-top white">{$userdata.user_type}</h4>
+                </div>
+            </div>
+            <div class="uk-width-3-4">
+                <div class="user-info">
+                <h2>{$userdata.username} <span class="uk-text-small"><if condition="$curtask['accept_uid'] eq $userdata['id']">({$userdata.telphone})<else/>手机号合作后可查看</if></span></h2>
+                <hr>
+                <p>信誉等级：<span>{$userdata.dengji}</span>  信誉积分：<span>{$userdata.jifen}</span>
+                </p>
+                <hr>
+                <if condition="$userdata['is_identify'] eq 1">
+                     <div class="renzheng-png">
+                        <img src="__PUBLIC__/images/icon-17.png" alt=""> <span class="uk-text-middle">已认证（线上）</span>
+                    </div>
+		<elseif condition="$userdata['is_identify'] eq 2"/>
+                     <div class="renzheng-png">
+                        <img src="__PUBLIC__/images/icon-17.png" alt=""> <span class="uk-text-middle">已认证（线下）</span>
+                    </div>
+                <else/>
+                    <div class="renzheng-png">
+                        <img src="__PUBLIC__/images/icon-17.png" alt=""> <span class="uk-text-middle">未认证（审核中）</span>
+                    </div>
+                </if>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="balance">
+        <div class="uk-container uk-container-center">
+        <div class="uk-grid">
+            <div class="uk-width-1-2">
+                <span>好评率：<i class="red"><php>echo intval($userdata['jifen']*100/$userdata['realjf'])."%";</php></i></span>                
+            </div>
+            <if condition="empty($curtask['accept_uid']) && $curtask['status'] eq 3">
+                <div class="uk-width-1-2 uk-text-right">
+                    <a href="{:U('task/selectPartner',array('taskid'=>$curtask['id'],'accept_uid'=>$userdata['id'],'send_uid'=>$curtask['uid']))}" class="uk-button uk-button-large uk-button-yellow">选择与Ta合作</a>
+                </div>
+            </if>
+        </div>
+        </div>
+    </div>
+    <br>
+    <if condition="$userdata['industry_type'] neq ''">
+    <div class="uk-container uk-container-center view-info">
+        <h2 class="iv-h2">所在行业 <span class="uk-float-right">{$userdata.industry_type}</span></h2>
+    </div>
+    <hr>
+    </if>
+    <div class="uk-container uk-container-center view-info">
+    <h2 class="iv-h2">年龄 <span class="uk-float-right"><php>echo intval(date("Y"))-intval($userdata['year'])</php>岁</span></h2>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center view-info">
+        <h2 class="iv-h2">所在区域 <span class="uk-float-right">{$userdata.name} {$userdata.city}</span></h2>
+    </div>
+    <hr>
+    <div class="uk-container uk-container-center view-info">
+        <h2 class="iv-h2">自我介绍</h2>
+        <p>
+            {$userdata.myself}
+        </p>
+    </div> 
+	<div class="uk-container uk-container-center view-info">
+        <h2 class="iv-h2">自我阐述</h2>
+        <p>
+            {$userdata.self_introduce}
+        </p>
+    </div>	
+    <div class="assi-title uk-text-center"><img src="__PUBLIC__/images/icon-25.png" alt="">  他的任务</div>
+    <foreach name="task" item="taskdata">
+    <div class="uk-container uk-container-center">
+    <div class="report">
+        <h3>{$taskdata.pro_name}</h3>
+        <p><span>项目编号：{$taskdata.pro_code}</span> <span>提交时间：<php>echo date("Y-m-d", $taskdata['create_time']);</php></span> </p>
+        <div><a href="{:U('task/detail',array('id'=>$taskdata['id']))}" class="uk-button uk-button-primary uk-button-large">查看详情</a> <span class="uk-float-right">状态：<i class="red"><if condition="$taskdata['status'] eq 0">后台审核中<elseif condition="$taskdata['status'] eq 1"/>进行中<elseif condition="$taskdata['status'] eq 2"/>已完成<elseif condition="$taskdata['status'] eq 4"/>已取消<else/>已结束</if></i></span></div>
+    </div>
+    </div>
+    <hr>
+    </foreach>
+    <div class="assi-title uk-text-center"><img src="__PUBLIC__/images/icon-25.png" alt="">  他的评价</div>
+    <div class="uk-container uk-container-center">
+    <foreach name="evaluate" item="evadata">
+    <article>
+        <h3>{$evadata.pro_name}</h3>
+        <p class="uk-article-meta">项目编号：{$evadata.pro_code} &nbsp;&nbsp;&nbsp;评价时间：<php>echo date("Y-m-d", $evadata['create_time']);</php></p>
+    </article>
+    <dl class="prestige-dl">
+        <dt>评语</dt>
+        <dd>
+            {$evadata.content}
+        </dd>
+        <div style="height:15px;"></div>
+        <dt>评分</dt>
+        <dd class="star">
+            <p>效率：<php>for($i=0;$i<$evadata['efficate'];$i++){echo '<i class="uk-icon-star"></i>';}</php>
+            </p>
+            <p>质量：<php>for($a=0;$a<$evadata['quality'];$a++){echo '<i class="uk-icon-star"></i>';}</php>
+            </p>
+            <p>评分：<php>for($c=0;$c<$evadata['attitude'];$c++){echo '<i class="uk-icon-star"></i>';}</php>
+            </p>
+        </dd>
+    </dl>
+    </foreach>
+    <if condition="empty($curtask['accept_uid']) && $curtask['status'] eq 3">
+    <div class="uk-text-center">
+    <a href="{:U('task/selectPartner',array('taskid'=>$curtask['id'],'accept_uid'=>$userdata['id'],'send_uid'=>$curtask['uid']))}"><button class="uk-margin-top uk-button uk-button-primary uk-button-submit"><i class="uk-icon-mouse-pointer uk-icon-justify"></i>选择与Ta合作</button></a>
+    </div>
+    </if>
+	<if condition="$curtask['accept_uid'] eq $userdata['id']">
+	<div class="uk-text-center">
+        <a href="{:U('task/checkuser',array('task_id'=>$curtask['id'],'userid'=>$curtask['accept_uid']))}"><button class="uk-margin-top uk-button uk-button-primary uk-button-submit"><i class="uk-icon-mouse-pointer uk-icon-justify"></i>查看联系方式</button></a>
+    </div>
+	</if>
+    </div>
+
+<include file="Public/footer" />
+    

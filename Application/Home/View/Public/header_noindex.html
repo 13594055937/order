@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <php>$a=0;</php>
+    <if condition="isset($detail) && $detail['seo_title'] neq ''">
+        <php>$a=1;</php>
+        <title>{$detail.seo_title}</title>
+        <meta name="keywords" content="{$detail.seo_key_words}">
+        <meta name="description" content="{$detail.seo_description}">
+   </if>
+    <if condition="isset($data) && $data['seo_title'] neq ''">
+	<php>$a=1;</php>
+	<title>{$data.seo_title}</title>
+	<meta name="keywords" content="{$data.seo_key_words}">
+	<meta name="description" content="{$data.seo_description}">
+   </if>	
+   <if condition="isset($product_detail) && $product_detail['seo_title'] neq ''">
+        <php>$a=1;</php>
+	<title>{$product_detail.seo_title}</title>
+        <meta name="keywords" content="{$product_detail.seo_key_words}">
+        <meta name="description" content="{$product_detail.seo_description}">
+   </if>
+   <if condition="$a eq 0 && isset($content_seo)">
+        <php>$a=1;</php>
+        <title>{$content_seo.title}</title>
+        <meta name="keywords" content="{$content_seo.keywords}">
+        <meta name="description" content="{$content_seo.description}">
+   </if>
+    <if condition="$a eq 0">
+    	<title>{$sonNav}</title>
+    </if>
+    <link href="__PUBLIC__/css/common.css" rel="stylesheet">
+    <link href="__PUBLIC__/css/animate.css" rel="stylesheet">
+    <link href="__PUBLIC__/css/swiper.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="__PUBLIC__/images/favicon.ico">
+    {$baseConfig.header_xuke}
+  </head>
+  <body>
+    <div class="header">
+      <div class="stores">
+        <div class="st-head"><b>全国店面分布</b><i> </i></div>
+        <div class="st-body">
+          <ul>
+            <php>$store_num=0;</php>
+            <foreach name="storelist" item="store_data">
+              <php>$store_num += 1 ;</php>
+              <li>
+                <h3><a href="{:U('store/storemap')}">{$store_data.province_name}：{$store_data.name}</a></h3>
+                <div class="box"><img alt="{$imgalt}" src="__PUBLIC__/images/{$store_data.store_img1}">
+                  <p>{$store_data.address}</p>
+                  <p>联系电话：{$store_data.telphone}</p>
+                </div>
+              </li>
+            </foreach>
+            <li>
+            <h3> <a href="{:U('store/storemap')}">查看全国<b>24+</b>门店</a></h3>
+            </li>
+          </ul>
+          <div class="st-close"><b></b></div>
+        </div>
+      </div>
+      <div class="w clearfix">
+	<ol class="nav">
+          <li><a href="/" <if condition="$curclass eq 'index'">style="color:#b00005"</if>>首页</a></li>
+          <li><a href="{:U('store/ychdzx')}" <if condition="$curclass eq 'ychdzx'">style="color:#b00005"</if> >阳澄湖大闸蟹</a></li>
+          <li><a href="{:U('product/hxh')}" <if condition="$curclass eq 'hxh'">style="color:#b00005"</if>>好蟹汇</a></li>
+        </ol>
+        <div class="logo fl"><a href="/"><img alt="{$imgalt}" src="__PUBLIC__/images/logo.png"></a></div>
+        <ol class="nav nav-4">
+          <li><a href="{:U('product/putcrab')}" <if condition="$curclass eq 'putcrab'">style="color:#b00005"</if>>提蟹</a></li>
+          <li><a href="{:U('index/merchants')}" <if condition="$curclass eq 'merchants'">style="color:#b00005"</if>>合作加盟</a></li>
+          <li><a href="{:U('news/newslist')}" <if condition="$curclass eq 'news'">style="color:#b00005"</if>>资讯中心</a></li>
+          <li><a href="{:U('index/contact')}" <if condition="$curclass eq 'contact'">style="color:#b00005"</if>>联系我们   </a></li>
+        </ol>
+        <div class="phonenum"><i></i><span>{$baseConfig.telphone}</span></div>
+      </div>
+    </div>

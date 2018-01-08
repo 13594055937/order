@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+        <title>报备详情</title>
+        <link rel="stylesheet" href="__PUBLIC__/css/uikit.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/iven.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/form-select.css" />
+        <script src="__PUBLIC__/js/jquery.js"></script>
+        <script src="__PUBLIC__/js/uikit.min.js"></script>
+        <script src="__PUBLIC__/js/form-select.min.js"></script>
+    </head>
+    <body>
+    <div class="uk-container uk-container-center">
+        <h2 class="iv-h2"><span>项目名称:</span> {$list.pro_name}</h2>
+        <h2 class="iv-h2"><span>项目地址:</span> {$pro_name.name} {$list.city}</h2>
+        <h2 class="iv-h2"><span>项目阶段:</span> {$list.pro_stage}</h2>
+        <h2 class="iv-h2"><span>选择品牌:</span> {$list.product_brand}</h2>
+        <h2 class="iv-h2"><span>选择产品:</span> {$list.design_product_ids}</h2>
+        <h2 class="iv-h2"><span>提交时间:</span> <php>echo date("Y-m-d", $list['create_time']);</php></h2>
+        <h2 class="iv-h2"><span>更新时间:</span> <php>echo date("Y-m-d", $list['update_time']);</php></h2>
+        <h2 class="iv-h2"><span>状 态:</span> <if condition="$list['baobei_status'] eq 0">报备审核中<elseif condition="$list['baobei_status'] eq 1"/>报备成功<else/>报备失败</if> <if condition="$list['baobei_status'] neq 1"><span>2个工作日左右审核</span></if></h2>
+        <h2 class="iv-h2"><span>项目描述:</span> </h2>
+        <p>
+            {$list.content}
+        </p>
+		<if condition="$list['baobei_status'] eq 0">
+		<p class="uk-text-center uk-text-muted">*平台审核中，请耐心等待并随时关注动态..</p>
+		</if>
+        <if condition="$list['baobei_status'] neq 0">
+        <div class="uk-text-center">
+            <if condition="$list['baobei_status'] eq 2">
+            <a href="{:U('task/baobei',array('id'=>$list['id']))}"><button class="uk-margin-top uk-button uk-button-primary uk-button-submit"><i class="uk-icon-mouse-pointer uk-icon-justify"></i>重新报备</button></a>
+            </if>
+        </div>
+        </if>
+    </div>  
+    <include file="Public/footer" />

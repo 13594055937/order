@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+        <title>我的反馈</title>
+        <link rel="stylesheet" href="__PUBLIC__/css/uikit.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/iven.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/form-select.css" />
+        <script src="__PUBLIC__/js/jquery.js"></script>
+        <script src="__PUBLIC__/js/uikit.min.js"></script>
+        <script src="__PUBLIC__/js/form-select.min.js"></script>
+    </head>
+    <body>
+
+    <!-- 这是包含拨动元素的容器 -->
+    <ul class="feed-tabs-title">
+        <li <if condition="$type eq '交易维权'">class="uk-active"</if>><a href="{:U('user/mySuggest',array('type'=>'交易维权'))}">交易维权</a></li>
+        <li <if condition="$type eq '交易举报'">class="uk-active"</if>><a href="{:U('user/mySuggest',array('type'=>'交易举报'))}">交易举报</a></li>
+        <li <if condition="$type eq '投诉建议'">class="uk-active"</if>><a href="{:U('user/mySuggest',array('type'=>'投诉建议'))}">投诉建议</a></li>
+    </ul>
+
+    <div class="uk-container uk-container-center">
+    <!-- 这是内容项目的容器 -->
+	<!--我要举报-->  
+		<div class="uk-grid">
+			<if condition="$type eq '交易举报'">
+				<div class="uk-width-3-5">
+					<h3 class="uk-margin-remove">举报记录</h3>
+					<p class="uk-margin-remove">举报违规的项目，我们会严加惩办</p>
+				</div>
+				<div class="uk-width-2-5 uk-text-right">
+					<a href="{:U('suggest/tosuggest',array('type'=>$type))}" class="uk-button uk-button-primary uk-float-right">我要举报</a>
+				</div>
+			</if>
+			<if condition="$type eq '投诉建议'">
+				<div class="uk-width-3-5">
+					<h3 class="uk-margin-remove">投诉建议记录</h3>
+					<p class="uk-margin-remove">举报违规的项目，我们会严加惩办</p>
+				</div>
+				<div class="uk-width-2-5 uk-text-right">
+					<a href="{:U('suggest/tosuggest',array('type'=>$type))}" class="uk-button uk-button-primary uk-float-right">我要投诉/建议</a>
+				</div>
+			</if>
+			<if condition="$type eq '交易维权'">
+				<div class="uk-width-3-5">
+					<h3 class="uk-margin-remove">维权记录</h3>
+					<p class="uk-margin-remove">举报违规的项目，我们会严加惩办</p>
+				</div>
+				<div class="uk-width-2-5 uk-text-right">
+					<a href="{:U('suggest/index',array('type'=>$type))}" class="uk-button uk-button-primary uk-float-right">我要维权</a>
+				</div>
+			</if>
+		</div>
+		<hr>
+		<foreach name="suggest" item="suggestdata">
+			<div class="report">
+			<h3><if condition="$type neq '投诉建议'">{$suggestdata.pro_name}<else/>{$suggestdata.title}</if></h3>
+			<p><span><if condition="$type neq '投诉建议'">项目编号：{$suggestdata.pro_code}</if></span>&nbsp;&nbsp;<span>提交时间：<php> echo date("Y-m-d",$suggestdata['suggest_time']);</php></span> </p>
+			<div><a href="{:U('suggest/detail',array('id'=>$suggestdata['id']))}" class="uk-button uk-button-primary">查看详情</a> <span class="uk-float-right">状态：<i class="red"><if condition="$suggestdata['status'] eq 0">待处理<elseif condition="$suggestdata['status'] eq 1"/>解决中<elseif condition="$suggestdata['status'] eq 2"/>已解决<else/>未解决</if></i></span></div>
+			</div>
+			<hr>
+		</foreach>
+    </div>    
+
+    <include file="Public/footer" />

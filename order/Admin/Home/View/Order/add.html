@@ -1,0 +1,195 @@
+<include file="Public/header" />
+<include file="Public/top" />
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/css/laydate.css" />
+<script language="JavaScript">
+    $(document).ready(function(){
+        $("#myForm1").validate({
+            rules:{
+                requireuser:"required",
+                jobtype:"required",
+                province:"required",
+                city:"required",
+                area:"required",
+            },
+            messages:{
+                requireuser:"公司信息不能为空",
+                jobtype:"问题类型不能为空",
+                province:"省市不能为空",
+                city:"城市不能为空",
+                area:"城区不能为空",
+            },
+            submitHandler: function(form) {
+                $(form).ajaxSubmit(options);
+                return false;
+            }
+        });
+        var options = {
+            url: "{:U('order/save')}",
+            type: 'post',
+            success: function(data) {
+                data = eval("("+data+")")
+                if(data.status=="true"){
+                    window.location.href=$("#index_url").val();
+                }else{
+                    alert("保存出错了！" + data.msg);
+                }
+            }
+        };
+    });
+</script>
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">
+            <span>工单管理</span>
+        </h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<input type="hidden" id="index_url" value="{:U('order/index')}"/>
+<input type="hidden" id="search_url" value="{:U('order/search')}">
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <!-- /.panel-heading -->
+            <form role="form" action="{:U('order/index',array('pid'=>$pid))}" method="POST" id="myForm1" enctype="multipart/form-data" data-ajax="false">
+                <input type="hidden" name="id" value="{$data.id}" readyonly />
+                <h2>{$edit_info} </h2>
+                <table class="table table-striped table-bordered table-hover">
+                    <tr>
+                        <td class="col-name">工单编号</td>
+                        <td>
+                            <input name="ordercode" type="text" value="{$data.ordercode}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-name">公司名称*</td>
+                        <td>
+                            <input type="text" name="requireuser" id="requireuser" value="{$data.requireuser}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-name">医院名称</td>
+                        <td>
+                            <input type="text" name="customerId" id="customerId" value="{$data.customerid}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-name">问题类型*</td>
+                        <td>
+                            <input type="text" name="jobtype" id="jobtype" value="{$data.jobtype}">
+                        </td>
+                    </tr>
+                    <!--<tr>
+                        <td class="col-name">到场人员</td>
+                        <td>
+                            <input type="text" name="engineerId" id="engineerId" value="{$data.engineerid}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-name">期待时间</td>
+                        <td>
+                            <input name="hopetime" placeholder="请输入期待日期" class="laydate-icon timeUstyle stateUTime" onclick="laydate({istime: true,format:'YYYY-MM-DD hh:mm'})" type="text" value="{$data.hopetime}">
+                        </td>
+                    </tr>
+                    <!-- <tr>
+                        <td class="col-name">接单时间</td>
+                        <td>
+                            <input name="accepttime" placeholder="请输入接单日期" class="laydate-icon timeUstyle stateUTime" onclick="laydate({istime: true,format:'YYYY-MM-DD hh:mm'})" type="text" value="{$data.accepttime}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-name">到场时间</td>
+                        <td>
+                            <input name="arrivetime" placeholder="请输入到场日期" class="laydate-icon timeUstyle stateUTime" onclick="laydate({istime: true,format:'YYYY-MM-DD hh:mm'})" type="text" value="{$data.arrivetime}" readonly>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-name">结束时间</td>
+                        <td>
+                            <input name="endtime" placeholder="请输入结束日期" class="laydate-icon timeUstyle stateUTime" onclick="laydate({istime: true,format:'YYYY-MM-DD hh:mm'})" type="text" value="{$data.endtime}">
+                        </td>
+                    </tr> -->
+                    <tr>
+                        <td class="col-name">工作说明</td>
+                        <td>
+                            <input name="jobcontent" type="text" value="{$data.jobcontent}" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-name">特殊需求</td>
+                        <td>
+                            <input name="extrademand" type="text" value="{$data.extrademand}" >
+                        </td>
+                    </tr>
+                    <!-- <tr>
+                        <td class="col-name">成本</td>
+                        <td>
+                            <input name="amount" type="number" value="{$data.amount}">
+                        </td>
+                    </tr> -->
+                    <tr>
+                        <td class="col-name">状态</td>
+                        <td>
+                            <div data-role="controlgroup" data-type="horizontal">
+                                <label>已申请<input name="status" type="radio" value="0" <if condition="$data['status'] eq 0"> checked=true </if>></label>
+                                <label>已派单<input name="status" type="radio" value="1" <if condition="$data['status'] eq 1 "> checked=true </if>></label>
+                                <label>处理中<input name="status" type="radio" value="2" <if condition="$data['status'] eq 2  "> checked=true </if>></label>
+                                <label>已关闭<input name="status" type="radio" value="3" <if condition="$data['status'] eq 3 "> checked=true </if>></label>
+                                <label>已支付<input name="status" type="radio" value="4" <if condition="$data['status'] eq 4 "> checked=true </if>></label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-name">备注</td>
+                        <td>
+                            <input name="memo" type="text" value="{$data.memo}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <if condition="$edit_info neq '查看信息'">
+                            <td colspan="2" align="center">
+                                <input type="submit" class="search" data-inline="true" value="提交">
+                            </td>
+                        </if>
+                    </tr>
+                </table>
+                <input type="button" value="返回" onclick="window.history.back(-1)" data-inline="true">
+            </form>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+
+<include file="Public/footer" />
+<script src="__PUBLIC__/js/laydate.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="__PUBLIC__/js/laydate.js"></script>
+<script type="text/javascript">
+    $(function() {
+
+        var customerId_param = "?table=Customer&field=name";
+        $("#customerId").autocomplete({
+            source: $('#search_url').val() + customerId_param
+        });
+
+        var requireuser_param = "?table=Company&field=name";
+        $("#requireuser").autocomplete({
+            source: $('#search_url').val() + requireuser_param
+        });
+
+        var jobtype_param = "?table=Jobtype&field=name";
+        $("#jobtype").autocomplete({
+            source: $('#search_url').val() + jobtype_param
+        });
+
+        var engineer_param = "?table=Engineer&field=engineername";
+        $("#engineerId").autocomplete({
+            source: $('#search_url').val() + engineer_param
+        });
+    });
+</script>

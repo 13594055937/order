@@ -1,0 +1,459 @@
+<include file="Public/header" />
+    <link href="__PUBLIC__/css/merchants.css" rel="stylesheet">
+    </div><a href="javascript:;" class="banner">
+	<php>$bg="banner-9.jpg";</php>
+    <foreach name="imgs" item="imgslist"><if condition="$imgslist['position'] eq 'pc合作加盟'"><php>$bg = $imgslist['small_pic'];</php></if></foreach>
+      <div style="background:url(__PUBLIC__/images/banner-9.jpg) no-repeat center top;height:712px;" class="img"></div></a>
+    <div class="introduction">
+      <div class="w">
+        <div class="title"><img alt="{$imgalt}" src="__PUBLIC__/images/tit-7.png" class="animated swing infinite"></div>
+        <div class="clearfix">
+          <div class="fl">
+            <div class="title-2"><b>豪蟹汇公司</b><span>HAOXIEHUI</span></div>
+            <div class="text">
+              <h3>好蟹汇隶属于上海豪蟹汇实业有限公司，是著名的阳澄湖大闸蟹品牌，拥有十余年的养蟹、售蟹经验。</h3>
+              <p>历年来，好蟹汇阳澄湖大闸蟹通过培植水草净化水质、增加溶氧，投施鱼虾、螺蛽作为天然铒料，培育最正宗的长江区系中华绒螯蟹，实体店以苏州为中心遍布北、上、广等20多个主要城市。</p>
+            </div>
+            <ul class="features">
+              <li>诚信</li>
+              <li>诚实</li>
+              <li>诚意</li>
+              <li>诚恳</li>
+            </ul>
+            <div class="text">
+              <h3>始终坚持<span class="red">诚信、诚实、诚意、诚恳</span><br>的四诚经营理念以及顾客至上的服务理念！</h3>
+            </div><a href="{$baseConfig.shangqiao}" target="_blank"  class="btn">立即咨询</a>
+          </div>
+          <div class="fr"><img alt="{$imgalt}" src="__PUBLIC__/images/zs-1.png" ></div>
+        </div>
+      </div>
+    </div>
+    <div class="recruit-partner">
+      <div class="w clearfix">
+        <div class="fl left">
+          <h3><b>好蟹汇运营模式</b><span>Operation mode</span></h3><img alt="{$imgalt}" src="__PUBLIC__/images/zm-1.jpg" >
+        </div>
+        <div class="fl center">
+          <h2>好蟹汇全国招募合作伙伴</h2>
+          <p class="text">辉煌15年，我们始终坚持培育正宗的阳澄湖大闸蟹，售卖新鲜的海鲜产品，坚持诚信、诚实、诚意、诚恳的四诚经营理念以及顾客至上的服务理念，实体店遍布全国20多个主要城市。</p>
+          <p class="bg">互联网+线下实体店双联动</p>
+          <p class="bg">店商＋电商+多元化产品运营</p>
+        </div>
+        <div class="fr right"><img alt="{$imgalt}" src="__PUBLIC__/images/zm-2.png" ></div>
+      </div>
+      <div class="bottom">
+        <div class="w clearfix">
+          <div class="fr">全国合作热线：400-880-1517</div>
+          <div class="fr red">引领行业发展  共攀财富高峰</div>
+        </div>
+      </div>
+    </div>
+    <div class="product">
+      <div class="w">
+        <div class="title">
+          <div class="animated swing infinite">
+            <h3 class="red">多元化产品</h3>
+            <p>阳澄湖大闸蟹/海鲜大礼包</p><img alt="{$imgalt}" src="__PUBLIC__/images/dy-1.png" >
+          </div>
+        </div>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+	    <foreach name="commend_card" item="commend_data" key="key_index">
+	    <if condition="$key_index eq 0 || $key_index eq 4 || $key_index eq 8">
+            <div class="swiper-slide">
+              <ul class="box list">
+	    </if>
+                <li>
+		<a href="/product/codebuy_{$commend_data.id}.html">
+                    <div class="img"><img alt="{$imgalt}" src="__PUBLIC__/images/{$commend_data.pic}"></div>
+                    <div class="l-bottom"><b>{$commend_data.type}规格选择</b>
+                      <div class="line">
+                        <div class="fl spec">
+                          <p>雄蟹 {$commend_data.male_crab_weight}两 / {$commend_data.nums}只</p>
+                          <p>雌蟹 {$commend_data.female_crab_weight}两 / {$commend_data.nums}只</p>
+                        </div>
+                        <div class="fl price">RMB:{$commend_data.price}</div>
+                      </div>
+                    </div></a>
+                </li>
+	    <if condition="$key_index eq 3 || $key_index eq 7 || $key_index eq count($commend_card)-1">
+              </ul>
+            </div>
+	    </if>
+	  </foreach>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+    <div class="handinhand">
+      <div class="w">
+        <div class="title"><img alt="{$imgalt}" src="__PUBLIC__/images/tit-8.png"  class="animated swing infinite"></div>
+        <ul class="bg-1">
+          <li>
+            <div>
+              <p><span>增强企业</span><span>竞争实力</span></p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p><span>创造开拓</span><span>新市场</span></p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p><span>促进资源</span><span>合理利用</span></p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p><span>增加</span><span>企业收益</span></p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p><span>多元化</span><span>战略展开</span></p>
+            </div>
+          </li>
+        </ul>
+        <ul class="red bg-2">
+          <li>
+            <div>
+              <p><span>0投入</span></p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p><span>0门槛</span></p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p><span>0风险</span></p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p><span>0负担</span></p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <p><span>高回报</span></p>
+            </div>
+          </li>
+        </ul>
+        <ul class="text">
+          <li>
+            <p>无需压货</p>
+          </li>
+          <li>
+            <p>无需保证金</p>
+          </li>
+          <li>
+            <p>无条件退卡</p>
+          </li>
+          <li>
+            <p>物流+售后</p>
+          </li>
+          <li>
+            <p>低折扣</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="guarantee">
+      <div class="w">
+        <div class="title">
+          <h3>五大保障  为您保驾护航</h3>
+          <p><span></span><b>免除后顾之忧</b><span> </span></p>
+        </div>
+        <ul>
+          <li>
+            <div class="text">
+              <div>
+                <h3>收益保障</h3>
+                <p>市场成熟</p>
+                <p>回报丰厚</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="text">
+              <div>
+                <h3>广告营销</h3>
+                <p>全方位</p>
+                <p>品牌打造</p>
+                <p>网络推广</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="text">
+              <div>
+                <h3>全程护航</h3>
+                <p>前期培训</p>
+                <p>中期指导</p>
+                <p>后期维护</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="text">
+              <div>
+                <h3>合作自由</h3>
+                <p>个人合作</p>
+                <p>半年起签</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="text">
+              <div>
+                <h3>售后无忧</h3>
+                <p>7*12小时</p>
+                <p>客服技术团队</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="standby">
+      <div class="w">
+        <div class="title">
+          <div class="animated swing infinite">
+            <h3 class="red">8大支持·解决您的后顾之忧</h3>
+            <p>生态系统 协同作战 优势共享</p>
+            <p>wu xie ke ji de hao wei dao</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="flex"><img alt="{$imgalt}" src="__PUBLIC__/images/zc-1.jpg" >
+            <ul>
+              <li><span class="num-1"></span>
+                <div class="text">
+                  <h3>原产货源支持</h3>
+                  <p>阳澄湖鲜活现捕，品质无忧</p>
+                </div>
+              </li>
+              <li><span class="num-3"></span>
+                <div class="text">
+                  <h3>销售支持</h3>
+                  <p>礼卡礼盒、企业定制需求优先处理</p>
+                </div>
+              </li>
+              <li><span class="num-5"></span>
+                <div class="text">
+                  <h3>销售返利支持</h3>
+                  <p>赋予极具可操作性的利润空间和商业机会</p>
+                </div>
+              </li>
+              <li><span class="num-7"></span>
+                <div class="text">
+                  <h3>客户支持</h3>
+                  <p>线上大闸蟹礼卡售后提货</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="flex"><img alt="{$imgalt}" src="__PUBLIC__/images/zc-2.jpg" >
+            <ul>
+              <li><span class="num-2"></span>
+                <div class="text">
+                  <h3>品牌支持</h3>
+                  <p>正宗阳澄湖大闸蟹知名品牌，全面的线上、线下品牌体系</p>
+                </div>
+              </li>
+              <li><span class="num-4"></span>
+                <div class="text">
+                  <h3>全方位培训支持</h3>
+                  <p>销售及产品的培训、营销指导、活动指导支持</p>
+                </div>
+              </li>
+              <li><span class="num-6"></span>
+                <div class="text">
+                  <h3>物流配送支持</h3>
+                  <p>顺丰合作</p>
+                </div>
+              </li>
+              <li><span class="num-8"></span>
+                <div class="text">
+                  <h3>店面支持</h3>
+                  <p>装修设计指导支持</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cooperation">
+      <div class="w">
+        <div class="title">
+          <h3>
+             
+            合作无界 互助<span class="red">共赢</span>
+          </h3>
+          <p>wu xie ke ji de hao wei dao</p>
+        </div>
+        <ul class="tabs">
+          <li><a href="javascript:;" name=".tab2_1">好蟹汇合作伙伴</a></li>
+          <li><a href="javascript:;" name=".tab2_2">好蟹汇荣誉资质</a></li>
+        </ul>
+        <div class="content">
+          <div class="tab2_1 focus-img">
+            <div class="focus-img-con">
+              <ul>
+                <li> <a href="javascript:;"><img alt="{$imgalt}" src="__PUBLIC__/images/2honor.jpg"></a></li>
+                <li> <a href="javascript:;"><img alt="{$imgalt}" src="__PUBLIC__/images/2honor-1.jpg"></a></li>
+                <li> <a href="javascript:;"><img alt="{$imgalt}" src="__PUBLIC__/images/2honor-2.jpg"></a></li>
+                <li> <a href="javascript:;"><img alt="{$imgalt}" src="__PUBLIC__/images/2honor-3.jpg"></a></li>
+                <li> <a href="javascript:;"><img alt="{$imgalt}" src="__PUBLIC__/images/2honor-4.jpg"></a></li>
+                <li> <a href="javascript:;"><img alt="{$imgalt}" src="__PUBLIC__/images/2honor-5.jpg"></a></li>
+                <li> <a href="javascript:;"><img alt="{$imgalt}" src="__PUBLIC__/images/2honor-6.jpg"></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab2_2 focus-img">
+            <div class="focus-img-con">
+              <ul>
+                <li> <a href="javascript:;"><img alt="{$imgalt}" src="__PUBLIC__/images/honor.jpg"></a></li>
+                <li> <a href="javascript:;"><img alt="{$imgalt}" src="__PUBLIC__/images/honor-1.jpg"></a></li>
+                <li> <a href="javascript:;"><img alt="{$imgalt}" src="__PUBLIC__/images/honor-2.jpg"></a></li>
+                <li> <a href="javascript:;"><img alt="{$imgalt}" src="__PUBLIC__/images/honor-3.jpg"></a></li>
+                <li> <a href="javascript:;"><img alt="{$imgalt}" src="__PUBLIC__/images/honor-4.jpg"></a></li>
+                <li> <a href="javascript:;"><img alt="{$imgalt}" src="__PUBLIC__/images/honor-5.jpg"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="w clearfix">
+        <div class="logo fl"><img alt="{$imgalt}" src="__PUBLIC__/images/logo.png"></div>
+        <div class="text fl">
+          <h3>一份“蟹”礼让你的人脉无<b>“蟹”</b>可击</h3>
+          <ul class="clearfix">
+            <li>专属 · 客户服务</li>
+            <li>专业 · 解决方案</li>
+            <li>专享 · 企业价格</li>
+            <li>专致 · 客户体验</li>
+          </ul>
+        </div>
+        <div class="or"><b></b></div>
+        <div class="order fr">
+          <p><span>订购电话：</span><b>400-880-1517</b></p><a href="{$baseConfig.shangqiao}" target="_blank" class="btn"><i></i><span>企业订购快速通道</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="c-link-2">
+      <div class="w">
+        <ul>
+          <li><a href="javascript:;">
+              <div class="img2 img-2-1"></div>
+              <p>15年养蟹经验</p></a></li>
+          <li><a href="javascript:;">
+              <div class="img2 img-2-2"></div>
+              <p>200+企业合作</p></a></li>
+          <li><a href="javascript:;">
+              <div class="img img-3"></div>
+              <p>24家全国直营店</p></a></li>
+          <li><a href="javascript:;">
+              <div class="img img-8"></div>
+              <p>全年7*12服务</p></a></li>
+          <li><a href="javascript:;">
+              <div class="img img-5"></div>
+              <p>800亩阳澄湖养殖水域</p></a></li>
+          <li><a href="javascript:;">
+              <div class="img img-6"></div>
+              <p>品质保障</p></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="company">
+      <div class="w">
+        <div class="title">
+          <h3 class="red">好蟹汇·企业历程</h3>
+          <p>wu xie ke ji de hao wei dao</p>
+        </div>
+        <ul>
+          <li>
+            <h3><span>2007</span></h3>
+            <p>
+               
+              上海豪蟹汇实业有限<span>公司成立，</span>好蟹汇<span>品牌成立。</span>
+            </p>
+          </li>
+          <li>
+            <h3><span>2009</span></h3>
+            <p>
+               
+              建立<span>苏州</span>阳澄湖东湖养殖基地，<span>养殖面积810亩。</span>
+            </p>
+          </li>
+          <li>
+            <h3><span>2010</span></h3>
+            <p>
+               
+              加入苏州阳澄湖大闸蟹协会，成为<span>理事单位</span>；全国直营店达到<span>6家。</span>
+            </p>
+          </li>
+          <li>
+            <h3><span>2011</span></h3>
+            <p> <span>北京</span>分公司成立在全国实行南北统一管理制；全国直营店达到<span>10家。</span></p>
+          </li>
+          <li>
+            <h3><span>2012</span></h3>
+            <p>
+               
+              引进最先进的大闸蟹养殖技术；成为提供最优质大闸蟹的<span>供货商</span>之一。
+            </p>
+          </li>
+          <li>
+            <h3><span>2013</span></h3>
+            <p> <span>上海总部建立</span>；成立业内最先进的配送服务中心与网络配送系统；全国直营店达到<span>20家。</span></p>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <h3><span>2014</span></h3>
+            <p>获得国家原产地产品保护管理委员会颁发的<span>“阳澄湖大闸蟹地理标志保护产品专营店单位”</span>资格好蟹汇产品多元化，增加舟山海鲜及全球多款进口海鲜产品好蟹汇开通品牌微信订阅号、建立好蟹汇微信服务号，打造电子商务<span>全面平台全面进驻淘宝天猫、京东、1号店等大型电商网站</span>带动阳澄湖大闸蟹进入千家万户</p>
+          </li>
+          <li>
+            <h3><span>2015</span></h3>
+            <p>好蟹汇全面启动<span>全国直营店</span>计划，将为更广大的客户带来更加完美的购蟹体验，为客户提供最优质的订购、送货和售后服务。成立产品安全质量监督部门，确保每一只大闸蟹的健康安全，服务和安检水平达到业内领先</p>
+          </li>
+          <li>
+            <h3><span>2016</span></h3>
+            <p>好蟹汇的脚步迈向全国，至2016年年底全国直营店达<span>24家；</span>荣获：匠新 <span>2016</span>年度阳澄湖大闸蟹项目<span>诚信商家称号。</span></p>
+          </li>
+          <li>
+            <h3><span>2017</span></h3>
+            <p>
+              我们整装待发，将以
+              最贴心的服务
+              和
+              最优质的产品
+              来回馈朋友们对好蟹汇的认可和期待。
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="cooperate">
+      <div class="w">
+        <div class="title">
+          <h3>合作流程</h3>
+          <p>wu xie ke ji de hao wei dao</p>
+        </div>
+        <div class="img-1"><img alt="{$imgalt}" src="__PUBLIC__/images/hz-1.jpg" >
+          <div class="btn-box"><a href="{$baseConfig.shangqiao}" title="申请合作" class="apply" target="_blank">申请合作</a><a href="/" title="进入官网" class="index">进入官网</a></div>
+        </div>
+      </div>
+    </div>
+    <include file="Public/footer2"/>
+    <script src="__PUBLIC__/js/require.js" data-main="__PUBLIC__/js/merchants"></script>
+  </body>
+</html>

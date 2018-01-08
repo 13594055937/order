@@ -1,0 +1,25 @@
+.icon-font {
+    width: 0;
+    height: 0;
+    font-size: 0;
+    position: relative;
+    top: -4px;
+    &.icon-arrow-left {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-right: 5px solid @primary;
+        right: 4px;
+        a:hover &{
+            border-right-color:#fff;
+        }
+    }
+    &.icon-arrow-right {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 5px solid @primary;
+        left: 4px;
+        a:hover &{
+            border-left-color:#fff;
+        }
+    }
+}

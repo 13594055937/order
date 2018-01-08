@@ -1,0 +1,104 @@
+.m-aside-box {
+    margin-bottom: 20px;
+    border: 1px solid @border-color;
+    background-color: @bg;
+    .m-aside-hd {
+        padding: 5px 10px;
+        border-bottom: 1px solid @border-color;
+        h2 {
+            line-height: 30px;
+            .font-size-lg;
+            color: @primary-hover;
+            .text-ellipsis;
+        }
+    }
+    .m-aside-bd {
+        padding: 10px 10px 0 10px;
+    }
+    .list-txt{
+        .item{
+            .text-ellipsis;
+        }
+    }
+}
+.list {
+    &.list-rank {
+        .item-inner {
+            display: block;
+            margin-bottom: 10px;
+            &.current {
+                .item {
+                    display: block;
+                    .font-size-md;
+                    .item-avatar(120px, 90px);
+                    .num {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 18px;
+                        height: 18px;
+                        text-align: center;
+                        line-height: 18px;
+                        background-color: @assert;
+                        color: #fff;
+                    }
+                    .desc {
+                        margin-top: 5px;
+                        line-height: 20px;
+                        height: 40px;
+                        overflow: hidden;
+                    }
+                    .statics {
+                        margin-top: 15px;
+                        display: inline-block;
+                        line-height: 26px;
+                        padding: 0 10px;
+                        border: 1px solid @border-color;
+                        .border-radius(3px);
+                        position: relative;
+                        &:before,
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            left: 50%;
+                            margin-left: -5px;
+                            width: 0;
+                            height: 0;
+                            font-size: 0;
+                            border-left: 5px solid transparent;
+                            border-right: 5px solid transparent;
+                        }
+                        &:before {
+                            top: -5px;
+                            border-bottom: 5px solid @border-color;
+                        }
+                        &:after {
+                            top: -4px;
+                            border-bottom: 5px solid @bg;
+                        }
+                    }
+                }
+                .title {
+                    display: none;
+                }
+            }
+        }
+        .item {
+            display: none;
+        }
+        .title {
+            .font-size-md;
+            line-height: 18px;
+            .text-ellipsis;
+            .num {
+                float: left;
+                width: 18px;
+                height: 18px;
+                .text-ellipsis;
+                text-align: center;
+                margin-right: 4px;
+                background-color: @border-color;
+            }
+        }
+    }
+}

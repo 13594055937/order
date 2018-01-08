@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="edge" />
+<title>睿年俱乐部</title>
+<meta name="keywords" content="关键词">
+<meta name="description" content="描述">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/uikit.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bgstretcher.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/jquery.mCustomScrollbar.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/iven.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/responsive.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/animate.min.css" />
+</head>
+<body>
+<div class="bgStretcherWp"></div>
+
+<div class="big-container">
+<include file="Public/header" />
+<!--uk-container-end-->
+
+<!--内容动画-->
+<div class="left-box uk-width-small-2-3">
+	<div class="uk-grid uk-grid-collapse">
+		<div class="uk-width-large-1-10 uk-width-medium-3-10 lefthide uk-hidden-small">
+			<div class="left-bar">
+				<ul>
+					<li><a href="#">{$index_list.name}</a>
+					
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="uk-width-large-9-10 uk-width-medium-7-10 righthide">
+			<div class="left-cont">
+				<div class="left-cont-title"><i class="uk-icon-close left-close"></i></div>
+				<div class="left-cont-body">
+					<div class="p-cont">
+					{$index_list.content}
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+<include file="Public/footer" />

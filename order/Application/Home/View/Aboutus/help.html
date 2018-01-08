@@ -1,0 +1,19 @@
+<include file="Public/header_help" />
+<link href="__PUBLIC__/css/common.css" rel="stylesheet">
+<link href="__PUBLIC__/css/animate.css" rel="stylesheet">
+<link href="__PUBLIC__/css/help.css" rel="stylesheet">
+      <div class="w boxs clearfix">
+        <div class="title">当前位置： <span><a href="/">好蟹汇</a>>{$detail.parent_name}>{$detail.name}</span></div>
+        <div class="left fl">
+          <include file="Public/mid_help"/>
+        </div>
+        <div class="right fr">
+          <h3>{$detail.name}</h3>
+	  {$detail.description}
+        </div>
+      </div>
+    </div>
+    <include file="Public/footer2" />
+    <script src="__PUBLIC__/js/require.js" data-main="__PUBLIC__/js/index"></script>
+    </body>
+    </html>

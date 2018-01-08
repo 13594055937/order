@@ -1,0 +1,29 @@
+<dl>
+                <dt>售后服务</dt>
+		<foreach name="help" item="help_data">
+               <if condition="$help_data['parent_name'] eq '售后服务'"> <dd><a href="/aboutus/help_{$help_data.id}.html">{$help_data.name}</a></dd></if>
+		</foreach>
+              </dl>
+              <dl>
+                <dt>支付配送</dt>
+		<foreach name="help" item="help_data">
+               <if condition="$help_data['parent_name'] eq '支付配送'"> <dd><a href="/aboutus/help_{$help_data.id}.html">{$help_data.name}</a></dd></if>
+                </foreach>
+              </dl>
+              <dl>
+                <dt>新手上路</dt>
+		<foreach name="help" item="help_data">
+               <if condition="$help_data['parent_name'] eq '新手上路'"> <dd><a href="/aboutus/help_{$help_data.id}.html">{$help_data.name}</a></dd></if>
+                </foreach>
+              </dl>
+              <dl>
+                <dt>招商加盟</dt>
+		<foreach name="help" item="help_data">
+               <if condition="$help_data['parent_name'] eq '招商加盟'"> <dd><a href="/aboutus/help_{$help_data.id}.html">{$help_data.name}</a></dd></if>
+                </foreach>
+              </dl>
+<dl>
+                <dt>关于我们</dt>
+                <dd><a href="{:U('product/hxh')}">公司简介</a></dd>
+                <dd><a href="{:U('index/contact')}">联系我们 </a></dd>
+              </dl>

@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+ .sex_male input,
+ .sex_female input,
+ .sex_nomale input
+ {
+	display:none
+ }
+ .tel_btm_02_by_jr
+ {
+ 	color: rgb(255, 255, 255);
+	font-style: italic;
+	font-weight: bold;
+	font-size: 25px;
+	font-family:'微软雅黑','宋体',Arial,Helvetica,sans-serif;
+	display: block;
+	float: left;
+	margin-top: 50px;
+	margin-right: 10px;
+	margin-left: 10px;
+ }
+ 
+ .my_Name_bind{margin-top:-21px;}
+.level_con{ display:none;}
+.level_con .level_con_txt{ min-height: 156px;max-height: 156px;overflow: hidden;padding-top: 2px;}
+ 	

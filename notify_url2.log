@@ -1,0 +1,168 @@
+执行日期：2017-05-13-09：32：24
+【接收到的alipay notify通知】:
+ccc
+
+
+执行日期：2017-05-13-09：32：24
+【接收到的alipay notify通知】:
+array (
+  'out_trade_no' => 'hxh170513093201_3',
+  'trade_no' => '2017051321001004470212371348',
+  'total_fee' => '1.00',
+  'trade_status' => 'TRADE_SUCCESS',
+  'notify_id' => 'eb7f4d793a6ddf800e3ef4467add2edjmm',
+  'notify_time' => '2017-05-13 09:32:24',
+  'buyer_email' => '15000897931',
+)
+
+执行日期：2017-05-13-09：32：24
+【接收到的alipay notify通知】:
+
+
+执行日期：2017-05-13-09：32：36
+【接收到的alipay notify通知】:
+ccc
+
+
+执行日期：2017-05-13-09：32：36
+【接收到的alipay notify通知】:
+array (
+  'out_trade_no' => 'hxh170513093201_3',
+  'trade_no' => '2017051321001004470212371348',
+  'total_fee' => '1.00',
+  'trade_status' => 'TRADE_SUCCESS',
+  'notify_id' => 'RqPnCoPT3K9%2Fvwbh3InYzf5RJTVs1WPRoESF%2FouVlZwGz2084t5rXmG%2FXvl%2FJb0j36iW',
+  'notify_time' => '2017-05-13 09:32:33',
+  'buyer_email' => '15000897931',
+)
+
+执行日期：2017-05-13-09：32：36
+【接收到的alipay notify通知】:
+
+
+执行日期：2017-05-13-09：34：35
+【接收到的alipay notify通知】:
+ccc
+
+
+执行日期：2017-05-13-09：34：35
+【接收到的alipay notify通知】:
+array (
+  'out_trade_no' => 'hxh170513093357_2-20170512103806',
+  'trade_no' => '2017051321001004470212382648',
+  'total_fee' => '1.00',
+  'trade_status' => 'TRADE_SUCCESS',
+  'notify_id' => 'd34999430ac095889e2a40518c35323jmm',
+  'notify_time' => '2017-05-13 09:34:35',
+  'buyer_email' => '15000897931',
+)
+
+执行日期：2017-05-13-09：34：35
+【接收到的alipay notify通知】:
+2-20170512103806
+
+执行日期：2017-05-13-09：34：47
+【接收到的alipay notify通知】:
+ccc
+
+
+执行日期：2017-05-13-09：34：47
+【接收到的alipay notify通知】:
+array (
+  'out_trade_no' => 'hxh170513093357_2-20170512103806',
+  'trade_no' => '2017051321001004470212382648',
+  'total_fee' => '1.00',
+  'trade_status' => 'TRADE_SUCCESS',
+  'notify_id' => 'RqPnCoPT3K9%2Fvwbh3InYzf5RJTZhDmv85bCCoZktLYPMVDYI2%2FaIPmKq9884SYxucEl5',
+  'notify_time' => '2017-05-13 09:34:44',
+  'buyer_email' => '15000897931',
+)
+
+执行日期：2017-05-13-09：34：47
+【接收到的alipay notify通知】:
+2-20170512103806
+
+执行日期：2017-06-12-10：39：39
+【接收到的alipay notify通知】:
+ccc
+
+
+执行日期：2017-06-12-10：39：39
+【接收到的alipay notify通知】:
+array (
+  'out_trade_no' => 'hxh170612103901_91',
+  'trade_no' => '2017061221001004470268741600',
+  'total_fee' => '1.00',
+  'trade_status' => 'TRADE_SUCCESS',
+  'notify_id' => '6cb5ceb42c6c7d2124f9cc9c868e5c0jmm',
+  'notify_time' => '2017-06-12 10:39:38',
+  'buyer_email' => '15000897931',
+)
+
+执行日期：2017-06-12-10：39：39
+【接收到的alipay notify通知】:
+91
+
+执行日期：2017-06-12-10：39：47
+【接收到的alipay notify通知】:
+ccc
+
+
+执行日期：2017-06-12-10：39：47
+【接收到的alipay notify通知】:
+array (
+  'out_trade_no' => 'hxh170612103901_91',
+  'trade_no' => '2017061221001004470268741600',
+  'total_fee' => '1.00',
+  'trade_status' => 'TRADE_SUCCESS',
+  'notify_id' => 'RqPnCoPT3K9%2Fvwbh3InYzrkd3qbo712cTgx44IOh4ZHOAKq9XnZFqJvId%2F2HbKIa8sa%2B',
+  'notify_time' => '2017-06-12 10:39:38',
+  'buyer_email' => NULL,
+)
+
+执行日期：2017-06-12-10：39：47
+【接收到的alipay notify通知】:
+91
+
+执行日期：2017-06-12-17：57：17
+【接收到的alipay notify通知】:
+ccc
+
+
+执行日期：2017-06-12-17：57：17
+【接收到的alipay notify通知】:
+array (
+  'out_trade_no' => 'hxh170612055648_90',
+  'trade_no' => '2017061221001004520200617739',
+  'total_fee' => '1.00',
+  'trade_status' => 'TRADE_SUCCESS',
+  'notify_id' => '66d33c897dde09d8481ef753e0269c7k0i',
+  'notify_time' => '2017-06-12 17:57:17',
+  'buyer_email' => '1515052886@qq.com',
+)
+
+执行日期：2017-06-12-17：57：17
+【接收到的alipay notify通知】:
+90
+
+执行日期：2017-06-12-17：57：20
+【接收到的alipay notify通知】:
+ccc
+
+
+执行日期：2017-06-12-17：57：20
+【接收到的alipay notify通知】:
+array (
+  'out_trade_no' => 'hxh170612055648_90',
+  'trade_no' => '2017061221001004520200617739',
+  'total_fee' => '1.00',
+  'trade_status' => 'TRADE_SUCCESS',
+  'notify_id' => 'RqPnCoPT3K9%2Fvwbh3InYzrkYpaXabjrKiCojWkhiYiyyLZ4lfw6vqLSSmHYq4xppzmp2',
+  'notify_time' => '2017-06-12 17:57:17',
+  'buyer_email' => NULL,
+)
+
+执行日期：2017-06-12-17：57：20
+【接收到的alipay notify通知】:
+90
+

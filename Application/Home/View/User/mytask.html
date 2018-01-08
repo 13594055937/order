@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+        <title>任务</title>
+        <link rel="stylesheet" href="__PUBLIC__/css/uikit.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/iven.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/form-select.css" />
+        <script src="__PUBLIC__/js/jquery.js"></script>
+        <script src="__PUBLIC__/js/uikit.min.js"></script>
+        <script src="__PUBLIC__/js/form-select.min.js"></script>
+    </head>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $(".legal-tabs-title li").click(function(){
+             if($(this).hasClass("uk-active")){
+                return false;
+            }
+            var id = $(this).attr("id");
+            var otherid = (id=="i1") ? "i0":"i1";
+            $(this).addClass("uk-active");
+            $("#"+otherid).removeClass("uk-active");
+            $("#task"+otherid).hide();
+            $("#task"+id).show();
+        })
+    })
+    </script>
+    <body>
+    <!-- 这是包含拨动元素的容器 -->
+    <ul class="legal-tabs-title">
+        <li class="uk-active" id="i0">我发布的任务</li> 
+        <li id="i1">我投标的任务</li>
+    </ul>
+
+    <div class="uk-container uk-container-center" id="taski0">
+        <!-- 这是内容项目的容器 -->
+        <foreach  name="sendtask" item="senddata">
+            <div class="report">
+        	<h3>{$senddata.pro_name}</h3>
+        	<p><span>项目编号：{$senddata.pro_code}</span>&nbsp;&nbsp;<span>发布时间：<php>echo date("Y-m-d", $senddata['create_time']);</php></span> </p>
+        	<div class="i-post"><a href="{:U('user/taskdetail',array('task_id'=>$senddata['id']))}" class="uk-button uk-button-primary uk-position-relative btn-spec">查看详情 <if condition="isset($senddata['has_read'])&& $senddata['has_read'] eq 0"><i class="uk-position-absolute">+1</i></if></a>
+		<!--这里是添加待评价的地方-->
+		<if condition="$senddata['status'] eq 2 && (empty($senddata['te_user_id']) || $senddata['te_user_id'] != $senddata['uid'])">
+            <a class="uk-button uk-button-yellow" href="{:U('user/toevaluate',array('taskid'=>$senddata['id']))}">去评价</a>
+           	 </if>
+		 <span class="uk-float-right">状态：<i class="red"><if condition="$senddata['status'] eq 0">后台审核中<elseif condition="$senddata['status'] eq 1"/>进行中<elseif condition="$senddata['status'] eq 2"/>已完成<elseif condition="$senddata['status'] eq 3"/>招标中<elseif condition="$senddata['status'] eq 4"/>已取消<else/>已结束</if></i></span>
+        	</div>
+        	</div>
+        	<hr>
+        </foreach>
+    </div>    
+    
+    <div class="uk-container uk-container-center" id="taski1" style="display:none">
+        <!-- 这是内容项目的容器 -->
+        <foreach  name="bidtask" item="biddata">
+            <div class="report">
+            <h3 class="uk-text-truncate">{$biddata.pro_name}</h3>
+            <p><span>项目编号：{$biddata.pro_code}</span>&nbsp;&nbsp;<span>发布时间：<php>echo date("Y-m-d", $biddata['create_time']);</php></span> </p>
+            <div class="i-post"><a href="{:U('user/biddetail',array('id'=>$biddata['id']))}" class="uk-button uk-button-primary uk-position-relative btn-spec">查看详情 <if condition="isset($biddata['bid_has_read'])&&$biddata['bid_has_read'] eq 0"><i class="uk-position-absolute">+1</i></if></a>
+		<if condition="$biddata['status'] eq 2 && empty($biddata['hasPl'])">
+          	  <a  class="uk-button uk-button-yellow" href="{:U('user/toevaluate',array('taskid'=>$biddata['id']))}">去评价</a>
+           	 </if>
+		 <span class="uk-float-right">状态：<i class="red"><if condition="$biddata['bstatus'] eq 0">已放弃<elseif condition="$biddata['status'] eq 0"/>后台审核中<elseif condition="$biddata['status'] eq 1"/>进行中<elseif condition="$biddata['status'] eq 2"/>已完成<elseif condition="$biddata['status'] eq 3"/>招标中<elseif condition="$biddata['status'] eq 4"/>已取消<else/>已结束</if></i></span>
+            </div>
+            </div>
+            <hr>
+        </foreach>
+    </div>
+
+    <include file="Public/footer" />

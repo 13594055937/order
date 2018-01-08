@@ -1,0 +1,89 @@
+<include file="Public/header"/>
+<link rel="stylesheet" href="__PUBLIC__/smallphone/css/common.css">
+<link rel="stylesheet" href="__PUBLIC__/smallphone/css/my.css">
+		<!-- 头部 E -->
+		<div class="placeorder">
+
+			<div class="title-2">提交订单</div>
+			<!-- 显示默认地址 S-->
+			<if condition="!empty($addrlist)">
+			<div class="box defaultadd">
+				<div class="line">姓名：{$addrlist.name}</div>
+				<div class="line">电话：{$addrlist.mobile}</div>
+				<div class="line">地址：{$addrlist.province}{$addrlist.city}{$addrlist.district}{$addrlist.address}</div>
+			</div>
+			<div class="add-address">
+                                <a href="{:U('user/addresslist')}?gotourl={:U('user/placeorder')}" class="am-btn am-btn-block ">更换其他地址</a>
+                         </div>
+			</if>
+			<!-- 没有地址新建地址 S -->
+			<if condition="empty($addrlist)">
+				<div class="add-address">
+					<a href="{:U('user/editAddress')}?gotourl={:U('user/placeorder')}" class="am-btn am-btn-block ">您当前没有收货地址，点击添加+</a>
+				</div>
+			</if>
+			<!-- 没有地址新建地址 S -->
+
+			<!-- 商品清单 S -->
+			<div class="box">
+
+				<div class="title-3">商品清单</div>
+				<ul class="cm-list">
+				<php>$total_price = 0;</php>
+				<foreach name="cartlist" item="cartdata">
+				<php>$total_price += intval($cartdata['price'] * $cartdata['quantity']);</php>
+					<li>
+						<div class="left">
+							<img alt="{$imgalt}" alt="{$imgalt}"src="__PUBLIC__/images/{$cartdata.pic}" >
+						</div>
+						<div class="right">
+							<h3 class="line-1 title">{$cartdata.name}{$cartdata.type}{$cartdata.nums}对装</h3>
+							<div class="red">
+								<div class="price">{$cartdata.price} <em>×{$cartdata.quantity}</em></div>
+							</div>
+						</div>
+					</li>
+				</foreach>
+				</ul>
+			</div>
+			<!-- 商品清单 E -->
+			<!-- 支付方式 S -->
+			<div class="box payment">
+				<div class="title-3">支付方式</div>
+				<div class="method">
+					<if condition="!isset($isWeiXin)">
+					<a href="" class="plipay">
+						<img alt="{$imgalt}" alt="{$imgalt}"src="__PUBLIC__/smallphone/images/plipay.jpg">
+					</a>
+					<else/>
+					<a href="" class="wechat">
+						<img alt="{$imgalt}" alt="{$imgalt}"src="__PUBLIC__/smallphone/images/wechat.jpg">
+					</a>
+					</if>
+				</div>
+			</div>
+			<input type="hidden" id="redirect_url" value="{:U('wxpay/index')}">
+			<input type="hidden" id="real_price" value="100">
+			<!-- 支付方式 S -->		
+		</div>
+		<div class="b-fixed">
+			<div class="left">
+				商品总金额：<span class="price">{$total_price}</span>
+			</div>
+			<div class="right">
+				<a class="am-btn" href="{:U('user/pay')}">去结算</a>
+			</div>
+		</div>
+
+		<!--[if (gte IE 9)|!(IE)]><!-->
+		<script src="__PUBLIC__/smallphone/js/jquery.min.js"></script>
+		<!--<![endif]-->
+
+		<!--[if lte IE 8 ]>
+		<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+		<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+		<![endif]-->
+		<script src="__PUBLIC__/smallphone/js/amazeui.min.js"></script>
+	</body>
+</html>

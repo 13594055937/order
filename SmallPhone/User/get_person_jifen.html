@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta http-equiv="X-UA-Compatible" content="edge" />
+<title>睿年俱乐部</title>
+<meta name="keywords" content="关键词">
+<meta name="description" content="描述">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/uikit.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bgstretcher.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/jquery.mCustomScrollbar.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/iven.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/responsive.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/animate.min.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/jquery.bxslider.css" />
+</head>
+<body>
+<div class="bbs-bg"></div>
+<div class="big-container">
+  <include file="Public/user_header" />
+  <!--header end--> 
+  
+  <!--内容块-->
+<div class="bbs-container">  
+
+<div class="user-center-box">
+	<div class="user-center-top">
+		<em><span>我的积分</span></em>
+	</div>
+	<hr>
+<table width="97%" border="0" class="jifen-list">
+  <thead>
+  <tr>
+    <td>积分变化</td>
+    <td>日期</td>
+    <td>说明</td>
+    <td>剩余积分</td>
+  </tr>
+  </thead>
+  <tbody>
+    <foreach name="list" item="data" key="k">
+      <if condition="$k eq 0">
+      <tr>
+        <td><span class="red">{$data.jifen}</span></td>
+        <td><span class="red"><php>echo date("Y-m-d H:i",$data['time']);</php></span></td>
+        <td><span class="red">{$data.reason}</span></td>
+        <td><span class="red">{$userinfo.jifen}</span></td>
+      </tr>
+      </if>
+      <if condition="$k gt 0">
+        <tr>
+          <td><span class="gray">{$data.jifen}</span></td>
+          <td><span class="gray"><php>echo date("Y-m-d H:i",$data['time']);</php></span></td>
+          <td><span class="gray">{$data.reason}</span></td>
+          <td><span class="gray">{$userinfo.jifen}</span></td>
+        </tr>
+      </if>
+    </foreach>
+  </tbody>
+</table>
+		<div class="tabs1-pagebox">
+		<div class="one-pages">{$page}</div>
+		</div>
+		
+</div><!--user-center-box end-->
+
+      
+<br><br><br><br>
+</div><!--bbs container end-->	
+  <include file="Public/footer" />

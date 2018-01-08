@@ -1,0 +1,263 @@
+			<div class="box4">
+				<img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/11-bg2.jpg">
+				<img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/11-bg3.jpg">
+			</div>
+			
+			<!-- Swiper -->
+		    <div class="swiper-container swiper-container1">
+		        <div class="swiper-wrapper">
+		            <div class="swiper-slide"><img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/11-bg4_1.jpg"></div>
+		            <div class="swiper-slide"><img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/11-bg4.jpg"></div>
+		        </div>
+		        <!-- Add Pagination -->
+		        <div class="swiper-pagination"></div>
+		    </div>
+
+		    <div class="box5">
+		    	<img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/11-t6.png">
+		    	 <!-- Swiper -->
+			    <div class="swiper-container swiper-container2">
+			        <div class="swiper-wrapper">
+			            <div class="swiper-slide">
+			            	<img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/11-bg5.1.png">
+		            	</div>
+			            <div class="swiper-slide">
+			            	<img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/11-bg5.2.png">
+		            	</div>
+			        </div>
+			        <!-- Add Pagination -->
+			        <div class="swiper-pagination"></div>
+			        <!-- Add Arrows -->
+			        <div class="swiper-button-next"></div>
+			        <div class="swiper-button-prev"></div>
+			    </div>
+		    </div>
+		    <div class="box6">
+				<img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/11-bg6.jpg">
+			</div>
+		 	<div class="box7">
+				<img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/11-t3.png" class="img1">
+				<img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/11-bg5.png">
+			</div>
+			<div class="box8">
+				<img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/11-bg7.jpg">
+				<!-- Swiper -->
+			    <div class="swiper-container swiper-container3">
+			        <div class="swiper-wrapper">
+			            <div class="swiper-slide"><img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/11-bg8-1.jpg"></div>
+			            <div class="swiper-slide"><img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/11-bg8.jpg"></div>
+			        </div>
+			        <!-- Add Pagination -->
+			        <div class="swiper-pagination"></div>
+			    </div>
+			</div>
+			<div class="box9 box5">
+				<img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/11-t4.png">
+				 <!-- Swiper -->
+			    <div class="swiper-container swiper-container4">
+			        <div class="swiper-wrapper">
+			            <div class="swiper-slide">
+			            	<img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/11-bg6.png">
+		            	</div>
+			            <div class="swiper-slide">
+			            	<img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/11-bg6_1.png">
+		            	</div>
+			        </div>
+			        <!-- Add Pagination -->
+			        <div class="swiper-pagination"></div>
+			        <!-- Add Arrows -->
+			        <div class="swiper-button-next"></div>
+			        <div class="swiper-button-prev"></div>
+			    </div>
+			</div>
+			<div class="box10">
+				<img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/11-bg7.png">
+			</div>
+			<div class="box11">
+				<img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/11-t5.png">
+				<div class="am-tabs" data-am-tabs>
+				  <ul class="am-tabs-nav am-nav am-nav-tabs">
+				    <li class="am-active"><a href="javascript:;">三对装</a></li>
+				    <li><a href="javascript:;">四对装</a></li>
+				    <li><a href="javascript:;">五对装</a></li>
+				  </ul>
+
+				  <div class="am-tabs-bd">
+				    <div class="am-tab-panel am-active" id="tab1">
+				    	<ul class="cm-list">
+							<foreach name="gift" item="gift_data">
+             						 <if condition="$gift_data['type'] eq '礼卡' && $gift_data['nums'] eq 3">
+							<foreach name="giftp" item="giftp_data">
+                                                                                 <if condition="$giftp_data['gift_id'] eq $gift_data['id']">
+							<li>
+								<a href="/product/codebuy_{$giftp_data.id}.html">
+									<div class="left">
+										<img alt="{$imgalt}" src="__PUBLIC__/images/{$gift_data['pic']}" >
+									</div>
+									<div class="right">
+										<h3 class="line-1 title">{$gift_data.name}【{$giftp_data.pname}】{$gift_data.type}</h3>
+										<div class="price red">{$giftp_data.price}</div>
+										<div class="text">雄蟹：{$giftp_data.male_crab_weight}两*{$giftp_data.nums}只+雌蟹：{$giftp_data.female_crab_weight}两*{$gift_data.nums}只</div>
+									</div>
+								</a>
+							</li>
+							</if>
+                                                        </foreach>
+							</if>
+							</foreach>
+						</ul>
+				    </div>
+				    <div class="am-tab-panel" id="tab2">
+				   	<ul class="cm-list">
+                                                        <foreach name="gift" item="gift_data">
+                                                         <if condition="$gift_data['type'] eq '礼卡' && $gift_data['nums'] eq 4">
+                                                        <foreach name="giftp" item="giftp_data">
+                                                                                 <if condition="$giftp_data['gift_id'] eq $gift_data['id']">
+                                                        <li>
+                                                                <a href="/product/codebuy_{$giftp_data.id}.html">
+                                                                        <div class="left">
+                                                                                <img alt="{$imgalt}" src="__PUBLIC__/images/{$gift_data['pic']}" >
+                                                                        </div>
+                                                                        <div class="right">
+                                                                                <h3 class="line-1 title">{$gift_data.name}【{$giftp_data.pname}】{$gift_data.type}</h3>
+                                                                                <div class="price red">{$giftp_data.price}</div>
+                                                                                <div class="text">雄蟹：{$giftp_data.male_crab_weight}两*{$giftp_data.nums}只+雌蟹：{$giftp_data.female_crab_weight}两*{$gift_data.nums}只</div>
+                                                                        </div>
+                                                                </a>
+                                                        </li>
+                                                        </if>
+                                                        </foreach>
+                                                        </if>
+                                                        </foreach>
+                                                </ul>
+				    </div>
+				    <div class="am-tab-panel" id="tab3">
+					<ul class="cm-list">
+                                                        <foreach name="gift" item="gift_data">
+                                                         <if condition="$gift_data['type'] eq '礼卡' && $gift_data['nums'] eq 5">
+                                                        <foreach name="giftp" item="giftp_data">
+                                                                                 <if condition="$giftp_data['gift_id'] eq $gift_data['id']">
+                                                        <li>
+                                                                <a href="/product/codebuy_{$giftp_data.id}.html">
+                                                                        <div class="left">
+                                                                                <img alt="{$imgalt}" src="__PUBLIC__/images/{$gift_data['pic']}" >
+                                                                        </div>
+                                                                        <div class="right">
+                                                                                <h3 class="line-1 title">{$gift_data.name}【{$giftp_data.pname}】{$gift_data.type}</h3>
+                                                                                <div class="price red">{$giftp_data.price}</div>
+                                                                                <div class="text">雄蟹：{$giftp_data.male_crab_weight}两*{$giftp_data.nums}只+雌蟹：{$giftp_data.female_crab_weight}两*{$gift_data.nums}只</div>
+                                                                        </div>
+                                                                </a>
+                                                        </li>
+                                                        </if>
+                                                        </foreach>
+                                                        </if>
+                                                        </foreach>
+                                                </ul>
+				    </div>
+				  </div>
+				</div>
+			</div>
+			<div class="box12 box5">
+				<img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/11-t7.png">
+				 <!-- Swiper -->
+			    <div class="swiper-container swiper-container5">
+			        <div class="swiper-wrapper">
+			            <div class="swiper-slide">
+			            	<img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/11-4.png">
+		            	</div>
+			            <div class="swiper-slide">
+			            	<img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/11-4_1.png">
+		            	</div>
+			        </div>
+			        <!-- Add Pagination -->
+			        <div class="swiper-pagination"></div>
+			        <!-- Add Arrows -->
+			        <div class="swiper-button-next"></div>
+			        <div class="swiper-button-prev"></div>
+			    </div>
+			</div>
+			<div class="box13">
+				<img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/11-bg16.jpg">
+			</div>
+			<div class="box14">
+				<img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/11-t8.png">
+				<p>
+					<a href="/">浏览好蟹汇官网首页</a>
+					<a href="{$baseConfig.phone_shangqiao}">订购阳澄湖大闸蟹</a>
+				</p>
+			</div>
+			<div class="box15">
+				<img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/11-t9.png">
+				 <!-- Swiper -->
+			    <div class="swiper-container swiper-container6">
+			        <div class="swiper-wrapper">
+			            <div class="swiper-slide">
+			            	<img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/11-5.png">
+		            	</div>
+			            <div class="swiper-slide">
+			            	<img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/11-5_1.png">
+		            	</div>
+			        </div>
+			        <!-- Add Pagination -->
+			        <div class="swiper-pagination"></div>
+			    </div>
+				<a href="{$baseConfig.phone_shangqiao}">我要定制</a>
+			</div>
+		</div>
+		<!-- 底部 -->
+		<include file="Public/footer"/>
+
+		<script src="__PUBLIC__/smallphone/js/swiper.min.js"></script>
+
+		<!-- Initialize Swiper -->
+	    <script>
+	    	$('#doc-my-tabs').tabs();
+		    var swiper1 = new Swiper('.swiper-container1', {
+		        pagination: '.swiper-pagination',
+		        paginationClickable: true
+		    });
+
+		    var swiper2 = new Swiper('.swiper-container2', {
+		        pagination: '.swiper-pagination',
+		        nextButton: '.swiper-button-next',
+		        prevButton: '.swiper-button-prev',
+		        slidesPerView: 1,
+		        paginationClickable: true,
+		        spaceBetween: 30,
+		        loop: true,
+		    });
+
+		    var swiper3 = new Swiper('.swiper-container3', {
+		        pagination: '.swiper-pagination',
+		        paginationClickable: true
+		    });
+
+		    var swiper4 = new Swiper('.swiper-container4', {
+		        pagination: '.swiper-pagination',
+		        slidesPerView: 1,
+		        paginationClickable: true,
+		        spaceBetween: 30,
+		        loop: true,
+		        nextButton: '.swiper-button-next',
+		        prevButton: '.swiper-button-prev'
+		    });
+
+		    var swiper5 = new Swiper('.swiper-container5', {
+		        pagination: '.swiper-pagination',
+		        slidesPerView: 1,
+		        paginationClickable: true,
+		        spaceBetween: 30,
+		        loop: true,
+		        nextButton: '.swiper-button-next',
+		        prevButton: '.swiper-button-prev'
+		    });
+
+		    var swiper6 = new Swiper('.swiper-container6', {
+		        pagination: '.swiper-pagination',
+		        slidesPerView: 1,
+		        paginationClickable: true,
+		        spaceBetween: 30,
+		        loop: true,
+		    });
+	    </script>

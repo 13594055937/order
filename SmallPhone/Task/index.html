@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+        <title>任务大厅</title>
+        <link rel="stylesheet" href="__PUBLIC__/css/uikit.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/iven.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/form-select.css" />
+        <script src="__PUBLIC__/js/jquery.js"></script>
+        <script src="__PUBLIC__/js/uikit.min.js"></script>
+        <script src="__PUBLIC__/js/form-select.min.js"></script>
+    </head>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $("#tasktype").change(function(){
+            var uu = $(this).find('option:selected').val();
+            if(uu=="")return false;
+            $("form").submit();
+        });
+        $("#city").change(function(){
+            var uu = $(this).find('option:selected').val();
+            if(uu=="")return false;
+            $("form").submit();
+        });
+    })
+    </script>
+    <body>
+	<!--筛选-->
+    <form action="{:U('task/index')}" class="room-select" method="post">
+    <div class="uk-container uk-container-center">
+    <div class="uk-grid uk-grid-divider">
+        <div class="uk-width-1-2">
+            <div class="uk-form-select" data-uk-form-select>
+                <span></span>
+                <select id="tasktype" name="tasktype">
+                    <option value="">任务类型</option>
+                    <foreach name="task_type" item="tasktypedata">
+                        <option value='{$tasktypedata.id}' <if condition="isset($tasktype) && $tasktype eq $tasktypedata['id']">selected=selected</if> >{$tasktypedata.task_type_name}</option>
+                    </foreach>
+                </select>
+            </div>
+        </div>
+        <div class="uk-width-1-2">
+            <div class="uk-form-select" data-uk-form-select>
+                <span></span>
+                <select id="city" name="city">
+                    <option value="">地域筛选</option>
+                    <foreach name="province" item="provincedata">
+                        <option value='{$provincedata.id}' <if condition="isset($city) && $city eq $provincedata['id']">selected=selected</if> >{$provincedata.name}</option>
+                    </foreach>
+                </select>
+            </div>
+        </div>
+    </div>
+    </div>
+    </form>
+
+    <!--new assignment-->
+    <section class="assi">
+        <div class="uk-container uk-container-center">
+            <foreach name="maintask" item="taskdata">
+                <div class="uk-grid">
+                    <div class="uk-width-1-3">
+                       <a href="{:U('task/detail',array('id'=>$taskdata['id']))}">
+                        <img src="__PUBLIC__/images/2016-08-26_205703.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="uk-width-2-3 uk-position-relative">
+                        <h4 class="uk-text-truncate"><a href="{:U('task/detail',array('id'=>$taskdata['id']))}">{$taskdata.pro_name}</a></h4>
+                        <div class="assi-price">
+							<if condition="empty($taskdata['price'])">赏金详谈<else/>￥{$taskdata.price}</if>
+							<span class="uk-button uk-button-small uk-button-primary"><a href="{:U('task/detail',array('id'=>$taskdata['id']))}"><if condition="$taskdata['price'] gt 0">已托管赏金<else/>已交保证金</if></a></span>
+						</div>
+                        <div class="uk-position-absolute assi-info">                            
+                            <span class="span2">{$taskdata.task_type_name} · <i class="red">投标{$taskdata.bid_nums}</i> · {$taskdata.city}</span>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </foreach>
+        </div>
+    </section>
+
+    <include file="Public/footer" />

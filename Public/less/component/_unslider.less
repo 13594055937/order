@@ -1,0 +1,54 @@
+.unslider {
+    overflow: auto;
+    position: relative;
+    .unslider-arrow {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        z-index: 2;
+        cursor: pointer;
+        &.next {
+            left: auto;
+            right: 20px;
+        }
+    }
+    .unslider-nav {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        li {
+            float: left;
+            margin: 0 4px;
+            width: 0;
+            height: 0;
+            font-size: 0;
+            border: 5px solid @border-color;
+            .border-radius(50%);
+            &.unslider-active {
+                border-color: #fff;
+            }
+        }
+    }
+}
+
+.unslider-wrap {
+    position: relative;
+    &.unslider-carousel li {
+        float: left;
+    }
+}
+
+.unslider-fade {
+    position: relative;
+    .unslider-wrap li {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        z-index: 8;
+        &.unslider-active {
+            z-index: 10;
+        }
+    }
+}

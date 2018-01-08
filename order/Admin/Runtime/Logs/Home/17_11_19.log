@@ -1,0 +1,1434 @@
+[ 2017-11-19T20:49:15+08:00 ] 117.88.245.236 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000074s ]
+
+[ 2017-11-19T20:49:15+08:00 ] 117.88.245.221 /admin.php/Home/login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000038s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000054s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000024s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000054s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002281s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000056s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000032s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000050s ]
+
+[ 2017-11-19T20:49:25+08:00 ] 121.229.89.205 /admin.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000024s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000062s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `user` WHERE ( username='admin' and userpwd ='880343944aeb296d98d986b169ee9414' and status=1 )  [ RunTime:0.0003s ]
+SQL: UPDATE `user` SET `latestLogin`='1511095765' WHERE `id` = '1' [ RunTime:0.0035s ]
+
+[ 2017-11-19T20:49:25+08:00 ] 117.88.245.243 /admin.php/Home/order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000048s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000026s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000052s ]
+NOTIC: [2048] Declaration of Home\Controller\OrderController::getcityinfo() should be compatible with Home\Controller\GlobalController::getCityInfo($provinceId) /www/web/order/Admin/Home/Controller/OrderController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\OrderController::getareainfo() should be compatible with Home\Controller\GlobalController::getAreaInfo($cityid) /www/web/order/Admin/Home/Controller/OrderController.class.php 第 4 行.
+NOTIC: [8] Undefined index: manage_list /www/web/order/Admin/Home/Controller/GlobalController.class.php 第 34 行.
+SQL: SHOW COLUMNS FROM `engineer` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `engineer` WHERE ( status=1 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `customer` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `customer` WHERE ( status=1 )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `company` WHERE ( status=1 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `jobtype` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jobtype` WHERE ( status=1 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `g_order` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `g_order` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT g_order.*,customer.code,customer.province,customer.city,customer.area FROM `g_order` left join customer on customer.name = g_order.customerId  ORDER BY id DESC LIMIT 0,30   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Admin/Home/View/Public/top.html): failed to open stream: No such file or directory /www/web/order/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+NOTIC: [8] Undefined index: accept_start /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 156 行.
+NOTIC: [8] Undefined index: accept_end /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 158 行.
+NOTIC: [8] Undefined index: status /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 163 行.
+NOTIC: [8] Undefined index: status /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 164 行.
+NOTIC: [8] Undefined index: status /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 165 行.
+NOTIC: [8] Undefined index: status /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 166 行.
+NOTIC: [8] Undefined index: status /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 167 行.
+NOTIC: [8] Undefined index: arrive_start /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 174 行.
+NOTIC: [8] Undefined index: arrive_end /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 176 行.
+NOTIC: [8] Undefined index: requireuser /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 181 行.
+NOTIC: [8] Undefined index: end_start /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 188 行.
+NOTIC: [8] Undefined index: end_end /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 190 行.
+NOTIC: [8] Undefined index: city /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 195 行.
+NOTIC: [8] Undefined index: area /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 196 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: jobtype /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 245 行.
+NOTIC: [8] Undefined index: jobtype /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 245 行.
+NOTIC: [8] Undefined index: jobtype /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 245 行.
+NOTIC: [8] Undefined index: jobtype /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 245 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010729s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010759s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000025s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000024s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000046s ]
+
+[ 2017-11-19T20:51:59+08:00 ] 117.88.245.235 /admin.php/Home/customer/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000050s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000061s ]
+NOTIC: [8] Undefined index: manage_list /www/web/order/Admin/Home/Controller/GlobalController.class.php 第 34 行.
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `company`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `customer` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `customer` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `customer` ORDER BY id DESC LIMIT 0,30   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Admin/Home/View/Public/top.html): failed to open stream: No such file or directory /www/web/order/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000079s ]
+NOTIC: [8] Undefined index: code /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 154 行.
+NOTIC: [8] Undefined index: name /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 157 行.
+NOTIC: [8] Undefined index: city /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 163 行.
+NOTIC: [8] Undefined index: area /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 164 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: status /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 207 行.
+NOTIC: [8] Undefined index: status /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 208 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007621s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007664s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000057s ]
+
+[ 2017-11-19T20:53:05+08:00 ] 117.88.245.237 /admin.php/Home/customer/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000073s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000059s ]
+NOTIC: [8] Undefined index: manage_list /www/web/order/Admin/Home/Controller/GlobalController.class.php 第 34 行.
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `company`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `customer` [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Admin/Home/View/Public/top.html): failed to open stream: No such file or directory /www/web/order/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000079s ]
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 192 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 198 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 204 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 210 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 216 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 222 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 230 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 231 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 274 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 280 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 286 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 293 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 302 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 304 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 304 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 311 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007722s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007748s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000051s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000054s ]
+
+[ 2017-11-19T21:01:49+08:00 ] 117.88.245.236 /admin.php/Home/customer/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000051s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000061s ]
+NOTIC: [8] Undefined index: manage_list /www/web/order/Admin/Home/Controller/GlobalController.class.php 第 34 行.
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `company`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `customer` [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Admin/Home/View/Public/top.html): failed to open stream: No such file or directory /www/web/order/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 192 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 198 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 204 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 210 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 216 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 222 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 230 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 231 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 234 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 274 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 280 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 286 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 293 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 302 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 304 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 304 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/33bdbbc451230ebfb4fe036e03a5f6f9.php 第 311 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007410s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007436s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000049s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000061s ]
+
+[ 2017-11-19T21:02:10+08:00 ] 117.88.245.237 /admin.php/Home/Order/getcityinfo.html?province=%E5%8C%97%E4%BA%AC%E5%B8%82&city=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000022s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000044s ]
+NOTIC: [2048] Declaration of Home\Controller\OrderController::getcityinfo() should be compatible with Home\Controller\GlobalController::getCityInfo($provinceId) /www/web/order/Admin/Home/Controller/OrderController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\OrderController::getareainfo() should be compatible with Home\Controller\GlobalController::getAreaInfo($cityid) /www/web/order/Admin/Home/Controller/OrderController.class.php 第 4 行.
+NOTIC: [8] Undefined index: manage_list /www/web/order/Admin/Home/Controller/GlobalController.class.php 第 34 行.
+SQL: SHOW COLUMNS FROM `city` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `city` left join province on city.provinceid=province.id  WHERE ( name='北京市' )  [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000045s ]
+
+[ 2017-11-19T21:02:12+08:00 ] 117.88.245.236 /admin.php/Home/Order/getareainfo.html?city=%E5%B8%82%E8%BE%96%E5%8C%BA&area=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000024s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000046s ]
+NOTIC: [2048] Declaration of Home\Controller\OrderController::getcityinfo() should be compatible with Home\Controller\GlobalController::getCityInfo($provinceId) /www/web/order/Admin/Home/Controller/OrderController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\OrderController::getareainfo() should be compatible with Home\Controller\GlobalController::getAreaInfo($cityid) /www/web/order/Admin/Home/Controller/OrderController.class.php 第 4 行.
+NOTIC: [8] Undefined index: manage_list /www/web/order/Admin/Home/Controller/GlobalController.class.php 第 34 行.
+SQL: SHOW COLUMNS FROM `district` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `district` left join city on city.id=district.cityid  WHERE ( cityname='市辖区' )  [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000027s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000051s ]
+
+[ 2017-11-19T21:03:14+08:00 ] 117.88.245.237 /admin.php/Home/customer/save.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000051s ]
+NOTIC: [8] Undefined index: manage_list /www/web/order/Admin/Home/Controller/GlobalController.class.php 第 34 行.
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `company`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `customer` [ RunTime:0.0006s ]
+SQL: INSERT INTO `customer` (`id`,`code`,`name`,`grade`,`outpatient`,`bednum`,`province`,`city`,`area`,`position`,`contactname`,`contacttel`,`company`,`status`,`memo`,`createtime`) VALUES ('0','HY001','测试医院','未知','1','1','北京市','市辖区','东城区','测试','','','禾连科技','1','','1511096594') [ RunTime:0.0091s ]
+
+[ 2017-11-19T21:03:14+08:00 ] 117.88.245.236 /admin.php/Home/customer/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000024s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000047s ]
+NOTIC: [8] Undefined index: manage_list /www/web/order/Admin/Home/Controller/GlobalController.class.php 第 34 行.
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `company`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `customer` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `customer` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `customer` ORDER BY id DESC LIMIT 0,30   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Admin/Home/View/Public/top.html): failed to open stream: No such file or directory /www/web/order/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000078s ]
+NOTIC: [8] Undefined index: code /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 154 行.
+NOTIC: [8] Undefined index: name /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 157 行.
+NOTIC: [8] Undefined index: city /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 163 行.
+NOTIC: [8] Undefined index: area /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 164 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: status /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 207 行.
+NOTIC: [8] Undefined index: status /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 208 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007316s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007342s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000052s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000032s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000054s ]
+
+[ 2017-11-19T23:20:02+08:00 ] 117.88.245.236 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+
+[ 2017-11-19T23:20:02+08:00 ] 117.88.245.237 /admin.php/Home/login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000037s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000025s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000050s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000025s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000054s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001670s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001701s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000052s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000028s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000047s ]
+
+[ 2017-11-19T23:20:04+08:00 ] 117.88.245.236 /admin.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000047s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000025s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000049s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `user` WHERE ( username='admin' and userpwd ='880343944aeb296d98d986b169ee9414' and status=1 )  [ RunTime:0.0003s ]
+SQL: UPDATE `user` SET `latestLogin`='1511104804' WHERE `id` = '1' [ RunTime:0.0040s ]
+
+[ 2017-11-19T23:20:04+08:00 ] 117.88.245.243 /admin.php/Home/order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000037s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000022s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000045s ]
+NOTIC: [2048] Declaration of Home\Controller\OrderController::getcityinfo() should be compatible with Home\Controller\GlobalController::getCityInfo($provinceId) /www/web/order/Admin/Home/Controller/OrderController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\OrderController::getareainfo() should be compatible with Home\Controller\GlobalController::getAreaInfo($cityid) /www/web/order/Admin/Home/Controller/OrderController.class.php 第 4 行.
+NOTIC: [8] Undefined index: manage_list /www/web/order/Admin/Home/Controller/GlobalController.class.php 第 34 行.
+SQL: SHOW COLUMNS FROM `engineer` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `engineer` WHERE ( status=1 )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `customer` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `customer` WHERE ( status=1 )  [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `company` WHERE ( status=1 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `jobtype` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jobtype` WHERE ( status=1 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `g_order` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `g_order` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT g_order.*,customer.code,customer.province,customer.city,customer.area FROM `g_order` left join customer on customer.name = g_order.customerId  ORDER BY id DESC LIMIT 0,30   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Admin/Home/View/Public/top.html): failed to open stream: No such file or directory /www/web/order/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+NOTIC: [8] Undefined index: accept_start /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 156 行.
+NOTIC: [8] Undefined index: accept_end /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 158 行.
+NOTIC: [8] Undefined index: status /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 163 行.
+NOTIC: [8] Undefined index: status /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 164 行.
+NOTIC: [8] Undefined index: status /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 165 行.
+NOTIC: [8] Undefined index: status /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 166 行.
+NOTIC: [8] Undefined index: status /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 167 行.
+NOTIC: [8] Undefined index: arrive_start /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 174 行.
+NOTIC: [8] Undefined index: arrive_end /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 176 行.
+NOTIC: [8] Undefined index: requireuser /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 181 行.
+NOTIC: [8] Undefined index: end_start /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 188 行.
+NOTIC: [8] Undefined index: end_end /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 190 行.
+NOTIC: [8] Undefined index: city /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 195 行.
+NOTIC: [8] Undefined index: area /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 196 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 199 行.
+NOTIC: [8] Undefined index: jobtype /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 245 行.
+NOTIC: [8] Undefined index: jobtype /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 245 行.
+NOTIC: [8] Undefined index: jobtype /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 245 行.
+NOTIC: [8] Undefined index: jobtype /www/web/order/Admin/Runtime/Cache/Home/c9598960eadfb49cd7cb0e5e76951f3a.php 第 245 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009422s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009448s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000025s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000046s ]
+
+[ 2017-11-19T23:20:07+08:00 ] 121.229.89.202 /admin.php/Home/customer/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000046s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000025s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000050s ]
+NOTIC: [8] Undefined index: manage_list /www/web/order/Admin/Home/Controller/GlobalController.class.php 第 34 行.
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `company`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `customer` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `customer` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `customer` ORDER BY id DESC LIMIT 0,30   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Admin/Home/View/Public/top.html): failed to open stream: No such file or directory /www/web/order/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000078s ]
+NOTIC: [8] Undefined index: code /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 154 行.
+NOTIC: [8] Undefined index: name /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 157 行.
+NOTIC: [8] Undefined index: city /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 163 行.
+NOTIC: [8] Undefined index: area /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 164 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: status /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 207 行.
+NOTIC: [8] Undefined index: status /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 208 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008074s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008102s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000045s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000047s ]
+
+[ 2017-11-19T23:20:14+08:00 ] 117.88.245.242 /admin.php/Home/Order/getcityinfo.html?province=%E5%A4%A9%E6%B4%A5%E5%B8%82&city=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000046s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000026s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000048s ]
+NOTIC: [2048] Declaration of Home\Controller\OrderController::getcityinfo() should be compatible with Home\Controller\GlobalController::getCityInfo($provinceId) /www/web/order/Admin/Home/Controller/OrderController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\OrderController::getareainfo() should be compatible with Home\Controller\GlobalController::getAreaInfo($cityid) /www/web/order/Admin/Home/Controller/OrderController.class.php 第 4 行.
+NOTIC: [8] Undefined index: manage_list /www/web/order/Admin/Home/Controller/GlobalController.class.php 第 34 行.
+SQL: SHOW COLUMNS FROM `city` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `city` left join province on city.provinceid=province.id  WHERE ( name='天津市' )  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000029s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000052s ]
+
+[ 2017-11-19T23:20:15+08:00 ] 117.88.245.243 /admin.php/Home/customer/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000021s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000045s ]
+NOTIC: [8] Undefined index: manage_list /www/web/order/Admin/Home/Controller/GlobalController.class.php 第 34 行.
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `company`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `customer` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `customer` WHERE (  province like '%天津市%' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `customer` WHERE (  province like '%天津市%' ) ORDER BY id DESC LIMIT 0,30   [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Admin/Home/View/Public/top.html): failed to open stream: No such file or directory /www/web/order/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006629s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006654s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000024s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000053s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000061s ]
+
+[ 2017-11-19T23:20:18+08:00 ] 117.88.245.235 /admin.php/Home/Order/getcityinfo.html?province=%E5%86%85%E8%92%99%E5%8F%A4%E8%87%AA%E6%B2%BB%E5%8C%BA&city=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000061s ]
+NOTIC: [2048] Declaration of Home\Controller\OrderController::getcityinfo() should be compatible with Home\Controller\GlobalController::getCityInfo($provinceId) /www/web/order/Admin/Home/Controller/OrderController.class.php 第 4 行.
+NOTIC: [2048] Declaration of Home\Controller\OrderController::getareainfo() should be compatible with Home\Controller\GlobalController::getAreaInfo($cityid) /www/web/order/Admin/Home/Controller/OrderController.class.php 第 4 行.
+NOTIC: [8] Undefined index: manage_list /www/web/order/Admin/Home/Controller/GlobalController.class.php 第 34 行.
+SQL: SHOW COLUMNS FROM `city` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `city` left join province on city.provinceid=province.id  WHERE ( name='内蒙古自治区' )  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000030s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000054s ]
+
+[ 2017-11-19T23:20:19+08:00 ] 121.229.89.202 /admin.php/Home/customer/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000048s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000026s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+NOTIC: [8] Undefined index: manage_list /www/web/order/Admin/Home/Controller/GlobalController.class.php 第 34 行.
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `company`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `customer` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `customer` WHERE (  province like '%内蒙古自治区%' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `customer` WHERE (  province like '%内蒙古自治区%' ) ORDER BY id DESC LIMIT 0,30   [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Admin/Home/View/Public/top.html): failed to open stream: No such file or directory /www/web/order/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000090s ]
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007592s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007620s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000026s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000024s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000045s ]
+
+[ 2017-11-19T23:20:26+08:00 ] 117.88.245.221 /admin.php/Home/customer/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000051s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000025s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000053s ]
+NOTIC: [8] Undefined index: manage_list /www/web/order/Admin/Home/Controller/GlobalController.class.php 第 34 行.
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `company`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `customer` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `customer` WHERE (  name like '%鼓楼%' and  province like '%内蒙古自治区%' ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `customer` WHERE (  name like '%鼓楼%' and  province like '%内蒙古自治区%' ) ORDER BY id DESC LIMIT 0,30   [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Admin/Home/View/Public/top.html): failed to open stream: No such file or directory /www/web/order/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007085s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007117s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000026s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000024s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000047s ]
+
+[ 2017-11-19T23:20:37+08:00 ] 117.88.245.247 /admin.php/Home/customer/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000026s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000055s ]
+NOTIC: [8] Undefined index: manage_list /www/web/order/Admin/Home/Controller/GlobalController.class.php 第 34 行.
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `company`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `customer` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `customer` WHERE (  name like '%鼓楼%' and  province like '%内蒙古自治区%' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `customer` WHERE (  name like '%鼓楼%' and  province like '%内蒙古自治区%' ) ORDER BY id DESC LIMIT 0,30   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Admin/Home/View/Public/top.html): failed to open stream: No such file or directory /www/web/order/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000078s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007421s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007452s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000051s ]
+
+[ 2017-11-19T23:20:38+08:00 ] 117.88.245.242 /admin.php/Home/company/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000047s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000054s ]
+NOTIC: [8] Undefined index: manage_list /www/web/order/Admin/Home/Controller/GlobalController.class.php 第 34 行.
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `company` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `company` ORDER BY id DESC LIMIT 0,30   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Admin/Home/View/Public/top.html): failed to open stream: No such file or directory /www/web/order/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+NOTIC: [8] Undefined index: code /www/web/order/Admin/Runtime/Cache/Home/1f1dc672940be3c921c6d9d88dfa824a.php 第 154 行.
+NOTIC: [8] Undefined index: name /www/web/order/Admin/Runtime/Cache/Home/1f1dc672940be3c921c6d9d88dfa824a.php 第 157 行.
+NOTIC: [8] Undefined index: status /www/web/order/Admin/Runtime/Cache/Home/1f1dc672940be3c921c6d9d88dfa824a.php 第 162 行.
+NOTIC: [8] Undefined index: status /www/web/order/Admin/Runtime/Cache/Home/1f1dc672940be3c921c6d9d88dfa824a.php 第 163 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006175s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006205s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000024s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000023s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000044s ]
+
+[ 2017-11-19T23:20:39+08:00 ] 117.88.245.238 /admin.php/Home/customer/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000024s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000047s ]
+NOTIC: [8] Undefined index: manage_list /www/web/order/Admin/Home/Controller/GlobalController.class.php 第 34 行.
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `company`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `customer` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `customer` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `customer` ORDER BY id DESC LIMIT 0,30   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Admin/Home/View/Public/top.html): failed to open stream: No such file or directory /www/web/order/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000080s ]
+NOTIC: [8] Undefined index: code /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 154 行.
+NOTIC: [8] Undefined index: name /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 157 行.
+NOTIC: [8] Undefined index: city /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 163 行.
+NOTIC: [8] Undefined index: area /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 164 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 167 行.
+NOTIC: [8] Undefined index: status /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 207 行.
+NOTIC: [8] Undefined index: status /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 208 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: cityname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+NOTIC: [8] Undefined index: areaname /www/web/order/Admin/Runtime/Cache/Home/b2dee79ce70d7f8d6bdbe8a21278765f.php 第 243 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008149s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008177s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000026s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000047s ]
+
+[ 2017-11-19T23:20:44+08:00 ] 121.229.89.202 /admin.php/Home/customer/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000024s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000051s ]
+NOTIC: [8] Undefined index: manage_list /www/web/order/Admin/Home/Controller/GlobalController.class.php 第 34 行.
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `company`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `customer` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `customer` WHERE (  name like '%鼓楼%' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `customer` WHERE (  name like '%鼓楼%' ) ORDER BY id DESC LIMIT 0,30   [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Admin/Home/View/Public/top.html): failed to open stream: No such file or directory /www/web/order/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006965s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006995s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000058s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000046s ]
+
+[ 2017-11-19T23:20:54+08:00 ] 121.229.89.205 /admin.php/Home/customer/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000056s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000056s ]
+NOTIC: [8] Undefined index: manage_list /www/web/order/Admin/Home/Controller/GlobalController.class.php 第 34 行.
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `company`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `customer` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `customer` WHERE (  name like '%鼓楼%' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `customer` WHERE (  name like '%鼓楼%' ) ORDER BY id DESC LIMIT 0,30   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Admin/Home/View/Public/top.html): failed to open stream: No such file or directory /www/web/order/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000075s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007235s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007265s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000025s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000024s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000045s ]
+
+[ 2017-11-19T23:21:04+08:00 ] 117.88.245.235 /admin.php/Home/customer/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000051s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000070s ]
+NOTIC: [8] Undefined index: manage_list /www/web/order/Admin/Home/Controller/GlobalController.class.php 第 34 行.
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `company`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `customer` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `customer` WHERE (  name like '%鼓楼医院%' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `customer` WHERE (  name like '%鼓楼医院%' ) ORDER BY id DESC LIMIT 0,30   [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Admin/Home/View/Public/top.html): failed to open stream: No such file or directory /www/web/order/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007037s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007068s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000052s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000041s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000064s ]
+
+[ 2017-11-19T23:21:06+08:00 ] 117.88.245.238 /admin.php/Home/customer/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000061s ]
+NOTIC: [8] Undefined index: manage_list /www/web/order/Admin/Home/Controller/GlobalController.class.php 第 34 行.
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `company` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `company`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `customer` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `customer` WHERE (  name like '%鼓楼医院%' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `customer` WHERE (  name like '%鼓楼医院%' ) ORDER BY id DESC LIMIT 0,30   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Admin/Home/View/Public/top.html): failed to open stream: No such file or directory /www/web/order/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007148s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007178s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000024s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000023s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000045s ]
+
+[ 2017-11-19T23:24:40+08:00 ] 117.88.245.235 /admin.php/Home/engineers/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000061s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000055s ]
+NOTIC: [8] Undefined index: manage_list /www/web/order/Admin/Home/Controller/GlobalController.class.php 第 34 行.
+SQL: SHOW COLUMNS FROM `engineerrate` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `engineerrate` WHERE ( status=1 )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `engineertype` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `engineertype` WHERE ( status=1 )  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `province` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `province`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `engineer` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `engineer` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `engineer` ORDER BY id DESC LIMIT 0,30   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Admin/Home/View/Public/top.html): failed to open stream: No such file or directory /www/web/order/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+NOTIC: [8] Undefined index: engineerCode /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 156 行.
+NOTIC: [8] Undefined index: status /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 160 行.
+NOTIC: [8] Undefined index: status /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 161 行.
+NOTIC: [8] Undefined index: engineerName /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 164 行.
+NOTIC: [8] Undefined index: weixin /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 167 行.
+NOTIC: [8] Undefined index: city /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 171 行.
+NOTIC: [8] Undefined index: area /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 172 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: province /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 175 行.
+NOTIC: [8] Undefined index: mobile /www/web/order/Admin/Runtime/Cache/Home/b244408377fde82e682a28ebfe5fe538.php 第 212 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007699s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007729s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000051s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000032s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000054s ]
+
+[ 2017-11-19T23:42:57+08:00 ] 117.88.245.221 /admin.php/Home/infomanage/engineertype.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000051s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+NOTIC: [8] Undefined index: manage_list /www/web/order/Admin/Home/Controller/GlobalController.class.php 第 34 行.
+SQL: SHOW COLUMNS FROM `engineertype` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `engineertype` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `engineertype` WHERE ( status=1 )  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Admin/Home/View/Public/top.html): failed to open stream: No such file or directory /www/web/order/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000081s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005416s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005453s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000060s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2017-11-19T23:43:00+08:00 ] 117.88.245.242 /admin.php/Home/infomanage/engineer_type_add/edit_info/%E6%B7%BB%E5%8A%A0%E4%BF%A1%E6%81%AF.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000025s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000048s ]
+NOTIC: [8] Undefined index: manage_list /www/web/order/Admin/Home/Controller/GlobalController.class.php 第 34 行.
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Admin/Home/View/Public/top.html): failed to open stream: No such file or directory /www/web/order/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+NOTIC: [2] file_get_contents(./Admin/Home/View/Public/menu.html): failed to open stream: No such file or directory /www/web/order/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/53396d60cd5d01acdf5a005242bd2e95.php 第 150 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/53396d60cd5d01acdf5a005242bd2e95.php 第 155 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/53396d60cd5d01acdf5a005242bd2e95.php 第 163 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/53396d60cd5d01acdf5a005242bd2e95.php 第 165 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/53396d60cd5d01acdf5a005242bd2e95.php 第 165 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004476s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004500s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000026s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000047s ]
+
+[ 2017-11-19T23:43:17+08:00 ] 117.88.245.237 /admin.php/Home/infomanage/engineer_type_save.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000045s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000025s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000052s ]
+NOTIC: [8] Undefined index: manage_list /www/web/order/Admin/Home/Controller/GlobalController.class.php 第 34 行.
+SQL: SHOW COLUMNS FROM `engineertype` [ RunTime:0.0008s ]
+SQL: INSERT INTO `engineertype` (`id`,`name`,`status`,`inserttime`) VALUES ('0','兼职人员','1','1511106197') [ RunTime:0.0037s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000022s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000051s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001539s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001571s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000046s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000021s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000041s ]
+
+[ 2017-11-19T23:43:18+08:00 ] 117.88.245.249 /admin.php/Home/infomanage/engineertype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000046s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000026s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000051s ]
+NOTIC: [8] Undefined index: manage_list /www/web/order/Admin/Home/Controller/GlobalController.class.php 第 34 行.
+SQL: SHOW COLUMNS FROM `engineertype` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `engineertype` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `engineertype` WHERE ( status=1 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Admin/Home/View/Public/top.html): failed to open stream: No such file or directory /www/web/order/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000073s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004581s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004612s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000045s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000049s ]
+
+[ 2017-11-19T23:43:21+08:00 ] 117.88.245.243 /admin.php/Home/infomanage/engineer_type_add/edit_info/%E6%B7%BB%E5%8A%A0%E4%BF%A1%E6%81%AF.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000026s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000052s ]
+NOTIC: [8] Undefined index: manage_list /www/web/order/Admin/Home/Controller/GlobalController.class.php 第 34 行.
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Admin/Home/View/Public/top.html): failed to open stream: No such file or directory /www/web/order/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+NOTIC: [2] file_get_contents(./Admin/Home/View/Public/menu.html): failed to open stream: No such file or directory /www/web/order/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/53396d60cd5d01acdf5a005242bd2e95.php 第 150 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/53396d60cd5d01acdf5a005242bd2e95.php 第 155 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/53396d60cd5d01acdf5a005242bd2e95.php 第 163 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/53396d60cd5d01acdf5a005242bd2e95.php 第 165 行.
+NOTIC: [8] Undefined variable: data /www/web/order/Admin/Runtime/Cache/Home/53396d60cd5d01acdf5a005242bd2e95.php 第 165 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004875s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004902s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000047s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000050s ]
+
+[ 2017-11-19T23:43:36+08:00 ] 117.88.245.238 /admin.php/Home/infomanage/engineer_type_save.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000062s ]
+NOTIC: [8] Undefined index: manage_list /www/web/order/Admin/Home/Controller/GlobalController.class.php 第 34 行.
+SQL: SHOW COLUMNS FROM `engineertype` [ RunTime:0.0008s ]
+SQL: INSERT INTO `engineertype` (`id`,`name`,`status`,`inserttime`) VALUES ('0','维修公司','1','1511106216') [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000023s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000059s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001501s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001532s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000026s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000045s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000022s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000040s ]
+
+[ 2017-11-19T23:43:37+08:00 ] 117.88.245.247 /admin.php/Home/infomanage/engineertype
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000026s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000049s ]
+NOTIC: [8] Undefined index: manage_list /www/web/order/Admin/Home/Controller/GlobalController.class.php 第 34 行.
+SQL: SHOW COLUMNS FROM `engineertype` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `engineertype` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `engineertype` WHERE ( status=1 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Admin/Home/View/Public/top.html): failed to open stream: No such file or directory /www/web/order/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000071s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004574s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004603s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000045s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000063s ]
+

@@ -1,0 +1,25 @@
+<include file="Public/header" />
+<link rel="stylesheet" href="__PUBLIC__/css/list.min.css">
+    <!-- container -->
+    <div id="container">
+        <div class="g-wrap m-video-page g-mt20">
+            <ul class="list list-normal-five current clearfix g-mt20">
+                <foreach name="list" item="data">
+                    <li class="item">
+                        <a href="{:U('index/video_detail',array('id'=>$data['id']))}" class="item-img">
+                            <img data-original="__PUBLIC__/images/{$data.small_pic}" alt="" class="img lazy">
+                        </a>
+                        <p class="item-desc"><a href="{:U('index/video_detail',array('id'=>$data['id']))}">{$data.name}</a></p>
+                    </li>
+                </foreach>
+            </ul>
+            <div class="m-page-box g-mtb20">
+                {$page}
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+     <include file="Public/footer_detail_body" />
+    <script src="__PUBLIC__/js/video.min.js"></script>
+    <body>
+</html>

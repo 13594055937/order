@@ -1,0 +1,783 @@
+html,
+body {
+  height: 100%;
+}
+.main {
+  padding: 0 12px;
+  position: absolute;
+  top: 49px;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+.title-2 {
+  padding-top: 1rem;
+  line-height: 4.2rem;
+  font-size: 2rem;
+  color: #000;
+  border-bottom: 1px solid #000;
+  margin-bottom: 1.8rem;
+}
+.foot-text {
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 2.2rem;
+  padding-top: 3.8rem;
+  color: #000;
+}
+.foot-text p {
+  margin-bottom: 0;
+}
+.foot-text * + p {
+  margin-top: 0;
+}
+.z-link {
+  display: block;
+  line-height: 4rem;
+  font-size: 1.8rem;
+  color: #666666;
+  border-bottom: 1px solid #ddd;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.z-link .z-modify {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: right;
+  color: #666;
+}
+.z-link input[type="text"] {
+  border: none;
+  outline: none;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  line-height: 4rem;
+  font-size: 1.8rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+.z-link textarea {
+  border: none;
+  outline: none;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-height: 2rem;
+}
+.z-link label {
+  margin-right: 10px;
+  font-size: 1.8rem;
+  color: #666666;
+}
+.z-link select {
+  font-size: 1.8rem;
+  border: none;
+  outline: none;
+  padding: 1rem  0.12rem;
+  margin-right: 2rem;
+  display: inline-block;
+}
+.z-link + .am-btn {
+  margin-top: 2.1rem;
+}
+.f-main {
+  position: absolute;
+  top: 49px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.f-main .head {
+  text-align: center;
+  font-size: 1.5rem;
+}
+.f-main .head img {
+  width: 6.1rem;
+  height: 6.1rem;
+  overflow: hidden;
+  display: block;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 1.4rem;
+}
+.f-main .logo {
+  padding-top: 12%;
+  padding-bottom: 8%;
+}
+.f-main .logo img {
+  width: 10.6rem;
+  display: block;
+  margin: 0 auto;
+}
+.f-main .am-form-group {
+  border-bottom: 1px solid #d6d6d6;
+  margin-bottom: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.f-main .am-form-group label {
+  font-size: 1.6rem;
+  line-height: 1.9;
+  margin-bottom: 0;
+  padding: .5em;
+  font-size: 1.8rem;
+  font-weight: normal;
+  display: block;
+}
+.f-main .am-form-group label i {
+  width: 2.2rem;
+  display: inline-block;
+  font-size: 2rem;
+  color: #666;
+}
+.f-main .am-form-group label i.icon-shuru {
+  font-size: 2.6rem;
+}
+.f-main .am-form-group input {
+  font-size: 1.8rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border-width: 0;
+  outline: none;
+  line-height: 1.9;
+}
+.f-main .am-form-group input:focus {
+  border-color: transparent;
+}
+.f-main .am-form-group a {
+  width: 7.2rem;
+  display: block;
+  height: 2.7rem;
+  line-height: 2.7rem;
+  text-align: center;
+  font-size: 1.3rem;
+}
+.f-main .am-form-group .getcodeimg img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.f-main .am-form-group .getcode {
+  background: #cc1717;
+  color: #fff;
+}
+.f-main p {
+  padding-top: 1rem;
+  margin-bottom: 0;
+}
+.f-main fieldset {
+  margin-bottom: 0;
+  padding: 0!important;
+}
+.f-main .Login {
+  margin:12px;
+}
+.f-main .Login a {
+  color: #454040;
+  font-size: 1.5rem;
+}
+.f-main .agreement {
+  font-size: 1.5rem;
+  padding-top: 0.8rem;
+}
+.f-main .agreement a {
+  color: #cc1717;
+}
+.login {
+  top: 0!important;
+}
+.register {
+  top: 0!important;
+}
+.register .am-form-group label,
+.register .am-form-group input {
+  line-height: 1.4;
+  display: block;
+}
+.register .am-form-group input {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 100px;
+}
+.register .title-2 {
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-bottom: 0;
+}
+.modify .am-form-group input {
+  line-height: 4.3rem;
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+.WeChat {
+  border-top: 1px solid #999999;
+  padding-top: 1.9rem;
+  margin: 4.1rem 12px 0;
+  text-align: center;
+}
+.WeChat img {
+  width: 3.8rem;
+  display: block;
+  margin: 0 auto;
+}
+.WeChat span {
+  font-size: 1.5rem;
+  color: #333;
+}
+.personal {
+  padding-bottom: 1rem;
+}
+.personal .head {
+  background: #eeeeee;
+  padding-top: 4.4rem;
+  padding-bottom: 1.5rem;
+  display: block;
+  text-align: center;
+}
+.personal .head > * {
+  display: block;
+  margin: 0 auto;
+  font-size: 1.8rem;
+  color: #333;
+}
+.personal .head img {
+  width: 6.6rem;
+  height: 6.6rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.personal .head em {
+  color: #999999;
+  font-style: normal;
+}
+.myorder .title {
+  display: block;
+  font-size: 1.8rem;
+  line-height: 5.2rem;
+  padding: 0 12px;
+  color: #333;
+  overflow: hidden;
+}
+.myorder .title > * {
+  display: block;
+  font-weight: normal;
+}
+.myorder .title .am-fr {
+  position: relative;
+  padding-right: 1.6rem;
+}
+.myorder .title .am-fr:after {
+  content: '';
+  position: absolute;
+  right: .3rem;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 0.8rem;
+  width: 0.8rem;
+  display: block;
+  border-left: #ccc solid 1px;
+  border-bottom: #ccc solid 1px;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+.myorder ul {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+.myorder ul li {
+  list-style: none;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: center;
+  padding-top: 0.3rem;
+  padding-bottom: 0.2rem;
+}
+.myorder ul li a {
+  color: #333;
+}
+.myorder ul li i {
+  font-size: 3.4rem;
+  display: block;
+  margin-bottom: -1rem;
+}
+.myorder ul li span {
+  font-size: 1.8rem;
+}
+.cm-link {
+  padding: 0 12px;
+  overflow: hidden;
+}
+.cm-link a {
+  display: block;
+  position: relative;
+  border-bottom: 1px solid #eeeeee;
+  line-height: 5.5rem;
+  color: #333;
+  font-size: 1.6rem;
+}
+.cm-link a:after {
+  content: '';
+  position: absolute;
+  right: .3rem;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 0.8rem;
+  width: 0.8rem;
+  display: block;
+  border-left: #cccccc solid 1px;
+  border-bottom: #cccccc solid 1px;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+.am-btn {
+  background: #cc1717;
+  color: #fff;
+  line-height: 1.6;
+  font-size: 1.8rem;
+}
+.orderlist {
+  padding: 0 12px;
+}
+.orderlist .state-date {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.orderlist .state-date .date {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: right;
+}
+.orderlist .list .item {
+  padding: 0.6rem;
+  background: #fff;
+  border: 1px solid #b5b5b5;
+  border-radius: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+.orderlist .list .item .btnbox {
+  padding-top: 0.6rem;
+}
+.orderlist .list .item .btnbox .am-fr .am-btn {
+  width: 6.5rem;
+  line-height: 2.4rem;
+  font-size: 1.5rem;
+  padding: 0;
+  text-align: center;
+  border-radius: 0.4rem;
+  background: #fff;
+  border: 1px solid #434343;
+  color: #434343;
+}
+.orderlist .list .item .btnbox .am-fr .am-btn.red {
+  border-color: #b60005;
+  color: #fff!important;
+  background: #b60005;
+}
+.orderlist .list .item .detailgoods li {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #dddddd;
+  margin-bottom: 0.8rem;
+}
+.orderlist .list .item .detailgoods li .left {
+  width: 9.7rem;
+  margin-right: 1.2rem;
+}
+.orderlist .list .item .detailgoods li .left img {
+  width: 100%;
+}
+.orderlist .list .item .detailgoods li .right {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 1.5rem;
+}
+.orderlist .list .item .goods {
+  border-bottom: 1px solid #000;
+  border-top: 1px solid #dddddd;
+  padding-top: 0.8rem;
+}
+.orderlist .list .item .goods a {
+  display: inline-block;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  width: 30%;
+}
+.orderlist .list .item .goods a:nth-child(3n) {
+  margin-right: 0;
+}
+.orderlist .list .item .goods a img {
+  width: 100%;
+  border-radius: 0.6rem;
+}
+.orderlist .list .item .goods h3.title {
+  font-size: 1.5rem;
+  color: #111;
+  font-weight: normal;
+}
+.orderlist .list .item .goods .text {
+  font-size: 1.2rem;
+  color: #333;
+}
+.orderlist .list .item .goods .price {
+  font-size: 1.8rem;
+}
+.orderlist .list .item .goods .left {
+  width: 9.7rem;
+  margin-right: 1.2rem;
+}
+.orderlist .list .item .goods .left img {
+  width: 100%;
+}
+.orderlist .list .item .goods .right {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.orderlist .list .item .state {
+  color: #cc1717;
+  font-size: 1.5rem;
+  line-height: 3.0rem;
+}
+.orderlist .list .item .date {
+  font-size: 1.2rem;
+  line-height: 3.0rem;
+}
+.orderlist .list .item .box {
+  border-bottom: 1px solid #ddd;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  line-height: 2.6rem;
+  font-size: 1.8rem;
+}
+.orderlist .list .item .box:last-child {
+  border-bottom-width: 0;
+}
+.orderlist .list .item .box .l-date {
+  color: #666;
+  font-size: 1.5rem;
+}
+.payinfo {
+  font-size: 1.8rem;
+  padding-top: 1rem;
+}
+.payinfo .payment {
+  margin-top: 1rem;
+  border-top: 1px solid #ddd;
+  padding: 1rem 0;
+}
+.payinfo .payment .red {
+  font-size: 2.4rem;
+}
+.paytip {
+  padding: 0 12px 1rem;
+  font-size: 0;
+}
+.paytip .am-fl {
+  font-size: 1.5rem;
+  line-height: 3.3rem;
+  border: 1px solid transparent;
+}
+.paytip .am-fr {
+  padding: 0 0;
+  width: 11.4rem;
+  line-height: 3.3rem;
+  text-align: center;
+  border-radius: 0.6rem;
+  font-size: 1.8rem;
+}
+input[type="checkbox"] {
+  display: none;
+}
+[id^="checkbox-10-"] + label {
+  background-color: #666;
+  border-radius: 50px;
+  display: inline-block;
+  position: relative;
+  transition: all 0.1s ease-in;
+  width: 3.1rem;
+  height: 1.9rem;
+  vertical-align: middle;
+}
+[id^="checkbox-10-"] + label:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  transition: box-shadow 0.1s ease-in;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  box-shadow: inset 0 0 0 0 #eee, 0 0 1px rgba(0, 0, 0, 0.4);
+}
+[id^="checkbox-10-"] + label:before {
+  content: ' ';
+  position: absolute;
+  background: white;
+  top: 0.3rem;
+  left: 0.3rem;
+  z-index: 999999;
+  width: 1.3rem;
+  transition: all 0.1s ease-in;
+  height: 1.3rem;
+  border-radius: 100px;
+  box-shadow: 0 3px 1px rgba(0, 0, 0, 0.05), 0 0px 1px rgba(0, 0, 0, 0.3);
+}
+[id^="checkbox-10-"]:active + label:after {
+  box-shadow: inset 0 0 0 20px #eee, 0 0 1px #eee;
+}
+[id^="checkbox-10-"]:checked:active + label:before {
+  left: 1.5rem;
+}
+[id^="checkbox-10-"] + label:active {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+[id^="checkbox-10-"]:checked + label:before {
+  content: ' ';
+  position: absolute;
+  left: 1.5rem;
+}
+[id^="checkbox-10-"]:checked + label:after {
+  content: ' ';
+  font-size: 1.5em;
+  position: absolute;
+  background: #cc1717;
+  box-shadow: 0 0 1px #cc1717;
+}
+.z-check {
+  position: relative;
+  font-size: 0;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: right;
+}
+.z-check label {
+  margin-right: 0px;
+  font-size: 0;
+  margin-bottom: 0;
+}
+.c-prompt {
+  margin-bottom: 0.6rem;
+  font-size: 1.5rem;
+  color: #666666;
+}
+.item-f .box {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.item-f .box .b-fl {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.default {
+  height: 15px;
+  width: 15px;
+  display: inline-block;
+  content: '';
+  border: 1px solid #333333;
+  vertical-align: middle;
+  margin-left: 0.8rem;
+  position: relative;
+  margin-bottom: 0.1rem;
+}
+.default:after {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: #333;
+  content: '';
+}
+.shoppingcar {
+  padding: 0 12px;
+  padding-bottom: 5.2rem;
+}
+.shoppingcar .cm-list li {
+  background: #fff;
+  margin-bottom: 0.8rem;
+  border-width: 0;
+  padding-right: 0.8rem;
+  padding-left: 0.8rem;
+  border-radius: 0.8rem;
+  border: 1px solid #b5b5b5;
+  padding-bottom: 3.2rem;
+  position: relative;
+}
+.shoppingcar .cm-list li .red {
+  padding-top: 1.1rem;
+  padding-bottom: 1.3rem;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.shoppingcar .cm-list li .red .price {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.shoppingcar .cm-list li .delete {
+  border-top: 1px solid #dddddd;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  line-height: 3.2rem;
+  left: 0;
+}
+.shoppingcar .cm-list li .delete a {
+  display: block;
+  padding: 0 0.8rem;
+  text-align: right;
+  font-size: 1.5rem;
+  color: #333;
+}
+.b-fixed {
+  position: fixed;
+  background: #f2f2f2;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  line-height: 4.8rem;
+  padding: 0 12px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.b-fixed .left {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  color: #cc1717;
+  font-size: 1.5rem;
+}
+.b-fixed .right .am-btn {
+  color: #fff;
+  width: 11.4rem;
+  line-height: 3.3rem;
+  background: #cc1717;
+  padding: 0;
+  font-size: 1.8rem;
+  border-width: 0;
+  border-radius: 0.6rem;
+}
+.placeorder {
+  padding-bottom: 5.2rem;
+  margin: 0 12px;
+}
+.placeorder .add-address {
+  margin-bottom: 1.3rem;
+  margin-top: 0.9rem;
+}
+.placeorder .add-address .am-btn {
+  background: #cc1717;
+  font-size: 1.5rem;
+}
+.placeorder .title-3 {
+  line-height: 2.9rem;
+  padding: 0 0.8rem;
+  border-bottom: 1px solid #dddddd;
+  color: #000000;
+  font-size: 1.3rem;
+}
+.placeorder .box {
+  background: #fff;
+  padding-bottom: 3.5rem;
+  border-radius: 0.6rem;
+  border: 1px solid #d1d1d1;
+  margin-bottom: 1rem;
+}
+.placeorder .cm-list {
+  margin: 0 0;
+}
+.placeorder .cm-list li {
+  padding: 1.2rem 0.8rem;
+  border-bottom-style: solid;
+}
+.placeorder .cm-list li .red {
+  padding-top: 1.1rem;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.placeorder .cm-list li .red .price {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.placeorder .payment {
+  padding-bottom: 0;
+}
+.placeorder .payment .method {
+  font-size: 0;
+  padding: 1rem 0.8rem;
+}
+.placeorder .payment .method a {
+  display: inline-block;
+  vertical-align: middle;
+}
+.placeorder .payment .method .plipay img {
+  height: 2.5rem;
+  width: auto;
+}
+.placeorder .payment .method .wechat {
+  margin-left: 4.5rem;
+}
+.placeorder .payment .method .wechat img {
+  height: 3rem;
+  width: auto;
+}
+.defaultadd {
+  margin-top: 0.9rem;
+  padding: 1.7rem 0.8rem 0.8rem!important;
+}
+.defaultadd .btn-default {
+  margin-top: 0.5rem;
+  width: 7.2rem;
+  line-height: 2.3rem;
+  font-size: 1.5rem;
+  background: #000;
+  color: #fff;
+  display: block;
+  text-align: center;
+}
+.defaultadd .line {
+  font-size: 1.8rem;
+  color: #333;
+  padding-bottom: 1rem;
+  line-height: 1;
+}
+

@@ -1,0 +1,45 @@
+<include file="Public/header" />
+<link rel="stylesheet" href="__PUBLIC__/css/member.min.css">
+    <!-- container -->
+    <div id="container">
+        <div class="g-wrap m-member-page clearfix g-pt20">
+            <div class="mem-info">
+                <div class="avatar">
+                    <img src="__PUBLIC__/images/{$userinfo.small_pic}" class="img" alt="">
+                </div>
+                <div class="info">
+                    <div class="name">{$userinfo.username}</div>
+                    <div class="rank">等级：<a href="#" class="s-orange">{$userinfo.dengji}</a>
+                    </div>
+                    <div>积分：<span class="s-orange">{$userinfo.jifen}</span><a href="{:U('user/coin_exchange')}" class="button button-clear to-exchange">兑换</a></div>
+                </div>
+                <ul class="list list-member">
+                    <li <if condition="$sonNav eq 'member'">class="current"</if>>
+                        <a href="{:U('user/member')}"><span class="icon-mem icon-l icon-home"></span>会员首页</a>
+                    </li>
+                    <li <if condition="$sonNav eq 'mem_line'">class="current"</if>>
+                        <a href="{:U('user/mem_line')}"><span class="icon-mem icon-l icon-line"></span>我的线路</a>
+                    </li>
+                    <li <if condition="$sonNav eq 'mem_salon'">class="current"</if>>
+                        <a href="{:U('user/mem_salon')}"><span class="icon-mem icon-l icon-salon"></span>我的沙龙</a>
+                    </li>
+                    <li <if condition="$sonNav eq 'mem_activity'">class="current"</if>>
+                        <a href="{:U('user/mem_activity')}"><span class="icon-mem icon-l icon-activity"></span>我发起的活动</a>
+                    </li>
+                    <li <if condition="$sonNav eq 'mem_forum'">class="current"</if>>
+                        <a href="{:U('user/mem_forum')}"><span class="icon-mem icon-l icon-forum"></span>我的泡坛</a>
+                    </li>
+                    <li <if condition="$sonNav eq 'mem_works'">class="current"</if>>
+                        <a href="{:U('user/mem_works')}"><span class="icon-mem icon-l icon-works"></span>我的摄影作品</a>
+                    </li>
+                    <li <if condition="$sonNav eq 'mem_study'">class="current"</if>>
+                        <a href="{:U('user/mem_study')}"><span class="icon-mem icon-l icon-study"></span>我的学习园地</a>
+                    </li>
+                    <li <if condition="$sonNav eq 'mem_center'">class="current"</if>>
+                        <a href="{:U('user/mem_center')}"><span class="icon-mem icon-l icon-center"></span>个人中心</a>
+                    </li>
+                    <li>
+                        <a href="{:U('user/mem_news')}"><span class="icon-mem icon-l icon-news"></span>我的消息</a>
+                    </li>
+                </ul>
+            </div>

@@ -1,0 +1,100 @@
+<include file="Public/header" />
+<link href="__PUBLIC__/css/ychdzx.css" rel="stylesheet">
+    <php>$bg="bg-3.jpg";</php>
+    <foreach name="imgs" item="imgslist"><if condition="$imgslist['position'] eq 'pc阳澄湖大闸蟹'"><php>$bg = $imgslist['small_pic'];</php></if></foreach>
+    <div class="imgboxs animated pulse"><img alt="{$imgalt}" src="__PUBLIC__/images/{$bg}"></div>
+    <div class="box1">
+      <div class="b1"><img alt="{$imgalt}" src="__PUBLIC__/images/2t-6.png"><img alt="{$imgalt}" src="__PUBLIC__/images/2t-7.png" class="img2"></div>
+      <div class="b2">
+        <p>好蟹汇为您精心准备了20种款式型号 提供性高价比的搭配，满足您的不同需求，只为更贴心！</p>
+        <p class="red">好蟹汇阳澄湖大闸蟹 送客户 送领导 送朋友 送长辈</p>
+      </div>
+      <div class="b3"><span <if condition="$type eq '礼卡'">class="active"</if> ><a>礼卡</a></span><span <if condition="$type eq '礼盒'">class="active"</if>> <a>现货礼盒</a></span><span> <a>企业定制</a></span></div>
+      <div class="b4 w">
+        <div <if condition="$type neq '礼卡'">class=" gift hide" style="display:none"<else/>class="gift"</if>>
+          <ul>
+            <foreach name="gift" item="gift_data">
+              <if condition="$gift_data['type'] eq '礼卡'">
+                <li><img alt="{$imgalt}" src="__PUBLIC__/images/{$gift_data.pic}">
+                  <div class="group">
+                    <div class="text">
+                      <img alt="{$imgalt}" src="__PUBLIC__/images/2t{$gift_data.nums}.png">
+                    </div>
+                    <div class="rectangle"></div>
+                    <div class="xiebox">
+                    <foreach name="giftp" item="giftp_data">
+                      <if condition="$giftp_data['gift_id'] eq $gift_data['id']">
+                          <a href="/product/codebuy_{$giftp_data.id}.html" class="xie clearfix" style="display: block;">
+                            <div class="xie1 fl"><span>雄蟹 {$giftp_data.male_crab_weight} 两*{$gift_data.nums}只</span><span>雌蟹 {$giftp_data.female_crab_weight} 两*{$gift_data.nums}只</span></div>
+                            <div class="xie2 fl"><img alt="{$imgalt}" src="__PUBLIC__/images/2t-8.png"></div>
+                            <div class="xie3 fl">{$giftp_data.pname}元/张</div>
+                          </a>
+                      </if>
+                    </foreach>
+                    </div>
+                  </div>
+                </li>
+              </if>
+            </foreach>
+          </ul>
+        </div>
+        <div <if condition="$type eq '礼卡'">class=" giftbox hide" style="display:none"<else/>class="giftbox"</if> >
+          <ul>
+            <foreach name="gift" item="gift_data">
+              <if condition="$gift_data['type'] eq '礼盒'">
+                <li><img alt="{$imgalt}" src="__PUBLIC__/images/{$gift_data.pic}">
+                  <div class="group">
+                    <div class="text">
+                      <img alt="{$imgalt}" src="__PUBLIC__/images/2t{$gift_data.nums}.png">
+                    </div>
+                    <div class="rectangle"></div>
+                    <div class="xiebox">
+                    <foreach name="giftp" item="giftp_data">
+                      <if condition="$giftp_data['gift_id'] eq $gift_data['id']">
+                          <a href="/product/codebuy_{$giftp_data.id}.html"  class="xie clearfix" style="display: block;">
+                            <div class="xie1 fl"><span>雄蟹 {$giftp_data.male_crab_weight} 两*{$gift_data.nums}只</span><span>雌蟹 {$giftp_data.female_crab_weight} 两*{$gift_data.nums}只</span></div>
+                            <div class="xie2 fl"><img alt="{$imgalt}" src="__PUBLIC__/images/2t-8.png"></div>
+                            <div class="xie3 fl">{$giftp_data.pname}元/张</div>
+                          </a>
+                      </if>
+                    </foreach>
+                    </div>
+                  </div>
+                </li>
+              </if>
+            </foreach>
+          </ul>
+        </div>
+        <div class="customization"></div>
+      </div>
+	<input type="hidden" id="custom" value="{:U('product/custom')}">
+    </div>
+    <div class="imgboxs"><img alt="{$imgalt}" src="__PUBLIC__/images/bg-4.jpg"></div>
+    <div class="box2">
+      <div class="video">
+        <video id="videobg_html5_api" data-setup="{&amp;quot;loop&amp;quot;: true}" loop="" autoplay class="vjs-tech">
+          <source src="__PUBLIC__/video/dzx.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="text"><img alt="{$imgalt}" src="__PUBLIC__/images/2t-1.png">
+        <h3>蟹中极品 盘中佳肴</h3>
+        <p>一个人，一只蟹，一段幸福的品蟹时光，是鲜美沁心的生活，是醇静恬淡的乐趣，是爱，是温暖，是遐思，是</p>
+        <p>柔情。让螃若无人的品蟹时光，静静地流淌......</p><a href="{$baseConfig.shangqiao}" class="button" target="_blank">订购阳澄湖大闸蟹</a>
+        <ul>
+          <li><i class="i1"></i><span>蟹黄似火 天赐尤物</span><span>口齿留香 回味无穷</span></li>
+          <li><i class="i2"></i><span>蟹膏似玉 令人垂涎</span><span>饱满粘嘴 至臻美味</span></li>
+          <li><i class="i3"></i><span>产地直供 使命必达</span><span>新鲜看得见</span></li>
+          <li><i class="i4"></i><span>绿色喂养 身宽体胖</span><span>蟹味鲜嫩美味</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="box3">
+      <div class="w"><img alt="{$imgalt}" src="__PUBLIC__/images/2t-12.png"><a href="{$baseConfig.shangqiao}" class="button" target="_blank">订购阳澄湖大闸蟹</a></div>
+    </div>
+    <div class="box4">
+      <!-- img(src="__PUBLIC__/images/bg-7.png")--><a href="{$baseConfig.shangqiao}" class="button" target="_blank">我要定制</a>
+    </div>
+    <include file="Public/footer2" />
+    <script src="__PUBLIC__/js/require.js" data-main="__PUBLIC__/js/ychdzx"></script>
+  </body>
+</html>

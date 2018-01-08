@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+        <title>联系方式</title>
+        <link rel="stylesheet" href="__PUBLIC__/css/uikit.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/iven.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/form-select.css" />
+        <script src="__PUBLIC__/js/jquery.js"></script>
+        <script src="__PUBLIC__/js/uikit.min.js"></script>
+        <script src="__PUBLIC__/js/form-select.min.js"></script>
+    </head>
+    <body>
+    <div class="user-header">
+        <div class="uk-container uk-container-center">
+            <div class="uk-grid uk-grid-small">
+                <div class="uk-width-1-4">
+                    <div class="uk-panel user-pic uk-text-center">
+                        <img src="__PUBLIC__/images/mrzhang.jpg" alt="">
+                        <h4 class="uk-margin-small-top white">{$user.user_type}</h4>
+                    </div>
+                </div>
+                <div class="uk-width-3-4">
+                    <div class="user-info">
+                    <h2>{$user.username} <span class="uk-text-small">（{$user.telphone}）</span></h2>
+                    <hr>
+                    <p>信誉等级：<span>{$user.dengji}</span>  信誉积分：<span>{$user.jifen}</span>
+                    </p>
+                    <hr>
+                    <if condition="$user['is_identify'] eq 1">
+                         <div class="renzheng-png">
+                            <img src="__PUBLIC__/images/icon-17.png" alt=""> <span class="uk-text-middle">已认证（线上）</span>
+                        </div>
+		    <elseif condition="$userinfo['is_identify'] eq 2"/>
+                     <div class="renzheng-png">
+                        <img src="__PUBLIC__/images/icon-17.png" alt=""> <span class="uk-text-middle">已认证（线下）</span>
+                    </div>
+                    <else/>
+                        <div class="renzheng-png">
+                            <img src="__PUBLIC__/images/icon-17.png" alt=""> <span class="uk-text-middle">未认证（审核中）</span>
+                        </div>
+                    </if>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="balance">
+        <div class="uk-container uk-container-center">
+            <span>好评率：<i class="red"><php>echo intval($user['jifen']*100/$user['realjf'])."%";</php></i></span>                
+        </div>
+    </div>
+    </div>
+    <br>
+    <div class="uk-container uk-container-center view-info">
+        <h2 class="iv-h2 uk-margin-top">QQ号码 <span class="uk-float-right">{$user.qq}</span></h2>
+        <h2 class="iv-h2 uk-margin-top">微信号 <span class="uk-float-right">{$user.weixin}</span></h2>
+        <h2 class="iv-h2 uk-margin-top">邮箱 <span class="uk-float-right">{$user.email}</span></h2>
+        <h2 class="iv-h2 uk-margin-top">所在区域 <span class="uk-float-right">{$pro_name.name} {$user.city}</span></h2>
+    </div>
+<include file="Public/footer" /> 

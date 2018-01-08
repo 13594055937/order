@@ -1,0 +1,149 @@
+<include file="Public/header" />
+<link href="__PUBLIC__/css/system.css" rel="stylesheet">
+<link href="__PUBLIC__/css/calendar.css" rel="stylesheet">
+    <div class="maincontent">
+      <div class="w">
+        <div class="main">
+          <div class="box"> 
+            <!--进入提蟹系统-->
+            <div class="box1" <if condition="$step neq 1">style="display:none"</if>>
+              <h3>欢迎进入提蟹系统</h3>
+              <p>尊敬的顾客朋友：2017年3月9号起停止提货。</p>
+              <div class="input">
+                <p><img alt="{$imgalt}" src="__PUBLIC__/images/username icon.png">
+                  <input type="text" placeholder="请输入卡号" id="card_no">
+                </p>
+                <p><img alt="{$imgalt}" src="__PUBLIC__/images/password icon.png">
+                  <input type="password" placeholder="请输入密码" id="card_pwd">
+                </p>
+                <p class="verif"><img alt="{$imgalt}" src="__PUBLIC__/images/verif.png">
+                  <input type="text" placeholder="请输入验证码" id="yanzhengma"><span><img alt="{$imgalt}" id="codeimg" src="{:U('product/verify')}"><a id="code" style="display:text-inline">换一张</a></span>
+                </p>
+              </div>
+              <button id="btn1">提交</button>
+              <div class="bar"></div>
+            </div>
+            <!--礼卡信息-->
+            <input type="hidden" id="xie_card_id" value="">
+            <input type="hidden" id="is_subscribe" value="0">
+            <div class="box2" <if condition="$step neq 2">style="display:none"</if>>
+              <h3>礼卡信息</h3>
+              <div class="input">
+                <p>提货编码<span class="tihuo_id">1546562</span></p>
+                <p>礼卡类型<span class="card_name">祥瑞鑫礼1988型</span></p>
+                <p>商品规格<span class="guige">雄蟹4.5两*5只 </span></p>
+                <p>礼卡状态<span>礼卡为真，尚未提货</span></p>
+              </div>
+              <div class="btn"><a id="btn2">申请提货</a><a id="btn4" class="gray">预约自提</a></div>
+            </div>
+            <!--申请提货-->
+            <div class="box3" <if condition="$step neq 3">style="display:none"</if>>
+              <h3>申请送货</h3>
+              <p class="title"><span>提货编码</span><span class="tihuo_id">1546562</span><span>礼卡类型</span><span class="card_name">祥瑞鑫礼1988型</span><span>商品规格</span><span class="guige">雄蟹4.5两*5只 雌蟹3.5两*5只</span></p>
+              <ul>
+                <li><b>*</b>
+                  <lable>收货人姓名</lable>
+                  <input type="text" id="username">
+                </li>
+                <li><b>*</b>
+                  <lable>收货人电话</lable>
+                  <input type="text" id="telphone">
+                </li>
+                <li><b>*</b>
+                  <lable>备用电话</lable>
+                  <input type="text" id="other_telphone">
+                </li>
+                <li class="address1"><b>*</b>                  <lable>收货地址</lable>
+                  <!--城市联动-->
+                  <select id="s_province" name="s_province"></select>
+                  <select id="s_city" name="s_city">   </select>
+                  <select id="s_county" name="s_county"></select>
+                </li>
+                <li class="address2"><b>*</b>
+                  <lable>详细地址</lable>
+                  <input type="text" id="address2">
+                </li>
+                <li><b>*</b>
+                  <lable>期望发货日期</lable>
+                  <input name="lable" onClick="setday(this);" size="9" maxlength="10" style="width:50%; padding-left:6px;" placeholder="请点击选择" readonly id="fahuo_time">
+                </li>
+                <li>
+                  <lable>备注	</lable>
+                  <input type="text" id="note">
+                </li>
+              </ul>
+              <button id="btn3">申请提货</button>
+            </div>
+            <!--申请送货-->
+            <div class="box4" <if condition="$step neq 4">style="display:none"</if>>
+              <h3>申请送货</h3>
+              <p class="title"><span>提货编码</span><span class="tihuo_id">1546562</span><span>礼卡类型</span><span class="card_name">祥瑞鑫礼1988型</span><span>商品规格</span><span class="guige">雄蟹4.5两*5只 雌蟹3.5两*5只</span></p>
+              <div class="msg">
+                <ul class="left">
+                  <li><img alt="{$imgalt}" src="__PUBLIC__/images/win.png"></li>
+                  <li>提货成功</li>
+                  <li>登陆成功界面：已提货</li>
+                </ul>
+                <ul class="right" id="shouhuo_message">
+                  <li>收货人：WANGSHA	</li>
+                  <li>电话：13817189491</li>
+                  <li>备用电话：13162083683</li>
+                  <li>申请时间：2017.03.20</li>
+                  <li>期望发货日期：2017.03.21</li>
+                </ul>
+              </div>
+            </div>
+            <!-- 预约自提-->
+            <div class="box5" <if condition="$step neq 5">style="display:none"</if>>
+              <h3>预约自提</h3>
+              <div class="input">
+                <p>提货编码<span class="tihuo_id">1546562</span></p>
+                <p>礼卡类型<span class="card_name">祥瑞鑫礼1988型</span></p>
+                <p>商品规格<span class="guige">雄蟹4.5两*5只 雌蟹3.5两*5只</span></p>
+                <p class="last last1">礼卡状态<span>礼卡为真，尚未提货</span></p>
+              </div>
+              <div class="input">
+                <div class="address">
+                  <p id="address">门店地址：
+                    <input type="text" placeholder="请点击选择" id="zt_store_name">
+                  </p>
+                  <ul id="lists"></ul>
+                </div>
+                <p>姓名：
+                  <input type="text" id="zt_username">
+                </p>
+                <p>电话：
+                  <input type="text" id="zt_telphone">
+                </p>
+                <p class="last">提货时间：
+                  <input name="lable" onClick="setday(this);" size="9" maxlength="10" placeholder="请点击选择" readonly id="zt_fahuo_time">
+                </p>
+                <div class="btn"><a id="btn6">预约自提</a></div>
+              </div>
+            </div>
+            <!-- 提示框-->
+            <div class="box6" <if condition="$step neq 6">style="display:none"</if>>
+              <div class="mask"></div>
+              <div class="poptext"><img alt="{$imgalt}" src="__PUBLIC__/images/win.png">
+                <h3>预约成功</h3>
+                <p>请按时前往门店提货 </p><a id="btn7">确定</a>
+              </div>
+            </div>
+          </div>
+          <h5>提蟹须知：</h5>
+          <ol>
+            <li>1. 收货地址请一定是顺丰速运配送范围城市，超出范围无法进行配送的，收送范围以顺丰官网 为准</li>
+            <li>2. 请务必填写正确地址与电话，如地址电话错误，造成的损失，我们将无法提供售后服务，抱歉！</li>
+            <li>3. 由于顺丰速运存在快递延误的现象，我们无法保证百分百准时到达，一般从发货起，2天左右，节假日派送根据顺丰的调整进行派送，可能会出现节假日停发现象，请尽量避开节假日提蟹。</li>
+            <li>4. 您在收到大闸蟹后，立即把大闸蟹从箱子拿出，放在冰箱保鲜层，温度控制在3-6度左右，一般3至5天蟹不会死，不能放水里大闸蟹会因为缺氧死亡，为保证享受到美味，请您尽早食用。</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+	<include file="Public/footer_tixie" />
+  	<script src="__PUBLIC__/js/area.js" type="text/javascript"></script>
+    <script src="__PUBLIC__/js/require.js" data-main="__PUBLIC__/js/system"></script>
+    <script src="__PUBLIC__/js/jquery.js" type="text/javascript"></script>
+    <script src="__PUBLIC__/js/calendar.js" type="text/javascript"></script>
+  </body>
+</html>

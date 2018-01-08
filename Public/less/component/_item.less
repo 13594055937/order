@@ -1,0 +1,338 @@
+.item-img(@width: 190px, @height: 190px) {
+    display: block;
+    width: @width;
+    height: @height;
+    overflow: hidden;
+}
+
+.item-txt (@width: 80px, @height: 30px, @p1: 0px, @p2: 0px) {
+    position: relative;
+    padding: @p1 @p2 @p1 @width;
+    .item-title {
+        display: block;
+        position: absolute;
+        top: @p1;
+        left: @p2;
+        width: @width - @p1;
+        line-height: @height;
+        text-align: right;
+        .text-ellipsis;
+        padding-right: 2px;
+    }
+    .item-cont {
+        display: block;
+        line-height: @height;
+    }
+}
+
+.item-avatar(@width: 140px, @height: 180px, @padding: 0) {
+    display: block;
+    position: relative;
+    padding: @padding @padding @padding @width + @padding + 10px;
+    .item-avatar {
+        position: absolute;
+        top: @padding;
+        left: @padding;
+        width: @width;
+        height: @height;
+        overflow: hidden;
+    }
+    .item-info {
+        position: relative;
+        min-height: @height;
+    }
+}
+
+.item {
+    &.name-value-sm {
+        .item-txt(@width: 70px, @height: 30px, @p1: 10px, @p2: 10px);
+    }
+    &.name-value {
+        .item-txt(@width: 120px, @height: 30px, @p1: 10px, @p2: 10px);
+    }
+}
+
+// 列表
+.list {
+    &.list-txt-time {
+        .item {
+            line-height: 30px;
+            position: relative;
+            padding-right: 116px;
+        }
+        .name,
+        .time,
+        .ope {
+            line-height: 30px;
+            display: block;
+            .text-ellipsis;
+        }
+        .time,
+        .ope {
+            position: absolute;
+            top: 0;
+            right: 0px;
+            text-align: right;
+            width: 116px;
+        }
+        .ope {
+            text-align: center;
+            a {
+                margin: 0 5px;
+            }
+        }
+    }
+    &.list-img-txt {
+        .item-img {
+            position: relative;
+            display: block;
+            height: 100%;
+        }
+        p {
+            &.item-txt {
+                height: 30px;
+                background-color: rgba(0, 0, 0, 0.4);
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                padding-right: 80px;
+                .name {
+                    display: block;
+                    line-height: 30px;
+                    text-indent: 10px;
+                    .text-ellipsis;
+                }
+                .time {
+                    position: absolute;
+                    width: 80px;
+                    top: 0;
+                    right: 0;
+                    text-align: center;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+    &.list-img {
+        .item {
+            float: left;
+            .item-img;
+        }
+    }
+    &.list-style-a {
+        .item {
+            border-width: 1px;
+            border-style: solid;
+            border-color: @primary-hover @border-color @border-color @border-color;
+            margin-bottom: 20px;
+        }
+    }
+    &.list-category {
+        border: 1px solid @border-color;
+        background-color: @bg;
+        li {
+            float: left;
+            cursor: pointer;
+            padding: 2px 25px;
+            line-height: 30px;
+            .font-size-md;
+            &.current {
+                background-color: @border-color;
+            }
+        }
+    }
+    &.list-notice-member {
+        .item {
+            background-color: @bg;
+            .item-avatar(200px, 150px, 20px);
+        }
+        .item-info {
+            h3 {
+                .font-size-md;
+                .name {
+                    .font-size-lg;
+                    color: @orange;
+                    margin-right: 15px;
+                }
+                .time {
+                    margin-right: 15px;
+                }
+            }
+            .desc {
+                margin: 10px 0 20px;
+                line-height: 20px;
+                height: 40px;
+                overflow: hidden;
+            }
+            .reg-status {
+                position: absolute;
+                bottom: -20px;
+                right: -20px;
+                background-color: @orange;
+                color: #fff;
+                padding: 3px 30px;
+                .font-size-lg;
+                &:after {
+                    content: '';
+                    width: 0;
+                    height: 0;
+                    font-size: 0;
+                    position: absolute;
+                    top: 0;
+                    left: -18px;
+                    border-right: 18px solid @orange;
+                    border-top: 18px solid transparent;
+                    border-bottom: 18px solid transparent;
+                }
+            }
+        }
+    }
+    // 常用列表-4
+    &.list-normal {
+        margin-right: -20px;
+        overflow: hidden;
+        .item {
+            float: left;
+            width: 285px;
+            margin: 0 20px 20px 0;
+            .item-img {
+                width: 285px;
+                height: 210px;
+                display: block;
+                overflow: hidden;
+            }
+        }
+        .item-desc {
+            display: block;
+            padding: 8px 0;
+            line-height: 20px;
+            height: 46px;
+            overflow: hidden;
+            color: #fff;
+            .font-size-md;
+        }
+        .ope {
+            margin-top: 5px;
+            .font-size-md;
+            a {
+                margin-right: 10px;
+            }
+        }
+        .name {
+            display: inline-block;
+            max-width: 120px;
+            .text-ellipsis;
+        }
+    }
+    &.list-normal-five {
+        margin-right: -20px;
+        overflow: hidden;
+        .item {
+            float: left;
+            width: 224px;
+            margin: 0 20px 20px 0;
+            .item-img {
+                width: 224px;
+                height: 220px;
+                display: block;
+                overflow: hidden;
+            }
+        }
+        .item-desc {
+            display: block;
+            padding: 3px 0;
+            line-height: 20px;
+            height: 46px;
+            overflow: hidden;
+        }
+    }
+    // 头像
+    &.list-avatar-50 {
+        .item {
+            .item-avatar(50px, 50px);
+        }
+    }
+    // 老师风采-老师风采详情
+    &.list-avatar-200 {
+        .item {
+            background-color: @bg;
+            .item-avatar(200px, 150px, 0);
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed @border-color;
+            .font-size-md;
+        }
+        .item-info {
+            h3 {
+                .font-size-md;
+                .name {
+                    .font-size-lg;
+                    color: @orange;
+                }
+            }
+            .position {
+                color: @orange;
+            }
+            .desc {
+                margin-top: 10px;
+                line-height: 20px;
+                height: 60px;
+                overflow: hidden;
+            }
+        }
+    }
+    // 学习园地
+    &.list-avatar-160 {
+        .item {
+            background-color: @bg;
+            .item-avatar(160px, 120px, 0);
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed @border-color;
+            .font-size-md;
+        }
+        .item-info {
+            h3 {
+                .font-size-md;
+                .name {
+                    .font-size-lg;
+                    color: @orange;
+                }
+            }
+            .position {
+                color: @orange;
+            }
+            .desc {
+                margin-top: 10px;
+                line-height: 20px;
+                height: 60px;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+.item-attr {
+    height: 24px;
+    span {
+        display: inline-block;
+        line-height: 24px;
+        overflow: hidden;
+        &.view,
+        &.zan,
+        &.comment {
+            position: relative;
+            top: 2px;
+            margin-right: 8px;
+        }
+    }
+    .icon-browser,
+    .icon-view,
+    .icon-zan,
+    .icon-comment {
+        position: relative;
+        top: -2px;
+        margin-right: 3px;
+    }
+}

@@ -1,0 +1,99 @@
+<include file="Public/header" />
+    <style type="text/css">
+      #ChinaMap {
+        background: #eeeeee;
+        padding-bottom: 42px;
+      }
+      #topList{
+        color: #666;
+      }
+      #topList h3{
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 25px;
+        color: #666;
+      }
+      #topList p{
+        display: none;
+        font-size: 12px;
+        color: #666;
+        font-weight: normal;
+      }
+      #map{
+        padding-top: 66px;
+      }
+    </style>
+    <div id="ChinaMap">
+      <div class="w clearfix">
+        <div class="fl">
+          <div class="img"><img alt="{$imgalt}" src="__PUBLIC__/images/map-t.png" style="padding-top:120px;padding-bottom:24px;"></div>
+          <div class="ToolTip">
+            <div id="topList"></div>
+          </div>
+        </div>
+        <div id="map" class="fr"></div> 
+      </div>
+      
+      
+
+    </div>
+
+
+
+    <include file="Public/footer" />
+
+
+
+
+    <script src="__PUBLIC__/js/jquery.min.js"></script>
+    <script src="__PUBLIC__/js/raphael.js"></script>
+    <script src="__PUBLIC__/js/chinamapPath.js"></script>
+    <script src="__PUBLIC__/js/chinamap.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+	var data = '{$storelist2}';
+	data = eval('('+data+')');
+	Map(data);
+    	Bind(data);
+        $(".st-head i").click(function() {
+          $(this).toggleClass('close').parent().next('.st-body').slideToggle();
+        });
+        $('.st-close b').click(function() {
+          $(".st-head i").trigger("click");
+        });
+        $('.st-body li').hover(function() {
+          var _this = $(this);
+          _this.find('.box').fadeIn('fast');
+        }, function() {
+          $(this).find('.box').fadeOut('fast');
+        });
+        //tab切换
+        function resetTabs(obj) {
+          $(obj).parent().parent().next("div").children("div").hide();
+          $(obj).parent().parent().find("a").removeClass("current");
+        }
+
+        //tab
+        loadTab();
+
+        function loadTab() {
+          $(".content > div").hide();
+          $(".tabs").each(function() {
+            $(this).find("li:first a").addClass("current");
+          });
+          $(".content").each(function() {
+            $(this).find("div:first").fadeIn();
+          });
+          $(".tabs a").on("click", function(e) {
+            e.preventDefault();
+            if ($(this).attr("class") == "current") {
+              return;
+            } else {
+              resetTabs(this);
+              $(this).addClass("current");
+              $($(this).attr("name")).fadeIn();
+            }
+          });
+        }
+      })
+    </script>

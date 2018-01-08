@@ -1,0 +1,228 @@
+<include file="Public/header"/>
+<link rel="stylesheet" href="__PUBLIC__/smallphone/css/system.css">
+<link rel="stylesheet" href="__PUBLIC__/smallphone/css/amazeui.datetimepicker.css">
+		<div class="outbox">
+			<!-- 登录模块 -->
+			<div class="box1">
+				<div class="imgbox">
+					<a href="{:U('index/index')}" style="display: block;"><img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/5-1.png"></a>
+				</div>
+				<div class="textboxs">
+					<div class="textbox border">
+						<label>提货卡号</label><input type="text" id="card_no">
+					</div>
+					<div class="textbox last">
+						<label>密码</label><input type="number" id="card_pwd" >
+					</div>
+					<p>* 尊敬的顾客朋友{$userinfo.name}</p>
+					<div class="btn" id="btn1" href="{:U('product/system',array('step'=>2))}"><a href="javascript:void(0)">提交</a></div>
+				</div>
+				<!-- 错误提示框1 -->
+				<div class="popbox">
+					<h3>提示</h3>
+					<p id="tips">您输入的卡号或密码有误，<br>请重新输入！</p>
+					<img alt="{$imgalt}" id="close" src="__PUBLIC__/smallphone/images/close.png">
+				</div>
+			</div>
+
+			<!--礼卡信息-->
+            <input type="hidden" id="xie_card_id" value="">
+            <input type="hidden" id="is_subscribe" value="0">
+            <div class="box2" id="tihuo_box2" <if condition="$step neq 2">style="display:none"</if>>
+              <h3>礼卡信息</h3>
+              <ul>
+					<li>
+						<span>提货编码</span>
+						<span class="tihuo_id">1546562</span>
+					</li>
+					<li>
+						<span>礼卡类型</span>
+						<span class="card_name">祥瑞鑫礼1988型</span>
+					</li>
+					<li>
+						<span>商品规格</span>
+						<span class="guige">雄蟹4.5两*5只 </span>
+					</li>
+					<li>
+						<span>礼卡状态</span>
+						<span class="red">礼卡为真，尚未提货</span>
+					</li>
+				</ul>
+              <div class="btn"><a id="btn2">申请提货</a><a id="btn4" class="gray">预约自提</a></div>
+            </div>
+
+
+            <!--申请提货-->
+            <div class="box2" id="tihuo_box3" <if condition="$step neq 3">style="display:none"</if>>
+              <h3>申请送货</h3>
+              <ul>
+              		<li>
+						<span>提货编码</span>
+						<span class="tihuo_id">1546562</span>
+					</li>
+					<li>
+						<span>礼卡类型</span>
+						<span class="card_name">祥瑞鑫礼1988型</span>
+					</li>
+					<li>
+						<span>商品规格</span>
+						<span class="guige">雄蟹4.5两*5只 </span>
+					</li>
+				</ul>
+              <h3 style="margin-top: 45px;">完善收货信息</h3>
+				<ul class="usermsg">
+                <li><b>*</b>
+                  <span>收货人姓名</span>
+                  <input type="text" id="username" placeholder="请输入收货人姓名">
+                </li>
+                <li><b>*</b>
+                  <span>收货人电话</span>
+                  <input type="text" id="telphone" placeholder="请输入收货人电话">
+                </li>
+                <li><b>*</b>
+                  <span>备用电话</span>
+                  <input type="text" id="other_telphone" placeholder="请输入备用电话">
+                </li>
+                <li class="address1"><b>*</b> 
+                   <span>收货地址</span>
+                  <!--城市联动-->
+                  <select id="s_province" name="s_province"></select>
+                  <select id="s_city" name="s_city">   </select>
+                  <select id="s_county" name="s_county"></select>
+                </li>
+                <li class="address2"><b>*</b>
+                  <span>详细地址</span>
+                  <input type="text" id="address2" >
+                </li>
+                <li><b>*</b>
+                  <span>期望发货日期</span>
+                  <input name="lable" size="9" maxlength="10" type="text" class="datetimepicker" style="width:50%; padding-left:6px;" placeholder="请点击选择" readonly id="fahuo_time">
+                </li>
+                <li>
+                  <span>备注	</span>
+                  <input type="text" id="note">
+                </li>
+              </ul>
+		<div class="btn">
+		<a class="gray" id="goback">上一步</a>
+		<a href="javascript:void(0)" id="btn3">提交</a>
+		</div>
+            </div>
+            <!--申请送货-->
+            <div class="box5" id="tihuo_box4" <if condition="$step neq 4">style="display:none"</if>>
+            	<div class="box5-1">
+					<img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/win.png">
+					<h3>提货成功</h3>
+					<p>您可以 <a href="{:U('product/putcrab')}" class="red">继续提货</a> 或 返回 <a href="{:U('index/index')}" class="red">首页</a></p>
+				</div>
+				<div class="box5-2">
+					<ul class="userbox" id="shouhuo_message">
+						<li>
+							<span>订单号码：</span>
+							<span>13817189494</span>
+						</li>
+						<li>
+							<span>收货人：</span>
+							<span>WANGSHA</span>
+						</li>
+						<li>
+							<span>电话：</span>
+							<span>13162083683</span>
+						</li>
+						<li>
+							<span>地址：</span>
+							<span>上海市闵行区宝华花园104-106</span>
+						</li>
+						<li class="clearfix">
+							<span>期望发货日期</span>
+							<span class="time">2017.04.10</span>
+						</li>
+					</ul>
+				</div>
+				<div class="box5-3 giftbox hide">
+					<h3>礼卡信息</h3>
+					<div class="text">
+						<img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/5-3.png">
+						<div>
+							<h5>大闸蟹至尊上品礼卡5对装</h5>
+							<p class="price">1608.00</p>
+							<p>雄蟹4.5两*5只 雌蟹3.5两*5只</p>
+						</div>
+					</div>
+				</div>
+            </div>
+            <!-- 预约自提-->
+            <div class="box3" id="tihuo_box5" <if condition="$step neq 5">style="display:none"</if>>
+			<div class="giftbox">
+					<h3>礼卡信息</h3>
+					<div class="text">
+					<img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/5-3.png">
+					<div>
+						<h5 class="card_name">大闸蟹至尊上品礼卡5对装</h5>
+						<p class="guige">雄蟹4.5两*5只 雌蟹3.5两*5只</p>
+					</div>
+					</div>
+			  </div>
+			  <ul class="adressbox">
+					<li>
+						<p id="address">门店地址：
+		                    <input type="text" placeholder="请点击选择" id="zt_store_name">
+		                </p>
+						<ul id="lists"></ul>
+					</li>
+					<li>
+						<span>姓名：</span>
+						<input type="text" placeholder="请输入姓名" id="zt_username">
+					</li>
+					<li>
+						<span>电话：</span>
+						<input type="text" placeholder="请输入电话号码" id="zt_telphone">
+					</li>
+					<li>
+						<span>提货时间：</span>
+						<input name="lable" type="text" class="datetimepicker" size="9" maxlength="10" id="zt_fahuo_time">
+					</li>
+			  </ul>
+			<div class="btn" id="btn6">
+				<a>提交预约</a>
+			</div>
+			<!-- 提示框-->
+            <div class="box6" <if condition="$step neq 6">style="display:none"</if>>
+              <div class="mask"></div>
+              <div class="poptext"><img alt="{$imgalt}" src="__PUBLIC__/images/win.png">
+                <h3>预约成功</h3>
+                <p>请按时前往门店提货 </p><a href="{:U('product/putcrab')}">确定</a>
+              </div>
+            </div>
+            </div>
+
+		</div>
+
+		<include file="Public/footer_system"/>
+		<script src="__PUBLIC__/js/area.js" type="text/javascript"></script>
+	    <script src="__PUBLIC__/js/jquery.js" type="text/javascript"></script>
+	    <script src="__PUBLIC__/js/common1.js" type="text/javascript"></script>
+	    <script src="__PUBLIC__/js/system1.js" type="text/javascript"></script>
+	    <link rel="stylesheet" href="__PUBLIC__/smallphone/css/amazeui.datetimepicker.css">
+<script type="text/javascript" src='__PUBLIC__/smallphone/js/amazeui.min.js'></script>
+<script type="text/javascript" src='__PUBLIC__/smallphone/js/amazeui.datetimepicker.js'></script>
+<script>
+	// 时间控件
+                        $('.datetimepicker').datetimepicker({
+                                 format: 'yyyy-mm-dd',
+                                 todayBtn: true,
+                                 autoclose: true,
+                                 viewSelect: 2,
+                                 minView: 2,
+                                 theme: 'danger',
+                        });
+                        $('.datetimepicker').click(function(){
+                                $(".maskbox").show();
+                        });
+                        $(".datetimepicker-days").click(function(){
+                                $(".maskbox").hide();
+                        });
+                        $(".maskbox").click(function(){
+                                $(this).hide();
+                        });
+</script>

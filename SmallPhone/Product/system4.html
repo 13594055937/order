@@ -1,0 +1,100 @@
+<include file="Public/header"/>
+<link rel="stylesheet" href="__PUBLIC__/smallphone/css/amazeui.datetimepicker.css">
+<link rel="stylesheet" href="__PUBLIC__/smallphone/css/system.css">
+<script type="text/javascript" src='__PUBLIC__/smallphone/js/jquery.min.js'></script>
+<script type="text/javascript" src='__PUBLIC__/smallphone/js/amazeui.min.js'></script>
+<script type="text/javascript" src='__PUBLIC__/smallphone/js/amazeui.datetimepicker.js'></script>
+<script type="text/javascript" src='__PUBLIC__/smallphone/js/system.js'></script>
+<script type="text/javascript" src="__PUBLIC__/smallphone/js/area.js"></script>
+<style type="text/css">
+	.datetimepicker{top:152px!important;}
+</style>
+		<!-- 头部 E -->
+		<div class="outbox">
+			<!-- 申请送货 -->
+			<div class="box2">
+				<h3>申请送货</h3>
+				<ul>
+					<li>
+						<span>提货编码</span>
+						<span>1546562</span>
+					</li>
+					<li>
+						<span>礼卡类型</span>
+						<span>祥瑞金礼1988型</span>
+					</li>
+					<li>
+						<span>商品规格</span>
+						<span>雄蟹4.5两*5只 雌蟹3.5两*5只</span>
+					</li>
+				</ul>
+				<h3 style="margin-top: 45px;">完善收货信息</h3>
+				<ul class="usermsg">
+					<li>
+						<span>收货人姓名</span>
+						<input type="text" placeholder="请输入收货人姓名">
+					</li>
+					<li>
+						<span>收货人电话</span>
+						<input type="text" placeholder="请输入收货人电话">
+					</li>
+					<li>
+						<span>备用电话</span>
+						<input type="text" placeholder="请输入备用电话">
+					</li>
+					<li>
+						<span>收货地址</span>
+						<!--城市联动-->
+	                  	<select id="s_province" name="s_province" readOnly="true" style="ime-mode: disabled"></select>
+	                  	<select id="s_city" name="s_city" readOnly="true" style="ime-mode: disabled"></select>
+	                  	<!-- <select id="s_county" name="s_county"></select> -->
+					</li>
+					<li>
+						<span>详细地址</span>
+						<input type="text" placeholder="">
+					</li>
+					<li>
+						<span>期望发货日期</span>
+						<input type="text" value="" id="datetimepicker" placeholder="请选择期望发货日期" readOnly="true" style="ime-mode: disabled">
+					</li>
+					<li>
+						<span>备注</span>
+						<input type="text" placeholder="请输入备注信息">
+					</li>
+				</ul>
+				<div class="btn">
+					<a class="gray" href="{:U('product/tixie',array('step'=>2))}">上一步</a>
+					<a  href="{:U('product/tixie',array('step'=>5))}">提交</a>
+				</div>
+				<div class="maskbox"></div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			// 地址联动
+			_init_area();
+			var showArea = function() {
+				$('#show').innerHTML = "<h3>省" + $('#s_province').value + " - 市" +
+					$('#s_city').value + " - 县/区" +
+					$('#s_county').value + "</h3>"
+			}
+			// 时间控件
+			$('#datetimepicker').datetimepicker({
+				 format: 'yyyy-mm-dd',
+				 todayBtn: true,
+				 autoclose: true,
+				 viewSelect: 2,
+				 minView: 2,
+				 theme: 'danger',
+			});
+			$('#datetimepicker').click(function(){
+				$(".maskbox").show();
+			});
+			$(".datetimepicker-days").click(function(){
+				$(".maskbox").hide();
+			});
+			$(".maskbox").click(function(){
+				$(this).hide();
+			});
+		</script>
+	</body>
+</html>

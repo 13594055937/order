@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+        <title>我要预报备</title>
+        <link rel="stylesheet" href="__PUBLIC__/css/uikit.css" />
+		<link rel="stylesheet" href="__PUBLIC__/css/iven.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/form-select.css" />
+        <script src="__PUBLIC__/js/jquery.js"></script>
+        <script src="__PUBLIC__/js/uikit.min.js"></script>
+        <script src="__PUBLIC__/js/form-select.min.js"></script>
+    </head>
+    <script>
+            //select监听事件
+            $(document).ready(function() {
+                $("#province").change(function(){
+                    var uu = $(this).find('option:selected').val();
+                    if(uu=="")return false;
+                    var url = $("#cityurl").html();
+                    $.ajax({
+                          'url'  :url,
+                          'data'   :{'province_id':uu},
+                          'type'   :'get',
+                          'success':function(msg){
+                             $("#cityinfo").html(msg);
+                          }
+                        })
+                });
+                $("#submitit").click(function(){
+                    var type = $.trim($("#switch-option").find('option:selected').val());
+                    var pro_name = $.trim($("#pro_name").val());
+                    var content = $.trim($("#content").val());
+                    var pro_stage = $("#pro_stage").val();
+                    var province =  $("#province").find('option:selected').val();
+                    var city =  $("#cityinfo").find('option:selected').val();
+                    if(pro_stage == "" || pro_name == "" || content == ""  || province=="" || city ==""){
+                        alert("必填项不能为空");
+                        return false;
+                    }
+                    $("form").submit();
+                })
+            });
+        </script>
+    <body>
+	<div class="uk-container uk-container-center">
+        
+        <form class="uk-form assi-form" action="{:U('task/savebaobei')}" method="post">
+            <input type="hidden" name="id" value="{$id}">
+            <div id="cityurl" style="display:none">{:U('task/getcityinfo')}</div>
+            <h2 class="iv-h2">项目名称 <span class="uk-float-right"><i class="red">*</i>必填</span></h2>
+            <input type="text" name="pro_name" id="pro_name" placeholder="请输入项目名称" value="{$list.pro_name}"/>
+            <h2 class="iv-h2">项目地址 <span class="uk-float-right"><i class="red">*</i>必填</span></h2>
+            <div class="uk-grid">
+                <div class="uk-width-1-2">
+                    <div class="uk-form-select" data-uk-form-select>
+                        <span></span>
+                        <select id="province" name="province">
+                            <option value="">请选择省份</option>
+                            <foreach name="province" item="prodata">
+                            <option value="{$prodata.id}" <if condition="isset($list['province']) && $list['province'] eq $prodata['id']">selected=selected</if>>{$prodata.name}</option>
+                            </foreach>
+                        </select>
+                    </div>
+                </div>
+                <div class="uk-width-1-2">
+                    <div class="uk-form-select" data-uk-form-select>
+                        <span></span>
+                        <select id="cityinfo" name="city">
+                            <option value="">请选择城市</option>
+                             <if condition="isset($list['city'])">
+                             <option value="{$list.city}" selected=selected>{$list.city}</option>
+                             </if>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <h2 class="iv-h2">项目阶段 <span class="uk-float-right"><i class="red">*</i>必填</span></h2>
+            <input type="text" name="pro_stage" id="pro_stage" placeholder="项目阶段" value="{$list.pro_stage}"/>
+            
+            <h2 class="iv-h2">选择品牌 <span class="uk-float-right"><i class="red">*</i>必填</span></h2>
+            <ul class="uk-grid uk-grid-width-1-2">
+                 <foreach name="brand_list" item="branddata">
+                    <li><label><input type="checkbox" name="product_brands[]" value="{$branddata.task_trand_name}" > {$branddata.task_trand_name}</label></li>
+                </foreach>
+            </ul>
+            
+            <h2 class="iv-h2">选择产品 <span class="uk-float-right"><i class="red">*</i>必填</span></h2>
+            <ul class="uk-grid uk-grid-width-1-2">
+                <foreach name="design_list" item="designdata">
+                    <li><label><input type="checkbox" name="design_product_ids[]" value="{$designdata.design_product_name}"> {$designdata.design_product_name}</label></li>
+                </foreach>
+            </ul>
+            <h2 class="iv-h2">描述具体情况 <span class="uk-float-right"><i class="red">*</i>必填</span></h2>
+            <textarea name="content" id="content" cols="30" rows="10" placeholder="描述具体情况">{$list.content}</textarea>
+            <div class="uk-text-center uk-margin-top">
+                <button class="uk-margin-top uk-button uk-button-primary" id="submitit"><i class="uk-icon-mouse-pointer uk-icon-justify"></i>立即提交</button>
+            </div>
+        </form>
+    </div>
+    <include file="Public/footer" />

@@ -1,0 +1,50 @@
+// table-as
+.table-as {
+    background-color: @bg;
+    width: 100%;
+    border: 1px solid @border-color;
+    th {
+        padding: 12px 10px;
+        border-bottom: 1px solid @border-color;
+        line-height: 20px;
+        color: @primary-hover;
+        .font-size-md;
+    }
+    td {
+        padding: 8px 10px;
+        border-bottom: 1px dashed @border-color;
+        line-height: 20px;
+    }
+    p {
+        .font-size;
+        &.one {
+            line-height: 30px;
+            .text-ellipsis;
+        }
+        &.two {
+            line-height: 15px;
+        }
+        &.author {
+            color: #fff;
+        }
+        &.reply {
+            color: @primary-hover;
+        }
+    }
+    .th-title,
+    .td-title {
+        width: 60%;
+    }
+    .th-reply,
+    .td-reply {
+        width: 15%;
+    }
+    .th-author,
+    .td-author {
+        width: 15%;
+    }
+    .th-zan,
+    .td-zan {
+        width: 10%;
+    }
+}

@@ -1,0 +1,13 @@
+[ 2018-01-07T14:46:33+08:00 ] ::1 /order/order/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000606s ]
+NOTIC: [8] Use of undefined constant B_PATH - assumed 'B_PATH' C:\wamp64\www\order\order\Application\Home\Conf\config.php 第 25 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003195s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003627s ]
+NOTIC: [8] Undefined offset: 1 C:\wamp64\www\order\order\Application\Home\Controller\GlobalController.class.php 第 253 行.
+NOTIC: [8] Undefined index: timestamp C:\wamp64\www\order\order\ThinkPHP\Library\Com\Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: nonce C:\wamp64\www\order\order\ThinkPHP\Library\Com\Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: signature C:\wamp64\www\order\order\ThinkPHP\Library\Com\Wechat.class.php 第 300 行.
+

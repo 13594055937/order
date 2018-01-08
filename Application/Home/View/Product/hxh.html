@@ -1,0 +1,145 @@
+<include file="Public/header" />
+<link href="__PUBLIC__/css/hxh.css" rel="stylesheet">
+      <link href="__PUBLIC__/css/aboutus.css" rel="stylesheet">
+    <div class="banner">
+      <php>$bg="banner-6.jpg";</php>
+    <foreach name="imgs" item="imgslist"><if condition="$imgslist['position'] eq 'pc好蟹汇'"><php>$bg = $imgslist['small_pic'];</php></if></foreach>
+      <div style="background:url(__PUBLIC__/images/{$bg}) no-repeat center top;height:710px;" class="img"></div>
+    </div>
+    <div class="w about">
+      <div class="profiles clearfix c-bg">
+        <div class="fl title"><img alt="{$imgalt}" src="__PUBLIC__/images/tit-2.png"></div>
+        <div class="fr">
+          <div class="text">
+            <p>上海豪蟹汇实业有限公司，总部坐落于上海，集养殖、销售正宗阳澄湖大闸蟹于一体，致力于阳澄湖大闸蟹的直营销售。</p>
+            <p>十多年的大闸蟹的养殖与销售经验！</p>
+            <p>养殖基地位于无污染的阳澄湖，约800多亩，地理位置优越,水质清澈,水草茂盛,因此所销售的大闸蟹,个大膘肥、色泽鲜明、肉嫩、膏肥、黄足,是蟹中之王。</p>
+            <p>每年9月份-12月份为广大客户和消费者提供正宗的阳澄湖大闸蟹数万份，经验与质量的保障铸就了好蟹汇阳澄湖大闸蟹的品牌与口碑</p>
+          </div>
+          <div class="img clearfix">
+            <div class="fl">
+              <div class="line">
+                <div class="fl"><img alt="{$imgalt}" src="__PUBLIC__/images/xo-1.jpg"></div>
+                <div class="fr"><img alt="{$imgalt}" src="__PUBLIC__/images/xo-2.jpg"></div>
+              </div>
+              <div class="line"><img alt="{$imgalt}" src="__PUBLIC__/images/xo-3.jpg"></div>
+            </div>
+            <div class="fr"><img alt="{$imgalt}" src="__PUBLIC__/images/xo-4.jpg"><img alt="{$imgalt}" src="__PUBLIC__/images/xo-5.jpg"></div>
+          </div>
+        </div>
+      </div>
+      <div class="c-bg progess clearfix">
+        <div class="fl title"><img alt="{$imgalt}" src="__PUBLIC__/images/tit-1.png" style="padding-top: 30px;
+    padding-left: 60px;"></div>
+        <ul class="fr animation">
+          <li><b>2007</b>
+            <div class="text">
+              <p>上海豪蟹汇实业有限公司成立，好蟹汇品牌成立。</p>
+            </div>
+          </li>
+          <li><b>2009</b>
+            <div class="text">
+              <p>建立苏州阳澄湖东湖养殖基地，养殖面积810亩。</p>
+            </div>
+          </li>
+          <li><b>2010</b>
+            <div class="text">
+              <p>加入苏州阳澄湖大闸蟹协会，成为理事单位；全国直营店达到6家。</p>
+            </div>
+          </li>
+          <li><b>2011</b>
+            <div class="text">
+              <p>北京分公司成立在全国实行南北统一管理制；全国直营店达到10家。</p>
+            </div>
+          </li>
+          <li><b>2012</b>
+            <div class="text">
+              <p> 引进最先进的大闸蟹养殖技术；成为提供最优质大闸蟹的供货商之一。</p>
+            </div>
+          </li>
+          <li><b>2013</b>
+            <div class="text">
+              <p>上海总部建立；成立业内最先进的配送服务中心与网络配送系统；全国直营店达到20家。</p>
+            </div>
+          </li>
+          <li><b>2014</b>
+            <div class="text">
+              <p>       获得国家原产地产品保护管理委员会颁发的“阳澄湖大闸蟹地理标志保护产品专营店单位”资格</p>
+              <p>好蟹汇产品多元化，增加舟山海鲜及全球多款进口海鲜产品</p>
+              <p>好蟹汇开通品牌微信订阅号、建立好蟹汇微信服务号，打造电子商务全面平台</p>
+              <p>全面进驻淘宝天猫、京东、1号店等大型电商网站</p>
+              <p>带动阳澄湖大闸蟹进入千家万户</p>
+            </div>
+          </li>
+          <li><b>2015</b>
+            <div class="text">
+              <p>好蟹汇全面启动全国直营店计划，将为更广大的客户带来更加完美的购蟹体验，为客户提供最优质的订购、</p>
+              <p>送货和售后服务。</p>
+              <p>成立产品安全质量监督部门，确保每一只大闸蟹的健康安全，服务和安检水平达到业内领先</p>
+            </div>
+          </li>
+          <li><b>2016</b>
+            <div class="text">
+              <p>好蟹汇的脚步迈向全国，至2016年年底全国直营店达24家</p>
+              <p>荣获：匠新 2016年度阳澄湖大闸蟹项目诚信商家称号</p>
+            </div>
+          </li>
+        </ul>
+        <!--联系我们-->
+      </div>
+    </div>
+      <div class="c-link-2">
+        <div class="w">
+          <ul>
+		<li><a href="{:U('aboutus/honor')}">
+              <div class="img img-1"></div>
+              <p>常务理事单位</p></a></li>
+          <li class="line"></li>
+          <li><a href="{:U('aboutus/honor')}">
+              <div class="img img-2"></div>
+              <p>原产地直供</p></a></li>
+          <li class="line"></li>
+          <li><a href="{:U('aboutus/honor')}">
+              <div class="img img-3"></div>
+              <p>24家全国直营店</p></a></li>
+          <li class="line"></li>
+          <li><a href="{:U('aboutus/honor')}">
+              <div class="img img-4"></div>
+              <p>顺丰免费包邮</p></a></li>
+          <li class="line"></li>
+          <li><a href="{:U('aboutus/honor')}">
+              <div class="img img-5"></div>
+              <p>只只精选</p></a></li>
+          <li class="line"></li>
+          <li><a href="{:U('aboutus/honor')}">
+              <div class="img img-6"></div>
+              <p>品质保障</p></a></li>
+          <li class="line"></li>
+          <li><a href="{:U('aboutus/honor')}">
+              <div class="img img-7"></div>
+              <p>长期有效</p></a></li>
+          <li class="line"></li>
+          <li><a href="{:U('aboutus/honor')}">
+              <div class="img img-8"></div>
+              <p>全年7*12服务</p></a></li>
+          </ul>
+        </div>
+      </div>
+      <!--模块1-视频-->
+      <div id="item2" class="video-1 box-1 item">
+        <div class="img-2"><img alt="{$imgalt}" src="__PUBLIC__/images/pic-1.png"></div>
+      </div>
+	<include file="Public/hxh_body"/>
+    <!--显示视频-->
+    <div class="showvideo">
+      <div class="mask"></div>
+      <div class="video">
+        <video id="video1" width="693px" height="421px" controls="controls">
+          <source src="__PUBLIC__/video/dzx.mp4" type="video/mp4">your browser does not support the video tag
+        </video>
+      </div>
+    </div>
+    <include file="Public/footer2" />
+    <script src="__PUBLIC__/js/require.js" data-main="__PUBLIC__/js/hxh.js"></script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<include file="Public/header"/>
+<link rel="stylesheet" href="__PUBLIC__/smallphone/css/common.css">
+<link rel="stylesheet" href="__PUBLIC__/smallphone/css/buy.css">
+<link rel="stylesheet" href="__PUBLIC__/smallphone/css/hxh.css">
+<link rel="stylesheet" href="__PUBLIC__/smallphone/css/swiper.min.css">
+		<!-- 头部 E -->
+		<!-- 商品信息 S -->
+		<div class="goodsinfo">
+			<div class="name">{$product_detail.name}【{$product_detail.pname}】{$product_detail.type}</div>
+			<div class="img">
+				<img alt="{$imgalt}" src="__PUBLIC__/images/{$product_detail.small_pic}">
+			</div>
+			<div class="left-right price-num">
+				<span class="price red left">{$product_detail.price}</span>
+				<div class="r-modify right">
+					<span class="plus" id="plus">-</span><span class="plus" id="product_nums">1</span>
+					<span class="minus" id="minus">+</span>
+				</div>
+			</div>
+
+			<div class="buy-btn">
+				<input type="hidden" value="{:U('user/addcart',array('id'=>$product_detail['id']))}" id="addcarturl">
+				<a href="#" id="buynow" class="am-btn btn-radius am-btn-block">购买这个产品</a>
+			</div>
+			
+			<div class="spec-express box">
+				<p>产品规格：雄蟹：{$product_detail.male_crab_weight}两*{$product_detail.nums}只+雌蟹：{$product_detail.female_crab_weight}两*{$product_detail.nums}只</p>
+				<p>默认快递：顺丰免费包邮</p>
+			</div>
+			<div class="moremode box">
+				<p>更多选购方式：请致电<a class="red" href="tel:400-880-1517">400-880-1517</a></p>
+				<p>或<a href="{$baseConfig.phone_shangqiao}" class="red">点击咨询客服</a>也可查找在你附近的<a href="{:U('store/storemap')}" class="red">直营店</a></p>
+			</div>
+		</div>
+		<!-- 商品信息 E -->
+
+		<!-- 公司宣传视频 S -->
+		<div class="companyvideo am-paragraph am-paragraph-default">
+			<div class="tit-1">
+				<img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/tit-3.png">
+			</div>
+			<div class="video">
+	 			<video controls="controls" poster="__PUBLIC__/smallphone/images/video.png" controls>
+				  <source src="__PUBLIC__/smallphone/i/movie.ogg" type="video/ogg">
+				  <source src="__PUBLIC__/images/{$videos.video_url}" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+				<div class="text am-text-center">
+					<b>播放公司宣传视频</b>
+					<span>轻松便捷了解好蟹汇</span>
+				</div>
+	 		</div>
+		</div>
+		<div class="outbox">
+		<include file="Public/hxh_footer"/></div>			
+		<!-- 公司宣传视频 E -->
+		<script type="text/javascript">
+			$("#plus").click(function(){
+				var pnums = parseInt($("#product_nums").html());
+				if(pnums>1){
+					$("#product_nums").html(pnums - 1);
+				}
+			})
+			$("#minus").click(function(){
+				var pnums = parseInt($("#product_nums").html());
+				if(pnums<1000){
+					$("#product_nums").html(pnums + 1);
+				}
+			})
+			$("#buynow").click(function(){
+				var pnums = parseInt($("#product_nums").html());
+				var addcart = $("#addcarturl").val();
+				if(pnums>0){
+					window.location.href= addcart + "?pnums="+pnums;
+				}
+			})
+		</script>

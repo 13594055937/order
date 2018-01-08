@@ -1,0 +1,46 @@
+<include file="Public/header"/>
+<include file="Public/left"/>
+   <div class="mrn_con ">
+     <if condition="$detail_id eq ''">
+        <div class="mrnl_login regist culture_d">
+          <span class="culture_title">{$_PartDesc}</span>        
+        </div>
+        <div class="infomation_box">
+            <div class="infomation_listbox">
+              <ul>
+                <foreach name="list" item="data" key="k">
+                   <li>
+                       <a href="{:U('aboutus/news',array('detail_id'=>$data['id'],'pid'=>$pid,'id'=>$id))}" target="_blank"><em>
+                        <if condition="$k%3 eq 0 ">
+                          <img src="__PUBLIC__/images/login_19.jpg" />
+                        </if>
+                        <if condition="$k%3 eq 1 ">
+                          <img src="__PUBLIC__/images/login_26.jpg" />
+                        </if>
+                        <if condition="$k%3 eq 2 ">
+                          <img src="__PUBLIC__/images/login_28.jpg" />
+                        </if>
+                        </em>{$data.title}</a>
+                       <span class="time">{$data.create_time}</span></li> 
+                </foreach>
+              </ul>
+            </div>
+        </div>
+        <p class="map_page_box">{$uc1CurPageSplit}</p>
+        <p class="infomation_listbox_bottom"></p>
+    <else />
+          <div class="mrnl_login regist culture_d">  
+            <p class="culture_title">{$_PartDesc}</p>
+            <div style=" text-align: center;font-size: 20px;height: 50px;">{$list.title}<br><span style="font-size:12px;">发布日期：{$list.create_time}&nbsp;&nbsp;&nbsp;浏览次数：{$list.view_times}次</span></div>
+            <div>{$list.description}</div>
+            <div style="width: 550px; padding-top:10px;*margin-top:100px; margin:0 auto;text-align: center; height: 30px;">
+            </div>  
+            <br><br>
+          </div>             
+    </if>
+    </div>
+
+<div class="c1"></div>
+</div>
+</div>
+<include file="Public/footer"/>

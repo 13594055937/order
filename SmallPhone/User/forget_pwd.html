@@ -1,0 +1,89 @@
+<include file="Public/header"/>
+<include file="Public/left"/>
+    <div class="mrn_con border_all ">
+        <div class="mrnl_title">
+            <ul>
+                <li><a href="#" class="sel">登录</a></li>
+                <li><a href="{:U('user/register')}">注册</a></li>
+            </ul>
+        </div>
+        <div class="mrnl_login">
+            <form action="javascript:void(0)" method="post">
+                <img src="__PUBLIC__/images/login_bg1.png" class="ml_23" />
+                <span class="micro_yahei tips">亲爱的用户，该服务需要登录后才能使用，如果您还没有账号， 请先注册，如果您已注册，请输入用户名和密码进行登录。</span>
+                <div class="login_ny">
+                    <ul>
+                        <li class="l_bg">
+                            <label>
+                                邮 &nbsp;&nbsp;箱：</label>
+                            <span class=" green">
+                                <input type="text" name="email" id="email" class="input_w_2">
+                            </span></li>
+                        <li class="y_bg">
+                            <label>
+                                密 &nbsp;&nbsp;码：</label>
+                            <span class=" yellow2">
+                                <input type="password" name="password" id="password" class="input_w_2">
+                            </span></li>
+                        <!--
+                        <li class="b_bg">
+                            <label>
+                                验 证 码：</label>
+                            <span class=" blue">
+                               <input type="text" name="verifycode" id="verifycode" class="input_w_2">
+                            </span>
+                            <span class="yanzheng">
+                            </span>
+                        </li>-->
+                    </ul>
+                    <div class="cl">
+                    </div>
+                    <div style="float: left;">
+                        <input type="submit" class="submit" value="提 交" onclick="return btnSubmit_Click()">
+                        <input name="reset" type="button" class="submit margin famliy_com" onclick ="ResetLogin();" value="重置" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        function btnSubmit_Click() {
+            var _email = $("#email").val();
+
+            var _pwd = $("#password").val();
+
+            //var _code = $("#verifycode").val();
+
+            _email = $.trim(_email);
+        
+            if (_email == "" || _email == "请输入Email") {
+                alert("请输入Email");
+                return false;
+            }
+
+            if (_pwd == "") {
+                alert("请输入密码！");
+                return false;
+            }
+            $.ajax({
+              'url'  :"{:U('user/go_login')}",
+              'data'   :{'email':_email,'password':_pwd},
+              'type'   :'post',
+              'success':function(msg){
+                  if(msg != true){
+                    alert(msg)
+                    return false;
+                  }else{
+                    window.location.href="{:U('index/index')}";
+                  }
+              }
+            })
+        }
+
+    </script>
+
+</div>
+</div>
+<include file="Public/footer"/>

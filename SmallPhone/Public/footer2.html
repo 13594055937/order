@@ -1,0 +1,166 @@
+ <!--footer-->
+    <div id="item12" class="footer item">
+      <div class="footer-n">
+        <!--新闻-->
+        <div class="news">
+          <div class="w">
+            <div class="tit-2 line">
+              <h3 class="fl">新闻咨讯</h3><a href="{:U('news/newslist')}" class="fr">MORE</a>
+            </div>
+            <ul class="tabs">
+              <li><a href="#" name=".tab1_1">公司新闻</a></li>
+              <li><a href="#" name=".tab1_2">行业动态</a></li>
+              <li><a href="#" name=".tab1_3">世说蟹语</a></li>
+              <li><a href="#" name=".tab1_4">阳澄湖资讯</a></li>
+            </ul>
+            <div class="content">
+              <div class="tab1_1">
+                <ul class="list">
+                  <foreach name="news1" item="news1_data">
+                    <li><a href="/news/news_{$news1_data.id}.html" class="line"><span>{$news1_data.title}</span><em>{$news1_data.create_time}</em></a></li>
+                  </foreach>
+                </ul>
+              </div>
+              <div class="tab1_2">
+                <ul class="list">
+                  <foreach name="news2" item="news2_data">
+                    <li><a href="/news/news_{$news2_data.id}.html" class="line"><span>{$news2_data.title}</span><em>{$news2_data.create_time}</em></a></li>
+                  </foreach>
+                </ul>
+              </div>
+              <div class="tab1_3">
+                <ul class="list">
+                  <foreach name="news3" item="news3_data">
+                    <li><a href="/news/news_{$news3_data.id}.html" class="line"><span>{$news3_data.title}</span><em>{$news3_data.create_time}</em></a></li>
+                  </foreach>
+                </ul>
+              </div>
+              <div class="tab1_4">
+                <ul class="list">
+                  <foreach name="news4" item="news4_data">
+                    <li><a href="/news/news_{$news4_data.id}.html" class="line"><span>{$news4_data.title}</span><em>{$news4_data.create_time}</em></a></li>
+                  </foreach>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-t">
+        <div class="w">
+          <ul>
+            <li><img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/icon-zxzx.png"><span>在线咨询</span></li>
+            <li class="line"></li>
+            <li><img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/icon-sqsm.png"><span>送券上门</span></li>
+            <li class="line"></li>
+            <li><img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/icon-zfjs.png"><span>支付结算</span></li>
+            <li class="line"></li>
+            <li><img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/icon-zxth.png"><span>在线提货</span></li>
+            <li class="line"></li>
+            <li><img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/icon-mdzt.png"><span>门店自提</span></li>
+            <li class="line"></li>
+            <li><img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/icon-mfps.png"><span>免费配送</span></li>
+            <li class="line"></li>
+            <li><img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/icon-yhqs.png"><span>验货签收</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-c">
+        <div class="w clearfix">
+          <div class="fl">
+            <h3 class="f-tit">网站导航</h3>
+            <div class="clearfix f-desc">
+              <dl>
+                <dt>售后服务            </dt>
+                <dd><a href="{:U('aboutus/help')}">退款补寄</a></dd>
+                <dd><a href="{:U('aboutus/help',array('type'=>'faq'))}">常见问题</a></dd>
+                <dd><a href="{:U('aboutus/help',array('type'=>'psxz'))}">配送须知</a></dd>
+              </dl>
+              <dl>
+                <dt>支付配送</dt>
+                <dd><a href="{:U('aboutus/help',array('type'=>'yhqs'))}">验货与签收</a></dd>
+                <dd><a href="{:U('aboutus/help',array('type'=>'psfw'))}">配送范围</a></dd>
+                <dd><a href="{:U('aboutus/help',array('type'=>'zffs'))}">支付方式</a></dd>
+              </dl>
+              <dl>
+                <dt>新手上路</dt>
+                <dd><a href="{:U('aboutus/help',array('type'=>'ghfs'))}">购蟹方式</a></dd>
+                <dd><a href="{:U('aboutus/help',array('type'=>'zxth'))}">在线提货</a></dd>
+                <dd><a href="{:U('aboutus/help',array('type'=>'bzzx'))}">帮助中心</a></dd>
+              </dl>
+              <dl>
+                <dt>招商加盟</dt>
+                <dd><a href="{:U('aboutus/help',array('type'=>'xmsm'))}">项目说明</a></dd>
+                <dd><a href="{:U('aboutus/help',array('type'=>'jtxz'))}">具体细则</a></dd>
+                <dd><a href="{:U('aboutus/help',array('type'=>'zxfw'))}">咨询服务</a></dd>
+              </dl>
+              <dl>
+                <dt>关于我们</dt>
+                <dd><a href="{:U('aboutus/aboutus')}">公司简介</a></dd>
+                <dd><a href="{:U('aboutus/aboutus')}#development">发展历程</a></dd>
+                <dd><a href="{:U('aboutus/aboutus')}#info">联系我们 </a></dd>
+              </dl>
+            </div>
+            <h3 class="f-tit">合作单位</h3>
+            <ul class="partners">
+              <li> <img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/partners.jpg"></li>
+            </ul>
+          </div>
+          <div class="fr clearfix">
+            <div class="fl f-contactus">
+              <h3 class="f-tit">联系我们</h3>
+              <div class="box">
+                <p>地址：上海市普陀区武宁路1066号</p>
+                <p>订购电话：{$baseConfig.telphone}</p>
+                <p>邮箱：123456789@139.com</p>
+              </div>
+              <div class="codeimg"><img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/code.jpg"><span>扫码关注</span></div>
+            </div>
+            <div class="fr f-consulting">
+              <h3 class="f-tit">在线咨询</h3>
+              <form>
+                <div class="line">
+                  <label>姓名：</label>
+                  <input type="text" id="username">
+                </div>
+                <div class="line">
+                  <label>电话：</label>
+                  <input type="text" id="telphone">
+                </div>
+                <div class="line">
+                  <label>留言：</label>
+                  <textarea rows="4" cols="50" id="message"></textarea>
+                </div>
+                <div class="btn">
+                  <input type="button" onclick="submitmess()" value="提交信息">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-b">
+        <p>版权所有 ： “好蟹汇”牌(注册商标）阳澄湖大闸蟹   沪ICP备12024895号                     技术支持：东方硅谷</p>
+      </div>
+    </div>
+    {$baseConfig.phone_baidu_js}
+    <script type="text/javascript">
+      function submitmess(){
+        var username = $.trim($("#username").val());
+        var telphone = $("#telphone").val();
+        var message = $.trim($("#message").val());
+        if(username == "" || message ==""){
+          alert("用户信息、留言内容不能为空!");
+          return false;
+        }
+        if(!(/^1(3|4|5|7|8)\d{9}$/.test(telphone))){ 
+            alert("手机号码有误，请重填");  
+            return false; 
+        } 
+        $.post("{:U('index/savemessage')}",{"username":username,"telphone":telphone,"message":message},function(data){
+          data = JSON.parse(data);
+          alert(data.message);
+        });
+      }
+    </script>
+

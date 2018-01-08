@@ -1,0 +1,93 @@
+<include file="Public/header"/>
+<include file="Public/left"/>
+<style type="text/css">
+.submit_b{background: url("__PUBLIC__/images/save_01.png") no-repeat scroll 0% 0% transparent;}
+.cancel_b{background: url("__PUBLIC__/images/reset_01.png") no-repeat scroll 0% 0% transparent;}
+</style>
+<form action="#" method="post">
+  <input type="hidden" id="customers_id" value="{$userinfo.userid}">
+  <div class="mrn_con border_all ">
+      <div class="mrnl_title">
+        <ul>
+          <li><a href="#" class="sel">你的资料</a></li>
+        </ul>
+      </div>
+      <div class="mrnl_login" style="margin-top: 50px;">
+        <div class="Personal_ziliao fl famliy_com">密码管理</div>
+        <div class="Personal_password_managebox fl">
+          <ul>
+            <li class="Person_li_onebg">
+              <label>原始密码：</label>
+              <span class=" green">
+              <input name="old_password" id="old_password" type="password" class="input_w_2">
+              </span></li>
+            <li class="Person_li_twobg">
+              <label>新&nbsp;密&nbsp;码：</label>
+              <span class=" yellow2">
+              <input type="password" name="password" id="password" class="input_w_2">
+              </span></li>
+            <li class="Person_li_threebg">
+              <label>确认密码：</label>
+              <span class="blue2">
+                <input type="password" name="check_password" id="check_password" class="input_w_2">
+              </span>
+              </li>
+               <li style ="width:600px;height:22px;">
+                    <div id="error" style="color:Red;font-size:12px; font-family:微软雅黑;width:500px;  text-align :center;height:22px;"></div>    
+              </li>
+          </ul>
+          <div class="Person_two_btnbox">
+
+            <input name="" type="button" class="submit_b" onclick="chkUserPwd()">
+            <input name="" type="button" class="cancel_b" >
+          </div>
+        </div>
+      </div>
+    </div>
+</form>
+
+<script type="text/javascript">
+    function chkUserPwd() {
+        $("#error").html("");
+        var _oldpwd = $("#old_password").val();
+        _oldpwd = $.trim(_oldpwd);
+        if (_oldpwd == "") {
+            $("#error").html("*请输入原始密码！");
+            return false;
+        }
+        var _newpwd = $("#password").val();
+        _newpwd = $.trim(_newpwd);
+        if (_newpwd == "") {
+            $("#error").html("*请输入新密码！");
+            return false;
+        }
+        var _comfirmPwd = $("#check_password").val();
+        _comfirmPwd = $.trim(_comfirmPwd);
+        if (_comfirmPwd == "") {
+            $("#error").html("*请输入确认密码！");
+            return false;
+        }
+        if (_newpwd != _comfirmPwd) { 
+            $("#error").html("*两次输入的密码不一致！");
+        }
+        var userid=$("#customers_id").val()
+       $.ajax({
+            'url'  :"{:U('user/save_pwd')}",
+            'data'   :{'userid':userid,'old_password':_oldpwd,'password':_newpwd},
+            'type'   :'post',
+            'success':function(msg){
+                if(msg != true){
+                  $("#error").html(msg)
+                  return false;
+                }else{
+                  alert("保存成功");
+                  return true;
+                }
+            }
+          })
+    }
+</script>
+
+</div>
+</div>
+<include file="Public/footer"/>

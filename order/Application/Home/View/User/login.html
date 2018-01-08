@@ -1,0 +1,42 @@
+<include file="Public/header" />
+    <link rel="stylesheet" href="__PUBLIC__/css/regLogin.min.css">
+    <!-- container -->
+    <div id="container">
+        <div class="m-login-page">
+            <div class="g-wrap">
+                <div class="m-login-form">
+                    <h2>会员登录</h2>
+                    <div class="tips g-none"></div>
+                    <label for="userName" class="icon-value">
+                        <span class="item-title">
+                            <span class="icon-rl icon-name"></span>
+                        </span>
+                        <input type="text" name="" id="userName" class="form-text item-cont" placeholder="请填写您的手机号码">
+                    </label>
+                    <label for="userPsw" class="icon-value">
+                        <span class="item-title">
+                            <span class="icon-rl icon-psw"></span>
+                        </span>
+                        <input type="password" name="" id="userPsw" class="form-text item-cont" placeholder="请填写密码">
+                    </label>
+                    <div class="ope-login clearfix">
+                        <a href="{:U('user/reset_register')}" class="g-fr">忘记密码？</a>
+                        <label for="autoLogin">
+                            <input type="checkbox" name="" id="autoLogin" class="form-checkbox">自动登录</label>
+                    </div>
+                    <button class="button button-full button-lg button-orange button-login g-mtb20" data-loading-text="登录中" data-default-text="登录">登录</button>
+                    <div class="ope-related">
+                        <a href="{:U('user/register')}" class="to-register g-fr">免费注册&nbsp;&gt;</a>
+                        <span class="code"><img src="__PUBLIC__/images/{$base_config[0].weixin_card}"  class="g-fl g-mr5" alt="">关注二维码</span>
+                    </div>
+                    <div id="login_url" style="display:none">{:U('user/go_login')}</div>
+                    <div id="success_url" style="display:none">{:U('user/mem_center')}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <include file="Public/footer_body" />
+    <script src="__PUBLIC__/script/login.js"></script>
+    <body>
+</html>

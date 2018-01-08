@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+        <title>注册</title>
+        <link rel="stylesheet" href="__PUBLIC__/css/uikit.css" />
+		<link rel="stylesheet" href="__PUBLIC__/css/iven.css" />
+        <script src="__PUBLIC__/js/jquery.js"></script>
+        <script src="__PUBLIC__/js/uikit.min.js"></script>
+    </head>
+    <body>
+    <h3 class="uk-text-center register-2-note">请选择您的身份，一旦确认不可更改</h3>
+    <div class="uk-container uk-container-center">
+        <ul class="uk-list uk-list-line register-2-list">
+            <li class="uk-position-relative" type="sheji" user-type="设计师">
+                <h3>设计师</h3>
+                <p>设计院工作，从事电气设计专业的设计师</p>
+                <i class="uk-icon-check"></i>
+            </li>
+            <li class="uk-position-relative active" type="xiangmu" user-type="销售经理">
+                <h3>销售经理</h3>
+                <p>从事产品销售，促进项目成交的专业人员</p>
+                <i class="uk-icon-check"></i>
+            </li>
+            <li class="uk-position-relative" type="sale" user-type="报价工程师">
+                <h3>报价工程师</h3>
+                <p>为项目提供报价服务的专业人员</p>
+                <i class="uk-icon-check"></i>
+            </li>
+            <li class="uk-position-relative" type="sale" user-type="售后工程师">
+                <h3>售后工程师</h3>
+                <p>为项目售后提供优质服务的专业人员</p>
+                <i class="uk-icon-check"></i>
+            </li>
+        </ul>
+        <div style="display:none" id="gotourl">{:U('user/modifyUserInfo')}</div>
+        <script>
+        $(function(){
+            $('.register-2-list > li').click(function(){
+                $(this).addClass('active').siblings().removeClass('active');    
+            })
+            $(".uk-button-submit").click(function(){
+                var type = $(".active").attr("type");
+                var user_type = $(".active").attr("user-type");
+                window.location.href = $("#gotourl").html()+"?step=3&type="+type+"&user_type="+user_type;
+            })
+        })
+        </script>
+        <div class="uk-text-center">
+            <button class="uk-margin-top uk-button uk-button-primary uk-button-submit"><i class="uk-icon-mouse-pointer uk-icon-justify"></i>下一步</button>
+        </div>
+    </div>
+
+    <include file="Public/footer" />

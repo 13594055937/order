@@ -1,0 +1,173 @@
+// helper
+@import "../helper/_variable.less";
+@import "../helper/_mixin.less";
+// base
+@import "../base/_reset.less";
+// component
+@import "../component/_item.less";
+@import "../component/_button.less";
+@import "../component/_aside.less";
+@import "../component/_page.less";
+@import "../component/_table.less";
+@import "../component/_unslider.less";
+// icon
+@import "../icons/_icon_all.less";
+@import "../icons/_icon_font.less";
+// layout
+@import "../layout/_layout.less";
+@import "../layout/_header.less";
+@import "../layout/_nav.less";
+@import "../layout/_footer.less";
+
+/* spa */
+
+// 筛选
+.m-filter-box {
+    background-color: @bg;
+    border: 1px solid @border-color;
+    padding: 10px;
+    .item {
+        .item-txt(80px, 30px, 5px, 0);
+        .item-title {
+            .font-size-md;
+        }
+        dt {
+            color: #fff;
+        }
+        dd {
+            a {
+                line-height: 30px;
+                display: inline-block;
+                padding: 0 12px;
+                .font-size-md;
+                &:hover,
+                &.current {
+                    background-color: @primary-hover;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.list {
+    &.list-avatar-photograph {
+        .item {
+            background-color: @bg;
+            .item-avatar(240px, 180px, 20px);
+        }
+        .item-info {
+            position: relative;
+            padding-left: 10px;
+            .font-size-md;
+            .info-cont {
+                position: relative;
+                padding-right: 140px;
+                height: 140px;
+                border-bottom: 1px solid @border-color;
+                .ope {
+                    position: absolute;
+                    top: 30px;
+                    right: 0;
+                    width: 140px;
+                    text-align: center;
+                    .button {
+                        padding: 0 20px;
+                    }
+                }
+                h3 {
+                    .font-size-lg;
+                    color: @primary-hover;
+                    line-height: 30px;
+                }
+                .desc {
+                    .font-size-md;
+                    line-height: 22px;
+                }
+                .demand {
+                    margin-top: 15px;
+                }
+            }
+            .info-footer {
+                .attr {
+                    font-weight: bold;
+                    line-height: 40px;
+                    .col-6;
+                }
+                .time {
+                    font-weight: bold;
+                    .col-6;
+                    line-height: 40px;
+                    text-align: right;
+                }
+            }
+            .u-price {
+                color: @primary-hover;
+                text-align: center;
+                margin-bottom: 10px;
+                .price {
+                    font-size: 28px;
+                }
+            }
+            .u-line {
+                margin: 0 3px;
+            }
+        }
+    }
+}
+
+.m-activity-apply {
+    .font-size-md;
+    border: 1px solid @border-color;
+    padding: 15px;
+}
+
+// 会员公告
+.m-forum-page {
+    .list {
+        &.list-category {
+            border-bottom: 0 none;
+        }
+    }
+    .forum-cont {
+        display: none;
+        &.current {
+            display: block;
+        }
+    }
+}
+
+.m-works-page {
+    .list-normal {
+        display: none;
+        &.current {
+            display: block;
+        }
+    }
+}
+
+.m-study-page {
+    .list-avatar-160 {
+        display: none;
+        &.current {
+            display: block;
+        }
+    }
+}
+
+.m-salon-review {
+    h2 {
+        .font-size-lg;
+        padding: 10px 0;
+    }
+}
+
+.list-salon-review {
+    margin-right: -20px;
+    li {
+        float: left;
+        margin: 0 20px 20px 0;
+        width: 275px;
+        height: 210px;
+    }
+}

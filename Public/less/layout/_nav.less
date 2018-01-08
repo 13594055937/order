@@ -1,0 +1,22 @@
+// nav
+#nav {
+    background-color: @bg-dark;
+    li {
+        float: left;
+        a {
+            display: block;
+            padding: 0 20px;
+            width: 140px;
+            text-align: center;
+            .text-ellipsis;
+            line-height: 36px;
+            .font-size-md;
+            border-bottom: 2px solid @bg-dark;
+            &:hover {
+                color: @primary-hover;
+                position: relative;
+                border-bottom: 2px solid @primary-hover;
+            }
+        }
+    }
+}

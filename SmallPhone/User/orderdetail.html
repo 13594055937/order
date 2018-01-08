@@ -1,0 +1,67 @@
+<include file="Public/header"/>
+<link rel="stylesheet" href="__PUBLIC__/smallphone/css/common.css">
+<link rel="stylesheet" href="__PUBLIC__/smallphone/css/my.css">
+		<!-- 头部 E -->
+		<!-- 内容 S -->
+		<div class="orderlist">
+			<div class="title-2 am-text-lef t">订单详情</div>
+			<div class="list">
+				<div class="item">
+					<div class="box">订单号码：{$detail.order_id}</div>
+					<div class="box">
+						<div class="line">姓名：{$detail.name}</div>
+						<div class="line">电话：{$detail.mobile}</div>
+						<div class="line">地址：{$detail.provincecode}{$detail.citycode}{$detail.address}</div>
+					</div>
+					<div class="box">
+					<div class="line">订单状态：<span class="red"><if condition="$detail['status'] eq 0">待付款</if><if condition="$detail['status'] eq 1 && $detail['fahuo'] eq 0">待发货</if><if condition="$detail['fahuo'] eq 1">已发货</if></span></div>
+						<div class="line l-date">
+							<span>{$detail.create_time}</span>
+						</div>
+					</div>
+					</div>
+
+
+
+					<div class="item">
+						<div class="state-date">
+							<div class=" state">订单清单</div>
+							<div class=" date"><span>	{$detail.create_time}</span></div>
+						</div>
+						<ul class="detailgoods">
+								<foreach name="cartlist" item="product">		
+								<li>
+									<div class="left"><img alt="{$imgalt}" src="__PUBLIC__/images/{$product.pic}" ></div><div class="right"><h3 class="line-1 title">{$product.name}【{$product.pname}】{$product.type}</h3><div class="price red">{$product.price} x {$product.quantity}</div></div>
+								</li>
+								</foreach>
+						</ul>
+						<div class="payinfo">
+							<div class="am-cf">
+								<span class="am-fl">商品总价</span>
+								<span class="am-fr price">{$detail.amount}</span>
+							</div>
+							<div class="am-cf">
+								<span class="am-fl">运费计价</span>
+								<span class="am-fr price">0.00</span>
+							</div>
+							<div class="am-cf">
+								<span class="am-fl">商品总价</span>
+								<span class="am-fr price">{$detail.amount}</span>
+							</div>
+							<div class="am-cf payment">
+								<span class="am-fl">付款金额</span>
+								<span class="am-fr price red">{$detail.amount}</span>
+							</div>
+						</div>
+						
+					</div>
+			</div>
+		</div>
+		<if condition="$detail['status'] eq 0">
+		<div class="am-cf paytip">
+			<div class="am-fl">请在6天24小时内付款</div>
+			<a class="am-fr am-btn" href="{:U('user/pay',array('id'=>$detail['id']))}">去付款</a>
+		</div>
+		</if>
+		<!-- 内容 E -->
+		<include file="Public/footer"/>

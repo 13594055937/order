@@ -1,0 +1,16 @@
+<include file="Public/header_noindex" />
+<link href="__PUBLIC__/css/videolist.css" rel="stylesheet">
+    <div class="content"><img alt="{$imgalt}" src="__PUBLIC__/images/bg-8.png" class="imgs">
+      <div class="w boxs">
+        <ul>
+          <foreach name="videolist" item="listdata">
+          <li onclick="window.open('/news/videos_{$listdata.id}.html')"><img alt="{$imgalt}" src="__PUBLIC__/images/{$listdata.small_pic}">
+            <h3>{$listdata.title}</h3>
+          </li>
+        </foreach>
+        </ul>
+        <!--换页开始-->
+        <div class="page">{$page}</div>
+      </div>
+    </div>
+    <include file="Public/footer" />

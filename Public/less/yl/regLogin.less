@@ -1,0 +1,253 @@
+// helper
+@import "../helper/_variable.less";
+@import "../helper/_mixin.less";
+// base
+@import "../base/_reset.less";
+// component
+@import "../component/_item.less";
+@import "../component/_button.less";
+@import "../component/_form.less";
+// icon
+@import "../icons/_icon_all.less";
+@import "../icons/_icon_rl.less";
+// layout
+@import "../layout/_layout.less";
+@import "../layout/_header.less";
+@import "../layout/_nav.less";
+@import "../layout/_footer.less";
+
+/* spa */
+
+#container {
+    padding: 0;
+}
+
+.m-login-page {
+    background: url("@{img}login-banner-1.jpg") no-repeat;
+    height: 550px;
+    .g-wrap {
+        position: relative;
+    }
+}
+
+// 登录
+.m-login-form {
+    position: absolute;
+    top: 110px;
+    right: 0;
+    width: 340px;
+    background-color: #fff;
+    padding: 10px;
+    color: #333;
+    .form-text {
+        border-color: #fff;
+        background-color: #fff;
+        color: #333;
+        height: 42px;
+        line-height: 42px;
+    }
+    a {
+        color: #333;
+        &:hover {
+            color: @orange;
+        }
+    }
+    h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    label {
+        cursor: pointer;
+    }
+    .tips {
+        background-color: #fff6d2;
+        border: 1px solid #ffe57d;
+        height: 28px;
+        line-height: 28px;
+        .text-ellipsis;
+        text-indent: 5px;
+        margin-bottom: 10px;
+        .icon-rl {
+            width: 26px;
+            height: 26px;
+            background-position: -2px -64px;
+        }
+    }
+    .icon-value {
+        display: block;
+        margin-bottom: 20px;
+        border: 1px solid #bdbdbd;
+        .item-txt(42px,
+        42px);
+        .item-title {
+            height: 42px;
+            background-color: #f3f3f3;
+            border-right: 1px solid #bdbdbd;
+        }
+        .item-cont {
+            line-height: 40px;
+            width: 100%;
+            text-indent: 10px;
+        }
+        .icon-rl {
+            position: relative;
+            top: -1px;
+            left: -4px;
+        }
+    }
+    .ope-login {
+        margin-top: -10px;
+        .form-checkbox {
+            position: relative;
+            top: 2px;
+        }
+    }
+    .ope-related {
+        position: relative;
+        height: 31px;
+        .to-register {
+            position: absolute;
+            top: 0;
+            right: 0;
+            line-height: 20px;
+            .font-size-lg;
+            color: @orange;
+            &:hover {
+                color: @assert;
+            }
+        }
+        .code {
+            color: @text-gray-light;
+        }
+    }
+}
+
+// 注册
+.m-register-page {
+    width: 700px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.m-reset-register-page {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.reg-step-title {
+    margin-bottom: 30px;
+    .step-name {
+        float: left;
+        height: 60px;
+        line-height: 60px;
+        font-size: 20px;
+        .name {
+            font-weight: 700;
+        }
+        .num {
+            display: block;
+            float: left;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            font-size: 20px;
+            border: 1px solid @border-color;
+            background-color: @bg;
+            .border-radius(50%);
+            margin-right: 10px;
+        }
+        &.current {
+            .name {
+                color: @orange;
+            }
+            .num {
+                border-color: @orange;
+                background-color: @orange;
+                color: #fff;
+            }
+        }
+    }
+    .icon-rl {
+        float: left;
+        margin: 15px 30px 0 30px;
+    }
+}
+
+.reg-step-cont {
+    padding: 10px 20px;
+    display: none;
+    &.current {
+        display: block;
+    }
+    .item {
+        display: block;
+        margin-bottom: 20px;
+        .item-txt(120px,
+        44px);
+        .item-title {
+            .font-size-md;
+            padding-right: 5px;
+        }
+        .item-cont {
+            width: 440px;
+            position: relative;
+            &.item-cont-lg {
+                width: 500px;
+            }
+            .btn {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 108px;
+                padding: 0;
+                height: 42px;
+                line-height: 42px;
+                cursor: pointer;
+                &.fill-code {
+                    height: 44px;
+                    line-height: 44px;
+                    width: 178px;
+                    img {
+                        width: 75px;
+                        height: 44px;
+                        overflow: hidden;
+                    }
+                }
+                &.get-coin {
+                    background-color: transparent;
+                    border: 0 none;
+                    color: @primary;
+                    &:hover {
+                        color: @orange;
+                    }
+                }
+                &.get-msgCode {
+                    background-color: #a5a3a2;
+                }
+            }
+            .icon-r {
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                z-index: 1;
+            }
+        }
+    }
+    .form-text {
+        height: 44px;
+        line-height: 44px;
+        width: 315px;
+        &.form-text-lg {
+            width: 440px;
+        }
+    }
+    &.step-cont-success {
+        text-align: center;
+        .txt {
+            padding: 30px 0;
+            font-size: 24px;
+        }
+    }
+}

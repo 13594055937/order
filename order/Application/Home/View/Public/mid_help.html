@@ -1,0 +1,12 @@
+<foreach name="parent_help" item="parent_help_data">
+<div class="box">
+  <h4>{$parent_help_data}</h4>
+  <ul>
+    <foreach name="help" item="help_data">
+    <if condition="$help_data['parent_name'] eq $parent_help_data">
+    <li <if condition="$id eq $help_data['id']"> class="active" </if>> <a href="/aboutus/help_{$help_data.id}.html">{$help_data.name}</a></li>
+   </if> 
+   </foreach>
+  </ul>
+</div>
+</foreach>

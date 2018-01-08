@@ -1,0 +1,55 @@
+<include file="Public/header"/>
+<link rel="stylesheet" href="__PUBLIC__/smallphone/css/common.css">
+<link rel="stylesheet" href="__PUBLIC__/smallphone/css/my.css">
+<link rel="stylesheet" href="__PUBLIC__/smallphone/css/amazeui.chosen.css">
+<!-- 头部 E -->
+		<!-- 内容 S -->
+		<div class="main bgfff">
+			<div class="title-2 am-text-left">修改个人信息</div>
+			<!-- <div class="z-link"><input type="text" placeholder="您的手机号" name=""></div> -->
+			<div class="z-link"><input type="text" placeholder="您的姓名" name=""></div>
+			<div class="z-link  am-cf">
+				<label>
+			        <input type="radio" name="doc-radio-1" checked>
+			        先生
+			    </label>
+			
+				<label>
+			        <input type="radio" name="doc-radio-1">
+			        女士
+			    </label>
+			</div>
+			<div class="z-link">
+				
+				<select  class="province" >
+				    <option value="">省份</option>        
+				</select>
+				<select  class="city" >
+				    <option value="">城市</option>
+				</select>
+				<select  class="area" >
+				    <option value="">区域</option>
+				</select>
+			</div>
+			<div class="z-link">
+				<input type="text" placeholder="详细地址">
+			</div>
+			 <a href="{:U('user/my')}" class="am-btn am-btn-block">确认修改</a>
+		</div>
+		<!-- 内容 E -->
+		
+
+		<!--[if (gte IE 9)|!(IE)]><!-->
+		<script src="__PUBLIC__/smallphone/js/jquery.min.js"></script>
+		<!--<![endif]-->
+
+		<!--[if lte IE 8 ]>
+		<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+		<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+		<![endif]-->
+		<script src="__PUBLIC__/smallphone/js/amazeui.min.js"></script>
+
+	</body>
+
+</html>

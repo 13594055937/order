@@ -1,0 +1,74 @@
+<include file="Public/header" />
+	<!-- 头部 E -->
+	 <!-- 焦点图 S-->
+	 <div class="banner img">
+	 	<img alt="{$imgalt}" src="__PUBLIC__/smallphone/images/banner-3.jpg" >
+	 </div>
+	 <!-- 焦点图 E-->
+	<div class="am-list-news">
+		<div class="screen">
+			<input type="hidden" id="guiges" value="{$guige}">
+			<input type="hidden" id="type" value="{$type}">
+			<input type="hidden" id="name" value="{$name}">
+			<input type="hidden" id="price_order" value="{$price_order}">
+			<input type="hidden" id="sale_nums_order" value="{$sale_nums_order}">
+			<a  href="{:U('product/product_list',array('type'=>'礼卡'))}" id="lika" title="" <if condition="$type eq '礼卡'">class="current"</if>>礼卡<i></i></a>
+			<a   href="{:U('product/product_list',array('type'=>'礼盒'))}" id="lihe" title="" <if condition="$type eq '礼盒'">class="current" </if>>礼盒<i></i></a>
+			<a   href="{:U('product/product_list',array('type'=>'sale_nums'))}" id="sale_nums" title="{$sale_nums_order}" <if condition="$type eq 'sale_nums'">class="current"</if>>销量<i></i></a>
+			<!-- <a href="{:U('product/product_list',array('type'=>'male_crab_weight','show_all'=>$show_all))}" <if condition="$type eq 'male_crab_weight'">class="current"</if>>规格<i></i></a> -->
+		</div>
+		<ul class="cm-list">
+			<foreach name="commend_card" item="commend_data">
+				<li>
+					<a href="/product/codebuy_{$commend_data.id}.html">
+						<div class="left">
+							<img alt="{$imgalt}" src="__PUBLIC__/images/{$commend_data.pic}" >
+						</div>
+						<div class="right">
+							<h3 class="line-1 title">{$commend_data.name}【{$commend_data.pname}】{$commend_data.type}</h3>
+							<div class="price red">{$commend_data.price}</div>
+							<div class="text">雄蟹：{$commend_data.male_crab_weight}两*{$commend_data.nums}只+雌蟹：{$commend_data.female_crab_weight}两*{$commend_data.nums}只</div>
+						</div>
+					</a>
+				</li>
+			</foreach>
+		</ul>
+		<if condition="$show_all eq 0">
+		<div class="btn-all">
+			<a class="am-btn" href="{:U('product/product_list',array('type'=>$type,'show_all'=>1))}">显示全部</a>
+		</div>
+		</if>
+	</div>
+	
+<include file="Public/footer"/>
+<script>
+	$(function () {
+	/**
+	$("#guige_select").change( function () {
+      	 	var value = $(this).val();
+		var type = $("#type").val();
+		var sale_nums_order = $("#sale_nums_order").val();
+		var price_order = $("#price_order").val();
+        	var name = $.trim($(this).find("option:selected").text());
+       		window.location.href="/product/product_list.html?guige="+value+"&name="+name+"&type="+type;
+   	 })
+	$("#price").click(function(){
+		var guige = $("#guiges").val();
+                var type = $("#type").val();
+                var sale_nums_order = "";
+                var price_order = $("#price_order").val() =="desc" ? "asc" :"desc";
+                var name = $("#name").val();;
+                window.location.href="/product/product_list.html?guige="+guige+"&name="+name+"&type="+type+"&sale_nums_order="+sale_nums_order+"&price_order="+price_order;
+	})
+	$("#sale_nums").click(function(){
+		var guige = $("#guiges").val();
+                var type = $("#type").val();
+                var sale_nums_order = $("#sale_nums_order").val() =="desc" ? "asc" :"desc" ;
+                var price_order = "";
+                var name = $("#name").val();;
+                window.location.href="/product/product_list.html?guige="+guige+"&name="+name+"&type="+type+"&sale_nums_order="+sale_nums_order+"&price_order="+price_order;
+        })
+	**/
+
+	})
+</script>

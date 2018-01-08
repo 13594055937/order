@@ -1,0 +1,50 @@
+<include file="Public/header_noindex" />
+<link href="__PUBLIC__/css/newslist.css" rel="stylesheet">
+    <div class="banner">
+      <php>$bg="banner-2.jpg";</php>
+    <foreach name="imgs" item="imgslist"><if condition="$imgslist['position'] eq 'pc资讯中心'"><php>$bg = $imgslist['small_pic'];</php></if></foreach>
+      <div style="background:url(__PUBLIC__/images/banner-2.jpg) no-repeat center top;height:485px;" class="img"></div>
+    </div>
+    <div class="main">
+      <div class="w-1">
+        <ul class="tab-head">
+        <li <if condition="$news_type eq '公司新闻'">class="current"</if>><a href="/news/gsxw.html">公司新闻</a></li>
+          <li <if condition="$news_type eq '行业动态'">class="current"</if>><a href="/news/hydt.html">行业动态</a></li>
+          <li <if condition="$news_type eq '世说蟹语'">class="current"</if>><a href="/news/ssxy.html">世说蟹语</a></li>
+          <li <if condition="$news_type eq '阳澄湖资讯'">class="current"</if>><a href="/news/ychzx.html">阳澄湖资讯</a></li>
+        </ul>
+        <dl class="news-list w">
+          <foreach name="newslist" item="news_data" key="keys">
+          <if condition="$keys eq 0">
+            <dt class="line">
+              <a href="/news/news_{$news_data.id}.html">
+                <div class="img fl"><img alt="{$imgalt}" src="__PUBLIC__/images/{$news_data.small_pic}"></div>
+                <div class="fr">
+                  <h3>{$news_data.title}</h3>
+                  <p>{$news_data.title2}</p>
+                  <div class="time"> <span>{$news_data.create_time}</span></div>
+                </div>
+              </a>
+            </dt>
+          <else/>
+            <dd class="line">
+              <a href="/news/news_{$news_data.id}.html">
+                <div class="img fl"><img alt="{$imgalt}" src="__PUBLIC__/images/{$news_data.small_pic}"></div>
+                <div class="fr">
+                  <h3>{$news_data.title}</h3>
+                  <p>{$news_data.title2}</p>
+                  <div class="time"> <span>{$news_data.create_time}</span></div>
+                </div>
+              </a>
+            </dd>
+          </if>
+          </foreach>
+          <!--换页开始-->
+          <div class="page">{$page}</div>
+        </dl>
+      </div>
+    </div>
+    <include file="Public/footer2" />
+<script src="__PUBLIC__/js/require.js" data-main="__PUBLIC__/js/ychdzx"></script>
+ </body>
+</html>

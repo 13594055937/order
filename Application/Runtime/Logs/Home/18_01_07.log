@@ -1,0 +1,24 @@
+[ 2018-01-07T19:50:55+08:00 ] ::1 /order/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000260s ]
+INFO: [ app_init ] --END-- [ RunTime:0.014914s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.020807s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.021797s ]
+NOTIC: [8] Undefined offset: 1 C:\wamp64\www\order\Application\Home\Controller\GlobalController.class.php 第 253 行.
+NOTIC: [8] Undefined index: timestamp C:\wamp64\www\order\ThinkPHP\Library\Com\Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: nonce C:\wamp64\www\order\ThinkPHP\Library\Com\Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: signature C:\wamp64\www\order\ThinkPHP\Library\Com\Wechat.class.php 第 300 行.
+
+[ 2018-01-07T20:43:42+08:00 ] ::1 /order/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000450s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.020225s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.020997s ]
+NOTIC: [8] Undefined offset: 1 C:\wamp64\www\order\Application\Home\Controller\GlobalController.class.php 第 253 行.
+NOTIC: [8] Undefined index: timestamp C:\wamp64\www\order\ThinkPHP\Library\Com\Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: nonce C:\wamp64\www\order\ThinkPHP\Library\Com\Wechat.class.php 第 299 行.
+NOTIC: [8] Undefined index: signature C:\wamp64\www\order\ThinkPHP\Library\Com\Wechat.class.php 第 300 行.
+

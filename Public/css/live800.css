@@ -1,0 +1,110 @@
+﻿@CHARSET "UTF-8";
+/*
+窗口DIV
+*/
+#InviteWindow {
+	text-align:left;
+	position:absolute;
+	z-index:8889;
+	font-size:12px;
+	top:50px;
+	left:0px;
+	height:297px;
+	width:453px;
+	visibility:hidden;
+	background:url(http://www.1smart-bj.org/images/btn_xx.jpg) no-repeat;
+}
+
+#InviteWindow #invite_bg {
+
+}
+/*
+标题 一般被隐藏
+*/
+#invite_title {
+	height:27px;
+	line-height:27px;
+	color:#fff;
+	text-indent:12px;
+	cursor:move;
+	display:none;
+	
+	
+}
+/*
+中间文本的<div>样式
+*/
+#invite_text {
+	margin-top:20px;
+	margin-left:10px;
+	line-height:14px;
+	padding:13px 7px 0 156px;
+	height:70px;
+	overflow:hidden;
+	color:#FFF;
+	display:none;
+}
+/*中间文本的文本*/
+#invite_text p {
+	padding:10px 0 0 0;
+	margin:0;
+	text-indent:24px;
+	display:none;
+}
+/*
+
+*/
+#invite_btn {
+	
+}
+#invite_btn span {
+	color:#FFF;
+	display:none;
+}
+/*
+	接受按钮的css样式
+*/
+#invite_btn .accept {
+
+display:none;
+}
+#invite_btn .cancel {
+width: 115px;
+height: 36px;
+line-height: 22px;
+font-size: 12px;
+font-weight: bold;
+text-align: center;
+border: 0px solid red;
+background: url(http://www.ubsmart.org/images/btn_hl.png) no-repeat;
+cursor: pointer;
+position: absolute;
+bottom: 9px;
+left: 27px;
+margin-left:0px;
+}
+
+/*
+关闭X的样式
+*/
+#invite_btn .accept1 {
+	width: 115px;
+	height: 36px;
+	line-height: 22px;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	border: 0px solid red;
+	background: url(http://www.ubsmart.org/images/btn_zxjl.png) no-repeat;
+	cursor: pointer;
+	position: absolute;
+	bottom: 9px;
+	right: 178px;
+
+    
+}
+    #invite_btn .accept1 {
+    
+ 
+    
+    }

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+        <title>任务详情</title>
+        <link rel="stylesheet" href="__PUBLIC__/css/uikit.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/iven.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/form-select.css" />
+        <script src="__PUBLIC__/js/jquery.js"></script>
+        <script src="__PUBLIC__/js/uikit.min.js"></script>
+        <script src="__PUBLIC__/js/form-select.min.js"></script>
+    </head>
+    <body>
+	<!--详情-->
+    <div class="uk-container uk-container-center">    
+    <article>
+        <h1 class="uk-h2 uk-text-primary">{$task.pro_name}</h1>
+        <div class="uk-margin-top article-meta">项目编号：<span class="uk-text-muted">{$task.pro_code}</span>  更新时间：<span class="uk-text-muted"><php>echo date("Y-m-d", $task['create_time'])</php></span></div>
+		<div class="uk-margin-top">赏金：<span class="uk-text-warning uk-text-large"><if condition="empty($task['price'])">详谈<else/>￥{$task.price}</if></span>  </div>
+        <hr>
+        <div class="uk-margin-top">任务类型：<span class="uk-text-danger">{$task.task_type_name}</span>  </div>
+        <hr>
+		<if condition="!empty($pro_name )">
+		<div class="uk-margin-top">项目地址：<span class="uk-text-black">{$pro_name.name} {$task.city}</span>  </div>
+        <hr>
+		</if>
+        <if condition="!empty($task['design_product_ids'] )">
+            <div class="uk-margin-top">涉及产品：<span class="uk-text-black"><php>echo $task['design_product_ids'];</php></span>  </div>
+            <hr>
+        </if>
+        <div class="uk-margin-top">需求描述</div>
+        <div class="uk-margin-top uk-text-black">
+            {$task.content}
+        </div>
+        <div class="uk-text-center assi-form">
+            <br>
+            <!--<if condition="$task['uid'] neq $userinfo['id'] && $hasbid eq 0 ">
+                <a href="{:U('task/bidtask',array('id'=>$task['id']))}" class="uk-margin-top uk-button uk-button-primary uk-button-slarge"><i class="uk-icon-mouse-pointer uk-icon-justify"></i>我要投标</a>
+            </if>-->
+			<if condition="$task['uid'] neq $userinfo['id'] && $hasbid eq 0 ">
+			<a href="#tk" class="uk-margin-top uk-button uk-button-primary uk-button-slarge" data-uk-modal="{center:true}"><i class="uk-icon-mouse-pointer uk-icon-justify"></i>我要投标</a></if>
+            <p>已有<span class="uk-text-danger">{$task.bid_nums}人</span>投标</p>
+        </div>
+    </article>
+    </div> 
+
+	<!--弹框-->
+	<div class="uk-modal" id="tk">
+    <div class="uk-modal-dialog">
+		<a href="" class="uk-modal-close uk-close uk-close-alt"></a>
+        <div class="uk-modal-header"><h2 class="iv-h2 uk-margin-remove">自我阐述 <span>必填 <i class="red">*</i></span></h2></div>
+        <textarea id="self_introduce" name="self_introduce" class="uk-width-1-1" rows="8" placeholder="请描述您的竞争优势"></textarea>
+        <div class="uk-modal-footer">
+			<a href="javascript:void(0)" title="{:U('task/bidtask',array('id'=>$task['id']))}" id="toubiao" class="uk-margin-top uk-button uk-button-primary uk-button-slarge uk-align-center"><i class="uk-icon-mouse-pointer uk-icon-justify"></i>立即提交</a>
+		</div>
+    </div>
+	</div>	
+
+    <include file="Public/footer" />
+    <script>
+    $("#toubiao").click(function(){
+	var self_introduce = $("#self_introduce").val();
+	if($.trim(self_introduce) == ""){
+		alert("请填写您的竞争优势");
+		return false;
+	}
+	window.location.href = $(this).attr("title")+ "&self_introduce="+ self_introduce;
+	})
+	</script>

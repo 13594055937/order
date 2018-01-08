@@ -1,0 +1,109 @@
+<div class="b1"><img alt="{$imgalt}" src="__PUBLIC__/images/2t-6.png"><img alt="{$imgalt}" src="__PUBLIC__/images/2t-7.png" class="img2"></div>
+      <div class="b2">
+        <p>好蟹汇为您精心准备了20种款式型号 提供性高价比的搭配，满足您的不同需求，只为更贴心！</p>
+        <p class="red">好蟹汇阳澄湖大闸蟹 送客户 送领导 送朋友 送长辈</p>
+      </div>
+      <div class="b3"><span <if condition="$type eq '礼卡'">class="active"</if> ><a>礼卡</a></span><span <if condition="$type eq '礼盒'">class="active"</if>> <a>现货礼盒</a></span><span> <a>企业定制</a></span></div>
+      <div class="b4 w">
+        <div <if condition="$type neq '礼卡'">class=" gift hide" style="display:none"<else/>class="gift"</if>>
+          <ul>
+          <foreach name="gift" item="gift_data">
+              <if condition="$gift_data['type'] eq '礼卡'">
+                <li><img alt="{$imgalt}" src="__PUBLIC__/images/{$gift_data.pic}">
+                  <div class="group">
+                    <div class="text">
+                      <img alt="{$imgalt}" src="__PUBLIC__/images/2t{$gift_data.nums}.png">
+                    </div>
+                    <div class="rectangle"></div>
+                    <div class="xiebox">
+                    <foreach name="giftp" item="giftp_data">
+                      <if condition="$giftp_data['gift_id'] eq $gift_data['id']">
+                          <a href="/product/codebuy_{$giftp_data.id}.html" class="xie clearfix" style="display: block;">
+                            <div class="xie1 fl"><span>雄蟹 {$giftp_data.male_crab_weight} 两*{$gift_data.nums}只</span><span>雌蟹 {$giftp_data.female_crab_weight} 两*{$gift_data.nums}只</span></div>
+                            <div class="xie2 fl"><img alt="{$imgalt}" src="__PUBLIC__/images/2t-8.png"></div>
+                            <div class="xie3 fl">{$giftp_data.pname}元/张</div>
+                          </a>
+                      </if>
+                    </foreach>
+                    </div>
+                  </div>
+                </li>
+              </if>
+            </foreach>
+           <!--  <foreach name="gift" item="gift_data">
+              <if condition="$gift_data['type'] eq '礼卡'">
+                <li><img alt="{$imgalt}" src="__PUBLIC__/images/{$gift_data.pic}">
+                  <div class="group">
+                    <div class="text">
+                      <img alt="{$imgalt}" src="__PUBLIC__/images/2t{$gift_data.nums}.png">
+                    </div>
+                    <div class="rectangle"></div>
+                    <foreach name="giftp" item="giftp_data">
+                      <if condition="$giftp_data['gift_id'] eq $gift_data['id']">
+                        <a href="{:U('product/codebuy', array('id'=>$giftp_data['id']))}" class="xiebox">
+                          <div class="xie clearfix">
+                            <div class="xie1 fl"><span>雄蟹{$giftp_data.male_crab_weight}</span><span>雌蟹{$giftp_data.female_crab_weight}</span></div>
+                            <div class="xie2 fl"><img alt="{$imgalt}" src="__PUBLIC__/images/2t-8.png"></div>
+                            <div class="xie3 fl">{$giftp_data.pname}</div>
+                          </div>
+                        </a>
+                      </if>
+                    </foreach>
+                  </div>
+                </li>
+              </if>
+            </foreach> -->
+          </ul>
+        </div>
+        <div <if condition="$type eq '礼卡'">class=" giftbox hide" style="display:none"<else/>class="giftbox"</if> >
+          <ul>
+            <foreach name="gift" item="gift_data">
+              <if condition="$gift_data['type'] eq '礼盒'">
+                <li><img alt="{$imgalt}" src="__PUBLIC__/images/{$gift_data.pic}">
+                  <div class="group">
+                    <div class="text">
+                      <img alt="{$imgalt}" src="__PUBLIC__/images/2t{$gift_data.nums}.png">
+                    </div>
+                    <div class="rectangle"></div>
+                    <div class="xiebox">
+                    <foreach name="giftp" item="giftp_data">
+                      <if condition="$giftp_data['gift_id'] eq $gift_data['id']">
+                          <a href="/product/codebuy_{$giftp_data.id}.html"  class="xie clearfix" style="display: block;">
+                            <div class="xie1 fl"><span>雄蟹 {$giftp_data.male_crab_weight} 两*{$gift_data.nums}只</span><span>雌蟹 {$giftp_data.female_crab_weight} 两*{$gift_data.nums}只</span></div>
+                            <div class="xie2 fl"><img alt="{$imgalt}" src="__PUBLIC__/images/2t-8.png"></div>
+                            <div class="xie3 fl">{$giftp_data.pname}元/张</div>
+                          </a>
+                      </if>
+                    </foreach>
+                    </div>
+                  </div>
+                </li>
+              </if>
+            </foreach>
+            <!-- <foreach name="gift" item="gift_data">
+              <if condition="$gift_data['type'] eq '礼盒'">
+                <li><img alt="{$imgalt}" src="__PUBLIC__/images/{$gift_data.pic}">
+                  <div class="group">
+                    <div class="text">
+                      <img alt="{$imgalt}" src="__PUBLIC__/images/2t{$gift_data.nums}.png">
+                    </div>
+                    <div class="rectangle"></div>
+                    <foreach name="giftp" item="giftp_data">
+                      <if condition="$giftp_data['gift_id'] eq $gift_data['id']">
+                        <a href="{:U('product/codebuy', array('id'=>$giftp_data['id']))}" class="xiebox">
+                          <div class="xie clearfix">
+                            <div class="xie1 fl"><span>雄蟹{$giftp_data.male_crab_weight}</span><span>雌蟹{$giftp_data.female_crab_weight}</span></div>
+                            <div class="xie2 fl"><img alt="{$imgalt}" src="__PUBLIC__/images/2t-8.png"></div>
+                            <div class="xie3 fl">{$giftp_data.pname}</div>
+                          </div>
+                        </a>
+                      </if>
+                    </foreach>
+                  </div>
+                </li>
+              </if>
+            </foreach> -->
+          </ul>
+        </div>
+        <div class="customization"></div>
+      </div>

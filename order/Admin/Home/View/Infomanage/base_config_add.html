@@ -1,0 +1,126 @@
+<include file="Public/header" />
+<include file="Public/top" />
+<div role="main" class="ui-content">
+	<include file="Public/menu" />
+    <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            网址基本配置管理
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div>
+                                                    <form role="form" action="{:U('infomanage/base_config_save')}" method="POST" id="myForm" >
+            	<input type="hidden" name="id" value="{$data.id}" readyonly />
+                <h2>{$edit_info} </h2>
+             	<table class="table table-striped table-bordered table-hover">  
+            		 <tr>
+                        <td class="col-name">header前代码片段<font style="color:red">*</font></td>
+                        <td>
+                            <textarea name="header_xuke" style="width:700px;height:200px">{$data.header_xuke}</textarea> 
+                        </td>
+                    </tr>
+                     <tr>
+                        <td class="col-name">footer统计代码片段<font style="color:red">*</font></td>
+                        <td>
+                            <textarea name="baidu_js" style="width:700px;height:200px">{$data.baidu_js}</textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-name">商桥代码片段<font style="color:red">*</font></td>
+                        <td>
+                            <textarea name="shangqiao" style="width:700px;height:200px">{$data.shangqiao}</textarea>
+                        </td>
+                    </tr>
+		<tr>
+                        <td class="col-name">手机端header前代码片段<font style="color:red">*</font></td>
+                        <td>
+                            <textarea name="phone_header_xuke" style="width:700px;height:200px">{$data.phone_header_xuke}</textarea>
+                        </td>
+                    </tr>
+		
+		    <tr>
+                        <td class="col-name">手机端footer统计代码片段<font style="color:red">*</font></td>
+                        <td>
+                            <textarea name="phone_baidu_js" style="width:700px;height:200px">{$data.phone_baidu_js}</textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-name">手机端商桥代码片段<font style="color:red">*</font></td>
+                        <td>
+                            <textarea name="phone_shangqiao" style="width:700px;height:200px">{$data.phone_shangqiao}</textarea>
+                        </td>
+                    </tr>
+		    <tr>
+                        <td class="col-name">联系我们地址<font style="color:red">*</font></td>
+                        <td>
+                            <input type="text" name="address" value="{$data.address}">
+                        </td>
+                    </tr>
+		    <tr>
+                        <td class="col-name">联系我们电话<font style="color:red">*</font></td>
+                        <td>
+                            <input type="text" name="telphone" value="{$data.telphone}">
+                        </td>
+                    </tr>
+		    <tr>
+                        <td class="col-name">联系我们email<font style="color:red">*</font></td>
+                        <td>
+                            <input type="text" name="email" value="{$data.email}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-name">版权设置<font style="color:red">*</font></td>
+                        <td>
+                            <textarea name="footer_xuke" id="myEditor3">{$data.footer_xuke}</textarea>        
+                            <script type="text/javascript">
+                                UE.getEditor('myEditor3', {
+                                theme:"default", //皮肤
+                                lang:"zh-cn", //语言
+                                initialFrameWidth:600,  //初始化编辑器宽度,默认800
+                                initialFrameHeight:320
+                            });
+                            </script>
+                        </td>
+                    </tr>
+		    <tr>
+                        <td class="col-name">联系我们说明<font style="color:red">*</font></td>
+                        <td>
+                            <textarea name="company_introduce" id="myEditor7">{$data.company_introduce}</textarea>
+                            <script type="text/javascript">
+                                UE.getEditor('myEditor7', {
+                                theme:"default", //皮肤
+                                lang:"zh-cn", //语言
+                                initialFrameWidth:600,  //初始化编辑器宽度,默认800
+                                initialFrameHeight:320
+                            });
+                            </script>
+                        </td>
+                    </tr>
+            		<tr>
+                                        <if condition="$edit_info neq '查看信息'">
+                                            <td colspan="2" align="center">
+                                                <input type="button" value="返回" class="btn btn-default" onclick="window.history.back(-1)" data-inline="true">
+                                                <input type="submit" class="btn btn-default" data-inline="true" value="提交">
+                                            </td>
+                                            <else/>
+                                            <td colspan="2" align="center">
+                                                <input type="button" value="返回" class="btn btn-default" onclick="window.history.back(-1)" data-inline="true">
+                                            </td>
+                                        </if>
+                                    </tr>
+                                </table>
+                                
+                                </form>
+                                </div>
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+<include file="Public/footer" />

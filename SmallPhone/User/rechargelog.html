@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+        <title>充值，消费记录</title>
+        <link rel="stylesheet" href="__PUBLIC__/css/uikit.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/iven.css" />
+        <link rel="stylesheet" href="__PUBLIC__/css/form-select.css" />
+        <script src="__PUBLIC__/js/jquery.js"></script>
+        <script src="__PUBLIC__/js/uikit.min.js"></script>
+        <script src="__PUBLIC__/js/form-select.min.js"></script>
+    </head>
+    <script type="text/javascript">
+     $(document).ready(function(){
+        $(".legal-tabs-title li").click(function(){
+            if($(this).hasClass("uk-active")){
+                return false;
+            }
+            var id = $(this).attr("id");
+            var otherid = (id=="i1") ? "i0":"i1";
+            $(this).addClass("uk-active");
+            $("#"+otherid).removeClass("uk-active");
+            $("#task"+otherid).hide();
+            $("#task"+id).show();
+        })
+    })
+    </script>
+    <body>
+    <!-- 这是包含拨动元素的容器 -->
+    <ul class="legal-tabs-title">
+        <li class="uk-active" id="i0">收入记录</li>
+        <li id="i1">支出记录</li>
+    </ul>
+
+    <div class="uk-container uk-container-center">
+    <div id="taski0">
+        <foreach name="rechargelog" item="logdata">
+            <div class="report">
+            <h3>充值</h3>
+            <div>￥{$logdata.price}<span class="uk-float-right"  style="line-height:20px"><php>echo date("Y-m-d H:i:s",$logdata['create_time']);</php></span></div>
+            </div>
+            <hr>
+        </foreach>
+        <foreach name="relog" item="logdata2">
+            <div class="report">
+            <if condition="$logdata2['taskname'] neq ''">
+            <h3>{$logdata2.taskname}</h3>
+            <p><span>项目编号:{$logdata2.taskcode}</span> </p>
+            <else/>
+            <h3>{$logdata2.use_type}</h3>
+            </if>
+            <div><if condition="strpos($logdata2['use_type'], '保证金回退') !== false">保证金退还:</if><if condition="strpos($logdata2['use_type'], '完成任务') !== false">获得赏金:</if>￥{$logdata2.total_money}<span class="uk-float-right" style="line-height:20px"><php>echo date("Y-m-d H:i:s",$logdata2['create_time']);</php></span></div>
+            </div>
+            <hr>
+        </foreach>
+    </div>
+
+    <!-- 这是内容项目的容器 -->
+    <div id="taski1" style="display:none">
+        <foreach name="paylog" item="paydata">
+            <div class="report">
+            <if condition="$paydata['taskname'] neq ''">
+            <h3>{$paydata.taskname}</h3>
+            <p><span>项目编号:{$paydata.taskcode}</span> </p>
+            <else/>
+            <h3>{$paydata.use_type}</h3>
+            </if>
+            <div><span class="uk-text-large uk-text-primary">{$paydata.use_type}:￥{$paydata.pay_nums}</span><span class="uk-float-right"  style="line-height:20px"><php>echo date("Y-m-d H:i:s",$paydata['create_time']);</php></span></div>
+            </div>
+            <hr>
+        </foreach>
+    </div>
+    </div>    
+
+    <include file="Public/footer" />

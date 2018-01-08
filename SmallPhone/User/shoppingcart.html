@@ -1,0 +1,71 @@
+<include file="Public/header"/>
+<link rel="stylesheet" href="__PUBLIC__/smallphone/css/common.css">
+<link rel="stylesheet" href="__PUBLIC__/smallphone/css/my.css">
+		<!-- 头部 E -->
+		<div class="shoppingcar">
+			<div class="title-2">购物车</div>
+			<ul class="cm-list">
+				<input type="hidden" id="addcart" value="{:U('user/addCart')}">
+				<input type="hidden" id="delcart" value="{:U('user/del_cart')}">
+				<php>$total_price = 0;</php>
+				<foreach name="cartlist" item="cartdata">
+					<php>$total_price += intval($cartdata['price'] * $cartdata['quantity']);</php>
+					<li>
+						<div class="left">
+							<img alt="{$imgalt}" src="__PUBLIC__/images/{$cartdata.pic}" >
+						</div>
+						<div class="right">
+							<h3 class="line-1 title">{$cartdata.name}{$cartdata.type}{$cartdata.nums}对装</h3>
+							<div class="red">
+								<div class="price">{$cartdata.price} <em id="quantity_{$cartdata.product_id}">×{$cartdata.quantity}</em></div>
+								<div class="r-modify">
+									<span class="plus nums_{$cartdata.product_id}" title="{$cartdata.product_id}" nums="{$cartdata.quantity}">-</span>
+									<span class="minus nums_{$cartdata.product_id}" title="{$cartdata.product_id}" nums="{$cartdata.quantity}">+</span>
+								</div>
+							</div>
+						</div>
+						<div class="delete">
+							<a href="{:U('user/del_cart',array('id'=>$cartdata['id'],'del'=>1))}">删除</a>
+						</div>
+					</li>
+				</foreach>
+			</ul>
+		</div>
+		<div class="b-fixed">
+			<div class="left">
+				商品总金额：<span class="price">{$total_price}</span>
+			</div>
+			<div class="right">
+				<a class="am-btn" href="{:U('user/placeorder')}">去结算</a>
+			</div>
+		</div>
+		<!--[if (gte IE 9)|!(IE)]><!-->
+		<script src="__PUBLIC__/smallphone/js/jquery.min.js"></script>
+		<!--<![endif]-->
+
+		<!--[if lte IE 8 ]>
+		<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+		<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+		<![endif]-->
+		<script src="__PUBLIC__/smallphone/js/amazeui.min.js"></script>
+	</body>
+	<script type="text/javascript">
+		$(".plus").click(function(){
+			var id = $(this).attr("title");
+			var nums = parseInt($(this).attr("nums"))-1;
+			var del_cart = $("#delcart").val();
+			if(nums>0){
+				window.location.href = del_cart + "?id="+id+"&pnums="+nums;
+			}
+		})
+		$(".minus").click(function(){
+			var id = $(this).attr("title");
+			var nums = parseInt($(this).attr("nums"))+1;
+			var add_cart = $("#addcart").val();
+			if(nums<1000){
+				window.location.href = add_cart + "?id="+id+"&pnums="+nums;
+			}
+		})
+	</script>
+</html>

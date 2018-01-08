@@ -1,0 +1,406 @@
+// helper
+@import "../helper/_variable.less";
+@import "../helper/_mixin.less";
+// base
+@import "../base/_reset.less";
+// component
+@import "../component/_button.less";
+@import "../component/_item.less";
+@import "../component/_page.less";
+@import "../component/_table.less";
+@import "../component/_title.less";
+@import "../component/_form.less";
+// icon
+@import "../icons/_icon_all.less";
+@import "../icons/_icon_mem.less";
+// layout
+@import "../layout/_layout.less";
+@import "../layout/_header.less";
+@import "../layout/_nav.less";
+@import "../layout/_footer.less";
+
+/* spa */
+
+.m-member-page {
+    .mem-info {
+        float: left;
+        width: 250px;
+        background-color: @bg;
+        border: 1px solid @border-color;
+        .font-size-md;
+        .avatar {
+            width: 170px;
+            height: 170px;
+            overflow: hidden;
+            margin: 30px 40px 10px;
+        }
+        .info {
+            padding: 0 40px 30px;
+        }
+    }
+    .mem-title {
+        border-bottom: 1px solid @border-color;
+        margin-bottom: 10px;
+        li {
+            cursor: pointer;
+            display: inline-block;
+            width: 160px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: @orange;
+            .font-size-lg;
+            &:hover {
+                color: #fff;
+            }
+            &.current {
+                background-color: @orange;
+                color: #fff;
+            }
+        }
+    }
+    .mem-title-cont {
+        display: none;
+        padding: 20px;
+        &.current {
+            display: block;
+        }
+        .name-value-sm {
+            .value {
+                display: inline-block;
+            }
+            .form-text {
+                display: none;
+            }
+            &.edit {
+                .value {
+                    display: none;
+                }
+                .form-text,
+                .form-textarea {
+                    display: block;
+                }
+            }
+        }
+    }
+    .m-mem-hd {
+        position: relative;
+        &:after {
+            position: absolute;
+            top: 14px;
+            left: 0;
+            width: 100%;
+            content: '';
+            height: 0;
+            font-size: 0;
+            border-top: 1px dashed @border-color;
+        }
+        h3 {
+            font-weight: bold;
+            z-index: 1;
+            position: relative;
+            padding-right: 10px;
+        }
+        .button-save {
+            z-index: 1;
+            position: relative;
+            border: 1px solid @border-color;
+            .border-radius(15px);
+            background-color: @bg;
+            padding: 0 20px;
+            color: @orange;
+        }
+    }
+    .mem-cont {
+        float: right;
+        width: 930px;
+    }
+}
+
+.list {
+    &.list-footprint {
+        li {
+            padding: 10px 0;
+            p {
+                text-align: center;
+            }
+            .view {
+                display: inline-block;
+                line-height: 26px;
+                padding: 0 15px;
+                &:hover {
+                    border-color: @orange;
+                    background-color: @orange;
+                    color: #fff;
+                }
+            }
+            .num {
+                color: @orange;
+            }
+        }
+    }
+    &.list-member {
+        li {
+            a {
+                padding: 10px 40px 10px 32px;
+                display: block;
+                border-top: 1px solid @border-color;
+                color: #fff;
+                &:hover {
+                    background-color: @orange;
+                    border-top-color: @orange;
+                }
+            }
+            &.current {
+                a {
+                    background-color: @orange;
+                    border-top-color: @orange;
+                }
+            }
+        }
+    }
+}
+
+// 会员首页
+.m-this-member {
+    .m-footprint {
+        float: left;
+        width: 455px;
+    }
+    .m-notice {
+        float: right;
+        width: 455px;
+    }
+}
+
+// 我的积分
+.m-coin-info {
+    border: 1px solid @border-color;
+    border-top-color: @orange;
+    .col-5 {
+        border-right: 1px solid @border-color;
+        padding: 20px;
+        p {
+            text-align: center;
+            &.num {
+                font-size: 28px;
+                color: @orange;
+            }
+        }
+    }
+    .col-7 {
+        padding: 35px 0;
+        text-align: center;
+        .button {
+            margin: 0 5px;
+        }
+    }
+}
+
+// 如何获得积分
+.m-coin-ways {
+    margin-top: 20px;
+    h3 {
+        color: @orange;
+        padding: 10px 0 5px;
+    }
+    .bd {
+        border: 1px solid @border-color;
+        border-bottom: 0 none;
+        .item {
+            padding: 10px;
+            border-bottom: 1px solid @border-color;
+            div {
+                .text-ellipsis;
+            }
+            .name {
+                display: inline-block;
+                position: relative;
+                padding-left: 10px;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 10px;
+                    left: 0;
+                    width: 0;
+                    height: 0;
+                    font-size: 0;
+                    border-left: 5px solid @border-color;
+                    border-top: 5px solid transparent;
+                    border-bottom: 5px solid transparent;
+                }
+                &:hover {
+                    &:after {
+                        border-left-color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 积分使用记录
+.m-coin-do {
+    margin-top: 20px;
+    h3 {
+        padding: 5px 20px;
+        background-color: @orange;
+        color: #fff;
+        display: inline-block;
+    }
+    .m-hd {
+        padding: 5px 0;
+        border: 1px solid @border-color;
+        background-color: @border-color;
+        li {
+            padding: 0 10px;
+        }
+    }
+    .m-bd {
+        padding: 10px 0;
+        border: 1px solid @border-color;
+        border-top: 0;
+        .item {
+            li {
+                padding: 5px 10px;
+            }
+        }
+    }
+}
+
+// 积分兑换
+.m-coin-exchange {
+    .list {
+        &.list-normal {
+            margin-right: -37px;
+            .item {
+                margin-right: 37px;
+            }
+            .item-desc {
+                line-height: 30px;
+                height: 30px;
+                margin-top: 5px;
+                .text-ellipsis;
+                padding: 0;
+                a {
+                    color: #fff;
+                }
+            }
+            .to-exchange {
+                a {
+                    .font-size-lg;
+                }
+            }
+        }
+    }
+}
+
+// 我的路线
+.m-this-line {
+    .m-title-b {
+        border-bottom: 0 none;
+        margin-bottom: 0;
+    }
+}
+
+.this-line-cont {
+    .hd {
+        border-top: 1px solid @border-color;
+        border-bottom: 1px solid @border-color;
+        text-align: center;
+        .font-size-lg;
+        padding: 5px 0;
+        div {
+            float: left;
+            font-weight: bold;
+        }
+    }
+    .a_cost,
+    .a_status,
+    .a_ope {
+        width: 16%;
+        text-align: center;
+    }
+    .a_info {
+        width: 52%;
+    }
+    .table-as {
+        th {
+            background-color: @border-color;
+            padding: 0 10px;
+            color: @primary;
+        }
+        margin-top: 15px;
+        .a_status {
+            color: @orange;
+        }
+        .cost {
+            color: @orange;
+            .font-size-lg;
+            .symbol {
+                .font-size;
+            }
+        }
+    }
+    .list-avatar-8060 {
+        .item-avatar(80px, 60px, 10px);
+        .item-info {
+            p {
+                line-height: 22px;
+            }
+        }
+    }
+}
+
+// 我的泡坛
+.m-this-forum {
+    .m-title-b {
+        border-bottom: 0 none;
+        margin-bottom: 0;
+    }
+    .list {
+        &.list-txt-time {
+            li {
+                border-bottom: 1px dashed @border-color;
+                margin-bottom: 5px;
+                padding-bottom: 5px;
+            }
+        }
+    }
+    .table-as {
+        &.mem-forum-table {
+            .th-title,
+            .td-title {
+                width: 80%;
+            }
+            .th-ope,
+            .td-ope {
+                width: 20%;
+                text-align: center;
+            }
+            .td-ope {
+                a {
+                    margin: 0 5px;
+                }
+            }
+        }
+        th {
+            color: @primary;
+            font-weight: bold;
+        }
+        border-left: 0 none;
+        border-right: 0 none;
+    }
+}
+
+// 我的摄影作品
+.m-this-works {
+    .list {
+        &.list-normal {
+            margin-right: -37px;
+            .item {
+                margin-right: 37px;
+            }
+        }
+    }
+}

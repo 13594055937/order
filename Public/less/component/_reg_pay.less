@@ -1,0 +1,45 @@
+.m-util-reg,
+.m-util-pay {
+    padding: 60px 0 140px;
+}
+
+.m-util-pay {}
+
+.list-util-reg {
+    .font-size-lg;
+    margin-bottom: 50px;
+}
+
+.list-util-pay {
+    position: relative;
+    margin: 0 auto 50px;
+    width: 600px;
+    padding-left: 200px;
+    .font-size-lg;
+    .name {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 38px;
+        line-height: 38px;
+        .text-ellipsis;
+        text-align: right;
+    }
+    dd {
+        height: 37px;
+        img {
+            display: inline-block;
+        }
+        .pay-ways {
+            float: left;
+            width: 150px;
+            cursor: pointer;
+            input[type="radio"] {
+                margin-right: 5px;
+                top: 5px;
+                position: relative;
+            }
+        }
+    }
+}

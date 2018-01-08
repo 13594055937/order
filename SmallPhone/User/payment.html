@@ -1,0 +1,45 @@
+<include file="Public/header"/>
+<link rel="stylesheet" href="__PUBLIC__/smallphone/css/common.css">
+<link rel="stylesheet" href="__PUBLIC__/smallphone/css/my.css">
+		<!-- 头部 E -->
+		<!-- 内容 S -->
+		<div class="orderlist">
+			<div class="title-2 am-text-lef t">立即付款</div>
+			<div class="list">
+				<div class="item">
+					<div class="box">支付方式：支付宝支付</div>
+					<div class="box">
+						<div class="line">订单号：{$orderdetail.order_id}</div>
+						<div class="line">订单合计：{$orderdetail.total_price}</div>
+						<div class="line">下单时间：{$orderdetail.create_time}</div>
+					</div>
+				</div>
+				<form action="{:U('pay/doalipay')}" id="form_zfb" class="uk-form assi-form" method="POST">
+   				 <input type="hidden" name="trade_no" value="{$orderdetail.order_id}">
+   				 <input type="hidden" name="ordsubject" value="购买好蟹汇商品">
+   				 <input type="hidden" name="ordtotal_fee" value="{$orderdetail.total_price}">
+   				 <input type="hidden" name="ordbody" value="购买好蟹汇商品支付">
+   				 <input type="hidden" name="ordshow_url" value="{:U('index/index')}">
+   				 <input type="hidden" name="note_desc" id="ali_note_desc">
+				<a  href="javascript:;" class="am-btn am-btn-block weixinPayBtn" data-order_id="{$orderdetail.order_id}" data-price="{$orderdetail.total_price}" onclick="submitzfb()" >立即支付</a>	
+				</form>
+			</div>
+		</div>
+		<input type="hidden" id="redirect_url" value="{:U('wxpay/index')}">
+		<!-- 内容 E -->
+		
+
+		<!--[if (gte IE 9)|!(IE)]><!-->
+		<script src="__PUBLIC__/smallphone/js/jquery.min.js"></script>
+		<!--<![endif]-->
+
+		<!--[if lte IE 8 ]>
+		<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+		<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+		<![endif]-->
+		<script src="__PUBLIC__/smallphone/js/amazeui.min.js"></script>
+		<script>function submitzfb(){$("#form_zfb").submit();}</script>
+	</body>
+
+</html>

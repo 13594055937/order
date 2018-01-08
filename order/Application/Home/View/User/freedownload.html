@@ -1,0 +1,68 @@
+<include file="Public/header"/>
+<include file="Public/left"/>
+   <style type="text/css">
+    .empty
+    {   background:url(__PUBLIC__/images/download_r4_c8.jpg) no-repeat;}
+   </style>
+    <div class="download_material" style="margin-top:50px;">
+      <div class="start_cour_wenc famliy_com">
+        <p class="p_first">{$_PartDesc}</p>
+      </div>
+            <foreach name="list" item="data" key="k">
+              <if condition="$k%3 eq 0 ">
+              <div class="download_onebox">
+              </if>
+              <if condition="$k%3 eq 1 ">
+              <div class="download_twobox">
+              </if>
+              <if condition="$k%3 eq 2 ">
+              <div class="download_threebox">
+              </if>
+              <div class="leftbox">
+                  <span class="titlebox famliy_com">
+                       <em>{$k+1}</em>
+                       <span class="start_repeat">
+                          {$data.title}<em class="new_ico"><img src="__PUBLIC__/images/new_ico.png" /></em>
+                        </span>
+                       <span><img src="__PUBLIC__/images/school_{$k+1}.png" /></span> 
+                    </span>
+                    <span class="yellow_bule mt_10">{$data.file_name}</span>
+                    <span class="yellow_bule">分类：{$data.type}   电子书大小：{$data.file_vol}</span>
+                    <span class="yellow_bule">资料格式:{$data.file_houzui}   下载次数：{$data.view_times}</span>
+                    <span class="yellow_bule">上传时间：{$data.create_time}</span>
+                    <span class="yellow_bule">
+                    <span class="fl">资料星级：</span>
+                    <span class="download_start_ico <if condition='$data.file_star lt 1'>empty</if>"></span>
+                    <span class="download_start_ico <if condition='$data.file_star lt 2'>empty</if>"></span>
+                    <span class="download_start_ico <if condition='$data.file_star lt 3'>empty</if>"></span>
+                    <span class="download_start_ico <if condition='$data.file_star lt 4'>empty</if>"></span>
+                    <span class="download_start_ico <if condition='$data.file_star lt 5'>empty</if>"></span>
+
+                    </span>
+                    <span class="sharebox">
+                         <a class="email" href="mailTo:">Email给好友</a>
+                         <span class="fenxiang_icobox">分享到：
+                             <a href="http://v.t.sina.com.cn/share/share.php?title=<php>echo urlencode("我成功下载了@精锐教育独家免费学习资料，现在分享给大家");</php>&url=<php>echo $_SERVER['HTTP_REFERER'];</php>&source=bookmark&appkey=2992571369"
+                                  target="_blank"><img src="__PUBLIC__/images/xinlang_ico.jpg" /></a>
+                              <a href="http://www.douban.com/recommend/?url=<php>echo $_SERVER['HTTP_REFERER'];</php>&title=<php>echo urlencode("我成功下载了@精锐教育独家免费学习资料，现在分享给大家");</php>"
+                                      target="_blank"><img src="__PUBLIC__/images/doudou_ico.jpg" /></a> 
+                              <a href="http://www.kaixin001.com/login/index.php?flag=116&loginmode=rshare&loginsn=1&rpara=<php>echo $_SERVER['HTTP_REFERER'];</php>&r=4078"
+                                  target="_blank"><img src="__PUBLIC__/images/kaixin_ico.jpg" /></a>
+                              <a href="http://share.renren.com/share/buttonshare.do?link=<php>echo $_SERVER['HTTP_REFERER'];</php>&title=<php>echo urlencode("我成功下载了@精锐教育独家免费学习资料，现在分享给大家");</php>"
+                                  target="_blank"><img src="__PUBLIC__/images/renren_ico.jpg" /></a> 
+
+
+                         </span>
+                    </span>
+                    <span class="download_btn"><a href="{:U('user/file_download',array('id'=>$data['id']))}"><img src="__PUBLIC__/images/download_one.jpg" /></a></span> 
+              </div>
+              <div class="book"><a href="{:U('user/file_download',array('id'=>$data['id']))}"><img src="__PUBLIC__/images/{$data.info_imgs}" alt="" style="width:160px;height:224px" /></a></div>
+            </foreach>
+      </div>
+
+</div>
+</div>
+<include file="Public/footer"/>
+
+      
+
